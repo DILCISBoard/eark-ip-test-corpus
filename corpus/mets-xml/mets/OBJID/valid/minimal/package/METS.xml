@@ -1,3 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" OBJID="IDec234adb-fe77-4a60-bdac-c41c21fd68ed" xsi:schemaLocation="http://www.loc.gov/METS/ schemas/IP.xsd http://www.w3.org/1999/xlink schemas/xlink.xsd">
+<mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" OBJID="dc9cbecb-5e9b-4ae0-86bf-fe457aa77cc9" LABEL="" TYPE="SIP:MIXED" PROFILE="http://www.eark-project.com/METS/IP.xml" xsi:schemaLocation="http://www.loc.gov/METS/ schemas/IP.xsd http://www.w3.org/1999/xlink schemas/xlink.xsd">
+    <metsHdr CREATEDATE="2016-07-07T17:40:34.395+01:00" LASTMODDATE="2016-07-07T17:40:34.395+01:00">
+        <agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
+            <name>RODA-in</name>
+        </agent>
+    </metsHdr>
+    <dmdSec ID="IDD1030BCA-EB73-42B7-BD11-4DF83D05FE5F"/>
+    <amdSec ID="ID1A4027CE-F792-4DB1-9088-15AA29520B1C"/>
+    <fileSec ID="ID6D525945-99A7-40AF-9C8D-4196D812082D">
+        <fileGrp ID="ID08895099-93D7-4A03-81AC-BB833C87819E" USE="E-ARK files root">
+            <fileGrp ID="IDECC933D8-0C99-45F8-AD8E-F6B54B072E66" USE="representations"/>
+            <fileGrp ID="ID04B9CDA2-0D5F-47F1-B7C0-ED4527737F5A" USE="data"/>
+            <fileGrp ID="IDE47B59D7-9A70-4179-8E00-57657826A8C0" USE="schemas"/>
+            <fileGrp ID="IDE909B091-D368-4EDF-9594-4E08E2A7A89B" USE="documentation"/>
+        </fileGrp>
+    </fileSec>
+    <structMap ID="ID2114FD2D-81E0-4E7B-92BC-FBD956CEF81B" TYPE="physical" LABEL="E-ARK structural map">
+        <div ID="ID70630A29-9984-4994-A131-54EDF826510A" LABEL="dc9cbecb-5e9b-4ae0-86bf-fe457aa77cc9">
+            <div ID="IDBFBF1E58-6DC9-4841-B799-BB11059E6B0E" LABEL="metadata">
+                <div ID="ID11AECC28-EC19-42F8-92CB-2DAB84FDD850" LABEL="descriptive"/>
+                <div ID="ID75575CD4-0AF6-460C-82CB-A533264EEE91" LABEL="preservation"/>
+                <div ID="IDA1736DBA-126E-4CA9-B2DB-9E79726447D4" LABEL="other"/>
+            </div>
+            <div ID="ID37F73A9E-9CE3-499B-BA86-44A910D020FA" LABEL="data"/>
+            <div ID="IDC7AE565E-ADAF-44E1-AE94-A9EE0F1E40ED" LABEL="schemas"/>
+            <div ID="IDF4A9A5D5-CB83-4BF0-BA3F-6F10649580E8" LABEL="documentation"/>
+        </div>
+    </structMap>
 </mets>
