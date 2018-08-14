@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/METS/" OBJID="" TYPE="SIP:X">
+    <metsHdr/>
+    <structMap LABEL="E-ARK structural map">
+        <div>
+            <div LABEL="metadata">
+                <div LABEL="descriptive"/>
+                <div LABEL="preservation"/>
+                <div LABEL="other"/>
+            </div>
+        </div>
+    </structMap>
+</mets>
