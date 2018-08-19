@@ -18,4 +18,3 @@ The IP fulfills the following requirements:
 The IP is actually not minimal according to Common Specification for several reasons, incl.:
  * mets/@TYPE can have any value, but the current validator only accepts values in the form "SIP:X", where X is one or more non-space characters
  * mets/metsHdr is not mandatory
- * structMap/div/div is not mandatory
