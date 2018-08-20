@@ -18,14 +18,14 @@ __________
 Validation Corpus Creation
 --------------------------
 ### Process Overview
-The E-ARK Common Specification is the source of requirements and the yardstick by which progress is measured. The test corpus creation process is driven by the specification conditions. These requirements are read carefully and used to produce test cases. These documented test cases provide the backlog for the creation of corpus test packages. For each test case there should be a corpus packages demonstrating the pass and fail conditions.
+The E-ARK Common Specification is the source of requirements and the yardstick by which progress is measured. The test corpus creation process is driven by the specification conditions. These requirements are read carefully and used to produce test cases. These documented test cases provide the backlog for the creation of corpus test packages. For each test case there should be corpus packages demonstrating the pass and fail conditions.
 
 ### Requirements to Test Cases
-While the aim is to produced test cases, analysis of the specification will also lead to improvements to the specification.  To illustrate, consider a seemingly simple requirement from the specifcation:
+While the aim is to produce test cases, analysis of the specification will also lead to improvements to the specification.  To illustrate, consider a seemingly simple requirement from the specifcation:
 
 > CSIP4: The Information Package folder MUST include a metadata file named `METS.xml`, which includes information about the identity and structure of the package and its components;
 
-At first this suggests a simple pass and fail case, one with the file present and another from which it is missing. A more careful reading reveals that the file should contain "information about the identity and structure of the package...". The wording is problematic at there are no details as to what the information should be. Reading with a testing mindset yields further varieties of test case, e.g. what about case-sensitivity in the name, are `mets.xml`, `METS.XML`, or even `mEts.xMl` acceptable?
+At first this suggests a simple pass and fail case, one with the file present and another from which it is missing. A more careful reading reveals that the file should contain "information about the identity and structure of the package...". The wording is problematic as there are no details of what the information should be. Reading with a testing mindset yields further varieties of test case, e.g. what about case-sensitivity in the name - are `mets.xml`, `METS.XML`, or even `mEts.xMl` acceptable?
 
 #### Producing Test Cases
 The next actions here should be:
@@ -44,12 +44,12 @@ There is a one to many relationship between specification requirements and test 
 Every test case should be atomic and minimal. Atomic means that it violates only a single aspect of the specification. Minimal means that it contains only the data and metadata required to ensure only a single validator error is produced. **NOTE: To simplify this we want to introduce the concepts of "well-formed", "valid", and "audited" (what's a good word for passing integrity checks?), to allow minimal files that pass only the well formed structural checks possible, without the need for content**
 The E-ARK information package validation process has been broken into 3 parts, [described here](VALIDATION.md).
 
-There should be pass and fail corpus packages for each test case, although it's possible that multiple test cases might share single pass cases for brevity.
+There should be pass and fail corpus packages for each test case, although it's possible that multiple test cases share a single "pass" case for brevity.
 
 Producing test corpus packages that match the test cases:
-- creating the package locally;
-- testing against the prototype validator instance (locally or online)
-- submitting to GitHub corpus repository as a pull request for review
+- create the package locally;
+- test against the prototype validator instance (locally or online)
+- submit to GitHub corpus repository as a pull request for review
 
 #### Corpus Structure
 **To Be Discussed**
