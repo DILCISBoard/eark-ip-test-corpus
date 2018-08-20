@@ -12,7 +12,7 @@ __________
 
 Status
 ------
-The test corpus and validator are currently in early development, we'll provide a more detailed roadmap in Septemer 2018.
+The test corpus and validator are currently in early development, we'll provide a more detailed roadmap in September 2018.
 __________
 
 Validation Corpus Creation
