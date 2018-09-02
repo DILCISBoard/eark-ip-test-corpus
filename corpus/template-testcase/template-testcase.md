@@ -1,5 +1,7 @@
 # Short description
 
+**ID:** Unique identifier of the rule
+
 **Rule:** Detailed description of the rule
 
 **Reference:** Reference or link to the rule in CS

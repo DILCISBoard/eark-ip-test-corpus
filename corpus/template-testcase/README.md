@@ -3,6 +3,7 @@
 Test cases should be described using the following structure.
 
 &#35; Short description  
+&ast;&ast;ID:&ast;&ast; Unique identifier of the test case  
 &ast;&ast;Rule:&ast;&ast; Detailed description of the rule  
 &ast;&ast;Reference:&ast;&ast; Reference or link to the rule in CS  
 &ast;&ast;Referenced CSIP version:&ast;&ast; Commit ID and date of CSIP  
