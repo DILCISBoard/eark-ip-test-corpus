@@ -1,6 +1,6 @@
 # Short description
 
-**ID:** Unique identifier of the rule
+**ID:** Unique identifier of the test case
 
 **Rule:** Detailed description of the rule
 
@@ -10,7 +10,9 @@
 
 **Dependencies:** Dependencies with other test cases (if exist)
 
-**Violation:** Description of the violation
+**Violation ID:** Unique identifier of the violation
+
+**Violation description:** Description of the violation
 
 **Error level:** One of `[INFO | WARNING | ERROR]`
 
