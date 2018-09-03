@@ -10,6 +10,10 @@
 
 **Dependencies:** Dependencies with other test cases (if exist)
 
+**Comments:** Comments about the test case (if exist)
+
+---
+
 **Violation ID:** Unique identifier of the violation
 
 **Violation description:** Description of the violation
