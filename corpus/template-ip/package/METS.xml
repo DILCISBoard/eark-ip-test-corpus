@@ -4,7 +4,8 @@
 <!-- CSIP2 - mets/@OBJID  - cardinality [1..1]. It is recommended that it be the same as the name or ID of the package (the name of the root folder). The OBJID must meet the principle of being unique at least across the repository -->
 <!-- CSIP3 - mets/@TYPE - cardinality [1..1]. The TYPE attribute must be used for identifying the type of the package (genre), for example ERMS, RDBMS, digitised construction plans. However, there is no fixed vocabulary and as such implementers are welcome to use values most suitable for their needs. -->
 <!-- CSIP4 - mets/@csip:CONTENTTYPESPECIFICATION  - cardinality [1..1]. An attribute added by CSIP. It describes which content information type specification is used for the content. Values of the attribute are fixed in the following vocabulary: 1. SMURFERMS 2. SMURFSFSB 3. SIARD1 4. SIARD2 5. SIARDDK 6. GeoVectorGML 7. GeoRasterGeotiff 8. MIXED 9. OTHER. NB The vocabulary is extensible as additional content information type specifications are developed. -->
-<!-- CSIP6 - mets/@PROFILE - cardinality [1..1]. The PROFILE attribute has to have as its value the URL of the used profile. When this profile is implemented as is the value is the URL for the official CS IP METS Profile. --><mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/METS/" xmlns:csip="DILCIS" OBJID="ID0001" TYPE="SIP:X" csip:CONTENTTYPESPECIFICATION="MIXED" PROFILE="http://www.eark-project.com/METS/IP.xml">
+<!-- CSIP6 - mets/@PROFILE - cardinality [1..1]. The PROFILE attribute has to have as its value the URL of the used profile. When this profile is implemented as is the value is the URL for the official CS IP METS Profile. -->
+<mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/METS/" xmlns:csip="DILCIS" OBJID="ID0001" TYPE="SIP:X" csip:CONTENTTYPESPECIFICATION="MIXED" PROFILE="http://www.eark-project.com/METS/IP.xml">
   <!-- CSIP7 mets/@metsHdr - cardinality [1..1]. Element for describing the package itself. Mandatory within the CS IP -->
   <!-- CSIP8 mets/@metsHdr/@ADMID - cardinality [0..1]. Optional, referring to the appropriate administrative metadata section, if used for metadata about the package as a whole. -->
   <!-- CSIP10 mets/@metsHdr/@LASTMODDATE - cardinality [0..1]. Mandatory if relevant (in case the package has been modified) -->
@@ -21,8 +22,11 @@
       <note csip:NOTETYPE="SOFTWARE VERSION">1.0</note>
     </agent>
   </metsHdr>
-  <structMap TYPE="physical" LABEL="E-ARK structural map">
-    <div ID="ID7063">
+  <!-- CSIP80 mets/structMap - cardinality [1..n].  Each METS file needs to include exactly one structMap element used exactly as described in CSIP table. Institutions can add their own additional custom structural maps as separate structMap sections. -->
+  <!-- CSIP81 mets/structMap/@TYPE - cardinality [1..1]. Mandatory in CSIP. The value must be “physical” -->
+  <!-- CSIP82 mets/structMap/@LABEL - cardinality [1..1]. Mandatory in CSIP. The value must be “Common Specification structural map” -->
+  <structMap TYPE="physical" LABEL="Common Specification structural map">
+    <div ID="ID7063" LABEL="ID0001">
       <div LABEL="metadata" />
       <div LABEL="representations">
         <div LABEL="rep1">

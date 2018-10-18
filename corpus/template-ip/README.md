@@ -88,36 +88,15 @@ physical structure described above.
 `metsHdr/agent/note` element required, inferred by CSIP16 above;
 - [CSIP19](https://dilcisboard.github.io/E-ARK-CSIP/specification/implementation/metadata/#CSIP19)
 `metsHdr/agent/[note](NOTETYPE)` attribute with value `SOFTWARE VERSION` required, inferred by CSIP16 above;
-- [CSIP80](https://dilcisboard.github.io/E-ARK-CSIP/specification/implementation/metadata/#CSIP80)
-`structMap`
-
+- [CSIP80](https://dilcisboard.github.io/E-ARK-CSIP/specification/implemenxtation/metadata/#CSIP80)
+`structMap` element required;
 - [CSIP81](https://dilcisboard.github.io/E-ARK-CSIP/specification/implementation/metadata/#CSIP81)
-`structMap/@TYPE`
-
+`structMap/@TYPE` attribute with value `physical` required;
 - [CSIP82](https://dilcisboard.github.io/E-ARK-CSIP/specification/implementation/metadata/#CSIP82)
-`structMap/@LABEL` Change lable value
-
+`structMap/@LABEL` attribute with value `Common Specification structural map` required.
 - [CSIP83](https://dilcisboard.github.io/E-ARK-CSIP/specification/implementation/metadata/#CSIP83)
-`structMap/div` (Inferred by mandatory folders) (remove MD folder divs)
-
-- [CSIP83](https://dilcisboard.github.io/E-ARK-CSIP/specification/implementation/metadata/#CSIP83)
-`structMap/div/@ID`
-
+`structMap/div` elements required to describe mandatory metadata and representations folder structures;
+- [CSIP84](https://dilcisboard.github.io/E-ARK-CSIP/specification/implementation/metadata/#CSIP83)
+`structMap/div/@ID` attribute required with unique ID (within package), ID must comply with E-ARK ID criteria (currently without link).
 - [CSIP85](https://dilcisboard.github.io/E-ARK-CSIP/specification/implementation/metadata/#CSIP85)
-`structMap/div/@LABEL`
-
-
-The METS file satisfies the following MUST metadat requirements:
- * The Information Package folder MUST include a file named “METS.xml” [Ch. 4.1 - CSIP4]
- * mets/@OBJID MUST exist and have a value [Ch. 5.2, CSIP3]
- * all @ID attributes MUST have a value that starts with a prefix, followed by the actual value of the identifier [Ch. 5.2]
- * structMap MUST exist [Ch. 5.3.6., CSIP80]
- * structMap/@TYPE MUST exist [Ch. 5.3.6., CSIP81]
- * structMap/div/@ID MUST exist [Ch. 5.3.6., CSIP84]
- * root folder MUST have `metadata` folder [Ch. 4.1 - CSIP5]
- * root folder MUST have `representations` folder [Ch. 4.1 - CSIP9]
- * `representations` folder MUST include a sub-folder for each individual representation [Ch. 4.1 - CSIP10]
-
-The IP is actually not minimal according to Common Specification for several reasons, incl.:
- * mets/@TYPE can have any value, but the current validator only accepts values in the form "SIP:X", where X is one or more non-space characters
- * mets/metsHdr is not mandatory
+`structMap/div/@LABEL` attribute required, top level div label value should be the package ID, all other div label values should correspond to the folder name.
