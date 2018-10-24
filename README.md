@@ -15,6 +15,24 @@ Status
 The test corpus and validator are currently in early development, we'll provide a more detailed roadmap in September 2018.
 __________
 
+Scope & Coverage
+----------------
+
+#### Specification coverage
+An ideal validation corpus should be a physical demonstration of each and every requirement stated in the Common Specification. In testing terms, this aspiration is expressed as 100% coverage of the specification. The progress towards this milestone can be expressed as a percentage coverage of the specification requirements.
+
+While this is the most important metric, it's not easy to provide an objective, automatable measure. The A2 specification group will be the aribiter here.
+
+#### Out of scope
+There are some test case and corpus examples that we consider to be explicitly out of scope
+
+##### Testing METS schema validation
+We won't be providing test cases and corpus examples for issues that should be caught by automated XML parsing with XML schema validation enabled. The E-ARK CSIP METS implementation is based upon version 1.12 of the METS schema: https://www.loc.gov/standards/mets/version112/mets.xsd. We won't be creating test cases that represent a missing `mets` root element, the lack of a `structMap` element, or mis-spelled METS element and attribute names in general.
+
+#### Test Case backlog
+The number of open issues with a test case label...
+**To Be Discussed**
+
 Validation Corpus Creation
 --------------------------
 ### Process Overview
@@ -54,14 +72,3 @@ Producing test corpus packages that match the test cases:
 #### Corpus Structure
 **To Be Discussed**
 __________________
-
-Progress Metrics
------------------
-### Specification Coverage
-An ideal validation corpus should be a physical demonstration of each and every requirement stated in the Common Specification. In testing terms, this aspiration is expressed as 100% coverage of the specification. The progress towards this milestone can be expressed as a percentage coverage of the specification requirements.
-
-While this is the most important metric, it's not easy to provide an objective, automatable measure. The A2 specification group will be the aribiter here.
-
-### Test Case backlog
-The number of open issues with a test case label...
-**To Be Discussed**
