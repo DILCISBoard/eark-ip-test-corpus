@@ -6,8 +6,15 @@ Documenting Test Cases
 ### Principles
 - Test cases should be based on a single requirement, although there may be
 dependencies on other requirements.
+- Metadata test cases should not generally represent invalid METS documents,
+  that is issues caught by METS schema validation
 - A test case incorporates a set of rules that are the fine grained tests needed
 to completely validate the requirement.
+
+### Style Guide
+#### Paths
+When quoting XML XPaths or file system paths please state the full path for
+clarity.
 
 ### Notes on Test Case XML
 - Using the METS element name doesn't work for non-METS requirements,
