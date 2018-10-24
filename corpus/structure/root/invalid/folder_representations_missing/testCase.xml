@@ -1,0 +1,16 @@
+<testCase>
+   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR9" />
+  <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR9</reference>
+  <description>
+   The Information Package folder MUST include a folder named representations
+  </description>
+  <dependencies/>
+  <rules>
+    <rule id="1">
+      <description>Folder named representations missing in root folder</description>
+      <error level="ERROR">
+        <message> The Information Package folder MUST include a folder named representations</message>
+      </error>
+    </rule>
+  </rules>
+</testCase>

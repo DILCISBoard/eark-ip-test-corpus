@@ -6,4 +6,4 @@
 
 **Reference**: 4.1 - CSIP4
 
-**Violation:** File METS.xml has extra uppercase character in front of the filename(aMets.xml)
+**Violation:** File METS.xml has extension inside filename (METS.xml.xml)

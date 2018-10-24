@@ -1,0 +1,189 @@
+<testCase>
+   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR4" />
+  <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR4
+  </reference>
+  <description>
+  The Information Package folder MUST include a metadata file named METS.xml
+  </description>
+  <dependencies/>
+  <rules>
+    <rule id="1">
+      <description>The Information Package folder does not include .xml file</description>
+      <error level="ERROR">
+        <message>
+		The Information Package folder does not include .xml file
+		The Information Package folder MUST include a metadata file named METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="2">
+      <description>The Information Package folder includes a file named METS.docx. METS.xml is missing.</description>
+      <error level="ERROR">
+        <message>
+		METS file is in .docx format
+		The Information Package folder MUST include a metadata file in xml format named METS.
+		</message>
+      </error>
+    </rule>
+	<rule id="4">
+      <description>File METS.xml named in camelcase (Mets.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="5">
+      <description>File METS.xml has extra lowercase character at back of the filename(METSa.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="6">
+      <description>File METS.xml has extra lowercase character in front of the filename(aMETS.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="7">
+      <description>File METS.xml has extra lowercase character in the middle of the filename  (MEaTS.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="8">
+      <description>File METS.xml has extra uppercase character at back of the filename(METSA.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="9">
+      <description>File METS.xml has extra uppercase character in front of the filename(AMETS.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="10">
+      <description>File METS.xml has extra uppercase character in the middle of the filename  (MEATS.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="11">
+      <description>File METS.xml has extension inside filename (METS.xml.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="12">
+      <description>METS.xml named in lowercase (mets.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="13">
+      <description>File METS.xml has a number at the back of the filename (METS1.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="14">
+      <description>File METS.xml has a number in the front of the filename (1METS.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="15">
+      <description>File METS.xml has a number in the middle of the filename (ME1TS.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="16">
+      <description>The Information Package folder includes a file named test.xml. METS.xml is missing
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="17">
+      <description>File METS.xml has sign after the required filename (METS_old.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="18">
+      <description>File METS.xml has sign before the required filename (old_METS.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+	<rule id="19">
+      <description>File METS.xml has sign in the middle of the required filename (ME_TS.xml)
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect filename
+		Correct filename: METS.xml
+		</message>
+      </error>
+    </rule>
+  </rules>
+</testCase>

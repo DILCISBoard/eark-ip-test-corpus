@@ -1,0 +1,16 @@
+<testCase>
+   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR5" />
+  <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR5</reference>
+  <description>
+  The Information Package folder MUST include a folder named metadata
+  </description>
+  <dependencies/>
+  <rules>
+    <rule id="1">
+      <description>Folder named Metadata missing in root folder</description>
+      <error level="ERROR">
+        <message>The Information Package folder MUST include a folder named metadata, which MUST include at least all metadata relevant for the whole package</message>
+      </error>
+    </rule>
+  </rules>
+</testCase>
