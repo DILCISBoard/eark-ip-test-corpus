@@ -1,0 +1,22 @@
+<testCase>
+   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR10" />
+  <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR10
+  </reference>
+  <description>
+    `representations` folder MUST include a folder for each representation
+  </description>
+  <dependencies>
+    <dependency specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR10" />
+  </dependencies>
+  <rules>
+    <rule id="1">
+      <description>`representations` folder does not contain any folders</description>
+      <error level="ERROR">
+        <message>
+		`representations` folder does not contain any folders
+		`representations` folder MUST include a folder for each representation
+		</message>
+      </error>
+    </rule>
+  </rules>
+</testCase>

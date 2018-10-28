@@ -1,0 +1,177 @@
+<testCase>
+   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR11" />
+  <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR11</reference>
+  <description>
+    Single represenation folder MUST include a folder `data`.
+  </description>
+   <dependencies>
+    <dependency specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR10" />
+  </dependencies>
+  <rules>
+    <rule id="1">
+      <description>Folder named `data` missing in single representation folder</description>
+      <error level="ERROR">
+        <message> Single represenation folder MUST include a folder `data`.</message>
+      </error>
+    </rule>
+	<rule id="2">
+      <description>folder `data` named in camelcase 
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="3">
+      <description>folder `data` has extra lowercase character in back 
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="4">
+      <description>folder `data` has extra lowercase character in front
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="5">
+      <description>folder `data` has extra lowercase character in middle 
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="6">
+      <description>folder `data` has extra uppercase character in back 
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="7">
+      <description> folder `data` has extra uppercase character in front 
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="8">
+      <description>folder `data` has extra uppercase character in middle
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="9">
+      <description>folder `data` has number sign in back
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="10">
+      <description>folder `data` has number sign in front
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="11">
+      <description> folder `data` has number sign in middle
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="12">
+      <description>folder `data` has extra sign in back 
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="13">
+      <description>folder `data` has extra sign in front 
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="13">
+      <description>folder `data` named in camelcase 
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="14">
+      <description>folder `data` has number sign in middle 
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="15">
+      <description><rule id="14">
+      <description>folder `data` has number sign in middle 
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+	  </description>
+      <error level="ERROR">
+        <message>
+		Incorrect foldername
+		Correct foldername: `data`
+		</message>
+      </error>
+    </rule>
+  </rules>
+</testCase>

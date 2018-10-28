@@ -3,7 +3,7 @@
   <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR4
   </reference>
   <description>
-  The Information Package folder MUST include a metadata file named METS.xml
+  The Information Package folder MUST include a metadata file named `METS.xml`
   </description>
   <dependencies/>
   <rules>
@@ -12,12 +12,12 @@
       <error level="ERROR">
         <message>
 		The Information Package folder does not include .xml file
-		The Information Package folder MUST include a metadata file named METS.xml
+		The Information Package folder MUST include a metadata file named `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="2">
-      <description>The Information Package folder includes a file named METS.docx. METS.xml is missing.</description>
+      <description>The Information Package folder includes a file named METS.docx. `METS.xml` is missing.</description>
       <error level="ERROR">
         <message>
 		METS file is in .docx format
@@ -26,122 +26,122 @@
       </error>
     </rule>
 	<rule id="4">
-      <description>File METS.xml named in camelcase (Mets.xml)
+      <description>File `METS.xml` named in camelcase
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="5">
-      <description>File METS.xml has extra lowercase character at back of the filename
+      <description>File `METS.xml` has extra lowercase character at back of the filename
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="6">
-      <description>File METS.xml has extra lowercase character in front of the filename
+      <description>File `METS.xml` has extra lowercase character in front of the filename
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="7">
-      <description>File METS.xml has extra lowercase character in the middle of the filename  
+      <description>File `METS.xml` has extra lowercase character in the middle of the filename  
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="8">
-      <description>File METS.xml has extra uppercase character at back of the filename
+      <description>File `METS.xml` has extra uppercase character at back of the filename
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="9">
-      <description>File METS.xml has extra uppercase character in front of the filename
+      <description>File `METS.xml` has extra uppercase character in front of the filename
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="10">
-      <description>File METS.xml has extra uppercase character in the middle of the filename 
+      <description>File `METS.xml` has extra uppercase character in the middle of the filename 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="11">
-      <description>File METS.xml has extension inside filename 
+      <description>File `METS.xml` has extension inside filename 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="12">
-      <description>METS.xml named in lowercase 
+      <description>`METS.xml` named in lowercase 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="13">
-      <description>File METS.xml has a number at the back of the filename 
+      <description>File `METS.xml` has a number at the back of the filename 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="14">
-      <description>File METS.xml has a number in the front of the filename 
+      <description>File `METS.xml` has a number in the front of the filename 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="15">
-      <description>File METS.xml has a number in the middle of the filename 
+      <description>File `METS.xml` has a number in the middle of the filename 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
@@ -151,37 +151,37 @@
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="17">
-      <description>File METS.xml has sign after the required filename 
+      <description>File `METS.xml` has sign after the required filename 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="18">
-      <description>File METS.xml has sign before the required filename 
+      <description>File `METS.xml` has sign before the required filename 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>
 	<rule id="19">
-      <description>File METS.xml has sign in the middle of the required filename 
+      <description>File `METS.xml` has sign in the middle of the required filename 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect filename
-		Correct filename: METS.xml
+		Correct filename: `METS.xml`
 		</message>
       </error>
     </rule>

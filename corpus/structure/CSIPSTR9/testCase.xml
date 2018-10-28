@@ -2,164 +2,164 @@
    <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR9" />
   <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR9</reference>
   <description>
-   The Information Package folder MUST include a folder named representations
+   The Information Package folder MUST include a folder named `representations`
   </description>
   <dependencies/>
   <rules>
     <rule id="1">
-      <description>Folder named representations missing in root folder</description>
+      <description>Folder named `representations` missing in root folder</description>
       <error level="ERROR">
-        <message> The Information Package folder MUST include a folder named representations</message>
+        <message> The Information Package folder MUST include a folder named `representations`</message>
       </error>
     </rule>
 	<rule id="2">
-      <description>folder representations named in camelcase (Representations)
+      <description>folder `representations` named in camelcase 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="3">
-      <description>folder representations has extra lowercase character in back (representationsa)
+      <description>folder `representations` has extra lowercase character in back 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="4">
-      <description>folder representations has extra lowercase character in front (arepresentations)
+      <description>folder `representations` has extra lowercase character in front
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="5">
-      <description>folder representations has extra lowercase character in middle (represeantations)
+      <description>folder `representations` has extra lowercase character in middle 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="6">
-      <description>folder representations has extra uppercase character in back (representationsA)
+      <description>folder `representations` has extra uppercase character in back 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="7">
-      <description> folder representations has extra uppercase character in front (Arepresentations)
+      <description> folder `representations` has extra uppercase character in front 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="8">
-      <description>folder representations has extra uppercase character in middle(represeAntations)
+      <description>folder `representations` has extra uppercase character in middle
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="9">
-      <description>folder representations has number sign in back (representations1)
+      <description>folder `representations` has number sign in back
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="10">
-      <description>folder representations has number sign in front (1representations)
+      <description>folder `representations` has number sign in front
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="11">
-      <description> folder representations has number sign in middle (represe1ntations)
+      <description> folder `representations` has number sign in middle
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="12">
-      <description>folder representations has extra sign in back (representations_old)
+      <description>folder `representations` has extra sign in back 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="13">
-      <description>folder representations has extra sign in front (1representations)
+      <description>folder `representations` has extra sign in front 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="13">
-      <description>folder representations named in camelcase (Representations)
+      <description>folder `representations` named in camelcase 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="14">
-      <description>folder representations has number sign in middle (represe1ntations)
+      <description>folder `representations` has number sign in middle 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
 	<rule id="15">
       <description><rule id="14">
-      <description>folder representations has number sign in middle (represe1ntations)
+      <description>folder `representations` has number sign in middle 
 	  </description>
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
@@ -167,10 +167,9 @@
       <error level="ERROR">
         <message>
 		Incorrect foldername
-		Correct foldername: representations
+		Correct foldername: `representations`
 		</message>
       </error>
     </rule>
-	
   </rules>
 </testCase>

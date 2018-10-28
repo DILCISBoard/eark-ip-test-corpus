@@ -4,6 +4,6 @@
 
 **Rule:** Root folder MUST include a folder named “representations”
 
-**Reference**: 4.1 - CSIP9
+**Reference**: [CSIPSTR9](https://dilcisboard.github.io/E-ARK-CSIP/specification/implementation/structure/#CSIPSTR9)
 
 **Violation:** folder representations has number sign in back (representations1)
