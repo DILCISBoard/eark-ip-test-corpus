@@ -6,4 +6,4 @@
 
 **Reference**: [CSIPSTR10](https://dilcisboard.github.io/E-ARK-CSIP/specification/implementation/structure/#CSIPSTR12)
 
-**Description** The representation folder includes file METS.xml
+**Description** The representation folder does not include file METS.xml
