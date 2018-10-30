@@ -152,5 +152,14 @@
 		</message>
       </error>
     </rule>
+	<rule id="16">
+      <description>sample IP with one representation folder
+	  </description>
+      <error level="INFO">
+        <message>
+		Bo errors found
+		</message>
+      </error>
+    </rule>
   </rules>
 </testCase>
