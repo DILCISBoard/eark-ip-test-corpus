@@ -157,7 +157,7 @@
 	  </description>
       <error level="INFO">
         <message>
-		Bo errors found
+		No errors found
 		</message>
       </error>
     </rule>

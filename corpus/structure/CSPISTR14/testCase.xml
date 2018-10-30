@@ -1,16 +1,16 @@
 <testCase>
-   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR12" />
-  <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR12
+   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR14" />
+  <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR14
   </reference>
   <description>
-      The representation folder CAN include a metadata file named METS.xml which includes information about the identity and structure of the representation;
+      The Information Package folder and representation folder CAN be extended with additional sub-folders:
   </description>
   <dependencies>
     <dependency specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR10" />
   </dependencies>
   <rules>
     <rule id="1">
-      <description>The representation folder CAN include a metadata file named METS.xml</description>
+      <description>The representation folder has an additional folder</description>
       <error level="INFO">
         <message>
 		No errors found.
@@ -18,7 +18,23 @@
       </error>
     </rule>
 	<rule id="2">
-      <description>The representation folder dont't have to include a metadata file named METS.xml</description>
+      <description>The IP folder has an additional folder</description>
+      <error level="INFO">
+        <message>
+		No errors found.
+		</message>
+      </error>
+    </rule>
+	<rule id="3">
+      <description>The IP folder and the representation folder have additional folders</description>
+      <error level="INFO">
+        <message>
+		No errors found.
+		</message>
+      </error>
+    </rule>
+	<rule id="3">
+      <description>No additional folders in IP folder or the representation folder/description>
       <error level="INFO">
         <message>
 		No errors found.

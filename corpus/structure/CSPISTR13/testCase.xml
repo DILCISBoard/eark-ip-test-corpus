@@ -1,16 +1,16 @@
 <testCase>
-   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR12" />
+   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR13" />
   <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR12
   </reference>
   <description>
-      The representation folder CAN include a metadata file named METS.xml which includes information about the identity and structure of the representation;
+      The representation folder CAN include a sub-folder named metadata which CAN include all metadata about the specific representation
   </description>
   <dependencies>
     <dependency specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR10" />
   </dependencies>
   <rules>
     <rule id="1">
-      <description>The representation folder CAN include a metadata file named METS.xml</description>
+      <description>The representation folder CAN include a sub-folder 'metadata'</description>
       <error level="INFO">
         <message>
 		No errors found.
@@ -18,7 +18,7 @@
       </error>
     </rule>
 	<rule id="2">
-      <description>The representation folder dont't have to include a metadata file named METS.xml</description>
+      <description>The representation folder dont't have to include sub-folder 'metadata'</description>
       <error level="INFO">
         <message>
 		No errors found.

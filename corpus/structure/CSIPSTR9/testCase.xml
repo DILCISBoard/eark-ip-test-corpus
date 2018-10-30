@@ -132,18 +132,8 @@
 		</message>
       </error>
     </rule>
-	<rule id="13">
-      <description>folder `representations` named in camelcase 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
 	<rule id="14">
-      <description>folder `representations` has number sign in middle 
+      <description>folder `representations` has extra sign in middle
 	  </description>
       <error level="ERROR">
         <message>
@@ -153,8 +143,7 @@
       </error>
     </rule>
 	<rule id="15">
-      <description><rule id="14">
-      <description>folder `representations` has number sign in middle 
+      <description>folder `representations` named in uppercase 
 	  </description>
       <error level="ERROR">
         <message>
@@ -163,11 +152,12 @@
 		</message>
       </error>
     </rule>
+	<rule id="16">
+      <description>sample IP with one representation folder
 	  </description>
-      <error level="ERROR">
+      <error level="INFO">
         <message>
-		Incorrect foldername
-		Correct foldername: `representations`
+		No errors found
 		</message>
       </error>
     </rule>
