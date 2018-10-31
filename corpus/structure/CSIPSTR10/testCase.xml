@@ -18,5 +18,21 @@
 		</message>
       </error>
     </rule>
+	<rule id="2">
+      <description>`representations` folder has one sub-folder</description>
+      <error level="ERROR">
+        <message>
+		No errors found
+		</message>
+      </error>
+    </rule>
+		<rule id="3">
+      <description>`representations` folder has two sub-folders</description>
+      <error level="ERROR">
+        <message>
+		No errors found
+		</message>
+      </error>
+    </rule>
   </rules>
 </testCase>
