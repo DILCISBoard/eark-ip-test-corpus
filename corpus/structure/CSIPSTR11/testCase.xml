@@ -134,18 +134,8 @@
 		</message>
       </error>
     </rule>
-	<rule id="13">
-      <description>folder `data` named in camelcase 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
 	<rule id="14">
-      <description>folder `data` has number sign in middle 
+      <description>folder `data` has extra sign in middle 
 	  </description>
       <error level="ERROR">
         <message>
@@ -154,9 +144,8 @@
 		</message>
       </error>
     </rule>
-	<rule id="15">
-      <description><rule id="14">
-      <description>folder `data` has number sign in middle 
+	<rule id="16">
+      <description>folder `data` named in lowercase 
 	  </description>
       <error level="ERROR">
         <message>
@@ -165,11 +154,39 @@
 		</message>
       </error>
     </rule>
+	<rule id="17">
+      <description>IP has two representation folders. Folder `data` is missing from the first represenation folder.
 	  </description>
       <error level="ERROR">
         <message>
-		Incorrect foldername
-		Correct foldername: `data`
+		Each single represenation folder MUST include a folder `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="18">
+      <description>IP has two representation folders. Folder `data` is missing from the second represenation folder.
+	  </description>
+      <error level="ERROR">
+        <message>
+		Each single represenation folder MUST include a folder `data`
+		</message>
+      </error>
+    </rule>
+	<rule id="19">
+      <description>IP has one representation folder. It includes sub-folder data.
+	  </description>
+      <error level="ERROR">
+        <message>
+		No errors found
+		</message>
+      </error>
+    </rule>
+	<rule id="20">
+      <description>IP has two representation folders. Both of them include sub-folder data.
+	  </description>
+      <error level="ERROR">
+        <message>
+		No errors found
 		</message>
       </error>
     </rule>
