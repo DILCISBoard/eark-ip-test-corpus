@@ -32,8 +32,17 @@ The E-ARK information package validation process has been broken into 3 parts, [
 
 **NOTE: To simplify this we want to introduce the concepts of "well-formed", "valid", and "audited" (what's a good word for passing integrity checks?), to allow minimal files that pass only the well formed structural checks possible, without the need for content**
 
+
 Process
 -------
+Test cases initiated by the creation of a test case template GitHub issue, until these are assigned they're the "backlog". These are tied to requirment
+number so we can begin to track and report coverage. Once assigned the case is considered work in progress. First the specification is consulted and a new
+directory is created in the right place in the corpus tree. Next a full XML
+description of the test case is created, where the case is decomposed into individual validation rules (show example to illustrate distintion). The full
+XML description is then reviewed by the A3 corpus group, bump to A3 development group if questions (more heads). If still not resolved bring the
+case before the weekly A2 group. Most problems will be expressed as issues on
+the specification gh site tracker. Once XML description is informall approved it's assigned again (not necessarily to the same person who wrote the XMl) for corpus package creation. This means ensuring that there are corpus pakages that
+test the pass and fail case for each validation rule in the XML document. Complete test case and corpus package sets are reviewed internally by the A3 team and then sent to the A2 group for external review and sign off.
 
 Producing test corpus packages that match the test cases:
 - create the package locally;
