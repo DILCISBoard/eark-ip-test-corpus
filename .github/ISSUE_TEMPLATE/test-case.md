@@ -4,9 +4,10 @@ about: Test case initiation document to add to test case backlog
 
 ---
 
-**Specification:** *Name of Specification, e.g. CSIP*
-
-**Version:** *Version of the specification, currently 2.0-DRAFT*
+**Specification:**
+- **Name:** *Name of Specification, e.g. EARK CSIP*
+- **Version:** *Version of specification, e.g. 2.0-DRAFT*
+- **URL:** *A link to an online version of the specification document*
 
 **Requirement:**
 - **Id:** *The ID of the requirement*
