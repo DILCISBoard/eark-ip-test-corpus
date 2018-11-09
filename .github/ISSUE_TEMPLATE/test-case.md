@@ -10,8 +10,8 @@ about: Test case initiation document to add to test case backlog
 - **URL:** *A link to an online version of the specification document*
 
 **Requirement:**
-- **Id:** *The ID of the requirement*
-- **Link:** *A direct link to the requirement in an online specification document.*
+- **Id:** *A identifier for the requirement, that's unique within the scope of the specification. Usually derived from the specification itself.*
+- **Link:** *A direct link to the requirement in an online specification document, if available.*
 
 **Error Level:** *Error level expected from validator: [ ERROR | WARNING | INFO ]*
 
