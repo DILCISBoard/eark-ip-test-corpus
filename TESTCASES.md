@@ -1,9 +1,8 @@
 Creating Test Cases
 ===================
 
-Documenting Test Cases
-----------------------
-### Principles
+Principles
+----------
 - Test cases should be based on a single requirement, although there may be
 dependencies on other requirements.
 - Metadata test cases should not generally represent invalid METS documents,
@@ -11,17 +10,67 @@ dependencies on other requirements.
 - A test case incorporates a set of rules that are the fine grained tests needed
 to completely validate the requirement.
 
+Atomicity
+---------
+Every test case should be atomic and minimal. Atomic means that it violates only a single aspect of the specification. Minimal means that it contains only the data and metadata required to ensure only a single validator error is produced.
+
+A good starting principle is that there should be one test case per
+requirement. In practise this might not always be possible.
+
+### Complex requirements
+More complex requirements might require multiple test cases, or appear to. If
+this feels necessary then first discuss with the A3 group, as a comment on the
+test case thread. It might be that the requirement is too complex and could be
+broken down. If this isn't the case then there  will be a one to many
+relationship between specification requirements and test cases. The test cases
+provide fine-grained, detailed demonstrations of pass and fail conditions for
+the requirments.
+
+There should be pass and fail corpus packages for each test case, although it's possible that multiple test cases share a single "pass" case for brevity.
+
+The E-ARK information package validation process has been broken into 3 parts, [described here](VALIDATION.md).
+
+**NOTE: To simplify this we want to introduce the concepts of "well-formed", "valid", and "audited" (what's a good word for passing integrity checks?), to allow minimal files that pass only the well formed structural checks possible, without the need for content**
+
+Process
+-------
+
+Producing test corpus packages that match the test cases:
+- create the package locally;
+- test against the prototype validator instance (locally or online)
+- submit to GitHub corpus repository as a pull request for review
+
 ### Style Guide
+
 #### Paths
 When quoting XML XPaths or file system paths please state the full path for
 clarity.
 
-### Notes on Test Case XML
+#### Rule error messages
+Error messages assigned to rules should be consise and specific. Consider the
+CSIP requirement description for the `mets@TYPE` attribute.
+
+> Mandatory in this specification. The TYPE attribute must be used for identifying the type of the package (genre), for example ERMS, RDBMS, digitised construction plans. However, there is no fixed vocabulary and as such implementers are welcome to use values most suitable for their needs.
+
+The error message for when `mets/@TYPE` attribute does not exist should be:
+
+"`mets/@TYPE` attribute not present. The `@TYPE` attribute must be present with a value identifying the package type."
+
+rather than quoting the full specification text.
+
+Documenting Test Cases
+----------------------
+- Assign an ID
+- Provide reference to the specification
+- Define the error level, message and description expected from the validator
+- Document the minimal corpus package structure.
+
+### XML for structured test case description
+
+#### Test case XML Notes
 - Using the METS element name doesn't work for non-METS requirements,
   e.g. folder structure requirements, use the requirement ID structure instead.
 - do we need to document the minimal test IP structure?
-
-### XML for structured test case description
 
 ```xml
 <!-- Root element for an individual test case, allows these to be wrapped into
@@ -57,7 +106,7 @@ XML lists -->
 </testCase>
 ```
 
-#### Examples
+#### XML Examples
 
 Taken from https://github.com/DILCISBoard/eark-ip-test-corpus/tree/testcase/mets-xml/mets-root-element/corpus/mets-xml/mets/CONTENTTYPESPECIFICATION
 ```xml
