@@ -13,17 +13,37 @@
       <description>The representation folder has an additional folder</description>
       <error level="INFO">
         <message>
-		No errors found.
+		Additional sub-folder found in representation folder
 		</message>
-      </error>
+		</error>
+        <corpusPackages>
+		    <package name="representation_folder_has_additional_folder">
+		        <path>pass\representation_folder_has_additional_folder</path>
+		        <description>Positive testcase. The representation folder has additional folder</description>
+		    </package>
+		    <package name="IP_folder_and_rep_folder_have_additional_folder">
+		        <path>pass\IP_folder_and_rep_folder_have_additional_folder</path>
+		        <description>The IP folder and representation folder have additional folders</description>
+		    </package>
+        </corpusPackages>
     </rule>
 	<rule id="2">
-      <description>The IP folder has an additional folder</description>
-      <error level="INFO">
-        <message>
-		No errors found.
-		</message>
-      </error>
+        <description>The IP folder has an additional folder</description>
+        <error level="INFO">
+            <message>
+		    Additional sub-folder found in Information Package folder
+		    </message>
+       </error>
+	   <corpusPackages>
+		    <package name="IP_folder_has_additional_folder">
+		        <path>pass\IP_folder_has_additional_folder</path>
+		        <description>Positive testcase. The IP has additional folder</description>
+		    </package>
+		    <package name="IP_folder_and_rep_folder_have_additional_folder">
+		        <path>pass\IP_folder_and_rep_folder_have_additional_folder</path>
+		        <description>The IP folder and representation folder have additional folders</description>
+		    </package>
+        </corpusPackages>
     </rule>
   </rules>
 </testCase>
