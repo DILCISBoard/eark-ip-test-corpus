@@ -13,182 +13,84 @@
       <error level="ERROR">
         <message> Single represenation folder MUST include a folder `data`.</message>
       </error>
-    </rule>
-	<rule id="2">
-      <description>folder `data` named in camelcase 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="3">
-      <description>folder `data` has extra lowercase character in back 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="4">
-      <description>folder `data` has extra lowercase character in front
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="5">
-      <description>folder `data` has extra lowercase character in middle 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="6">
-      <description>folder `data` has extra uppercase character in back 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="7">
-      <description> folder `data` has extra uppercase character in front 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="8">
-      <description>folder `data` has extra uppercase character in middle
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="9">
-      <description>folder `data` has number sign in back
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="10">
-      <description>folder `data` has number sign in front
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="11">
-      <description> folder `data` has number sign in middle
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="12">
-      <description>folder `data` has extra sign in back 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="13">
-      <description>folder `data` has extra sign in front 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="14">
-      <description>folder `data` has extra sign in middle 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="16">
-      <description>folder `data` named in lowercase 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="17">
-      <description>IP has two representation folders. Folder `data` is missing from the first represenation folder.
-	  </description>
-      <error level="ERROR">
-        <message>
-		Each single represenation folder MUST include a folder `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="18">
-      <description>IP has two representation folders. Folder `data` is missing from the second represenation folder.
-	  </description>
-      <error level="ERROR">
-        <message>
-		Each single represenation folder MUST include a folder `data`
-		</message>
-      </error>
-    </rule>
-	<rule id="19">
-      <description>IP has one representation folder. It includes sub-folder data.
-	  </description>
-      <error level="ERROR">
-        <message>
-		No errors found
-		</message>
-      </error>
-    </rule>
-	<rule id="20">
-      <description>IP has two representation folders. Both of them include sub-folder data.
-	  </description>
-      <error level="ERROR">
-        <message>
-		No errors found
-		</message>
-      </error>
+	  <corpusPackages>
+		<package name="data_folder_camelcase">
+		    <path>fail\data_folder_camelcase</path>
+		    <description>Negative testcase. Folder `data` named in camelcase </description>
+		</package>
+		<package name="data_folder_character_lowercase_back">
+		    <path>fail\data_folder_character_lowercase_back</path>
+		    <description>Negative testcase. Foldername `data` has extra lowercase character in back</description>
+		</package>
+		<package name="data_folder_character_lowercase_front">
+		    <path>fail\data_folder_character_lowercase_front</path>
+		    <description>Negative testcase. Foldername `data` has extra lowercase character in middle</description>
+		</package>
+		<package name="data_folder_character_lowercase_middle">
+		    <path>fail\data_folder_character_lowercase_middle</path>
+		    <description>Negative testcase. Folder `data` has extra lowercase character in front</description>
+		</package>
+			<package name="data_folder_character_uppercase_back">
+		    <path>fail\data_folder_character_uppercase_back</path>
+		    <description>Negative testcase. Foldername `data` has extra uppercase character in back</description>
+		</package>
+			<package name="data_folder_character_uppercase_front">
+		    <path>fail\data_folder_character_uppercase_front</path>
+		    <description>Negative testcase. Foldername `data` has extra uppercase character in front</description>
+		</package>
+		<package name="data_folder_character_uppercase_middle">
+		    <path>fail\data_folder_character_uppercase_middle</path>
+		    <description>Negative testcase. Foldername `data` has extra uppercase character in middle</description>
+		</package>
+		<package name="data_folder_missing">
+		    <path>fail\data_folder_missing</path>
+		    <description>Negative testcase. IP has one representation folder. Folder `data` is missing from it.</description>
+		</package>
+		<package name="data_folder_missing_from_first_representation_folder">
+		    <path>fail\data_folder_missing_from_first_representation_folder</path>
+		    <description>Negative testcase. IP has two representation folders. Folder `data` is missing from the first representation folder.</description>
+		</package>
+		<package name="data_folder_missing_from_second_representation_folder">
+		    <path>fail\data_folder_missing_from_second_representation_folder</path>
+		    <description>Negative testcase. IP has two representation folders. Folder `data` is missing from the second representation folder.</description>
+		</package>
+		<package name="data_folder_number_back">
+		    <path>fail\data_folder_number_back</path>
+		    <description>Negative testcase. Foldername `data` has extra number sign in back</description>
+		</package>
+		<package name="data_folder_number_front">
+		    <path>fail\data_folder_number_front</path>
+		    <description>Negative testcase. Foldername `data` has extra number sign in front</description>
+		</package>
+		<package name="data_folder_number_middle">
+		    <path>fail\data_folder_number_middle</path>
+		    <description>Negative testcase. Foldername `data` has extra number sign in middle</description>
+		</package>
+		<package name="data_folder_sign_back">
+		    <path>fail\data_folder_sign_back</path>
+		    <description>Negative testcase. Foldername `data` has extra sign in back</description>
+		</package>
+        <package name="data_folder_sign_middle">
+		    <path>fail\data_folder_sign_middle</path>
+		    <description>Negative testcase. Foldername `data` has extra sign in middle</description>
+		</package>
+		<package name="data_folder_sign_front">
+		    <path>fail\data_folder_number_front</path>
+		    <description>Negative testcase. Foldername `data` has extra sign in front</description>
+		</package>
+		<package name="data_folder_uppercase">
+		    <path>fail\data_folder_uppercase</path>
+		    <description>Negative testcase. Folder `data` named in uppercase </description>
+		</package>
+		<package name="IP_has_one_representation_folder">
+		    <path>pass\IP_has_one_representation_folder</path>
+		    <description>Positive testcase. IP has one representation folder. It includes sub-folder `data`. </description>
+		</package>
+		<package name="IP_has_two_representation_folders">
+		    <path>pass\IP_has_two_representation_folders</path>
+		    <description>Positive testcase. IP has two representation folders. Both of them include sub-folder `data`. </description>
+		</package>
+    </corpusPackages>
     </rule>
   </rules>
 </testCase>
