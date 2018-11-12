@@ -44,10 +44,6 @@
 		    <path>R1\fail\METS_character_uppercase_middle</path>
 		    <description>Negative Testcase. File METS.xml has extra uppercase character in the middle of the filename (MEATS.xml)</description>
 		  </package>
-		  <package name="METS_docx_format">
-		    <path>R1\fail\METS_docx_format</path>
-		    <description>Negative Testcase. Root folder includes a file named METS.docx. METS.xml is missing.</description>
-		  </package>
 		   <package name="METS_extension_in_name">
 		    <path>R1\fail\METS_extension_in_name</path>
 		    <description>Negative Testcase.  File METS.xml has extension inside filename (METS.xml.xml)</description>
