@@ -17,80 +17,80 @@
       </error>
 	   <corpusPackages>
 		  <package name="METS_camelcase">
-		    <path>R1\fail\METS_camelcase</path>
-		    <description>Negative Testcase. File METS.xml named in camelcase (Mets.xml)</description>
+		    <path>fail\METS_camelcase</path>
+		    <description>Negative testcase. File METS.xml named in camelcase (Mets.xml)</description>
 		  </package>
 		  <package name="METS_character_lowercase_back">
-		    <path>R1\fail\METS_character_lowercase_back</path>
-		    <description>Negative Testcase. File METS.xml has extra lowercase character at back of the filename(METSa.xml)</description>
+		    <path>fail\METS_character_lowercase_back</path>
+		    <description>Negative testcase. File METS.xml has extra lowercase character at back of the filename(METSa.xml)</description>
 		  </package>
 		  <package name="METS_character_lowercase_front">
-		    <path>R1\fail\METS_character_lowercase_front</path>
-		    <description>Negative Testcase.  File METS.xml has extra lowercase character in front of the filename(aMETS.xml)</description>
+		    <path>fail\METS_character_lowercase_front</path>
+		    <description>Negative testcase.  File METS.xml has extra lowercase character in front of the filename(aMETS.xml)</description>
 		  </package>
 		  <package name="METS_character_lowercase_middle">
-		    <path>R1\fail\METS_character_middle</path>
-		    <description>Negative Testcase. File METS.xml has extra lowercase character in the middle of the filename (MEaTS.xml)</description>
+		    <path>fail\METS_character_middle</path>
+		    <description>Negative testcase. File METS.xml has extra lowercase character in the middle of the filename (MEaTS.xml)</description>
 		  </package>
 		  <package name="METS_character_uppercase_back">
-		    <path>R1\fail\METS_character_uppercase_back</path>
-		    <description>Negative Testcase. File METS.xml has extra uppercase character at back of the filename(METSA.xml)</description>
+		    <path>fail\METS_character_uppercase_back</path>
+		    <description>Negative testcase. File METS.xml has extra uppercase character at back of the filename(METSA.xml)</description>
 		  </package>
 		  <package name="METS_character_uppercase_front">
-		    <path>R1\fail\METS_character_uppercase_front</path>
-		    <description>Negative Testcase. File METS.xml has extra uppercase character in front of the filename(AMETS.xml)</description>
+		    <path>fail\METS_character_uppercase_front</path>
+		    <description>Negative testcase. File METS.xml has extra uppercase character in front of the filename(AMETS.xml)</description>
 		  </package>
 		  <package name="METS_character_uppercase_middle">
-		    <path>R1\fail\METS_character_uppercase_middle</path>
-		    <description>Negative Testcase. File METS.xml has extra uppercase character in the middle of the filename (MEATS.xml)</description>
+		    <path>fail\METS_character_uppercase_middle</path>
+		    <description>Negative testcase. File METS.xml has extra uppercase character in the middle of the filename (MEATS.xml)</description>
 		  </package>
 		   <package name="METS_extension_in_name">
-		    <path>R1\fail\METS_extension_in_name</path>
-		    <description>Negative Testcase.  File METS.xml has extension inside filename (METS.xml.xml)</description>
+		    <path>fail\METS_extension_in_name</path>
+		    <description>Negative testcase.  File METS.xml has extension inside filename (METS.xml.xml)</description>
 		  </package>
 		  <package name="METS_lowercase">
-		    <path>R1\fail\METS_lowercase</path>
-		    <description>Negative Testcase. METS.xml named in lowercase (mets.xml)</description>
+		    <path>fail\METS_lowercase</path>
+		    <description>Negative testcase. METS.xml named in lowercase (mets.xml)</description>
 		  </package>
 		  <package name="METS_missing">
-		    <path>R1\fail\METS_missing</path>
-		    <description>Negative Testcase. Root folder does not include .xml file</description>
+		    <path>fail\METS_missing</path>
+		    <description>Negative testcase. Root folder does not include .xml file</description>
 		  </package>
 		  <package name="METS_number_back">
-		    <path>R1\fail\METS_number_back</path>
-		    <description>Negative Testcase. File METS.xml has a number at the back of the filename (METS1.xml)</description>
+		    <path>fail\METS_number_back</path>
+		    <description>Negative testcase. File METS.xml has a number at the back of the filename (METS1.xml)</description>
 		  </package>
 		  <package name="METS_number_front">
-		    <path>R1\fail\METS_number_front</path>
-		    <description>Negative Testcase. File METS.xml has a number in the front of the filename (1METS.xml)</description>
+		    <path>fail\METS_number_front</path>
+		    <description>Negative testcase. File METS.xml has a number in the front of the filename (1METS.xml)</description>
 		  </package>
 		  <package name="METS_number_middle">
-		    <path>R1\fail\METS_number_middle</path>
-		    <description>Negative Testcase. File METS.xml has a number in the middle of the filename (ME1TS.xml)</description>
+		    <path>fail\METS_number_middle</path>
+		    <description>Negative testcase. File METS.xml has a number in the middle of the filename (ME1TS.xml)</description>
 		  </package>
 		  <package name="METS_other_filename">
-		    <path>R1\fail\METS_other_filename</path>
-		    <description>Negative Testcase. Root folder includes a file named test.xml. METS.xml is missing.</description>
+		    <path>fail\METS_other_filename</path>
+		    <description>Negative testcase. Root folder includes a file named test.xml. METS.xml is missing.</description>
 		  </package>
 		  <package name="METS_sign_back">
-		    <path>R1\fail\METS_sign_back</path>
-		    <description>Negative Testcase. File METS.xml has sign after the required filename (METS_old.xml)</description>
+		    <path>fail\METS_sign_back</path>
+		    <description>Negative testcase. File METS.xml has sign after the required filename (METS_old.xml)</description>
 		  </package>
 		  <package name="METS_sign_front">
-		    <path>R1\fail\METS_sign_front</path>
-		    <description>Negative Testcase. File METS.xml has sign after the required filename (METS_old.xml)</description>
+		    <path>fail\METS_sign_front</path>
+		    <description>Negative testcase. File METS.xml has sign after the required filename (METS_old.xml)</description>
 		  </package>
 		  <package name="METS_sign_middle">
-		    <path>R1\fail\METS_sign_middle</path>
-		    <description>Negative Testcase. File METS.xml has sign before the required filename (old_METS.xml)</description>
+		    <path>fail\METS_sign_middle</path>
+		    <description>Negative testcase. File METS.xml has sign before the required filename (old_METS.xml)</description>
 		  </package>
 		  <package name="METS_lowercase">
-		    <path>R1\fail\METS_lowercase</path>
-		    <description>Negative Testcase. File METS.xml has sign in the middle of the required filename (ME_TS.xml)</description>
+		    <path>fail\METS_lowercase</path>
+		    <description>Negative testcase. File METS.xml has sign in the middle of the required filename (ME_TS.xml)</description>
 		  </package>
 		  <package name="sampleIP_one_representation_folder">
-		    <path>R1\fail\sampleIP_one_representation_folder</path>
-		    <description>Positive Testcase. Sample IP with one representation folder</description>
+		    <path>pass\sampleIP_one_representation_folder</path>
+		    <description>Positive testcase. Sample IP with one representation folder</description>
 		  </package>
 	  </corpusPackages>
     </rule>

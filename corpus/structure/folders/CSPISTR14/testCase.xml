@@ -25,21 +25,5 @@
 		</message>
       </error>
     </rule>
-	<rule id="3">
-      <description>The IP folder and the representation folder have additional folders</description>
-      <error level="INFO">
-        <message>
-		No errors found.
-		</message>
-      </error>
-    </rule>
-	<rule id="3">
-      <description>No additional folders in IP folder or the representation folder/description>
-      <error level="INFO">
-        <message>
-		No errors found.
-		</message>
-      </error>
-    </rule>
   </rules>
 </testCase>
