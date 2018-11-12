@@ -11,155 +11,80 @@
       <error level="ERROR">
         <message>The Information Package folder MUST include a folder named `metadata`, which MUST include at least all `metadata` relevant for the whole package</message>
       </error>
-    </rule>
-	<rule id="2">
-      <description>Folder `metadata` named in camelcase 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="3">
-      <description>folder `metadata` has extra lowercase character in back 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="4">
-      <description> folder `metadata` has extra lowercase character in front 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="5">
-      <description> folder `metadata` has extra lowercase character in middle 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="6">
-      <description>folder `metadata` has extra uppercase character in back 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="7">
-      <description>folder `metadata` has extra uppercase character in back
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="8">
-      <description>folder `metadata` has extra uppercase character in middle 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="9">
-      <description>folder `metadata` has extra number sign in back 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="10">
-      <description> folder `metadata` has extra number sign in front 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="11">
-      <description>folder `metadata` has extra number sign in middle 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="12">
-      <description>folder `metadata` has extra sign in front 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="13">
-      <description>folder `metadata` has extra sign in front 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="14">
-      <description> folder `metadata` has extra sign in middle
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="15">
-      <description>folder `metadata` named in uppercase 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `metadata`
-		</message>
-      </error>
-    </rule>
-	<rule id="16">
-      <description>sample IP with one representation folder
-	  </description>
-      <error level="INFO">
-        <message>
-		No errors found
-		</message>
-      </error>
-    </rule>
+	<corpusPackages>
+		<package name="metadata_folder_camelcase">
+		    <path>fail\metadata_folder_camelcase</path>
+		    <description>Negative testcase. Folder `metadata` named in camelcase </description>
+		</package>
+		<package name="metadata_folder_character_lowercase_back">
+		    <path>fail\metadata_folder_character_lowercase_back</path>
+		    <description>Negative testcase. Foldername `metadata` has extra lowercase character in back</description>
+		</package>
+		<package name="metadata_folder_character_lowercase_front">
+		    <path>fail\metadata_folder_character_lowercase_front</path>
+		    <description>Negative testcase. Foldername `metadata` has extra lowercase character in middle</description>
+		</package>
+		<package name="metadata_folder_character_lowercase_middle">
+		    <path>fail\metadata_folder_character_lowercase_middle</path>
+		    <description>Negative testcase. Folder `metadata` has extra lowercase character in front</description>
+		</package>
+			<package name="metadata_folder_character_uppercase_back">
+		    <path>fail\metadata_folder_character_uppercase_back</path>
+		    <description>Negative testcase. Foldername `metadata` has extra uppercase character in back</description>
+		</package>
+		</package>
+			<package name="metadata_folder_character_uppercase_front">
+		    <path>fail\metadata_folder_character_uppercase_front</path>
+		    <description>Negative testcase. Foldername `metadata` has extra uppercase character in front</description>
+		</package>
+		</package>
+			<package name="metadata_folder_character_uppercase_middle">
+		    <path>fail\metadata_folder_character_uppercase_middle</path>
+		    <description>Negative testcase. Foldername `metadata` has extra uppercase character in middle</description>
+		</package>
+		<package name="metadata_folder_missing">
+		    <path>fail\metadata_folder_missing</path>
+		    <description>Negative testcase. Folder `metadata`  missing in root folder</description>
+		</package>
+		</package>
+			<package name="metadata_folder_number_back">
+		    <path>fail\metadata_folder_number_back</path>
+		    <description>Negative testcase. Foldername `metadata` has extra number sign in back</description>
+		</package>
+		</package>
+			<package name="metadata_folder_number_front">
+		    <path>fail\metadata_folder_number_front</path>
+		    <description>Negative testcase. Foldername `metadata` has extra number sign in front</description>
+		</package>
+		</package>
+			<package name="metadata_folder_number_middle">
+		    <path>fail\metadata_folder_number_middle</path>
+		    <description>Negative testcase. Foldername `metadata` has extra number sign in middle</description>
+		</package>
+		</package>
+			<package name="metadata_folder_sign_back">
+		    <path>fail\metadata_folder_sign_back</path>
+		    <description>Negative testcase. Foldername `metadata` has extra sign in back</description>
+		</package>
+		</package>
+			<package name="metadata_folder_sign_middle">
+		    <path>fail\metadata_folder_sign_middle</path>
+		    <description>Negative testcase. Foldername `metadata` has extra sign in middle</description>
+		</package>
+		</package>
+			<package name="metadata_folder_sign_front">
+		    <path>fail\metadata_folder_number_front</path>
+		    <description>Negative testcase. Foldername `metadata` has extra sign in front</description>
+		</package>
+		</package>
+			<package name="metadata_folder_uppercase">
+		    <path>fail\metadata_folder_uppercase</path>
+		    <description>Negative testcase. Folder `metadata` named in uppercase </description>
+		</package>
+		<package name="sampleIP_one_representation_folder">
+		    <path>pass\sampleIP_one_representation_folder</path>
+		    <description>Positive testcase. Sample IP with one representation folder</description>
+		</package>
+	</corpusPackages>
   </rules>
 </testCase>
