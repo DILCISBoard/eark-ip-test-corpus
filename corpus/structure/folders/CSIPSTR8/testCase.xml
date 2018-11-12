@@ -13,17 +13,13 @@
       <description>The 'metadata' folder CAN include additional sub-folder</description>
       <error level="INFO">
         <message>
-		No errors found.
+		Additional sub-folder found in 'metadata' folder
 		</message>
       </error>
-    </rule>
-	<rule id="2">
-      <description>The 'metadata' folder does include additional sub-folder</description>
-      <error level="INFO">
-        <message>
-		No errors found.
-		</message>
-      </error>
+	<package name="metadata_folder_has_folder_other">
+			<path>pass\metadata_folder_has_folder_other</path>
+		    <description>Positive testcase. The 'metadata'folder has additional folder named 'other'.</description>
+    </package>
     </rule>
   </rules>
 </testCase>

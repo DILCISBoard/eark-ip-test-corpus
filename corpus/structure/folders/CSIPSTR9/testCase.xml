@@ -7,159 +7,85 @@
   <dependencies/>
   <rules>
     <rule id="1">
-      <description>Folder named `representations` missing in root folder</description>
-      <error level="ERROR">
+        <description>Folder named `representations` missing in root folder</description>
+        <error level="ERROR">
         <message> The Information Package folder MUST include a folder named `representations`</message>
-      </error>
-    </rule>
-	<rule id="2">
-      <description>folder `representations` named in camelcase 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="3">
-      <description>folder `representations` has extra lowercase character in back 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="4">
-      <description>folder `representations` has extra lowercase character in front
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="5">
-      <description>folder `representations` has extra lowercase character in middle 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="6">
-      <description>folder `representations` has extra uppercase character in back 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="7">
-      <description> folder `representations` has extra uppercase character in front 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="8">
-      <description>folder `representations` has extra uppercase character in middle
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="9">
-      <description>folder `representations` has number sign in back
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="10">
-      <description>folder `representations` has number sign in front
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="11">
-      <description> folder `representations` has number sign in middle
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="12">
-      <description>folder `representations` has extra sign in back 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="13">
-      <description>folder `representations` has extra sign in front 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="14">
-      <description>folder `representations` has extra sign in middle
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="15">
-      <description>folder `representations` named in uppercase 
-	  </description>
-      <error level="ERROR">
-        <message>
-		Incorrect foldername
-		Correct foldername: `representations`
-		</message>
-      </error>
-    </rule>
-	<rule id="16">
-      <description>sample IP with one representation folder
-	  </description>
-      <error level="INFO">
-        <message>
-		No errors found
-		</message>
-      </error>
+        </error>
+	    <corpusPackages>
+		    <package name="representations_folder_camelcase">
+		    <path>fail\representations_folder_camelcase</path>
+		    <description>Negative testcase. Folder `representations` named in camelcase </description>
+		</package>
+		<package name="representations_folder_character_lowercase_back">
+		    <path>fail\representations_folder_character_lowercase_back</path>
+		    <description>Negative testcase. Foldername `representations` has extra lowercase character in back</description>
+		</package>
+		<package name="representations_folder_character_lowercase_front">
+		    <path>fail\representations_folder_character_lowercase_front</path>
+		    <description>Negative testcase. Foldername `representations` has extra lowercase character in middle</description>
+		</package>
+		<package name="representations_folder_character_lowercase_middle">
+		    <path>fail\representations_folder_character_lowercase_middle</path>
+		    <description>Negative testcase. Folder `representations` has extra lowercase character in front</description>
+		</package>
+			<package name="representations_folder_character_uppercase_back">
+		    <path>fail\representations_folder_character_uppercase_back</path>
+		    <description>Negative testcase. Foldername `representations` has extra uppercase character in back</description>
+		</package>
+		</package>
+			<package name="representations_folder_character_uppercase_front">
+		    <path>fail\representations_folder_character_uppercase_front</path>
+		    <description>Negative testcase. Foldername `representations` has extra uppercase character in front</description>
+		</package>
+		</package>
+			<package name="representations_folder_character_uppercase_middle">
+		    <path>fail\representations_folder_character_uppercase_middle</path>
+		    <description>Negative testcase. Foldername `representations` has extra uppercase character in middle</description>
+		</package>
+		<package name="representations_folder_missing">
+		    <path>fail\representations_folder_missing</path>
+		    <description>Negative testcase. Folder `representations`  missing in root folder</description>
+		</package>
+		</package>
+			<package name="representations_folder_number_back">
+		    <path>fail\representations_folder_number_back</path>
+		    <description>Negative testcase. Foldername `representations` has extra number sign in back</description>
+		</package>
+		</package>
+			<package name="representations_folder_number_front">
+		    <path>fail\representations_folder_number_front</path>
+		    <description>Negative testcase. Foldername `representations` has extra number sign in front</description>
+		</package>
+		</package>
+			<package name="representations_folder_number_middle">
+		    <path>fail\representations_folder_number_middle</path>
+		    <description>Negative testcase. Foldername `representations` has extra number sign in middle</description>
+		</package>
+		</package>
+			<package name="representations_folder_sign_back">
+		    <path>fail\representations_folder_sign_back</path>
+		    <description>Negative testcase. Foldername `representations` has extra sign in back</description>
+		</package>
+		</package>
+			<package name="representations_folder_sign_middle">
+		    <path>fail\representations_folder_sign_middle</path>
+		    <description>Negative testcase. Foldername `representations` has extra sign in middle</description>
+		</package>
+		</package>
+			<package name="representations_folder_sign_front">
+		    <path>fail\representations_folder_number_front</path>
+		    <description>Negative testcase. Foldername `representations` has extra sign in front</description>
+		</package>
+		</package>
+			<package name="representations_folder_uppercase">
+		    <path>fail\representations_folder_uppercase</path>
+		    <description>Negative testcase. Folder `representations` named in uppercase </description>
+		</package>
+		<package name="sampleIP_one_representation_folder">
+		    <path>pass\sampleIP_one_representation_folder</path>
+		    <description>Positive testcase. Sample IP with one representation folder</description>
+		</package>
+	    </corpusPackages>
     </rule>
   </rules>
 </testCase>
