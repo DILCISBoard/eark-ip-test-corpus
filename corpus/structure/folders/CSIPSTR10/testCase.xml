@@ -17,6 +17,20 @@
 		`representations` folder MUST include a folder for each representation
 		</message>
       </error>
+	  <corpusPackages>
+	  <package name="representations_folder_has_no_subfolder">
+			<path>fail\representations_folder_has_no_subfolder</path>
+		    <description>Negative testcase. The 'representations' folder has no subfolder.</description>
+        </package>
+	    <package name="representations_folder_has_one_subfolder">
+			<path>pass\representations_folder_has_one_subfolder</path>
+		    <description>Positive testcase. The 'representations' folder has one subfolder.</description>
+        </package>
+		<package name="representations_folder_has_two_subfolders">
+			<path>pass\representations_folder_has_two_subfolders</path>
+		    <description>Positive testcase. The 'representations' folder has two subfolders.</description>
+        </package>
+	   </corpusPackages>
     </rule>
   </rules>
 </testCase>

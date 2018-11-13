@@ -12,7 +12,7 @@
         <message> The Information Package folder MUST include a folder named `representations`</message>
         </error>
 	    <corpusPackages>
-		    <package name="representations_folder_camelcase">
+		<package name="representations_folder_camelcase">
 		    <path>fail\representations_folder_camelcase</path>
 		    <description>Negative testcase. Folder `representations` named in camelcase </description>
 		</package>
@@ -32,13 +32,11 @@
 		    <path>fail\representations_folder_character_uppercase_back</path>
 		    <description>Negative testcase. Foldername `representations` has extra uppercase character in back</description>
 		</package>
-		</package>
-			<package name="representations_folder_character_uppercase_front">
+		<package name="representations_folder_character_uppercase_front">
 		    <path>fail\representations_folder_character_uppercase_front</path>
 		    <description>Negative testcase. Foldername `representations` has extra uppercase character in front</description>
 		</package>
-		</package>
-			<package name="representations_folder_character_uppercase_middle">
+		<package name="representations_folder_character_uppercase_middle">
 		    <path>fail\representations_folder_character_uppercase_middle</path>
 		    <description>Negative testcase. Foldername `representations` has extra uppercase character in middle</description>
 		</package>
@@ -46,38 +44,31 @@
 		    <path>fail\representations_folder_missing</path>
 		    <description>Negative testcase. Folder `representations`  missing in root folder</description>
 		</package>
-		</package>
-			<package name="representations_folder_number_back">
+		<package name="representations_folder_number_back">
 		    <path>fail\representations_folder_number_back</path>
 		    <description>Negative testcase. Foldername `representations` has extra number sign in back</description>
 		</package>
-		</package>
-			<package name="representations_folder_number_front">
+		<package name="representations_folder_number_front">
 		    <path>fail\representations_folder_number_front</path>
 		    <description>Negative testcase. Foldername `representations` has extra number sign in front</description>
 		</package>
-		</package>
-			<package name="representations_folder_number_middle">
+		<package name="representations_folder_number_middle">
 		    <path>fail\representations_folder_number_middle</path>
 		    <description>Negative testcase. Foldername `representations` has extra number sign in middle</description>
-		</package>
 		</package>
 			<package name="representations_folder_sign_back">
 		    <path>fail\representations_folder_sign_back</path>
 		    <description>Negative testcase. Foldername `representations` has extra sign in back</description>
 		</package>
-		</package>
-			<package name="representations_folder_sign_middle">
+		<package name="representations_folder_sign_middle">
 		    <path>fail\representations_folder_sign_middle</path>
 		    <description>Negative testcase. Foldername `representations` has extra sign in middle</description>
 		</package>
-		</package>
-			<package name="representations_folder_sign_front">
+		<package name="representations_folder_sign_front">
 		    <path>fail\representations_folder_number_front</path>
 		    <description>Negative testcase. Foldername `representations` has extra sign in front</description>
 		</package>
-		</package>
-			<package name="representations_folder_uppercase">
+		<package name="representations_folder_uppercase">
 		    <path>fail\representations_folder_uppercase</path>
 		    <description>Negative testcase. Folder `representations` named in uppercase </description>
 		</package>

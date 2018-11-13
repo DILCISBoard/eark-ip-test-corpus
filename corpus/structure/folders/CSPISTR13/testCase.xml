@@ -17,13 +17,5 @@
 		</message>
       </error>
     </rule>
-	<rule id="2">
-      <description>The representation folder dont't have to include sub-folder 'metadata'</description>
-      <error level="INFO">
-        <message>
-		No errors found.
-		</message>
-      </error>
-    </rule>
   </rules>
 </testCase>
