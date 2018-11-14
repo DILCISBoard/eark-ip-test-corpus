@@ -35,20 +35,21 @@ The E-ARK information package validation process has been broken into 3 parts, [
 
 Process
 -------
-1. Test cases initiated by the creation of a test case template GitHub issue.
+1. **Initiaion:** The creation of a new test case is initiated by the submission of a new GitHub issue, ideally using the [test case template](https://github.com/DILCISBoard/eark-ip-test-corpus/issues/new?template=test-case.md). Internally the A3 and A2 teams should always use the template, it's possible that external submitters might not use the template.
 
-2. These are tied to requirment number so we can begin to track and report coverage. Until these are assigned they're the "backlog". Once assigned the case is considered work in progress.
+2. **Test Case Backlog:** Issues will be triaged regularly by the A3 team. Test case issues will be given a `test case` label and any missing details in the template will be populated. This process will tie the test case to a specific to requirment, by ID, so we can track and report coverage. These triaged test cases will then wait assignment to a member of the A3 team to work on them. This list of unassigned test cases is the "Test Case Backlog".
 
-3. First the specification is consulted and a new directory is created in the right place in the corpus tree. Next a full XML description of the test case is created, where the case is decomposed into individual validation rules (show example to illustrate distintion).
+3. **Work in Progress:** Test cases from the backlog will be assigned to a member of the A3 team, at this stage they become "Work in Progress", which effectively measures our open activitiy. The team should work hard to ensure that the list of "in progress" test cases does not become too large, which suggests we're struggling to complete and sign off corpus cases. Work assignment is the responsibility of the A3 lead but it will generally be carried out as a group in the team meetings.
 
-4. The full XML description is then reviewed by the A3 corpus group, bump to A3 development group if questions (more heads). If still not resolved bring the
-case before the weekly A2 group.
+4. **Test Case Definition:** The test case assignee now consults the specification and a new folder is created in the corpus tree if necessary. A full XML description of the test case is created, where the case is decomposed into individual validation rules. Within a rule there is space to define the corpus packages necessary to test the rule. A documented XML template for test cases is [available here](./test-case.xml).
 
-5. Most problems will be expressed as issues on the specification gh site tracker. Once XML description has informal approval it's assigned again (not necessarily to the same person who wrote the XMl) for corpus package creation.
+5. **Test Case Review:** The full XML description is then reviewed by the A3 corpus group, bump to A3 development group if questions (more heads). If still not resolved bring the case before the weekly A2 group.
 
-6. Corpus creation means ensuring that there are corpus pakages that test the pass and fail case for each validation rule in the XML document.
+6. Most problems will be expressed as issues on the specification gh site tracker. Once XML description has informal approval it's assigned again (not necessarily to the same person who wrote the XMl) for corpus package creation.
 
-7. Complete test case and corpus package sets are reviewed internally by the A3 team and then sent to the A2 group for external review and sign off.
+7. Corpus creation means ensuring that there are corpus pakages that test the pass and fail case for each validation rule in the XML document.
+
+8. Complete test case and corpus package sets are reviewed internally by the A3 team and then sent to the A2 group for external review and sign off.
 
 Slide revision
 --------------
