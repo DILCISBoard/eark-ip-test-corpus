@@ -1,5 +1,5 @@
-Creating Test Cases
-===================
+Creating and Documenting Test Cases
+=====================
 
 Principles
 ----------
@@ -7,8 +7,7 @@ Principles
 dependencies on other requirements.
 - Metadata test cases should not generally represent invalid METS documents,
   that is issues caught by METS schema validation
-- A test case incorporates a set of rules that are the fine grained tests needed
-to completely validate the requirement.
+- A test case incorporates a set of rules that are the fine grained tests needed to completely validate the requirement.
 
 Atomicity
 ---------
@@ -31,45 +30,6 @@ There should be pass and fail corpus packages for each test case, although it's 
 The E-ARK information package validation process has been broken into 3 parts, [described here](VALIDATION.md).
 
 **NOTE: To simplify this we want to introduce the concepts of "well-formed", "valid", and "audited" (what's a good word for passing integrity checks?), to allow minimal files that pass only the well formed structural checks possible, without the need for content**
-
-
-Process
--------
-1. **Initiaion:** The creation of a new test case is initiated by the submission of a new GitHub issue, ideally using the [test case template](https://github.com/DILCISBoard/eark-ip-test-corpus/issues/new?template=test-case.md). Internally the A3 and A2 teams should always use the template, it's possible that external submitters might not use the template.
-
-2. **Test Case Backlog:** Issues will be triaged regularly by the A3 team. Test case issues will be given a `test case` label and any missing details in the template will be populated. This process will tie the test case to a specific to requirment, by ID, so we can track and report coverage. These triaged test cases will then wait assignment to a member of the A3 team to work on them. This list of unassigned test cases is the "Test Case Backlog".
-
-3. **Work in Progress:** Test cases from the backlog will be assigned to a member of the A3 team, at this stage they become "Work in Progress", which effectively measures our open activitiy. The team should work hard to ensure that the list of "in progress" test cases does not become too large, which suggests we're struggling to complete and sign off corpus cases. Work assignment is the responsibility of the A3 lead but it will generally be carried out as a group in the team meetings.
-
-4. **Test Case Definition:** The test case assignee now consults the specification and a new folder is created in the corpus tree if necessary. A full XML description of the test case is created, where the case is decomposed into individual validation rules. Within a rule there is space to define the corpus packages necessary to test the rule. A documented XML template for test cases is [available here](./test-case.xml).
-
-5. **Test Case Review:** The full XML description is then reviewed by the A3 corpus group, bump to A3 development group if questions (more heads). If still not resolved bring the case before the weekly A2 group.
-
-6. Most problems will be expressed as issues on the specification gh site tracker. Once XML description has informal approval it's assigned again (not necessarily to the same person who wrote the XMl) for corpus package creation.
-
-7. Corpus creation means ensuring that there are corpus pakages that test the pass and fail case for each validation rule in the XML document.
-
-8. Complete test case and corpus package sets are reviewed internally by the A3 team and then sent to the A2 group for external review and sign off.
-
-Slide revision
---------------
-
-1. Test cases initiate by the submission of a GitHub Issue, preferably using the test case template.
-
-2. Issue triage to transpose to test case template and tie to a requirement number. These are the test case backlog until assigned as work in progress.
-
-3. Full XML test case description created with decomposition to validation rules and expected corpus packages.
-
-4. Review by A3 validation group where problem cases are pushed to the A3 development group and finally the A2 specification group.
-
-5. Corpus packages created to test each validation rule in test case.
-
-6. Complete test case and corpus package set reviewed by A3 team and then submitted to A2 group for external review and sign off.
-
-Producing test corpus packages that match the test cases:
-- create the package locally;
-- test against the prototype validator instance (locally or online)
-- submit to GitHub corpus repository as a pull request for review
 
 ### Style Guide
 
@@ -106,15 +66,18 @@ Documenting Test Cases
 ```xml
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
-<testCase>
+<testCase testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="" version="" section="" requirement="" />
-  <!-- URL reference to requirement for convenient lookup -->
-  <reference></reference>
+  <id specification="" version="" section="" requirementId="" />
+  <!-- URL references to requirements for convenient lookup -->
+  <references>
+    <reference requirementId=""><!-- URL for reference here --></reference>
+  </references>
   <!-- Textual description of the test case, may just be a repeat of the
   requirment text. -->
   <description></description>
-  <!-- List of test cases that this test case depends on -->
+  <!-- List of requirments that this test case depends on in addition to the
+  main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
     <!-- Individual test case dependencies listed by ID -->
     <dependency specification="" version="" section="" requirement="" />
@@ -132,6 +95,13 @@ XML lists -->
         <!-- Expected error message when the rule is violated. -->
         <message></message>
       </error>
+      <corpusPackages>
+        <!-- Details of corpus packages designed to test this validation rule. -->
+  	    <package name="descriptive_package_name" isValid="TRUE if package is a valid, FALSE if an invalid package.">
+  	      <path><!-- The relative path to the test corpus package root folder --></path>
+  		    <description><!-- Full description of corpus package features. --></description>
+        </package>
+  	  </corpusPackages>
     </rule>
   </rules>
 </testCase>
