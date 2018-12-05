@@ -1,13 +1,25 @@
 Minimal Information Package
 ===========================
-This package represents a minimal information package that is valid according
-to the current draft of the E-ARK Common Specification. The package consists of
+These two packages represent 
+- a minimal information package 
+- a minimal information package with schemas
+that is valid according to the current draft of the E-ARK Common Specification. 
+
+The minimal package consists of
 a minimal physical structure. This contains only the set of files and folders
 that are mandatory according to the specification. The package
 [METS file](package/METS.xml) contains only mandatory XML elements and
 attributes, including those needed to satisfy specification requirements
 regarding elements and attributes that correspond to the minimal package files
 and folders.
+
+The minimal package with schemas consists of
+a minimal physical structure. This contains only the set of files and folders
+that are mandatory according to the specification + local schemas. The package
+[METS file](package/METS.xml) contains only mandatory XML elements and
+attributes, including those needed to satisfy specification requirements
+regarding elements and attributes that correspond to the minimal package files
+and folders for an IP with local schemas.
 
 Status
 ------
