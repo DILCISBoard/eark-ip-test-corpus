@@ -5,7 +5,8 @@ Test corpus of E-ARK information packages to test validator functionality agains
 Quick Start
 -----------
 - [An overview of the 3 stage information package validation process](./VALIDATION.md)
-- [A guide to creating and documenting test cases](./TESTCASES.md)
+- [Process documentation for test case and corpus package creation](./PROCESS.md)
+- [A guide to documenting test cases](./TESTCASES.md)
 
 Introduction
 ------------

@@ -1,5 +1,5 @@
-Creating Test Cases
-===================
+Creating and Documenting Test Cases
+=====================
 
 Principles
 ----------
@@ -7,8 +7,7 @@ Principles
 dependencies on other requirements.
 - Metadata test cases should not generally represent invalid METS documents,
   that is issues caught by METS schema validation
-- A test case incorporates a set of rules that are the fine grained tests needed
-to completely validate the requirement.
+- A test case incorporates a set of rules that are the fine grained tests needed to completely validate the requirement.
 
 Atomicity
 ---------
@@ -31,14 +30,6 @@ There should be pass and fail corpus packages for each test case, although it's 
 The E-ARK information package validation process has been broken into 3 parts, [described here](VALIDATION.md).
 
 **NOTE: To simplify this we want to introduce the concepts of "well-formed", "valid", and "audited" (what's a good word for passing integrity checks?), to allow minimal files that pass only the well formed structural checks possible, without the need for content**
-
-Process
--------
-
-Producing test corpus packages that match the test cases:
-- create the package locally;
-- test against the prototype validator instance (locally or online)
-- submit to GitHub corpus repository as a pull request for review
 
 ### Style Guide
 
@@ -75,15 +66,18 @@ Documenting Test Cases
 ```xml
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
-<testCase>
+<testCase testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="" version="" section="" requirement="" />
-  <!-- URL reference to requirement for convenient lookup -->
-  <reference></reference>
+  <id specification="" version="" section="" requirementId="" />
+  <!-- URL references to requirements for convenient lookup -->
+  <references>
+    <reference requirementId=""><!-- URL for reference here --></reference>
+  </references>
   <!-- Textual description of the test case, may just be a repeat of the
   requirment text. -->
   <description></description>
-  <!-- List of test cases that this test case depends on -->
+  <!-- List of requirments that this test case depends on in addition to the
+  main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
     <!-- Individual test case dependencies listed by ID -->
     <dependency specification="" version="" section="" requirement="" />
@@ -101,6 +95,13 @@ XML lists -->
         <!-- Expected error message when the rule is violated. -->
         <message></message>
       </error>
+      <corpusPackages>
+        <!-- Details of corpus packages designed to test this validation rule. -->
+  	    <package name="descriptive_package_name" isValid="TRUE if package is a valid, FALSE if an invalid package.">
+  	      <path><!-- The relative path to the test corpus package root folder --></path>
+  		    <description><!-- Full description of corpus package features. --></description>
+        </package>
+  	  </corpusPackages>
     </rule>
   </rules>
 </testCase>

@@ -1,6 +1,6 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
-<testCase>
+<testCase testable="TRUE">
   <!-- Unique ID for the test case -->
   <id specification="" version="" section="" requirementId="" />
   <!-- URL references to requirements for convenient lookup -->
@@ -29,6 +29,13 @@ XML lists -->
         <!-- Expected error message when the rule is violated. -->
         <message></message>
       </error>
+      <corpusPackages>
+        <!-- Details of corpus packages designed to test this validation rule. -->
+  	    <package name="descriptive_package_name" isValid="TRUE if package is a valid, FALSE if an invalid package.">
+  	      <path><!-- The relative path to the test corpus package root folder --></path>
+  		    <description><!-- Full description of corpus package features. --></description>
+        </package>
+  	  </corpusPackages>
     </rule>
   </rules>
 </testCase>
