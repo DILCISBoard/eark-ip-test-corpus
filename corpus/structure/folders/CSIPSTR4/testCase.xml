@@ -1,17 +1,16 @@
 <testCase>
   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR4"/>
-  <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR4
-  </reference>
+  <reference>http://earkcsip.dilcis.eu/#CSIPSTR4</reference>
   <description>
     The Information Package folder MUST include a metadata file named `METS.xml`
   </description>
   <dependencies/>
   <rules>
     <rule id="1">
-      <description>The Information Package folder does not include .xml file</description>
+      <description>The Information Package folder does not include a metadata file named `METS.xml`</description>
       <error level="ERROR">
         <message>
-          The Information Package folder does not include .xml file The Information Package folder MUST include a metadata file named `METS.xml`
+          The Information Package folder DOES NOT include the mandatory metadata file `METS.xml`
         </message>
       </error>
       <corpusPackages>
