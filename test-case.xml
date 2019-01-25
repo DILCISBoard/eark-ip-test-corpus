@@ -2,14 +2,15 @@
 XML lists -->
 <testCase testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="" version="" section="" requirementId="" />
+  <id specification="E-ARK CSIP" version="2.0-DRAFT" section="dmdSec" requirementId="CSIP17" />
   <!-- URL references to requirements for convenient lookup -->
   <references>
-    <reference requirementId=""/>
+    <reference requirementId="http://earkcsip.dilcis.eu/#CSIP17"/>
   </references>
   <!-- Textual description of the test case, may just be a repeat of the
   requirment text. -->
-  <description></description>
+  <description>Must be used if descriptive metadata for the package content is available. Each descriptive metadata section (dmdSec) contains one description and thus is repeated when more descriptions are available.
+    It is possible to transfer metadata in a package using just the descriptive metadata sectiond/or adminstrative metadata section.</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
