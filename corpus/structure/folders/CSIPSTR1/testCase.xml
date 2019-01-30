@@ -1,0 +1,9 @@
+<testCase testable="FALSE">
+  <id specification="CSIP" version="2018-09-18" section="4.1" requirementId="1" />
+  <references>
+    <reference requirementId="1">https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/folders/index.md</reference>
+  </references>
+  <description>Any Information Package MUST be included within a single physical root folder (known as the “Information Package root folder”)</description>
+  <dependencies></dependencies>
+  <rules></rules>
+</testCase>
