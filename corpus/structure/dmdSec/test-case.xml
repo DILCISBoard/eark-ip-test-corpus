@@ -37,7 +37,6 @@ XML lists -->
           elementname 'dmdSec' found in the file mets.xml in folder 'path' even though there SHOULD be one </message>
       </error>
       <corpusPackages>
-
         <!-- Details of corpus packages designed to test this validation rule. -->
         <package name="IP_18000_CSIP17_1" isValid="TRUE">
           <path>/corpus/structure/dmdSec/IP_18000_CSIP17_1</path>
