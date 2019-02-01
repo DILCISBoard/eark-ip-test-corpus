@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="testCase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="references"/>
+        <xs:element ref="description"/>
+        <xs:element ref="dependencies"/>
+        <xs:element ref="rules"/>
+      </xs:sequence>
+      <xs:attribute name="testable" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="id">
+    <xs:complexType>
+      <xs:attribute name="requirementId" use="required"/>
+      <xs:attribute name="section" use="required"/>
+      <xs:attribute name="specification" use="required"/>
+      <xs:attribute name="version" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="references">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="reference" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reference">
+    <xs:complexType>
+      <xs:attribute name="requirementId" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dependencies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="dependency" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dependency">
+    <xs:complexType>
+      <xs:attribute name="requirement" use="required"/>
+      <xs:attribute name="section" use="required"/>
+      <xs:attribute name="specification" use="required"/>
+      <xs:attribute name="version" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rule" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="description"/>
+        <xs:element ref="error"/>
+        <xs:element ref="corpusPackages"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="error">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="message"/>
+      </xs:sequence>
+      <xs:attribute name="level" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="message">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="corpusPackages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="package" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="package">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="path"/>
+        <xs:element ref="description"/>
+      </xs:sequence>
+      <xs:attribute name="isValid" use="required"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="path">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="description">
+    <xs:complexType/>
+  </xs:element>
+</xs:schema>
