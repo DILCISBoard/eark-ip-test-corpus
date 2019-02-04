@@ -1,0 +1,9 @@
+<testCase testable="TRUE">
+  <id specification="CSIP" version="2018-09-18" section="4.1" requirementId="2" />
+  <references>
+  	<reference type="delegate" requirementId="CSIP2">https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/metadata/mets/mets-root/requirements.md</reference>
+  </references>
+  <description>The Information Package root folder SHOULD be named with the ID or name of the Information Package.</description>
+  <dependencies></dependencies>
+  <rules></rules>
+</testCase>
