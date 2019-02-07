@@ -38,7 +38,7 @@ XML lists -->
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
         <package name="IP_18000_CSIP17_1" isValid="FALSE">
-          <path>/corpus/structure/dmdSec/IP_18000_CSIP17_1</path>
+          <path>/corpus/structure/dmdSec/CSIP17/IP_18000_CSIP17_1</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains no dmdSec</description>
         </package>
@@ -59,7 +59,7 @@ XML lists -->
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
         <package name="IP_18000_CSIP17_2" isValid="FALSE">
-          <path>/corpus/structure/dmdSec/IP_18000_CSIP17_2</path>
+          <path>/corpus/structure/dmdSec/CSIP17/IP_18000_CSIP17_2</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains a dmdSec element in mets.xml. Contains
             no files in meta/description</description>
@@ -81,7 +81,7 @@ XML lists -->
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
         <package name="IP_18000_CSIP17_3" isValid="FALSE">
-          <path>/corpus/structure/dmdSec/IP_18000_CSIP17_3</path>
+          <path>/corpus/structure/dmdSec/CSIP17/IP_18000_CSIP17_3</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains no dmdSec in mets.xml. Contains files in
             meta/description</description>
