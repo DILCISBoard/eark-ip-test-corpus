@@ -1,8 +1,15 @@
 <testCase testable="TRUE">
-  <id specification="CSIP" version="2.0.0-DRAFT 2018-11-28" section="5.3.1." requirementId="CSIP1" />
+  <id specification="CSIP" version="2.0.0-DRAFT" requirementId="CSIP1" />
   <references>
-    <reference requirementId="CSIP1">http://earkcsip.dilcis.eu#CSIP1</reference>
-    <reference requirementId="the-use-of-identifiers">http://earkcsip.dilcis.eu/#the-use-of-identifiers</reference>
+    <reference requirementId="CSIP1" URL="http://earkcsip.dilcis.eu#CSIP1">
+      | ID | Name & Location | Description & usage | Cardinality & Level |
+      | -- | --------------- | ------------------- | ------------------- |
+      | **CSIP1** | **Content Identification** `mets/@OBJID` | It is mandatory to use a content ID which is expressed with @OBJID. The value should be the same as the name or ID of the package (the name of the root folder) for the root METS document or the name and folder name for the representation. The OBJID must meet the principle of being unique at least across the repository. | **1..1** MUST |
+    </reference>
+    <reference requirementId="the-use-of-identifiers" URL="http://earkcsip.dilcis.eu/#the-use-of-identifiers">
+      The ID data type in XML ( https://www.w3.org/TR/xml-id/ ) states that a valid ID must begin with a letter, or an underscore character (‘_’), and contain no characters other than letters, digits, hyphens, underscores, full stops, and certain combining and extension characters. To overcome this limitation and allow for interoperable package identification all identifiers within Common Specification metadata MUST start with a prefix, followed by the value of the identifier.
+      Note that identifier-type elements and attributes specified within the CS IP are mainly used for internal referencing between the components of an Information Package. As such there is no need to require the use of any specific prefix syntax but it is required that any selected prefix is used consistently throughout the package.
+    </reference>
   </references>
   <description>
     @OBJID MUST be present (CSIP1).
@@ -14,7 +21,9 @@
   </description>
   <dependencies>
     <!-- Instead of the link to CSIP, it should be a reference to the test case that deals with general requirements for ID-s-->
-    <dependency requirementId="the-use-of-identifiers" />
+    <dependency requirementId="the-use-of-identifiers" URL="http://earkcsip.dilcis.eu/#the-use-of-identifiers">
+      Full validation of CSIP1 requires validation of IDs, which is handled by another test case.
+    </dependency>
   </dependencies>
   <rules>
     <rule id="1">
