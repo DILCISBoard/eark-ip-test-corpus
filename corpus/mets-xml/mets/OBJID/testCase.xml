@@ -2,7 +2,7 @@
   <id specification="CSIP" version="2.0.0-DRAFT" requirementId="CSIP1" />
   <references>
     <reference requirementId="CSIP1" URL="http://earkcsip.dilcis.eu#CSIP1">
-      | ID | Name & Location | Description & usage | Cardinality & Level |
+      | ID | Name &amp; Location | Description &amp; usage | Cardinality &amp; Level |
       | -- | --------------- | ------------------- | ------------------- |
       | **CSIP1** | **Content Identification** `mets/@OBJID` | It is mandatory to use a content ID which is expressed with @OBJID. The value should be the same as the name or ID of the package (the name of the root folder) for the root METS document or the name and folder name for the representation. The OBJID must meet the principle of being unique at least across the repository. | **1..1** MUST |
     </reference>
@@ -37,7 +37,13 @@
         <package name="mets-xml_mets_OBJID_attribute_not_exist" isValid="FALSE">
           <path></path>
           <description>
-            METS.xml file with no mets/@OBJID attribute
+            METS.xml file with no mets/@OBJID attribute.
+          </description>
+        </package>
+        <package name="valid_minimal" isValid="TRUE">
+          <path></path>
+          <description>
+            Minimal folder structure and root METS.xml file, nothing optional included.
           </description>
         </package>
       </corpusPackages>
@@ -53,13 +59,21 @@
         <package name="mets-xml_mets_OBJID_attribute_value_empty" isValid="FALSE">
           <path></path>
           <description>
-            METS.xml file with mets/@OBJID = ""
+            METS.xml file with mets/@OBJID = "".
+          </description>
+        </package>
+        <package name="valid_minimal" isValid="TRUE">
+          <path></path>
+          <description>
+            Minimal folder structure and root METS.xml file, nothing optional included.
           </description>
         </package>
       </corpusPackages>
     </rule>
     <rule id="3">
-      <!-- It is assumed here that a generic ID validator exists that checks for all requirements of CSIP Ch. 5.2-->
+      <!--  This here is only a basic test of ID validity. We should create a 
+            separate ID validator test case that covers all requirements of 
+            CSIP Ch. 5.2 and then delete this rule here. -->
       <description>@OBJID MUST have a value that starts with a prefix, followed by the actual value of the identifier (CSIP Ch. 5.2).</description>
       <error level="ERROR">
         <message>
@@ -70,19 +84,24 @@
         <package name="mets-xml_mets_OBJID_attribute_value_numeric" isValid="FALSE">
           <path></path>
           <description>
-            METS.xml file with mets/@OBJID = "1"
+            METS.xml file with mets/@OBJID = "123".
           </description>
         </package>
         <package name="mets-xml_mets_OBJID_attribute_value_too_short" isValid="FALSE">
           <path></path>
           <description>
-            METS.xml file with mets/@OBJID = "a"
+            METS.xml file with mets/@OBJID = "a".
+          </description>
+        </package>
+        <package name="valid_minimal" isValid="TRUE">
+          <path></path>
+          <description>
+            Minimal folder structure and root METS.xml file, nothing optional included.
           </description>
         </package>
       </corpusPackages>
     </rule>
     <rule id="4">
-      <!-- It is assumed here that a generic ID validator exists that checks for all requirements of CSIP Ch. 5.2-->
       <description>
         @OBJID SHOULD be:
         a) For the METS document in the root folder, @OBJID should be equal to the package ID (i.e. the name of the root folder);
@@ -108,6 +127,12 @@
           <description>
             METS.xml file is located in root_ID/representations/rep_ID folder.
             The METS.xml file has mets/@OBJID not equal to rep_ID.
+          </description>
+        </package>
+        <package name="valid_minimal" isValid="TRUE">
+          <path></path>
+          <description>
+            Minimal folder structure and root METS.xml file, nothing optional included.
           </description>
         </package>
       </corpusPackages>
