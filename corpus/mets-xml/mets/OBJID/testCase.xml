@@ -6,23 +6,16 @@
       | -- | --------------- | ------------------- | ------------------- |
       | **CSIP1** | **Content Identification** `mets/@OBJID` | It is mandatory to use a content ID which is expressed with @OBJID. The value should be the same as the name or ID of the package (the name of the root folder) for the root METS document or the name and folder name for the representation. The OBJID must meet the principle of being unique at least across the repository. | **1..1** MUST |
     </reference>
-    <reference requirementId="the-use-of-identifiers" URL="http://earkcsip.dilcis.eu/#the-use-of-identifiers">
-      The ID data type in XML ( https://www.w3.org/TR/xml-id/ ) states that a valid ID must begin with a letter, or an underscore character (‘_’), and contain no characters other than letters, digits, hyphens, underscores, full stops, and certain combining and extension characters. To overcome this limitation and allow for interoperable package identification all identifiers within Common Specification metadata MUST start with a prefix, followed by the value of the identifier.
-      Note that identifier-type elements and attributes specified within the CS IP are mainly used for internal referencing between the components of an Information Package. As such there is no need to require the use of any specific prefix syntax but it is required that any selected prefix is used consistently throughout the package.
-    </reference>
   </references>
   <description>
     @OBJID MUST be present (CSIP1).
     @OBJID MUST have a non-empty value (CSIP1).
-    @OBJID MUST have a value that starts with a prefix, followed by the actual value of the identifier (CSIP Ch. 5.2).
     @OBJID SHOULD be:
     a) For the METS document in the root folder, @OBJID should be equal to the package ID (i.e. the name of the root folder);
     b) For a METS document in a representation folder, @OBJID should be equal to the representation ID (i.e. the name of the representation folder).
   </description>
   <dependencies>
-    <!-- Instead of the link to CSIP, it should be a reference to the test case that deals with general requirements for ID-s-->
-    <dependency requirementId="the-use-of-identifiers" URL="http://earkcsip.dilcis.eu/#the-use-of-identifiers">
-      Full validation of CSIP1 requires validation of IDs, which is handled by another test case.
+    <dependency requirementId="" URL="">
     </dependency>
   </dependencies>
   <rules>
@@ -30,7 +23,7 @@
       <description>@OBJID MUST be present (CSIP1).</description>
       <error level="ERROR">
         <message>
-          mets/@OBJID attribute does not exist. MUST be: attribute exists and has a value that starts with a letter or underscore that form a part of prefix, followed by the actual value of the identifier.
+          mets/@OBJID attribute does not exist. MUST be: attribute exists and has a value.
         </message>
       </error>
       <corpusPackages>
@@ -52,7 +45,7 @@
       <description>@OBJID MUST have a non-empty value (CSIP1).</description>
       <error level="ERROR">
         <message>
-          mets/@OBJID attribute value is emptry string. MUST be: a value that starts with a letter or underscore that form a part of prefix, followed by the actual value of the identifier.
+          mets/@OBJID attribute does not exist. MUST be: attribute exists and has a value.
         </message>
       </error>
       <corpusPackages>
@@ -71,37 +64,6 @@
       </corpusPackages>
     </rule>
     <rule id="3">
-      <!--  This here is only a basic test of ID validity. We should create a 
-            separate ID validator test case that covers all requirements of 
-            CSIP Ch. 5.2 and then delete this rule here. -->
-      <description>@OBJID MUST have a value that starts with a prefix, followed by the actual value of the identifier (CSIP Ch. 5.2).</description>
-      <error level="ERROR">
-        <message>
-          mets/@OBJID attribute value is not a proper ID. MUST be: a value that starts with a prefix, followed by the actual value of the identifier. The prefix MUST begin with a letter or underscore.
-        </message>
-      </error>
-      <corpusPackages>
-        <package name="mets-xml_mets_OBJID_attribute_value_numeric" isValid="FALSE">
-          <path></path>
-          <description>
-            METS.xml file with mets/@OBJID = "123".
-          </description>
-        </package>
-        <package name="mets-xml_mets_OBJID_attribute_value_too_short" isValid="FALSE">
-          <path></path>
-          <description>
-            METS.xml file with mets/@OBJID = "a".
-          </description>
-        </package>
-        <package name="valid_minimal" isValid="TRUE">
-          <path></path>
-          <description>
-            Minimal folder structure and root METS.xml file, nothing optional included.
-          </description>
-        </package>
-      </corpusPackages>
-    </rule>
-    <rule id="4">
       <description>
         @OBJID SHOULD be:
         a) For the METS document in the root folder, @OBJID should be equal to the package ID (i.e. the name of the root folder);
