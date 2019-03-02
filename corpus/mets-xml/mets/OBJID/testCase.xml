@@ -97,6 +97,12 @@
             Minimal folder structure and root METS.xml file, nothing optional included.
           </description>
         </package>
+        <package name="valid_minimal_with_one_representation" isValid="TRUE">
+          <path></path>
+          <description>
+            Minimal folder structure and root METS.xml file; one representation with minimal METS.xml file.
+          </description>
+        </package>
       </corpusPackages>
     </rule>
   </rules>
