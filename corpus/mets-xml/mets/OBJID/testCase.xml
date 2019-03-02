@@ -45,7 +45,7 @@
       <description>@OBJID MUST have a non-empty value (CSIP1).</description>
       <error level="ERROR">
         <message>
-          mets/@OBJID attribute does not exist. MUST be: attribute exists and has a value.
+          mets/@OBJID attribute value is empty. MUST be: attribute exists and has a value.
         </message>
       </error>
       <corpusPackages>
