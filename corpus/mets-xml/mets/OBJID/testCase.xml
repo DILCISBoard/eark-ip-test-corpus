@@ -14,10 +14,7 @@
     a) For the METS document in the root folder, @OBJID should be equal to the package ID (i.e. the name of the root folder);
     b) For a METS document in a representation folder, @OBJID should be equal to the representation ID (i.e. the name of the representation folder).
   </description>
-  <dependencies>
-    <dependency requirementId="" URL="">
-    </dependency>
-  </dependencies>
+  <dependencies />
   <rules>
     <rule id="1">
       <description>@OBJID MUST be present (CSIP1).</description>
