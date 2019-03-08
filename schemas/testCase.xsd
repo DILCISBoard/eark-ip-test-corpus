@@ -6,6 +6,7 @@
       <xs:sequence>
         <xs:element ref="id"/>
         <xs:element ref="references"/>
+        <xs:element name="requirementText" type="xs:string"/>
         <xs:element ref="description"/>
         <xs:element ref="dependencies"/>
         <xs:element ref="rules"/>
@@ -98,7 +99,7 @@
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
-  </xs:element>  
+  </xs:element>
 
   <xs:element name="rules">
     <xs:complexType>
