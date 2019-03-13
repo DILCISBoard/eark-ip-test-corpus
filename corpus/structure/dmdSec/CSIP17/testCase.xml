@@ -8,6 +8,11 @@ XML lists -->
   <references>
     <reference requirementId="CSIP17" URL="http://earkcsip.dilcis.eu/#533-use-of-the-mets-descriptive-metadata-section-element-dmdsec" />
   </references>
+  <requirementText>ID	Name and Location	Description and usage	Cardinality and Level
+    CSIP17	Descriptive metadata 
+    dmdSec	Must be used if descriptive metadata for the package content is available. Each descriptive metadata section (dmdSec) contains one description and thus is repeated when more descriptions are available. 
+    It is possible to transfer metadata in a package using just the descriptive metadata section/or adminstrative metadata section.	0..n 
+    SHOULD </requirementText>
   <!-- Textual description of the test case, may just be a repeat of the
   requirment text. -->
   <description>This testcase is for requirement CSIP17, which relates to descriptive metadata; the optional dmdSec
