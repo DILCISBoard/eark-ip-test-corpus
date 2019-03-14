@@ -66,37 +66,33 @@
     </xs:complexType>
   </xs:element>
 
-
-<xs:element name="requirementText">
-  <xs:complexType mixed="true">
-    <xs:sequence>
-      <xs:element name="nameAndLocation" type="xs:string" minOccurs="0"/>
-      <xs:element name="description" type="xs:string" minOccurs="0"/>
-      <xs:element name="cardinality" minOccurs="0">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="0..1"/>
-            <xs:enumeration value="0..n"/>
-            <xs:enumeration value="1..1"/>
-            <xs:enumeration value="1..n"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-      <xs:element name="level" minOccurs="0">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="MUST"/>
-            <xs:enumeration value="SHOULD"/>
-            <xs:enumeration value="MAY"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-</xs:element>
-
-
-
+  <xs:element name="requirementText">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element name="nameAndLocation" type="xs:string" minOccurs="0"/>
+        <xs:element name="description" type="xs:string" minOccurs="0"/>
+        <xs:element name="cardinality" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="0..1"/>
+              <xs:enumeration value="0..n"/>
+              <xs:enumeration value="1..1"/>
+              <xs:enumeration value="1..n"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="level" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="MUST"/>
+              <xs:enumeration value="SHOULD"/>
+              <xs:enumeration value="MAY"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 
   <xs:element name="dependencies">
     <xs:complexType>
