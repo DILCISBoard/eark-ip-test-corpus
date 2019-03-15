@@ -6,7 +6,7 @@
       <xs:sequence>
         <xs:element ref="id"/>
         <xs:element ref="references"/>
-        <xs:element name="requirementText" type="xs:string"/>
+        <xs:element ref="requirementText"/>
         <xs:element ref="description"/>
         <xs:element ref="dependencies"/>
         <xs:element ref="rules"/>
@@ -34,7 +34,7 @@
   <xs:element name="references">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="reference"/>
+        <xs:element ref="reference" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -63,6 +63,34 @@
           </xs:attribute>
         </xs:extension>
       </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="requirementText">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element name="nameAndLocation" type="xs:string" minOccurs="0"/>
+        <xs:element name="description" type="xs:string" minOccurs="0"/>
+        <xs:element name="cardinality" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="0..1"/>
+              <xs:enumeration value="0..n"/>
+              <xs:enumeration value="1..1"/>
+              <xs:enumeration value="1..n"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="level" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="MUST"/>
+              <xs:enumeration value="SHOULD"/>
+              <xs:enumeration value="MAY"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 
