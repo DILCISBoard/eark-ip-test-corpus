@@ -28,9 +28,10 @@
       <!-- CSIP16 mets/metsHdr/agent/note/@csip:NOTETYPE The mandatory agent note is typed with the fixed value of “SOFTWARE VERSION”. -->
     </agent>
   </metsHdr>
-  <!-- no dmdSec, but there is a file in the folder metadata/descriptive for this IP. --> 
-  <!--  CSIP92 ignored in this test. -->
-  <!--  CSIP92: Metadata division descriptive metadata referencing structMap/div/div/@DMDID 	All descriptive metadata described in the package are referenced via the descriptive section identifiers. 	0..1 MUST-->
+  <!-- no amdSec, but there is a file in the folder metadata/descriptive for this IP. -->
+  <!-- CSIP91 	Metadata division administrativ metadata referencing structMap/div/div/@ADMID 	All administrative metadata described in the package are referenced via the administrative sections different identifiers. 	0..1
+  MUST-->
+  
   <fileSec ID="ID_filesec">
     <!-- CSIP59 there MUST be an ID -->
     <!-- schemas -->
