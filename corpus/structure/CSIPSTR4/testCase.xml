@@ -80,11 +80,6 @@ XML lists -->
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Root folder does not include .xml file</description>
         </package>
-        <package name="IP_18000_CSIPSTR4_10" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_10</path>
-          <!-- Full description of corpus package features. -->
-          <description>A package based on the minimal IP with schemas. Root folder does not include .xml file</description>
-        </package>
         <package name="IP_18000_CSIPSTR4_11" isValid="FALSE">
           <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_11</path>
           <!-- Full description of corpus package features. -->
