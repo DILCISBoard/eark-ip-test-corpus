@@ -28,7 +28,7 @@ XML lists -->
       </error>
       <corpusPackages>
         <package name="IP_18000_CSIP21_1" isValid="TRUE" >
-          <path>/corpora/csip/metadata/dmdSec/CSIP20/IP_18000_CSIP21_1</path>
+          <path>/corpora/csip/metadata/dmdSec/CSIP21/IP_18000_CSIP21_1</path>
           <description>A package based on the minimal IP with schemas. Contains a dmdSec element with no mdRef-element in METS.xml.</description>
         </package>
       </corpusPackages>
@@ -40,7 +40,7 @@ XML lists -->
       </error>
       <corpusPackages>
         <package name="IP_18000_CSIP21_2" isValid="FALSE" >
-          <path>/corpora/csip/metadata/dmdSec/CSIP20/IP_18000_CSIP21_2</path>
+          <path>/corpora/csip/metadata/dmdSec/CSIP21/IP_18000_CSIP21_2</path>
           <description>A package based on the minimal IP with schemas. Contains a file in metadata/descriptive folder but has a dmdSec element with no mdRef-element in METS.xml.</description>
         </package>
       </corpusPackages>
