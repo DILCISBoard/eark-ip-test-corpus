@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- Minimal IP with schemas and dmdSec-->
+<!-- Minimal IP with schemas and amdSec-->
 <!-- In this example IDs are carring information to ease understanding - they look like paths to ease understanding, but are just IDs, similar to the naming of namespaces - these IDs can be replaced with information less UUID -->
 <!-- CSIPSTR15 goes like this: We recommend including all schema documents for any structured metadata within package. These schema documents SHOULD be placed in a sub-folder called schemas within the Information Package root folder and/or the representation folder. -->
 <mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/METS/"
@@ -28,7 +28,7 @@
       <!-- CSIP16 mets/metsHdr/agent/note/@csip:NOTETYPE The mandatory agent note is typed with the fixed value of “SOFTWARE VERSION”. -->
     </agent>
   </metsHdr>
-  <dmdSec ID="ID_dmdSec_1"/>
+  <amdSec ID="ID_amdSec_1" xlink:label="Adm regulation 1" xlink:href="somewhere on the internet"  />
   <!-- CSIP17 SHOULD - Must be used if descriptive metadata for the package content is available -->
   <!-- CSIP18 MUST - An identifier for the descriptive metadata section (dmdSec) used for referencing inside the package -->
   <!-- CSIP18 is part of the CSIP17 test-case, because the XML schema for METS.xml require it - otherwise the METS.xml would no be valid according to the XML schema -->
