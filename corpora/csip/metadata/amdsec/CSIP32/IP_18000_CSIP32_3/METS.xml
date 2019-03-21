@@ -7,7 +7,7 @@
   xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance schemas/XMLSchema.xsd http://www.loc.gov/METS/ schemas/mets.xsd 
     http://www.w3.org/1999/xlink schemas/xlink.xsd 
     https://DILCIS.eu/XML/METS/CSIPExtensionMETS schemas/CSIPExtensionMETS.xsd"
-    OBJID="IP_18000_CSIP17_3" TYPE="Database" csip:CONTENTINFORMATIONTYPE="SIARD2"
+  OBJID="IP_18000_CSIP17_3" TYPE="Database" csip:CONTENTINFORMATIONTYPE="SIARD2"
   PROFILE="http://www.eark-project.com/METS/IP.xml">
   <!-- CSIP1 - mets/@OBJID -->
   <!-- CSIP2 - mets/@TYPE -->
@@ -28,7 +28,8 @@
       <!-- CSIP16 mets/metsHdr/agent/note/@csip:NOTETYPE The mandatory agent note is typed with the fixed value of “SOFTWARE VERSION”. -->
     </agent>
   </metsHdr>
-  <!-- no dmdSec, but there is a file in the folder metadata/descriptive for this IP. --> 
+  <amdSec ID="ID_amdSec_1"/>
+  <!-- CSIP31 SHOULD - Must be used if administrative metadata for the package content is available -->
   <!--  CSIP92 ignored in this test. -->
   <!--  CSIP92: Metadata division descriptive metadata referencing structMap/div/div/@DMDID 	All descriptive metadata described in the package are referenced via the descriptive section identifiers. 	0..1 MUST-->
   <fileSec ID="ID_filesec">
@@ -71,19 +72,31 @@
       </file>
     </fileGrp>
   </fileSec>
-  
+
   <structMap TYPE="PHYSICAL" LABEL="CSIP StructMap" ID="StructmapID">
-    <!-- CSIP80 mets/structMap  -->
+    <!-- CSIP80 mets/structMap -->
     <!-- CSIP81 mets/structMap/@TYPE The type attribute of the structural map (structMap) is set to value “PHYSICAL” from the vocabualry -->
     <!-- CSIP82 mets/structMap/@LABEL The value must be “CSIP StructMap” -->
     <!-- CSIP83 mets/structMap/@ID -->
-    <div ID="Structmap_Div_ID" LABEL="IP_18000_CSIP17_3">
+    <div ID="Structmap_Div_ID" LABEL="IP_18000_CSIP31_1">
       <!-- CSIP84 mets/structMap/div -->
       <!-- CSIP85 mets/structMap/div/@ID -->
-      <!-- CSIP86 mets/structMap/div/@LABEL -->
-      <div ID="Structmap_Div_ID_Metadata" LABEL="Metadata"/>
-      <div ID="Structmap_Div_ID_Documentation" LABEL="Documentation"/>
+      <!-- CSIP86 mets/structMap/div/@LABEL - The main division (div) element in the package uses the package ID as the value for the attribute LABEL.-->
+      <div ID="Structmap_Div_ID_Metadata" LABEL="Metadata">
+        <!-- CSIPSTR5 The Information Package root folder MUST include a folder named metadata-->
+        <div ID="Structmap_Div_ID_Metadata_Preservation" LABEL="Preservation"/>
+        <!-- CSIPSTR6: If preservation metadata are available, they SHOULD be included in sub-folder preservation -->
+      </div>
+      <div ID="Structmap_Div_ID_Representations" LABEL="Representations">
+        <!-- CSIPSTR9: The Information Package folder MUST include a folder named representations -->
+        <div ID="Structmap_Div_ID_Representations_rep1" LABEL="Rep1">
+          <!-- CSIPSTR10: The representations folder MUST include a sub-folder for each individual representation-->
+          <div ID="Structmap_Div_ID_Representations_rep1_data" LABEL="Data"/>
+          <!-- CSIPSTR11: The representation folder MUST include a sub-folder named data which includes all data constituting the representation. -->
+        </div>
+      </div>
       <div ID="Structmap_Div_ID_Schemas" LABEL="Schemas" CONTENTIDS="ID_schemas"/>
+      <!-- CSIPSTR15 schema documents SHOULD be placed in a sub-folder called schemas -->
     </div>
   </structMap>
 </mets>

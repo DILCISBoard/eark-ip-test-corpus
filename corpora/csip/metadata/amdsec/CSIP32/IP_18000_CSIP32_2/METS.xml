@@ -29,10 +29,10 @@
     </agent>
   </metsHdr>
   <amdSec ID="ID_amdSec_1">
-    <digiprovMD ID="ID_amdSec_1_digiprovMD1" xlink:label="XX Archive standard migration"></digiprovMD>
+    <digiprovMD ID="ID_amdSec_1_digiprovMD1" xlink:label="XX Archive standard migration"/>
   </amdSec>
   <!-- CSIP31 SHOULD - Must be used if administrative metadata for the package content is available -->
-    <fileSec ID="ID_filesec">
+  <fileSec ID="ID_filesec">
     <!-- CSIP59 there MUST be an ID -->
     <!-- schemas -->
     <fileGrp USE="Schemas" ID="ID_schemas">
@@ -77,13 +77,23 @@
     <!-- CSIP81 mets/structMap/@TYPE The type attribute of the structural map (structMap) is set to value “PHYSICAL” from the vocabualry -->
     <!-- CSIP82 mets/structMap/@LABEL The value must be “CSIP StructMap” -->
     <!-- CSIP83 mets/structMap/@ID -->
-    <div ID="Structmap_Div_ID" LABEL="IP_18000_CSIP32_2">
+    <div ID="Structmap_Div_ID" LABEL="IP_18000_CSIP31_1">
       <!-- CSIP84 mets/structMap/div -->
       <!-- CSIP85 mets/structMap/div/@ID -->
       <!-- CSIP86 mets/structMap/div/@LABEL - The main division (div) element in the package uses the package ID as the value for the attribute LABEL.-->
-      <div ID="Structmap_Div_ID_Metadata" LABEL="Metadata"/>
-      <div ID="Structmap_Div_ID_Documentation" LABEL="Documentation"/>
+      <div ID="Structmap_Div_ID_Metadata" LABEL="Metadata">
+        <!-- CSIPSTR5 The Information Package root folder MUST include a folder named metadata-->
+      </div>
+      <div ID="Structmap_Div_ID_Representations" LABEL="Representations">
+        <!-- CSIPSTR9: The Information Package folder MUST include a folder named representations -->
+        <div ID="Structmap_Div_ID_Representations_rep1" LABEL="Rep1">
+          <!-- CSIPSTR10: The representations folder MUST include a sub-folder for each individual representation-->
+          <div ID="Structmap_Div_ID_Representations_rep1_data" LABEL="Data"/>
+          <!-- CSIPSTR11: The representation folder MUST include a sub-folder named data which includes all data constituting the representation. -->
+        </div>
+      </div>
       <div ID="Structmap_Div_ID_Schemas" LABEL="Schemas" CONTENTIDS="ID_schemas"/>
+      <!-- CSIPSTR15 schema documents SHOULD be placed in a sub-folder called schemas -->
     </div>
   </structMap>
 </mets>

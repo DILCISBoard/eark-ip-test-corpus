@@ -3,8 +3,7 @@
 <!-- In this example IDs are carring information to ease understanding - they look like paths to ease understanding, but are just IDs, similar to the naming of namespaces - these IDs can be replaced with information less UUID -->
 <!-- CSIPSTR15 goes like this: We recommend including all schema documents for any structured metadata within package. These schema documents SHOULD be placed in a sub-folder called schemas within the Information Package root folder and/or the representation folder. -->
 <mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/METS/"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS"
+  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS"
   xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance schemas/XMLSchema.xsd http://www.loc.gov/METS/ schemas/mets.xsd 
     http://www.w3.org/1999/xlink schemas/xlink.xsd 
     https://DILCIS.eu/XML/METS/CSIPExtensionMETS schemas/CSIPExtensionMETS.xsd"
@@ -29,7 +28,8 @@
       <!-- CSIP16 mets/metsHdr/agent/note/@csip:NOTETYPE The mandatory agent note is typed with the fixed value of “SOFTWARE VERSION”. -->
     </agent>
   </metsHdr>
-  <!-- no amdSec even though it SHOULD be here -->
+  <amdSec ID="ID_amdSec_1" xlink:label="Adm regulation 1" xlink:href="somewhere on the internet"/>
+  <!-- no amdSec/digiprovMD even though it SHOULD be here -->
   <fileSec ID="ID_filesec">
     <!-- CSIP59 there MUST be an ID -->
     <!-- schemas -->
@@ -80,8 +80,17 @@
       <!-- CSIP85 mets/structMap/div/@ID -->
       <!-- CSIP86 mets/structMap/div/@LABEL - The main division (div) element in the package uses the package ID as the value for the attribute LABEL.-->
       <div ID="Structmap_Div_ID_Metadata" LABEL="Metadata"/>
-      <div ID="Structmap_Div_ID_Documentation" LABEL="Documentation"/>
+      <!-- CSIPSTR5 The Information Package root folder MUST include a folder named metadata-->
+      <div ID="Structmap_Div_ID_Representations" LABEL="Representations">
+        <!-- CSIPSTR9: The Information Package folder MUST include a folder named representations -->
+        <div ID="Structmap_Div_ID_Representations_rep1" LABEL="Rep1">
+          <!-- CSIPSTR10: The representations folder MUST include a sub-folder for each individual representation-->
+          <div ID="Structmap_Div_ID_Representations_rep1_data" LABEL="Rep1"/>
+          <!-- CSIPSTR11: The representation folder MUST include a sub-folder named data which includes all data constituting the representation. -->
+        </div>
+      </div>
       <div ID="Structmap_Div_ID_Schemas" LABEL="Schemas" CONTENTIDS="ID_schemas"/>
+      <!-- CSIPSTR15 schema documents SHOULD be placed in a sub-folder called schemas -->
     </div>
   </structMap>
 </mets>
