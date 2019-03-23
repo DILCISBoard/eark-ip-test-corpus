@@ -1,18 +1,25 @@
-<testCase testable="TRUE">
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
   <id specification="CSIP" version="2.0.0-DRAFT" requirementId="CSIP1" />
   <references>
-    <reference requirementId="CSIP1" URL="http://earkcsip.dilcis.eu#CSIP1">
-      | ID | Name &amp; Location | Description &amp; usage | Cardinality &amp; Level |
-      | -- | --------------- | ------------------- | ------------------- |
-      | **CSIP1** | **Content Identification** `mets/@OBJID` | It is mandatory to use a content ID which is expressed with @OBJID. The value should be the same as the name or ID of the package (the name of the root folder) for the root METS document or the name and folder name for the representation. The OBJID must meet the principle of being unique at least across the repository. | **1..1** MUST |
-    </reference>
+    <reference requirementId="CSIP1" URL="http://earkcsip.dilcis.eu#CSIP1" />
   </references>
+  <requirementText>
+    <nameAndLocation>
+      Content Identification
+      `mets/@OBJID`
+    </nameAndLocation>
+    <description>
+      It is mandatory to use a content ID which is expressed with @OBJID. The value should be the same as the name or ID of the package (the name of the root folder) for the root METS document or the name and folder name for the representation. The OBJID must meet the principle of being unique at least across the repository.
+    </description>
+    <cardinality>1..1</cardinality>
+    <level>MUST</level>
+  </requirementText>
   <description>
-    @OBJID MUST be present (CSIP1).
-    @OBJID MUST have a non-empty value (CSIP1).
+    @OBJID MUST be present.
+    @OBJID MUST have a non-empty value.
     @OBJID SHOULD be:
-    a) For the METS document in the root folder, @OBJID should be equal to the package ID (i.e. the name of the root folder);
-    b) For a METS document in a representation folder, @OBJID should be equal to the representation ID (i.e. the name of the representation folder).
+    a) For the METS document in the root folder, @OBJID SHOULD be equal to the package ID (i.e. the name of the root folder);
+    b) For a METS document in a representation folder, @OBJID SHOULD be equal to the representation ID (i.e. the name of the representation folder).
   </description>
   <dependencies />
   <rules>
