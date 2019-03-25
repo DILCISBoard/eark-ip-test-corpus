@@ -1,7 +1,7 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="TRUE">
   <!-- Unique ID for the test case -->
   <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP23"/>
   <!-- URL references to requirements for convenient lookup -->
@@ -9,15 +9,26 @@ XML lists -->
     <reference requirementId="CSIP23" URL="http://earkcsip.dilcis.eu/#CSIP23"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>Attribute used with the value “simple”. Value list is maintained by the xlink standard
-</requirementText>
+  <requirementText>Attribute used with the value “simple”. Value list is maintained by the xlink standard</requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
+  <description>The @xlink:type is optional in METS schema but mandatory according to CSIP23. The METS schema only allows one value in this attribute: "simple" with lowercase. Uppercase gives validation error</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
   </dependencies>
   <!-- A list of the validation rules derived from the test case -->
   <rules>
+    <rule id="1">
+      <description>@xlink:type must exist in METS.xml</description>
+      <error level="ERROR">
+        <message>In METS.XML the dmdSec/mdRef-element MUST have the attribute: @xlink:type and its value must be "simple" </message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="IP_18000_CSIP23_1">
+          <path></path>
+          <description></description>
+        </package>
+      </corpusPackages>
+    </rule>
   </rules>
 </testCase>
