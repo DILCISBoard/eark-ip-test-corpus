@@ -1,23 +1,55 @@
-<!-- Root element for an individual test case, allows these to be wrapped into
-XML lists -->
-<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
-  <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP3"/>
-  <!-- URL references to requirements for convenient lookup -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="CSIP" version="2.0.0-DRAFT" requirementId="CSIP3"/>
   <references>
     <reference requirementId="CSIP3" URL="http://earkcsip.dilcis.eu/#CSIP3"/>
   </references>
-  <!-- The full text of the requirement. -->
-  <requirementText>The @csip:OTHERTYPE attribute must be used for stating the general type of the package (genre) when @TYPE has the value "OTHER"
-</requirementText>
-  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
-  <!-- List of requirments that this test case depends on in addition to the
-  main requirememt, e.g. general requirments on the form of IDs -->
+  <requirementText>
+    <nameAndLocation>
+      Other general content type 
+      `mets/@csip:OTHERTYPE`
+    </nameAndLocation>
+    <description>
+      The @csip:OTHERTYPE attribute must be used for stating the general type of the package (genre) when @TYPE has the value “OTHER”.
+      **See also:** Content information type declaration: http://earkcsip.dilcis.eu/#VocabularyType
+    </description>
+    <cardinality>0..1</cardinality>
+    <!-- It is actually a MUST: if @TYPE="OTHER" then @csip:OTHERTYPE MUST be used. -->
+    <level>SHOULD</level>
+  </requirementText>
+  <description>
+    If @TYPE = "OTHER" then @csip:OTHERTYPE:
+    - MUST exist
+    - MUST have a string value stating the general type of the package (genre)
+    - MUST NOT have a value from the VocabularyType as defined in http://earkcsip.dilcis.eu/schema/DILCISVocabulariesIP.xml because these vocabulary values MUST be used for attribute @TYPE.
+  </description>
   <dependencies>
+    <!-- Vocabularies should also have proper requirementID-s, the current one here is artificial. -->
+    <dependency requirementId="Content_information_type_declaration" URL="http://earkcsip.dilcis.eu/#VocabularyType">
+      http://earkcsip.dilcis.eu/schema/DILCISVocabulariesIP.xml
+    </dependency>
   </dependencies>
-  <!-- A list of the validation rules derived from the test case -->
   <rules>
+    <rule id="1">
+      <description>If @TYPE = "OTHER" then @csip:OTHERTYPE attribute MUST exist.</description>
+      <error level="ERROR">
+        <message>
+          mets/@csip:OTHERTYPE attribute does not exist. MUST be: if @TYPE = "OTHER" then @csip:OTHERTYPE attribute MUST exist and have a value.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets-xml_mets_csip-OTHERTYPE_attribute_not_exist" isValid="FALSE">
+          <path></path>
+          <description>
+            METS.xml file with @TYPE = "OTHER" but no @csip:OTHERTYPE attribute.
+          </description>
+        </package>
+        <package name="valid_minimal_mets_TYPE_is_OTHER" isValid="TRUE">
+          <path></path>
+          <description>
+            Minimal folder structure and root METS.xml. mets/@TYPE = "OTHER", @csip:OTHERTYPE has a meaningful value.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
   </rules>
 </testCase>
