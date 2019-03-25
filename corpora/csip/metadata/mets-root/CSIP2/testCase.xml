@@ -1,7 +1,7 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.0-DRAFT" requirementId="CSIP2" />
+  <id specification="CSIP" version="2.0.0-DRAFT" requirementId="CSIP2"/>
   <references>
-    <reference requirementId="CSIP2" URL="http://earkcsip.dilcis.eu#CSIP2" />
+    <reference requirementId="CSIP2" URL="http://earkcsip.dilcis.eu/#CSIP2"/>
   </references>
   <requirementText>
     <nameAndLocation>
