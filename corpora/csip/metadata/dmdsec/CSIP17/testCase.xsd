@@ -6,7 +6,7 @@
       <xs:sequence>
         <xs:element ref="id"/>
         <xs:element ref="references"/>
-        <xs:element name="requirementText" type="xs:string"/>
+        <xs:element ref="requirementText"/>
         <xs:element ref="description"/>
         <xs:element ref="dependencies"/>
         <xs:element ref="rules"/>
@@ -17,12 +17,13 @@
             <xs:enumeration value="FALSE"/>
             <xs:enumeration value="TRUE"/>
             <xs:enumeration value="UNKNOWN"/>
+            <xs:enumeration value="PARTIAL"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="id">
     <xs:complexType>
       <xs:attribute name="requirementId" use="required" type="xs:NCName"/>
@@ -30,11 +31,11 @@
       <xs:attribute name="version" use="required" type="xs:NMTOKEN"/>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="references">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="reference"/>
+        <xs:element ref="reference" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -65,7 +66,35 @@
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
-  
+
+  <xs:element name="requirementText">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element name="nameAndLocation" type="xs:string" minOccurs="0"/>
+        <xs:element name="description" type="xs:string" minOccurs="0"/>
+        <xs:element name="cardinality" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="0..1"/>
+              <xs:enumeration value="0..n"/>
+              <xs:enumeration value="1..1"/>
+              <xs:enumeration value="1..n"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="level" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="MUST"/>
+              <xs:enumeration value="SHOULD"/>
+              <xs:enumeration value="MAY"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
   <xs:element name="dependencies">
     <xs:complexType>
       <xs:sequence>
@@ -100,7 +129,7 @@
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="rules">
     <xs:complexType>
       <xs:sequence>
@@ -148,7 +177,22 @@
         <xs:element ref="path"/>
         <xs:element ref="description"/>
       </xs:sequence>
-      <xs:attribute name="isValid" use="required" type="xs:NCName"/>
+      <xs:attribute name="isValid" use="required">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+          The isValid attribute should be set TRUE for corpus packages that
+          shouldn't generate any validation messages, including WARNING or INFO
+          messages. The attribute is inappropriately named but changing it would
+          break too many existing test cases.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="TRUE"/>
+            <xs:enumeration value="FALSE"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
       <xs:attribute name="name" use="required" type="xs:NCName"/>
     </xs:complexType>
   </xs:element>
