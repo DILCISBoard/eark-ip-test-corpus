@@ -16,7 +16,7 @@ XML lists -->
   The requirement CSIP20 is not stringent and therefore difficult to test, it is based on nested conditions - and optional elements.
   I takes two rules to validate the requirement:
   Rule 1: The attribute is optional.
-  Rule 2: If the attribute exists the value of it is “SUPERSEDED” or “CURRENT” according to http://earkcsip.dilcis.eu/schema/DILCISVocabulariesIP.xml  
+  Rule 2: If the attribute exists the value of it is “SUPERSEDED” or “CURRENT” according to http://earkcsip.dilcis.eu/schema/DILCISVocabulariesIP.xml
   </description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
