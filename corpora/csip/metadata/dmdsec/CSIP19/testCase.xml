@@ -10,7 +10,7 @@ XML lists -->
   </references>
   <!-- Textual description of the test case, may just be a repeat of the
   requirement text. -->
-  <requirementText>Creation date of the descriptive metadata in this section.</requirementText> 
+  <requirementText>Creation date of the descriptive metadata in this section.</requirementText>
   <description>Test of the creation date (attribute created for element dmdSec) is present.
     Optional according to XML Schema, mandatory according to CSIP.
     No requirement for the date given, it therefore can be much older than the package itself, or be created in the future!
