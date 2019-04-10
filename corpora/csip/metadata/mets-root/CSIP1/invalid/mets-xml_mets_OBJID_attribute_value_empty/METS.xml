@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/METS/" xmlns:csip="DILCIS" OBJID="" TYPE="SIP:X" csip:CONTENTTYPESPECIFICATION="MIXED" PROFILE="http://www.eark-project.com/METS/IP.xml">
+  <metsHdr CREATEDATE="2018-10-12T14:20:00" csip:OAISPACKAGETYPE="SIP">
+    <agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
+      <name>E-ARK Corpus Team</name>
+      <note csip:NOTETYPE="SOFTWARE VERSION">1.0</note>
+    </agent>
+  </metsHdr>
+  <structMap TYPE="physical" LABEL="Common Specification structural map">
+    <div ID="ID7063" LABEL="ID0001">
+      <div LABEL="metadata" />
+      <div LABEL="representations">
+        <div LABEL="rep1">
+          <div LABEL="data"/>
+        </div>
+      </div>
+    </div>
+  </structMap>
+</mets>
