@@ -4,10 +4,8 @@
     <reference requirementId="CSIP1" URL="http://earkcsip.dilcis.eu#CSIP1" />
   </references>
   <requirementText>
-    <nameAndLocation>
-      Content Identification
-      `mets/@OBJID`
-    </nameAndLocation>
+    <name>Content Identification</name>
+    <location>mets/@OBJID</location>
     <description>
       It is mandatory to use a content ID which is expressed with @OBJID. The value should be the same as the name or ID of the package (the name of the root folder) for the root METS document or the name and folder name for the representation. The OBJID must meet the principle of being unique at least across the repository.
     </description>
