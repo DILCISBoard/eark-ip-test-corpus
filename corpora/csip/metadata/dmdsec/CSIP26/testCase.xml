@@ -1,7 +1,7 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="TRUE">
   <!-- Unique ID for the test case -->
   <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP26"/>
   <!-- URL references to requirements for convenient lookup -->
@@ -16,7 +16,7 @@ XML lists -->
     Rule for the existence of the attribute MIMETYPE for element dmdSec/mdRef.
     ERROR if it does not exists
     Rule for the value of the attribute MIMETYPE for element dmdSec/mdRef.
-    ERROR if it is not on the list.
+    WARNING if it is not on the list.
     
     How do we handle lists of valid values? Do we create a valid package for each valid value? And one invalid package for an invalid value?
     Are we supposed to check against IANA? http://www.iana.org/assignments/media-types/media-types.xhtml </description>
@@ -29,12 +29,12 @@ XML lists -->
     <rule id="1">
       <description>Tests whether MIMETYPE-attribute exists in METS</description>
       <error level="ERROR">
-        <message>The element mets/dmdSec/mdRef in METS.xml does not have a MIMETYPE-attribute. It MUST be there.</message>
+        <message>The element mets/dmdSec/mdRef in METS.xml does not have a MIMETYPE-attribute. It MUST be there according to CS IP.</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_18000_CSIP126_1">
-          <path>/corpora/csip/metadata/dmdSec/CSIP26/IP_18000_CSIP126_1</path>
-          <description>This package has no MIMETYPE-attribute in mets/dmdSec/mdRef</description>
+        <package isValid="FALSE" name="IP_18000_CSIP26_1">
+          <path>/corpora/csip/metadata/dmdSec/CSIP26/IP_18000_CSIP26_1</path>
+          <description>In METS.xml there is no MIMETYPE-attribute in mets/dmdSec/mdRef</description>
         </package>
       </corpusPackages>
     </rule>
@@ -44,8 +44,8 @@ XML lists -->
             <message>The element mets/dmdSec/mdRef in METS.xml has a MIMETYPE-attribute with no value. It SHOULD be there.</message>
           </error>
           <corpusPackages>
-            <package isValid="TRUE" name="IP_18000_CSIP126_2">
-              <path>/corpora/csip/metadata/dmdSec/CSIP26/IP_18000_CSIP126_2</path>
+            <package isValid="TRUE" name="IP_18000_CSIP26_2">
+              <path>/corpora/csip/metadata/dmdSec/CSIP26/IP_18000_CSIP26_2</path>
               <description>This package has a MIMETYPE-attribute with no value in mets/dmdSec/mdRef</description>
             </package>
       </corpusPackages>
@@ -56,8 +56,8 @@ XML lists -->
             <message>The element mets/dmdSec/mdRef in METS.xml has a MIMETYPE-attribute which it not on the IANA list. See http://www.iana.org/assignments/media-types/media-types.xhtml for the list of valid MIMETYPES </message>
           </error>
           <corpusPackages>
-            <package isValid="TRUE" name="IP_18000_CSIP126_3">
-              <path>/corpora/csip/metadata/dmdSec/CSIP26/IP_18000_CSIP126_3</path>
+            <package isValid="TRUE" name="IP_18000_CSIP26_3">
+              <path>/corpora/csip/metadata/dmdSec/CSIP26/IP_18000_CSIP26_3</path>
               <description>This package has a MIMETYPE-attribute with a wrong value in mets/dmdSec/mdRef</description>
             </package>
           </corpusPackages>
