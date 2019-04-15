@@ -25,7 +25,7 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="FALSE" name="IP_18000_CSIP24_1">
-          <path>\corpora\csip\metadata\dmdSec\CSIP24</path>
+          <path>\corpora\csip\metadata\dmdSec\CSIP24\IP_18000_CSIP24_1</path>
           <description>There is no @xlink:href in METS.xml</description>
         </package>
       </corpusPackages>
@@ -37,8 +37,8 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="FALSE" name="IP_18000_CSIP24_2">
-          <path>\corpora\csip\metadata\dmdSec\CSIP24</path>
-          <description>There is no value in dmdSec/mdRef/@xlink:href </description>
+          <path>\corpora\csip\metadata\dmdSec\CSIP24\IP_18000_CSIP24_2</path>
+          <description>There is no value in dmdSec/mdRef/@xlink:href</description>
         </package>
       </corpusPackages>
     </rule>
