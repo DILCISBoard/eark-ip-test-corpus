@@ -11,7 +11,7 @@ XML lists -->
   <!-- The full text of the requirement. -->
   <requirementText>Attribute used with the value “simple”. Value list is maintained by the xlink standard</requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description>The @xlink:type is optional in METS schema but mandatory according to CSIP23. The METS schema only allows one value in this attribute: "simple" with lowercase. Uppercase gives validation error</description>
+  <description>The @xlink:type is optional in METS schema but mandatory according to CSIP23. The METS schema only allows one value in this attribute: "simple" with lowercase. Uppercase and no value gives validation error</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
@@ -25,8 +25,8 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="FALSE" name="IP_18000_CSIP23_1">
-          <path></path>
-          <description></description>
+          <path>/corpora/csip/metadata/dmdSec/CSIP23/IP_18000_CSIP23_1</path>
+          <description>The METS.XML does not have the @xlink:type attribute.</description>
         </package>
       </corpusPackages>
     </rule>
