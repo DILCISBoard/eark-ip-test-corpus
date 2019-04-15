@@ -6,7 +6,7 @@ XML lists -->
   <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP17"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
-    <reference requirementId="CSIP17" URL="http://earkcsip.dilcis.eu/#533-use-of-the-mets-descriptive-metadata-section-element-dmdsec" />
+    <reference requirementId="CSIP17" URL="http://earkcsip.dilcis.eu/#CSIP17" />
   </references>
   <requirementText>ID	Name and Location	Description and usage	Cardinality and Level
     CSIP17	Descriptive metadata
@@ -42,8 +42,8 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIP17_1" isValid="FALSE">
-          <path>/corpus/structure/dmdSec/CSIP17/IP_18000_CSIP17_1</path>
+        <package name="IP_18000_CSIP17_1" isValid="TRUE">
+          <path>/corpora/csip/metadata/dmdSec/CSIP17/IP_18000_CSIP17_1</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains no dmdSec</description>
         </package>
@@ -63,8 +63,8 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIP17_2" isValid="FALSE">
-          <path>/corpus/structure/dmdSec/CSIP17/IP_18000_CSIP17_2</path>
+        <package name="IP_18000_CSIP17_2" isValid="TRUE">
+          <path>/corpora/csip/metadata/dmdSec/CSIP17/IP_18000_CSIP17_2</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains a dmdSec element in mets.xml. Contains
             no files in metadata/descriptive</description>
@@ -86,7 +86,7 @@ XML lists -->
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
         <package name="IP_18000_CSIP17_3" isValid="FALSE">
-          <path>/corpus/structure/dmdSec/CSIP17/IP_18000_CSIP17_3</path>
+          <path>/corpora/csip/metadata/dmdSec/CSIP17/IP_18000_CSIP17_3</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains no dmdSec in METS.xml. Contains files in the folder
             metadata/descriptive</description>
