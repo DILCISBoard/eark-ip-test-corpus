@@ -44,8 +44,8 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="FALSE" name="IP_18000_CSIP27_2">
-          <path>/corpora/csip/metadata/dmdSec/CSIP27/IP_18000_CSIP27_</path>
-          <description>There is a dmdSec/mdRef element in METS.xml but no @SIZE-attribute.</description>
+          <path>/corpora/csip/metadata/dmdSec/CSIP27/IP_18000_CSIP27_2</path>
+          <description>There is a dmdSec/mdRef element in METS.xml with a wrong value in @SIZE-attribute.</description>
         </package>
       </corpusPackages>
     </rule>
