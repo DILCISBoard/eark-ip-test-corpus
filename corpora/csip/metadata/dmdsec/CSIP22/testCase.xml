@@ -1,7 +1,7 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="TRUE">
   <!-- Unique ID for the test case -->
   <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP22"/>
   <!-- URL references to requirements for convenient lookup -->
