@@ -1,7 +1,7 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="TRUE">
   <!-- Unique ID for the test case -->
   <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP20"/>
   <!-- URL references to requirements for convenient lookup -->
@@ -40,7 +40,7 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIP20_1" isValid="FALSE">
+        <package name="IP_18000_CSIP20_1" isValid="TRUE">
           <path>/corpora/csip/metadata/dmdSec/CSIP20/IP_18000_CSIP20_1</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains dmdSec without a STATUS attribute</description>
