@@ -7,10 +7,10 @@
   xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance schemas/XMLSchema.xsd http://www.loc.gov/METS/ schemas/mets.xsd http://www.w3.org/1999/xlink schemas/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS schemas/CSIPExtensionMETS.xsd" 
-  OBJID="IP_18000_CSIP58_1" 
+  OBJID="IP_18000_siard2" 
   TYPE="Database" 
   csip:CONTENTINFORMATIONTYPE="SIARD2" 
-  PROFILE="http://www.eark-project.com/METS/IP.xml" >
+  PROFILE="https://earkcsip.dilcis.eu/profile/CSIP.xml" >
  <!-- CSIP1 - mets/@OBJID -->
   <!-- CSIP2 - mets/@TYPE -->
   <!-- CSIP4 - mets/@csip:CONTENTTYPESPECIFICATION -->
@@ -32,7 +32,7 @@
     </agent>
   </metsHdr>
   <dmdSec ID="ID-dmdsecID" CREATED="2018-10-10T12:00:00-05:00" STATUS="CURRENT" >
-    <mdRef  LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/descriptive/ead.xml" MDTYPE="EAD" MIMETYPE="application/xml" SIZE="10260" CREATED="2018-10-10T12:00:00-05:00" CHECKSUM="9fde2fd78193f7494711df983f0127d0" />
+    <mdRef  LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/descriptive/ead.xml" MDTYPE="EAD" MIMETYPE="application/xml" SIZE="10260" CREATED="2018-10-10T12:00:00-05:00" CHECKSUM="9fde2fd78193f7494711df983f0127d0" CHECKSUMTYPE="MD5" />
   </dmdSec>
   
   <fileSec ID="ID-IP_with_dmd">   
@@ -85,9 +85,18 @@
         <FLocat LOCTYPE="URL" xlink:href="schemas/ead3.xsd" xlink:type="simple"/>
       </file>
       
-      
+      </fileGrp> 
+    
+    <fileGrp USE="Representations"  ID="ID-IP_with_fileSec_fileSec" csip:CONTENTINFORMATIONTYPE="SIARD2">
+         
+      <file  ID="ID-rep1" MIMETYPE="application/xml" CHECKSUM="0bbd7ebec2ba061f034e72c8d288d82b" CHECKSUMTYPE="MD5" SIZE="12782">
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/METS.xml" /> 
+         </file>
+         
       </fileGrp>
+
   </fileSec>
+  
   <structMap TYPE="PHYSICAL" LABEL="CSIP StructMap" ID="ID-StructmapID"> 
     <!-- CSIP80 mets/structMap  -->
     <!-- CSIP81 mets/structMap/@TYPE The type attribute of the structural map (structMap) is set to value “PHYSICAL” from the vocabualry -->
@@ -102,6 +111,14 @@
       <div ID="ID-Structmap_Div_ID_Documentation" LABEL="Documentation">
       </div>
       <div ID="ID-Structmap_Div_ID_Schemas" LABEL="Schemas" CONTENTIDS="IP_with_dmd_fileGrp_schemas">
+      </div>
+     
+      <div ID="ID-root-mets-structMap-div-representations" LABEL="Representations">
+        <!-- CSIP106 structMap/div/div/@ID - cardinality [1..1]. Mandatory, identifier must be unique within the package. The ID must follow the rules for xml:id -->
+        <div ID="ID-root-mets-structMap-div-representations-rep1" LABEL="rep1">
+          <!-- CSIP109 structMap/div/div/mptr - cardinality [1..1]. The division (div) of the specific representation includes one occurrence of the METS pointer (mptr) element, pointing to the appropriate representation METS file. -->
+          <mptr xlink:type="simple" xlink:href="file:representations/rep1/METS.xml" LOCTYPE="URL"/>
+        </div>  
       </div>
     </div>
 
