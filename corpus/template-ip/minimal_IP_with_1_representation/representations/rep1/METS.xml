@@ -39,6 +39,30 @@
     </agent>
   </metsHdr>
 
+  <!-- CSIP59 fileSec/@ID - cardinality [1..1]. An identifier for the file section used for referencing inside the package. It must be unique within the package. The ID must follow the rules for xml:id -->
+  <fileSec ID="ID-rep1-mets-fileSec">
+    <!-- CSIP60 fileSec/fileGrp - cardinality [1..n]. There MUST be a fileGrp-element -->
+    <!-- CSIP62 fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE - cardinality [1..1]. An added attribute which describes the specific content information type specification used for the transferred content. The attribute is mandatory to use when the file group catagorization is Representations. The vocabulary is defined in CSIPExtensionMETS schema. -->
+    <!-- CSIP64 fileSec/fileGrp/@USE - The value in the @USE is the name of the whole folder structure to the data, e.g “Documentation”, “Schemas”, “Representations/preingest” or “Representations/submission/data” -->
+    <!-- CSIP65 fileSec/fileGrp/@ID - there MUST be an ID-attribute -->
+    <fileGrp csip:CONTENTINFORMATIONTYPE="MIXED" USE="Representations/rep1/data" ID="ID-rep1-mets-fileSec-fileGrp">
+      <!-- CSIP66 fileSec/fileGrp/file - there MUST be a file-element -->
+      <!-- CSIP67 fileSec/fileGrp/file/@ID - there MUST be an ID-attribute -->
+      <!-- CSIP68 fileSec/fileGrp/file/@MIMETYPE - there MUST be a MIMETYPE-attribute -->
+      <!-- CSIP69 fileSec/fileGrp/file/@SIZE - there MUST be a SIZE-attribute -->
+      <!-- CSIP70 fileSec/fileGrp/file/@CREATED - there MUST be a CREATED-attribute -->
+      <!-- CSIP71 fileSec/fileGrp/file/@CHECKSUM - there MUST be a CHECKSUM-attribute -->
+      <!-- CSIP72 fileSec/fileGrp/file/@CHECKSUMTYPE - there MUST be a CHECKSUMTYPE-attribute -->
+      <file ID="ID-rep1-mets-fileSec-fileGrp-file-representations-rep1-data-1" MIMETYPE="text/plain" SIZE="12" CREATED="2019-04-12T18:40:24" CHECKSUM="a9308bde501cfd1d91ce4e5e861c8971" CHECKSUMTYPE="MD5">
+        <!-- CSIP76 fileSec/fileGrp/file/FLocat - there MUST be a FLocat-element -->
+        <!-- CSIP77 fileSec/fileGrp/file/FLocat/@LOCTYPE - there MUST be a LOCTYPE-attribute -->
+        <!-- CSIP78 fileSec/fileGrp/file/FLocat/@xlink:type - there MUST be an xlink:type attribute with the value "simple" -->
+        <!-- CSIP79 fileSec/fileGrp/file/FLocat/@xlink:href - The actual location of the resource. We recommend recording a URL type filepath within this attribute. -->
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/data/plain_text_document.txt" />
+      </file>
+    </fileGrp>
+  </fileSec>
+
   <!-- CSIP80 mets/structMap - cardinality [1..n]. Each METS file needs to include exactly one structMap element used exactly as described in CSIP table. Institutions can add their own additional custom structural maps as separate structMap sections. -->
   <!-- § 5.3.6. The internal structure of the structural map (expressed by div elements) follows the CSIP high level physical structure as described in Section 4, therefore grouping together metadata, representations, schemas, documentation and user-defined folders into their own div elements. All div elements must use the attribute LABEL with the value being the name of the folder (as an example “metadata”) -->
   <!-- CSIP81 mets/structMap/@TYPE - cardinality [1..1]. Mandatory in CSIP. The value must be “PHYSICAL” -->

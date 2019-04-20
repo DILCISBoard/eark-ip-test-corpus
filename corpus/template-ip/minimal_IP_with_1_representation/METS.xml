@@ -40,12 +40,12 @@
   </metsHdr>
 
   <!-- CSIP59 fileSec/@ID - cardinality [1..1]. An identifier for the file section used for referencing inside the package. It must be unique within the package. The ID must follow the rules for xml:id -->
-  <fileSec ID="ID-root-mets-fileSec">   
+  <fileSec ID="ID-root-mets-fileSec">
     <!-- CSIP60 fileSec/fileGrp - cardinality [1..n]. There MUST be a fileGrp-element -->
     <!-- CSIP62 fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE - cardinality [1..1]. An added attribute which describes the specific content information type specification used for the transferred content. The attribute is mandatory to use when the file group catagorization is Representations. The vocabulary is defined in CSIPExtensionMETS schema. -->
     <!-- CSIP64 fileSec/fileGrp/@USE - The value in the @USE is the name of the whole folder structure to the data, e.g “Documentation”, “Schemas”, “Representations/preingest” or “Representations/submission/data” -->
     <!-- CSIP65 fileSec/fileGrp/@ID - there MUST be an ID-attribute -->
-    <fileGrp csip:CONTENTINFORMATIONTYPE="MIXED" USE="Representations/rep1" ID="ID-root-mets-fileSec-fileGrp">  
+    <fileGrp csip:CONTENTINFORMATIONTYPE="MIXED" USE="Representations/rep1" ID="ID-root-mets-fileSec-fileGrp">
       <!-- CSIP66 fileSec/fileGrp/file - there MUST be a file-element -->
       <!-- CSIP67 fileSec/fileGrp/file/@ID - there MUST be an ID-attribute -->
       <!-- CSIP68 fileSec/fileGrp/file/@MIMETYPE - there MUST be a MIMETYPE-attribute -->
@@ -53,7 +53,7 @@
       <!-- CSIP70 fileSec/fileGrp/file/@CREATED - there MUST be a CREATED-attribute -->
       <!-- CSIP71 fileSec/fileGrp/file/@CHECKSUM - there MUST be a CHECKSUM-attribute -->
       <!-- CSIP72 fileSec/fileGrp/file/@CHECKSUMTYPE - there MUST be a CHECKSUMTYPE-attribute -->
-      <file ID="ID-root-mets-fileSec-fileGrp-file-representations-rep1-METS-xml" MIMETYPE="application/xml" SIZE="7798" CREATED="2019-04-16T20:34:00" CHECKSUM="83b91081bd6c20221fc312ef89f7fbc7" CHECKSUMTYPE="MD5">
+      <file ID="ID-root-mets-fileSec-fileGrp-file-representations-rep1-METS-xml" MIMETYPE="application/xml" SIZE="10349" CREATED="2019-04-20T20:09:37" CHECKSUM="d2fae5a5e1a1c1ebb76c0d6cbb30e2dc" CHECKSUMTYPE="MD5">
         <!-- CSIP76 fileSec/fileGrp/file/FLocat - there MUST be a FLocat-element -->
         <!-- CSIP77 fileSec/fileGrp/file/FLocat/@LOCTYPE - there MUST be a LOCTYPE-attribute -->
         <!-- CSIP78 fileSec/fileGrp/file/FLocat/@xlink:type - there MUST be an xlink:type attribute with the value "simple" -->
