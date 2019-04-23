@@ -3,23 +3,17 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP29"/>
+  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP58"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
-    <reference requirementId="CSIP29" URL="http://earkcsip.dilcis.eu/#CSIP29"/>
+    <reference requirementId="CSIP58" URL="http://earkcsip.dilcis.eu/#CSIP58"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>The checksum of the linked file.</requirementText>
+  <requirementText>When the section is used only one file section (fileSec) element is present. It is possible to transfer just descriptive metadata and/or administrative metadata without files placed in this section.</requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirement text. -->
-  <description>It has cardinality '1..1' and level 'MUST' in CSIP.
-    It is mandatory in CSIP but optional in METS.
-    Rule needed for the existence of the attribute CHECKSUMTYPE for element dmdSec/mdRef.
-    ERROR if it does not exists.
-    
-    There is a dependency to CSIP29, since this attribute hold the value of the checksumtype for the linked file.
-    
-    The tests that check if checksumtype and checksum is correct can be found in CSIP29.
-  </description>
+  <description>There needs to be a package which has files in "data" folder and no fileSec - and this should produce a warning.
+    There needs to be a package which has data files in "data" folder! and no fileSec - and this should produce an error.
+    There needs to be a package which has no data files and a fileSec - and this should produce an error. </description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies> 
