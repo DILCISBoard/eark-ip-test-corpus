@@ -8,7 +8,7 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance schemas/XMLSchema.xsd http://www.loc.gov/METS/ schemas/mets.xsd http://www.w3.org/1999/xlink schemas/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS schemas/CSIPExtensionMETS.xsd" 
   OBJID="IP_1rep_SIARD2" 
-  TYPE="Database" 
+  TYPE="Databases" 
   csip:CONTENTINFORMATIONTYPE="SIARD2" 
   PROFILE="https://earkcsip.dilcis.eu/profile/CSIP.xml" >
  <!-- CSIP1 - mets/@OBJID -->
@@ -32,7 +32,7 @@
     </agent>
   </metsHdr>
   <dmdSec ID="ID-dmdsecID" CREATED="2018-10-10T12:00:00-05:00" STATUS="CURRENT" >
-    <mdRef  LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/descriptive/ead.xml" MDTYPE="EAD" MIMETYPE="application/xml" SIZE="10260" CREATED="2018-10-10T12:00:00-05:00" CHECKSUM="9fde2fd78193f7494711df983f0127d0" CHECKSUMTYPE="MD5" />
+    <mdRef  LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/descriptive/ead.xml" MDTYPE="EAD" MIMETYPE="application/xml" SIZE="10117" CREATED="2018-10-10T12:00:00-05:00" CHECKSUM="42c3b6a7aa3631ccff1411943dcfd407" CHECKSUMTYPE="MD5" />
   </dmdSec>
   
   <fileSec ID="ID-IP_with_dmd">   
@@ -102,7 +102,7 @@
     <!-- CSIP81 mets/structMap/@TYPE The type attribute of the structural map (structMap) is set to value “PHYSICAL” from the vocabualry -->
     <!-- CSIP82 mets/structMap/@LABEL The value must be “CSIP StructMap” -->
     <!-- CSIP83 mets/structMap/@ID -->
-    <div ID="ID-Structmap_Div_ID" LABEL="IP_with_dmd_">
+    <div ID="ID-Structmap_Div_ID" LABEL="IP_1rep_SIARD2">
       <!-- CSIP84 mets/structMap/div -->
       <!-- CSIP85 mets/structMap/div/@ID -->
       <!-- CSIP86 mets/structMap/div/@LABEL -->
@@ -110,7 +110,7 @@
       </div>
       <div ID="ID-Structmap_Div_ID_Documentation" LABEL="Documentation">
       </div>
-      <div ID="ID-Structmap_Div_ID_Schemas" LABEL="Schemas" CONTENTIDS="IP_with_dmd_fileGrp_schemas">
+      <div ID="ID-Structmap_Div_ID_Schemas" LABEL="Schemas" CONTENTIDS="ID-IP_with_dmd_fileGrp_schemas">
       </div>
      
       <div ID="ID-root-mets-structMap-div-representations" LABEL="Representations">
