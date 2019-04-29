@@ -89,7 +89,7 @@
     
     <fileGrp USE="Representations"  ID="ID-IP_with_fileSec_fileSec" csip:CONTENTINFORMATIONTYPE="SIARD2">
          
-      <file  ID="ID-rep1" MIMETYPE="application/xml" CHECKSUM="0e0b8ab09bef4032c93026a4b63d6189" CHECKSUMTYPE="MD5" SIZE="12432">
+      <file  ID="ID-rep1" MIMETYPE="application/xml" CHECKSUM="bb067c530ab7682b2be175dadfd18bbb" CHECKSUMTYPE="MD5" SIZE="11760">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/METS.xml" /> 
          </file>
          

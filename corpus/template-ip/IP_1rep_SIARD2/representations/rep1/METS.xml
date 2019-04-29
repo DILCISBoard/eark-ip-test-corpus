@@ -31,10 +31,7 @@
     <!-- CSIP16 mets/metsHdr/agent/note/@csip:NOTETYPE The mandatory agent note is typed with the fixed value of “SOFTWARE VERSION”. -->
     </agent>
   </metsHdr>
-  <dmdSec ID="ID-dmdsecID" CREATED="2018-10-10T12:00:00-05:00" STATUS="CURRENT" >
-    <mdRef  LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/descriptive/ead.xml" MDTYPE="EAD" MIMETYPE="application/xml" SIZE="10260" CREATED="2018-10-10T12:00:00-05:00" CHECKSUM="9fde2fd78193f7494711df983f0127d0" CHECKSUMTYPE="MD5" />
-  </dmdSec>
-  
+ 
   <fileSec ID="ID-IP_with_database">   
     <!-- CSIP59 there MUST be an ID -->
      
@@ -79,11 +76,6 @@
           <FLocat LOCTYPE="URL" xlink:href="schemas/CSIPExtensionMETS.xsd" xlink:type="simple"/>
         </file>
       
-      <!-- ead3.xsd -->
-      <file ID="ID-IP_with_database_fileGrp_schemas_ead3.xsd" MIMETYPE="application/xml"  CREATED="2016-12-14T14:20:00" 
-        CHECKSUM="7619e9dc6d1b592238e04a1d9be49c06" CHECKSUMTYPE="MD5" SIZE="92510">
-        <FLocat LOCTYPE="URL" xlink:href="schemas/ead3.xsd" xlink:type="simple"/>
-      </file>
       
       </fileGrp> 
     
