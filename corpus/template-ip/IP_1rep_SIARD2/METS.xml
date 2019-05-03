@@ -35,17 +35,17 @@
     <mdRef  LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/descriptive/ead.xml" MDTYPE="EAD" MIMETYPE="application/xml" SIZE="10117" CREATED="2018-10-10T12:00:00-05:00" CHECKSUM="42c3b6a7aa3631ccff1411943dcfd407" CHECKSUMTYPE="MD5" />
   </dmdSec>
   
-  <fileSec ID="ID-IP_with_dmd">   
+  <fileSec ID="ID-IP_fileSecID">   
     <!-- CSIP59 there MUST be an ID -->
      
       <!-- schemas -->	
-    <fileGrp USE="Schemas" ID="ID-IP_with_dmd_fileGrp_schemas">  
+    <fileGrp USE="Schemas" ID="ID-fileGrp_schemas">  
         <!-- CSIP60 there MUST be a fileGrp-element -->
         <!-- CSIP64 there MUST be an USE-attribute -->
         <!-- CSIP65 there MUST be an ID-attribute -->
             
         <!-- METS.xsd -->
-      <file ID="ID-IP_with_dmd_fileGrp_schemas_mets_xsd" MIMETYPE="application/xml" SIZE="133920" CREATED="2018-05-01T14:20:00" 
+      <file ID="ID-fileGrp_schemas_mets_xsd" MIMETYPE="application/xml" SIZE="133920" CREATED="2018-05-01T14:20:00" 
           CHECKSUM="4e9961dec3de72081e6142b28a437fb8" CHECKSUMTYPE="MD5">
           <!-- CSIP66 there MUST be a file-element -->
           <!-- CSIP67 there MUST be an ID-attribute -->
@@ -62,32 +62,32 @@
         </file>
         
         <!-- XMLSchema.xsd -->
-      <file ID="ID-IP_with_dmd_fileGrp_schemas_XMLSchema_xsd" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+      <file ID="ID-fileGrp_schemas_XMLSchema_xsd" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
           CHECKSUM="94ed1a93ce3147d01bcb2fc1126255ed" CHECKSUMTYPE="MD5" SIZE="87677">
           <FLocat LOCTYPE="URL" xlink:href="schemas/XMLSchema.xsd" xlink:type="simple"/>
         </file>
         
         <!-- xlink.xsd -->
-      <file ID="ID-IP_with_dmd_fileGrp_schemas_xlink_xsd" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+      <file ID="ID-fileGrp_schemas_xlink_xsd" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
           CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
           <FLocat LOCTYPE="URL" xlink:href="schemas/xlink.xsd" xlink:type="simple"/>
         </file>
         
         <!-- CSIPExtensionMETS.xsd -->
-      <file ID="ID-IP_with_dmd_fileGrp_schemas_CSIPExtensionMETS.xsd" MIMETYPE="application/xml"  CREATED="2018-12-14T14:20:00" 
+      <file ID="ID-fileGrp_schemas_CSIPExtensionMETS.xsd" MIMETYPE="application/xml"  CREATED="2018-12-14T14:20:00" 
           CHECKSUM="1a31b3aa3ae1e9b99e7a8b4618f3b485" CHECKSUMTYPE="MD5" SIZE="1673">
           <FLocat LOCTYPE="URL" xlink:href="schemas/CSIPExtensionMETS.xsd" xlink:type="simple"/>
         </file>
       
       <!-- ead3.xsd -->
-      <file ID="ID-IP_with_dmd_fileGrp_schemas_ead3.xsd" MIMETYPE="application/xml"  CREATED="2016-12-14T14:20:00" 
+      <file ID="ID-fileGrp_schemas_ead3.xsd" MIMETYPE="application/xml"  CREATED="2016-12-14T14:20:00" 
         CHECKSUM="7619e9dc6d1b592238e04a1d9be49c06" CHECKSUMTYPE="MD5" SIZE="92510">
         <FLocat LOCTYPE="URL" xlink:href="schemas/ead3.xsd" xlink:type="simple"/>
       </file>
       
       </fileGrp> 
     
-    <fileGrp USE="Representations"  ID="ID-IP_with_fileSec_fileSec" csip:CONTENTINFORMATIONTYPE="SIARD2">
+    <fileGrp USE="Representations"  ID="ID-fileGrp_Represenations" csip:CONTENTINFORMATIONTYPE="SIARD2">
          
       <file  ID="ID-rep1" MIMETYPE="application/xml" CHECKSUM="bb067c530ab7682b2be175dadfd18bbb" CHECKSUMTYPE="MD5" SIZE="11760">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/METS.xml" /> 
