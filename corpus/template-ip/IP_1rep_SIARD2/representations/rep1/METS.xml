@@ -79,7 +79,7 @@
       
       </fileGrp> 
     
-    <fileGrp USE="Data"  ID="ID-IP_with_fileSec_fileSec">
+    <fileGrp USE="Data"  ID="ID-rep1_data_fileSec">
          
          <file  ID="ID-SIARD1" MIMETYPE="application/zip" CHECKSUM="bbd7988c5f9d3f267102e14f6f4fbaac" CHECKSUMTYPE="MD5" SIZE="84269">
            <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/northwind.siard" /> 
@@ -143,20 +143,20 @@
   
   <structMap TYPE="PHYSICAL" LABEL="CSIP StructMap" ID="ID-StructmapID"> 
     <!-- CSIP80 mets/structMap  -->
-    <!-- CSIP81 mets/structMap/@TYPE The type attribute of the structural map (structMap) is set to value “PHYSICAL” from the vocabualry -->
+    <!-- CSIP81 mets/structMap/@TYPE The type attribute of the structural map (structMap) is set to value “PHYSICAL” from the vocabulary -->
     <!-- CSIP82 mets/structMap/@LABEL The value must be “CSIP StructMap” -->
     <!-- CSIP83 mets/structMap/@ID -->
-    <div ID="ID-Structmap_Div_ID" LABEL="IP_with_database_">
+    <div ID="ID-Structmap_Div_ID_rep1" LABEL="IP_with_database_">
       <!-- CSIP84 mets/structMap/div -->
       <!-- CSIP85 mets/structMap/div/@ID -->
       <!-- CSIP86 mets/structMap/div/@LABEL -->
-      <div ID="ID-Structmap_Div_ID_Metadata" LABEL="Metadata">
+      <div ID="ID-Structmap_Div_ID_Metadata_rep1" LABEL="Metadata">
       </div>
-      <div ID="ID-Structmap_Div_ID_Documentation" LABEL="Documentation">
+      <div ID="ID-Structmap_Div_ID_Documentation_rep1" LABEL="Documentation">
       </div>
-      <div ID="ID-Structmap_Div_ID_Schemas" LABEL="Schemas" CONTENTIDS="IP_with_database_fileGrp_schemas">
+      <div ID="ID-Structmap_Div_ID_Schemas_rep1" LABEL="Schemas" CONTENTIDS="ID-IP_with_database_fileGrp_schemas" >
       </div>
-      <div ID="ID-Structmap_Div_ID_data" LABEL="Data">
+      <div ID="ID-Structmap_Div_ID_data_rep1" LABEL="Data" CONTENTIDS="ID-rep1_data_fileSec">
       </div>
     </div>
 
