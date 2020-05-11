@@ -14,7 +14,7 @@ For a representation level METS document this value records the name/ID of the r
     <level>MUST</level>
   </requirementText>
   <description>
-    mets/@OBJID MUST be present.
+    mets/@OBJID MUST exist.
     mets/@OBJID MUST have a non-empty value.
     mets/@OBJID SHOULD be:
     a) For the package METS document, @OBJID SHOULD be equal to the name/ID of the package, i.e. the name of the package root folder;
@@ -23,7 +23,7 @@ For a representation level METS document this value records the name/ID of the r
   <dependencies />
   <rules>
     <rule id="1">
-      <description>mets/@OBJID MUST be present.</description>
+      <description>mets/@OBJID MUST exist.</description>
       <error level="ERROR">
         <message>
           mets/@OBJID attribute does not exist. MUST be: attribute exists and has a value.
