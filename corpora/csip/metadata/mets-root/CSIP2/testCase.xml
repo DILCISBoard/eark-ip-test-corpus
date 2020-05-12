@@ -1,33 +1,31 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.0-DRAFT" requirementId="CSIP2"/>
+  <id specification="CSIP" version="2.0.3" requirementId="CSIP2"/>
   <references>
     <reference requirementId="CSIP2" URL="http://earkcsip.dilcis.eu/#CSIP2"/>
   </references>
   <requirementText>
-    <nameAndLocation>
-      General content type
-      `mets/@TYPE`
-    </nameAndLocation>
+    <name>Content Category</name>
+    <location>mets/@TYPE</location>
     <description>
-      The @TYPE attribute must be used for identifying the general type of the package (genre). A vocabulary is used. The vocabulary is going to evolve under the care of the DILCIS Board as additional content information type specifications are developed.
-      **See also:** Content information type declaration: http://earkcsip.dilcis.eu/#VocabularyType
+      The mets/@TYPE attribute MUST be used to declare the category of the content held in the package, e.g. book, journal, stereograph, video, etc.. Legal values are defined in a fixed vocabulary. When the content category used falls outside of the defined vocabulary the mets/@TYPE value must be set to “OTHER” and the specific value declared in mets/@csip:OTHERTYPE. The vocabulary will develop under the curation of the DILCIS Board as additional content information type specifications are produced.
+      See also: Content Category, https://earkcsip.dilcis.eu/#VocabularyContentCategory
     </description>
     <cardinality>1..1</cardinality>
     <level>MUST</level>
   </requirementText>
   <description>
-    @TYPE MUST be present.
-    @TYPE MUST have a value from the VocabularyType as defined by DILCIS Board.
+    mets/@TYPE MUST exist.
+    mets/@TYPE MUST have a value from the VocabularyContentCategory as defined by DILCIS Board.
+    If mets/@TYPE = “OTHER” then mets/@csip:OTHERTYPE MUST exist and have a value.
   </description>
   <dependencies>
-    <!-- Vocabularies should also have proper requirementID-s, the current one here is artificial. -->
-    <dependency requirementId="Content_information_type_declaration" URL="http://earkcsip.dilcis.eu/#VocabularyType">
-      http://earkcsip.dilcis.eu/schema/DILCISVocabulariesIP.xml
+    <dependency requirementId="VocabularyContentCategory" URL="https://earkcsip.dilcis.eu/#VocabularyContentCategory">
+      https://earkcsip.dilcis.eu/schema/CSIPVocabularyContentCategory.xml
     </dependency>
   </dependencies>
   <rules>
     <rule id="1">
-      <description>@TYPE MUST be present.</description>
+      <description>mets/@TYPE MUST exist.</description>
       <error level="ERROR">
         <message>
           mets/@TYPE attribute does not exist. MUST be: attribute exists and has a value.
@@ -37,69 +35,89 @@
         <package name="mets-xml_mets_TYPE_attribute_not_exist" isValid="FALSE">
           <path></path>
           <description>
-            METS.xml file with no mets/@TYPE attribute.
+            METS.xml file has no mets/@TYPE attribute.
           </description>
         </package>
-        <package name="valid_minimal" isValid="TRUE">
+        <package name="minimal_IP_with_1_representation" isValid="TRUE">
           <path></path>
           <description>
-            Minimal folder structure and root METS.xml file, nothing optional included.
+            Minimal IP that matches all MUST requirements.
           </description>
         </package>
       </corpusPackages>
     </rule>
     <rule id="2">
-    <!--  A value is mandatory, so a check for empty value is reasonable. However,
-          technically the schema that defines the vocabulary could include an 
-          empty value. In that case, the error report here would be incorrect. -->
-      <description>@TYPE MUST have a non-empty value.</description>
+      <description>mets/@TYPE MUST have a value from the VocabularyContentCategory as defined by DILCIS Board.</description>
       <error level="ERROR">
         <message>
-          mets/@TYPE attribute has an empty value. MUST be: attribute has a value from the VocabularyType as defined by DILCIS Board.
-        </message>
-      </error>
-      <corpusPackages>
-        <package name="mets-xml_mets_TYPE_attribute_value_empty" isValid="FALSE">
-          <path></path>
-          <description>
-            METS.xml file with mets/@TYPE = "".
-          </description>
-        </package>
-        <package name="valid_minimal" isValid="TRUE">
-          <path></path>
-          <description>
-            Minimal folder structure and root METS.xml file, nothing optional included.
-          </description>
-        </package>
-      </corpusPackages>
-    </rule>
-    <rule id="3">
-      <description>@TYPE MUST have a value from the VocabularyType as defined by DILCIS Board.</description>
-      <error level="ERROR">
-        <message>
-          mets/@TYPE attribute has incorrect value. MUST be: attribute has a value from the VocabularyType as defined by DILCIS.
+          mets/@TYPE attribute has incorrect value. MUST be: attribute has a value from the VocabularyContentCategory as defined by DILCIS.
         </message>
       </error>
       <corpusPackages>
         <package name="mets-xml_mets_TYPE_attribute_value_incorrect" isValid="FALSE">
           <path></path>
           <description>
-            METS.xml file with mets/@TYPE = "random_string_n3ihcu63LdGb37kF7".
+            METS.xml file has mets/@TYPE = "random_string_n3ihcu63LdGb37kF7".
           </description>
         </package>
-        <package name="valid_minimal" isValid="TRUE">
+        <package name="minimal_IP_with_1_representation" isValid="TRUE">
           <path></path>
           <description>
-            Minimal folder structure and root METS.xml file, nothing optional included.
+            Minimal IP that matches all MUST requirements.
           </description>
         </package>
         <!--  Ideally, there should be a valid IP for each specific vocabulary 
-              value. This should be automated as VocabularyType currently 
-              allows 25 different values. -->
+              value, as this is the only certain way to test that the validator 
+              accepts any one of them. This should be automated as 
+              VocabularyContentCategory currently allows 25 different values. -->
         <package name="valid_minimal_mets_TYPE_value_vocabulary_1" isValid="TRUE">
           <path></path>
           <description>
-            Minimal folder structure and root METS.xml file, nothing optional included. mets/@TYPE value set to VocabularyType allowed value nr 1.
+            Minimal IP that matches all MUST requirements, mets/@TYPE value set to VocabularyContentCategory allowed value nr 1.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="3">
+      <description>If mets/@TYPE = “OTHER” then mets/@csip:OTHERTYPE MUST exist.</description>
+      <error level="ERROR">
+        <message>
+          mets/@csip:OTHERTYPE attribute does not exist. MUST be: If mets/@TYPE = “OTHER” then mets/@csip:OTHERTYPE MUST exist and have a value.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist" isValid="FALSE">
+          <path></path>
+          <description>
+            METS.xml file has mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE attribute does not exist.
+          </description>
+        </package>
+        <package name="valid_minimal_mets_TYPE_value_OTHER" isValid="TRUE">
+          <path></path>
+          <description>
+            Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works – Manuscripts".
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="4">
+      <description>If mets/@TYPE = “OTHER” then mets/@csip:OTHERTYPE MUST exist and have a value.</description>
+      <error level="ERROR">
+        <message>
+          mets/@csip:OTHERTYPE attribute has no value. MUST be: If mets/@TYPE = “OTHER” then mets/@csip:OTHERTYPE MUST exist and have a value.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value" isValid="FALSE">
+          <path></path>
+          <description>
+            METS.xml file has mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "".
+          </description>
+        </package>
+        <package name="valid_minimal_mets_TYPE_value_OTHER" isValid="TRUE">
+          <path></path>
+          <description>
+            Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works – Manuscripts".
           </description>
         </package>
       </corpusPackages>
