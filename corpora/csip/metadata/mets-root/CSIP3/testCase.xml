@@ -22,64 +22,23 @@
     If mets/@csip:OTHERTYPE exists then mets/@TYPE MUST be "OTHER".
   </description>
   <dependencies>
-    <dependency requirementId="CSIP2" URL="https://earkcsip.dilcis.eu/#CSIP2"></dependency>
-    <dependency requirementId="VocabularyContentCategory" URL="https://earkcsip.dilcis.eu/#VocabularyContentCategory">
-      https://earkcsip.dilcis.eu/schema/CSIPVocabularyContentCategory.xml
+    <dependency requirementId="CSIP2" URL="https://earkcsip.dilcis.eu/#CSIP2">
+      The value of the other attribute determines the existence of this attribute.
+    </dependency>
+    <dependency requirementId="VocabularyContentCategory" URL="https://earkcsip.dilcis.eu/schema/CSIPVocabularyContentCategory.xml">
+      The value of the attribute MUST NOT be from the vocabulary.
     </dependency>
   </dependencies>
   <rules>
-    <!-- This rule is identical to CSIP2 rule 3 -->
-    <rule id="1">
-      <description>If mets/@TYPE = "OTHER" then mets/@csip:OTHERTYPE MUST exist.</description>
-      <error level="ERROR">
-        <message>
-          mets/@csip:OTHERTYPE attribute does not exist. MUST be: If mets/@TYPE = "OTHER" then mets/@csip:OTHERTYPE MUST exist and have a value.
-        </message>
-      </error>
-      <corpusPackages>
-        <package name="mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist" isValid="FALSE">
-          <path></path>
-          <description>
-            METS.xml file has mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE attribute does not exist.
-          </description>
-        </package>
-        <package name="valid_minimal_mets_TYPE_value_OTHER" isValid="TRUE">
-          <path></path>
-          <description>
-            Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works - Manuscripts".
-          </description>
-        </package>
-      </corpusPackages>
-    </rule>
-    <!-- This rule is identical to CSIP2 rule 4 -->
-    <rule id="2">
-      <description>If mets/@TYPE = "OTHER" then mets/@csip:OTHERTYPE MUST exist and have a value.</description>
-      <error level="ERROR">
-        <message>
-          mets/@csip:OTHERTYPE attribute has no value. MUST be: If mets/@TYPE = "OTHER" then mets/@csip:OTHERTYPE MUST exist and have a value.
-        </message>
-      </error>
-      <corpusPackages>
-        <package name="mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value" isValid="FALSE">
-          <path></path>
-          <description>
-            METS.xml file has mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "".
-          </description>
-        </package>
-        <package name="valid_minimal_mets_TYPE_value_OTHER" isValid="TRUE">
-          <path></path>
-          <description>
-            Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works - Manuscripts".
-          </description>
-        </package>
-      </corpusPackages>
-    </rule>
+    <!--  The following rules are included in the test case for CSIP2 and not repeated here:
+          - "If mets/@TYPE = "OTHER" then mets/@csip:OTHERTYPE MUST exist."
+          - "If mets/@TYPE = "OTHER" then mets/@csip:OTHERTYPE MUST exist and have a value."-->
     <!-- This rule is implicit in the specification and is important for CSIP2 and CSIP3 to work as intended. -->
-    <rule id="3">
+    <rule id="1">
       <description>If mets/@TYPE = "OTHER" then mets/@csip:OTHERTYPE MUST NOT have a value from the VocabularyContentCategory because these vocabulary values MUST be used for the attribute mets/@TYPE.</description>
       <error level="ERROR">
         <message>
-          mets/@csip:OTHERTYPE attribute has a value that should instead be used for mets/@TYPE. MUST be: mets/@csip:OTHERTYPE MUST describe a content category that falls outside of the VocabularyContentCategory vocabulary.
+          mets/@csip:OTHERTYPE attribute has a value that MUST instead be used for mets/@TYPE. MUST be: mets/@csip:OTHERTYPE MUST describe a content category that falls outside of the VocabularyContentCategory vocabulary.
         </message>
       </error>
       <corpusPackages>
@@ -87,13 +46,13 @@
           value, as this is the only certain way to test that the validator
           checks for all of them. This should be automated as
           VocabularyContentCategory currently allows 25 different values. -->
-        <package name="mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_value_TYPE_vocabulary_1" isValid="FALSE">
+        <package name="mets-xml_mets_TYPE_OTHER_and_csip-OTHERTYPE_vocabulary_1" isValid="FALSE">
           <path></path>
           <description>
             METS.xml file has mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works - Print".
           </description>
         </package>
-        <package name="valid_minimal_mets_TYPE_value_OTHER" isValid="TRUE">
+        <package name="minimal_IP_with_1_rep_mets_TYPE_OTHER" isValid="TRUE">
           <path></path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works - Manuscripts".
@@ -102,7 +61,7 @@
       </corpusPackages>
     </rule>
     <!-- This rule is implicit in the specification and is important for CSIP2 and CSIP3 to work as intended. -->
-    <rule id="4">
+    <rule id="2">
       <description>If mets/@csip:OTHERTYPE exists then mets/@TYPE MUST be "OTHER".</description>
       <error level="ERROR">
         <message>
@@ -110,13 +69,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_TYPE_attribute_value_not_OTHER_and_csip-OTHERTYPE_exists" isValid="FALSE">
+        <package name="mets-xml_mets_TYPE_not_OTHER_and_csip-OTHERTYPE_exists" isValid="FALSE">
           <path></path>
           <description>
-            METS.xml file has mets/@TYPE equal to a value from VocabularyContentCategory, but not "OTHER" (e.g. "Textual works - Print"), and mets/@csip:OTHERTYPE exists (e.g. is "Textual works - Manuscripts").
+            METS.xml file has mets/@TYPE = "Textual works - Print", mets/@csip:OTHERTYPE = "Textual works - Manuscripts".
           </description>
         </package>
-        <package name="valid_minimal_mets_TYPE_value_OTHER" isValid="TRUE">
+        <package name="minimal_IP_with_1_rep_mets_TYPE_OTHER" isValid="TRUE">
           <path></path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works - Manuscripts".
