@@ -17,12 +17,13 @@
     If the METS document is at the package level (i.e. in the root folder) then mets/@csip:CONTENTINFORMATIONTYPE SHOULD (i.e. is recommended to) exist.
     If the METS document is at the representation level (i.e. in the /representations folder) then mets/@csip:CONTENTINFORMATIONTYPE MUST exist.
     If mets/@csip:CONTENTINFORMATIONTYPE exists, it MUST have a value from the VocabularyContentInformationTypeSpecification as defined by DILCIS Board.
-    If mets/@csip:CONTENTINFORMATIONTYPE = “OTHER” then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.
+    If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.
     
     Note: there is ambiguity around the case where an IP with one representation has only the root METS.xml (such a configuration is allowed by CSIP v.2.0.3). It could be said that such root METS.xml actually serves as representation METS.xml and thus mets/@csip:CONTENTINFORMATIONTYPE MUST exist. The interpretation here is that this is not the case, i.e. METS.xml is "representation level" only if it is located in /representations folder.
   </description>
   <dependencies>
     <dependency requirementId="VocabularyContentInformationTypeSpecification" URL="https://earkcsip.dilcis.eu/schema/CSIPVocabularyContentInformationType.xml">
+      The value of the attribute MUST be from the vocabulary.
     </dependency>
   </dependencies>
   <rules>
@@ -87,7 +88,7 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_csip-CONTENTINFORMATIONTYPE_attribute_value_incorrect" isValid="FALSE">
+        <package name="mets-xml_mets_csip-CONTENTINFORMATIONTYPE_value_incorrect" isValid="FALSE">
           <path></path>
           <description>
             METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "random_string_du92Neib57zjMWren".
@@ -113,20 +114,20 @@
       <!--  Rule 5 (the check for existence and value) covers it, but to make the
             error messages more precise, it makes sense to include a separate
             rule for existence only. -->
-      <description>If mets/@csip:CONTENTINFORMATIONTYPE = “OTHER” then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist.</description>
+      <description>If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist.</description>
       <error level="ERROR">
         <message>
-          mets/@csip:OTHERCONTENTINFORMATIONTYPE attribute does not exist. MUST be: If mets/@csip:CONTENTINFORMATIONTYPE = “OTHER” then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.
+          mets/@csip:OTHERCONTENTINFORMATIONTYPE attribute does not exist. MUST be: If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_csip-CONTENTINFORMATIONTYPE_attr_value_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_attr_not_exist" isValid="FALSE">
+        <package name="mets-xml_mets_csip-CONTENTINFORMATIONTYPE_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_not_exist" isValid="FALSE">
           <path></path>
           <description>
             METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE attribute does not exist.
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_value_OTHER" isValid="TRUE">
+        <package name="minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_OTHER" isValid="TRUE">
           <path></path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
@@ -135,20 +136,20 @@
       </corpusPackages>
     </rule>
     <rule id="5">
-      <description>If mets/@csip:CONTENTINFORMATIONTYPE = “OTHER” then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.</description>
+      <description>If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.</description>
       <error level="ERROR">
         <message>
-          mets/@csip:OTHERCONTENTINFORMATIONTYPE attribute has no value. MUST be: If mets/@csip:CONTENTINFORMATIONTYPE = “OTHER” then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.
+          mets/@csip:OTHERCONTENTINFORMATIONTYPE attribute has no value. MUST be: If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_csip-CONTENTINFORMATIONTYPE_attr_value_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_attr_no_value" isValid="FALSE">
+        <package name="mets-xml_mets_csip-CONTENTINFORMATIONTYPE_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_no_value" isValid="FALSE">
           <path></path>
           <description>
             METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "".
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_value_OTHER" isValid="TRUE">
+        <package name="minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_OTHER" isValid="TRUE">
           <path></path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
