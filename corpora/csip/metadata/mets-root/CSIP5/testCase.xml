@@ -47,13 +47,13 @@
           value, as this is the only certain way to test that the validator
           checks for all of them. This should be automated as
           VocabularyContentInformationTypeSpecification currently allows 7 different values. -->
-        <package name="mets-xml_mets_csip-CONTENTINFORMATIONTYPE_value_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_value_CONTENTINFORMATIONTYPE_vocabulary_1" isValid="FALSE">
+        <package name="mets-xml_mets_csip-CONTENTINFORMATIONTYPE_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_vocabulary_1" isValid="FALSE">
           <path></path>
           <description>
             METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "ERMS".
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_value_OTHER" isValid="TRUE">
+        <package name="minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_OTHER" isValid="TRUE">
           <path></path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
@@ -70,13 +70,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_csip-CONTENTINFORMATIONTYPE_value_not_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_exists" isValid="FALSE">
+        <package name="mets-xml_mets_csip-CONTENTINFORMATIONTYPE_not_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_exists" isValid="FALSE">
           <path></path>
           <description>
-            METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE equal to a value from VocabularyContentInformationTypeSpecification, but not "OTHER" (e.g. "ERMS"), and mets/@csip:OTHERCONTENTINFORMATIONTYPE exists (e.g. is "SIARDUK").
+            METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "ERMS" and mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_value_OTHER" isValid="TRUE">
+        <package name="minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_OTHER" isValid="TRUE">
           <path></path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
