@@ -65,7 +65,12 @@
 
             In conclusion, the proper approach now seems to have the
             validator test for a non-empty string. And raise the issue to the
-            A2 team to clarify the wording of CSIP6. -->
+            A2 team to clarify the wording of CSIP6.
+            
+            It seems a good idea to add a "WARNING" level dereferencing test
+            to the validator, but it would be improper to include it in the
+            testCase.xml because such requirement does not come from the
+            specification. -->
       <error level="ERROR">
         <message>
           mets/@PROFILE has incorrect value. MUST be: mets/@PROFILE has a value that is a URL to the METS profile XML document that the IP conforms with.
