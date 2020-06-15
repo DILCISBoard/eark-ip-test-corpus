@@ -141,7 +141,7 @@
      
   </fileSec>
   
-  <structMap TYPE="PHYSICAL" LABEL="CSIP StructMap" ID="ID-StructmapID"> 
+  <structMap TYPE="PHYSICAL" LABEL="CSIP StructMap" ID="ID-StructmapID_rep1"> 
     <!-- CSIP80 mets/structMap  -->
     <!-- CSIP81 mets/structMap/@TYPE The type attribute of the structural map (structMap) is set to value “PHYSICAL” from the vocabulary -->
     <!-- CSIP82 mets/structMap/@LABEL The value must be “CSIP StructMap” -->
@@ -163,4 +163,3 @@
   </structMap> 
   
 </mets>
-
