@@ -45,7 +45,7 @@ XML lists -->
         <package name="IP_18000_CSIP17_1" isValid="TRUE">
           <path>/corpora/csip/metadata/dmdSec/CSIP17/IP_18000_CSIP17_1</path>
           <!-- Full description of corpus package features. -->
-          <description>A package based on the minimal IP with schemas. Contains no dmdSec</description>
+          <description>A package based on the minimal IP with schemas. Contains no dmdSec in Root METS or Representation METS even though there are files in the metadata folder</description>
         </package>
       </corpusPackages>
     </rule>
