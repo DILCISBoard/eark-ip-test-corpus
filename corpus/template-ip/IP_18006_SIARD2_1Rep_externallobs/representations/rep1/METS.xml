@@ -1,4 +1,4 @@
-<!-- ID.AVID.RA.18006/representations/AVID.RA.18006.rep0/METS.xml - a representation level METS file -->
+<!-- a representation level METS file -->
 <!-- This representation level METS.xml file includes information about only the components of this segment of the representation -->
 <!-- This representation level METS.xml file is not aware of its own root level METS file or any other segments that may exists -->
 <mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -6,7 +6,7 @@
 	xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance schemas/XMLSchema.xsd http://www.loc.gov/METS/ schemas/mets.xsd http://www.w3.org/1999/xlink schemas/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS schemas/CSIPExtensionMETS.xsd" 
- OBJID="ID.AVID.RA.18006.rep0" TYPE="Databases" csip:CONTENTINFORMATIONTYPE="SIARD2" LABEL="representations level METS file for a representation">
+ OBJID="IP_18006_SIARD2_1Rep_externallobs_rep1" TYPE="Databases" csip:CONTENTINFORMATIONTYPE="SIARD2" LABEL="representations level METS file for a representation">
 	<!-- Note that the OBJID can be replaced with any ID scheme. In this example IDs carring information are used to ease understanding -->
 	<!-- PROFILE is not used at the representations level METS -->
 	<metsHdr RECORDSTATUS="NEW" CREATEDATE="2015-12-14T14:20:00" 
@@ -15,46 +15,46 @@
 			<name>E-ARK SIP Creator</name> <!-- CS optional -->
 			<note>VERSION=0.0.1</note> <!-- CS optional -->
 		</agent>
-		<metsDocumentID>ID.AVID.RA.18006.rep0</metsDocumentID> <!-- CS optional, recommended to be equal to OBJID -->
+		<metsDocumentID>IP_18006_SIARD2_1Rep_externallobs_rep1</metsDocumentID> <!-- CS optional, recommended to be equal to OBJID -->
 	</metsHdr>
 	<dmdSec ID="ID_dmdSec_rep0" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
 		<mdRef  ID="ID.archiveIndex.rep0" LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2340" CREATED="2018-04-24T14:37:49.609+01:00" CHECKSUM="9B706A5D472B383C5A965639F4873E01D081B89DFEA16A7D8E072A60B4C6846F" CHECKSUMTYPE="SHA-256"/>
 	</dmdSec>
 	<fileSec>
 		<!-- In these example IDs are carring information to ease understanding - they look like paths to ease understanding, but are just IDs, similar to the naming of namespaces - these IDs can be replaced with information less UUID -->
-		<fileGrp USE="E-ARK files representation ID.AVID.RA.18006.rep0." ID="ID.AVID.RA.18006.rep0"> <!-- this ID is just for internal reference -->
+		<fileGrp USE="E-ARK files representation IP_18006_SIARD2_1Rep_externallobs_rep1." ID="IP_18006_SIARD2_1Rep_externallobs_rep1"> <!-- this ID is just for internal reference -->
 			<!--CS requirement for value of USE: "E-ARK files representation [ID]" -->
 			<!-- schemas -->		
-			<fileGrp USE="schemas" ID="ID.AVID.RA.18006.rep0.representations.schemas">  <!-- this ID is just for internal reference -->
+			<fileGrp USE="schemas" ID="IP_18006_SIARD2_1Rep_externallobs_rep1.representations.schemas">  <!-- this ID is just for internal reference -->
 				<!-- METS.xsd -->
-				<file ID="ID.AVID.RA.18006.rep0.schemas.mets.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+				<file ID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.mets.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
 					CHECKSUM="75debd87e3d070e8590a393ac38483e4" CHECKSUMTYPE="MD5" SIZE="134223">
 					<FLocat LOCTYPE="URL" xlink:href="../../schemas/mets.xsd" xlink:type="simple"/>
 				</file>
 				<!-- mets_xlink.xsd -->
-				<file ID="ID.AVID.RA.18006.rep0.schemas.mets_xlink.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+				<file ID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.mets_xlink.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
 					CHECKSUM="0aaa1dd8380416f09ac607a06b3ec1a0" CHECKSUMTYPE="MD5" SIZE="3021">
 					<FLocat LOCTYPE="URL" xlink:href="../../schemas/mets_xlink.xsd" xlink:type="simple"/>
 				</file>
 				<!-- xlink.xsd -->
-				<file ID="ID.AVID.RA.18006.rep0.schemas.xlink.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+				<file ID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.xlink.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
 					CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
 					<FLocat LOCTYPE="URL" xlink:href="../../schemas/xlink.xsd" xlink:type="simple"/>
 				</file>
 			</fileGrp>
 			<!-- documentation -->		
-			<fileGrp USE="documentation" ID="ID.AVID.RA.18006.rep0.representations.documentation">  <!-- this ID is just for internal reference -->
+			<fileGrp USE="documentation" ID="IP_18006_SIARD2_1Rep_externallobs_rep1.representations.documentation">  <!-- this ID is just for internal reference -->
 				<!-- ER diagramme -->
-				<file ID="ID.AVID.RA.18006.rep0.erdiagramme" USE="documentation" MIMETYPE="tif"  CREATED="2015-12-14T14:20:00" 
+				<file ID="IP_18006_SIARD2_1Rep_externallobs_rep1.erdiagramme" USE="documentation" MIMETYPE="tif"  CREATED="2015-12-14T14:20:00" 
 					CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
 					<FLocat LOCTYPE="URL" xlink:href="documentation\Northwind ER diagram.png" xlink:type="simple"/>
 				</file>	
 			</fileGrp>				
 			<!-- metadata -->				
-			<fileGrp USE="metadata" ID="ID.AVID.RA.18006.rep0.representations.metadata">  <!-- this ID is just for internal reference -->
+			<fileGrp USE="metadata" ID="IP_18006_SIARD2_1Rep_externallobs_rep1.representations.metadata">  <!-- this ID is just for internal reference -->
 				<!-- EAD and PREMIS have been described under dmdSec and amdSec and according to the CS they MUST NOT (or SHOULD?) be listed here -->
 			</fileGrp>
-			<fileGrp USE="data" ID="ID.AVID.RA.18006.rep0.representations.data">  <!-- this ID is just for internal reference -->
+			<fileGrp USE="data" ID="IP_18006_SIARD2_1Rep_externallobs_rep1.representations.data">  <!-- this ID is just for internal reference -->
 				<!-- The following fileGrp is for the SIARD files. Other files in this IP must have their own fileGrp -->
 				<fileGrp ID="ID_SIARD_FILES">
 					<fileGrp ID="ID_SIARD_DDL">
@@ -128,11 +128,11 @@
 	</fileSec>
 	
 	<structMap TYPE="physical" LABEL="E-ARK structural map"> <!-- According to the CS v0.13 sec. 5.2, p 36 --> <!-- Modified by request of Jan Rörden -->
-		<div LABEL="ID.AVID.RA.18006.rep0"> <!-- CS: LABEL value MUST be ID of the repr.-->
+		<div LABEL="IP_18006_SIARD2_1Rep_externallobs_rep1"> <!-- CS: LABEL value MUST be ID of the repr.-->
 			<div LABEL="schemas">
-				<fptr FILEID="ID.AVID.RA.18006.rep0.schemas.mets.xsd"/> <!-- this FILEID attr. has a ref. to the ID attribute in the <file> element in the <fileGrp> element in the <fileSec> element -->
-				<fptr FILEID="ID.AVID.RA.18006.rep0.schemas.mets_xlink.xsd"/> 
-				<fptr FILEID="ID.AVID.RA.18006.rep0.schemas.xlink.xsd"/>
+				<fptr FILEID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.mets.xsd"/> <!-- this FILEID attr. has a ref. to the ID attribute in the <file> element in the <fileGrp> element in the <fileSec> element -->
+				<fptr FILEID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.mets_xlink.xsd"/> 
+				<fptr FILEID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.xlink.xsd"/>
 			</div>
 			<div LABEL="documentation"></div>	
 			<div LABEL="metadata">
@@ -169,7 +169,7 @@
 		</div>
 	</structMap>
 	<structMap TYPE="foldersonly" LABEL="DILCIS CSIP struct map compact"> <!-- this structMap does not repeat all files in fileSec for the files in the representation-->
-		<div LABEL="ID.AVID.RA.18006.rep0"> <!-- CS: LABEL value MUST be ID of the repr.-->
+		<div LABEL="IP_18006_SIARD2_1Rep_externallobs_rep1"> <!-- CS: LABEL value MUST be ID of the repr.-->
 			<div LABEL="schemas"></div>
 			<div LABEL="documentation"></div>	
 			<div LABEL="metadata">
