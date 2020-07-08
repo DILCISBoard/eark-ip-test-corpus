@@ -17,9 +17,10 @@
 		</agent>
 		<metsDocumentID>IP_18006_SIARD2_1Rep_externallobs_rep1</metsDocumentID> <!-- CS optional, recommended to be equal to OBJID -->
 	</metsHdr>
-	<dmdSec ID="ID_dmdSec_rep0" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
-		<mdRef  ID="ID.archiveIndex.rep0" LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2340" CREATED="2018-04-24T14:37:49.609+01:00" CHECKSUM="9B706A5D472B383C5A965639F4873E01D081B89DFEA16A7D8E072A60B4C6846F" CHECKSUMTYPE="SHA-256"/>
+	<dmdSec ID="ID_dmdSec_rep1" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
+		<mdRef  ID="ID.archiveIndex.rep1" LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2340" CREATED="2018-04-24T14:37:49.609+01:00" CHECKSUM="9B706A5D472B383C5A965639F4873E01D081B89DFEA16A7D8E072A60B4C6846F" CHECKSUMTYPE="SHA-256"/>
 	</dmdSec>
+	
 	<fileSec>
 		<!-- In these example IDs are carring information to ease understanding - they look like paths to ease understanding, but are just IDs, similar to the naming of namespaces - these IDs can be replaced with information less UUID -->
 		<fileGrp USE="E-ARK files representation IP_18006_SIARD2_1Rep_externallobs_rep1." ID="IP_18006_SIARD2_1Rep_externallobs_rep1"> <!-- this ID is just for internal reference -->
@@ -42,14 +43,7 @@
 					<FLocat LOCTYPE="URL" xlink:href="../../schemas/xlink.xsd" xlink:type="simple"/>
 				</file>
 			</fileGrp>
-			<!-- documentation -->		
-			<fileGrp USE="documentation" ID="IP_18006_SIARD2_1Rep_externallobs_rep1.representations.documentation">  <!-- this ID is just for internal reference -->
-				<!-- ER diagramme -->
-				<file ID="IP_18006_SIARD2_1Rep_externallobs_rep1.erdiagramme" USE="documentation" MIMETYPE="tif"  CREATED="2015-12-14T14:20:00" 
-					CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
-					<FLocat LOCTYPE="URL" xlink:href="documentation\Northwind ER diagram.png" xlink:type="simple"/>
-				</file>	
-			</fileGrp>				
+							
 			<!-- metadata -->				
 			<fileGrp USE="metadata" ID="IP_18006_SIARD2_1Rep_externallobs_rep1.representations.metadata">  <!-- this ID is just for internal reference -->
 				<!-- EAD and PREMIS have been described under dmdSec and amdSec and according to the CS they MUST NOT (or SHOULD?) be listed here -->
