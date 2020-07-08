@@ -49,8 +49,7 @@
 				</file>	
 			</fileGrp>				
 			<!-- metadata -->				
-			<fileGrp USE="metadata" ID="IP_18006_CSIP17_1.rep1.representations.metadata">  <!-- this ID is just for internal reference -->
-				<!-- EAD and PREMIS have been described under dmdSec and amdSec and according to the CS they MUST NOT (or SHOULD?) be listed here -->
+
 			</fileGrp>
 			<fileGrp USE="data" ID="IP_18006_CSIP17_1.rep1.representations.data">  <!-- this ID is just for internal reference -->
 				<!-- The following fileGrp is for the SIARD files. Other files in this IP must have their own fileGrp -->
@@ -122,7 +121,7 @@
 					</fileGrp>
 				</fileGrp>
 			</fileGrp>
-		</fileGrp>
+		
 	</fileSec>
 	
 	<structMap TYPE="physical" LABEL="E-ARK structural map"> <!-- According to the CS v0.13 sec. 5.2, p 36 --> <!-- Modified by request of Jan Rörden -->
@@ -134,8 +133,8 @@
 			</div>
 			<div LABEL="documentation"></div>	
 			<div LABEL="metadata">
-				<div LABEL="descriptive"><!-- ead.xml has been described in the dmdSec in ROOT METS so nothing further to describe here according to CS--></div>	
-				<div LABEL="preservation"><!-- premis.xml have been described in the amdSec in ROOT METSso nothing further to describe here according to CS--></div>	
+				<div LABEL="descriptive"></div>	
+				<div LABEL="preservation"></div>	
 				<div LABEL="other"></div>	
 			</div>
 			<div LABEL="data">
@@ -171,8 +170,8 @@
 			<div LABEL="schemas"></div>
 			<div LABEL="documentation"></div>	
 			<div LABEL="metadata">
-				<div LABEL="descriptive"><!-- ead.xml has been described in the dmdSec in ROOT METS so nothing further to describe here according to CS--></div>	
-				<div LABEL="preservation"><!-- premis.xml have been described in the amdSec in ROOT METS so nothing further to describe here according to CS--></div>	
+				<div LABEL="descriptive"></div>	
+				<div LABEL="preservation"></div>	
 				<div LABEL="other"></div>	
 			</div>
 			<div LABEL="data">
