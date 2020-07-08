@@ -23,25 +23,25 @@ XML lists -->
   <rules>
     <rule id="1">
       <description>The mdRef-element SHOULD be there</description>
-      <error level="WARNING">
+      <error level="ERROR">
         <message>There is no dmdSec/mdRef-element in METS.xml</message>
       </error>
       <corpusPackages>
         <package name="IP_18000_CSIP21_1" isValid="TRUE" >
           <path>/corpora/csip/metadata/dmdSec/CSIP21/IP_18000_CSIP21_1</path>
-          <description>A package based on the minimal IP with schemas. Contains a dmdSec element with no mdRef-element in METS.xml.</description>
+          <description>A package based on IP_18006_SIARD2_1Rep_externallobs. Contains a dmdSec element with no mdRef-element in both root METS.xml and representation METS but with files in both.</description>
         </package>
       </corpusPackages>
     </rule>
     <rule id="2">
       <description>The mdRef-element SHOULD be there</description>
-      <error level="ERROR">
+      <error level="WARNING">
         <message> There are files in the directory: /metadata/descriptive/ but there is no dmdSec/mdRef-element in METS.xml.</message>
       </error>
       <corpusPackages>
         <package name="IP_18000_CSIP21_2" isValid="FALSE" >
           <path>/corpora/csip/metadata/dmdSec/CSIP21/IP_18000_CSIP21_2</path>
-          <description>A package based on the minimal IP with schemas. Contains a file in metadata/descriptive folder but has a dmdSec element with no mdRef-element in METS.xml.</description>
+          <description>A package based on IP_18006_SIARD2_1Rep_externallobs. Contains a dmdSec element with no mdRef-element in both root METS.xml and representation METS and with no files.</description>
         </package>
       </corpusPackages>
     </rule>
