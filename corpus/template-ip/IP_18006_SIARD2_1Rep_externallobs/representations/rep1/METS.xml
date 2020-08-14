@@ -6,7 +6,9 @@
 	xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance schemas/XMLSchema.xsd http://www.loc.gov/METS/ schemas/mets.xsd http://www.w3.org/1999/xlink schemas/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS schemas/CSIPExtensionMETS.xsd" 
+
  OBJID="IP_18006_SIARD2_1Rep_externallobs_rep1" TYPE="Databases" csip:CONTENTINFORMATIONTYPE="SIARD2" csip:OTHERCONTENTTYPESPECIFICATION="SIARD_2.1" LABEL="representations level METS file for a representation" csip:OAISPACKAGETYPE="SIP">
+
 	<!-- Note that the OBJID can be replaced with any ID scheme. In this example IDs carring information are used to ease understanding -->
 	<!-- PROFILE is not used at the representations level METS -->
 	<metsHdr RECORDSTATUS="NEW" CREATEDATE="2015-12-14T14:20:00" 
@@ -128,7 +130,7 @@
 				<fptr FILEID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.mets_xlink.xsd"/> 
 				<fptr FILEID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.xlink.xsd"/>
 			</div>
-			<div LABEL="Documentation"></div>	
+			<div LABEL="documentation"></div>	
 			<div LABEL="metadata">
 				<div LABEL="descriptive"><!-- ead.xml has been described in the dmdSec in ROOT METS so nothing further to describe here according to CS--></div>	
 				<div LABEL="preservation"><!-- premis.xml have been described in the amdSec in ROOT METSso nothing further to describe here according to CS--></div>	

@@ -28,6 +28,7 @@
       <!-- CSIP16 mets/metsHdr/agent/note/@csip:NOTETYPE The mandatory agent note is typed with the fixed value of “SOFTWARE VERSION”. -->
     </agent>
   </metsHdr>
+
   <dmdSec ID="uuid-4wqd8DD8-2561-4315-AC39-F941CBB138B4" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
    <mdRef LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2340" CREATED="2018-04-24T14:37:49.609+01:00" 
      CHECKSUM="9B706A5D472B383C5A965639F4873E01D081B89DFEA16A7D8E072A60B4C6846F" CHECKSUMTYPE="SHA-256"/>
@@ -45,11 +46,9 @@
     </digiprovMD>
   </amdSec>
   
-  
-  
+
   <fileSec ID="ID_filesec">
-    	
-    
+
     <!-- CSIP59 there MUST be an ID -->
     <!-- schemas -->
     <fileGrp USE="Schemas" ID="ID_schemas">
@@ -90,14 +89,22 @@
     </fileGrp>
     <!-- documentation -->		
     <fileGrp USE="Documentation" ID="ID.AVID_documentation">  <!-- this ID is just for internal reference -->
-     
+
+      <!-- Submission decision-->
+      <file ID="submission_decision" USE="documentation" MIMETYPE="TIFF"  CREATED="2015-12-14T14:20:00" 
+        CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5" SIZE="86453">
+        <FLocat LOCTYPE="URL" xlink:href="documentation\submission_decision.tif" xlink:type="simple"/>
+      </file>	
+
       <!-- ER diagramme -->
       <file ID="IP_er_diagramme" USE="documentation" MIMETYPE="PNG"  CREATED="2015-12-14T14:20:00" 
         CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5" SIZE="86453">
         <FLocat LOCTYPE="URL" xlink:href="documentation\Northwind ER diagram.png" xlink:type="simple"/>
       </file>	
     </fileGrp>			
+
     <fileGrp USE="Representations" csip:OAISPACKAGETYPE="SIP" csip:CONTENTINFORMATIONTYPE="SIARD2" csip:OTHERCONTENTTYPESPECIFICATION="SIARD_2.1" ID="ID_Rep1">
+
       <file ID="IP_18006_SIARD2_1Rep_externallobs_METS.xml" USE="OTHER" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
 	     CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
 	     <FLocat LOCTYPE="URL" xlink:href="representations\rep1\METS.xml" xlink:type="simple"/>
@@ -107,6 +114,7 @@
   <structMap TYPE="PHYSICAL" LABEL="CSIP" ID="StructmapID_rep1">
     <!-- CSIP80 mets/structMap -->
     <!-- CSIP81 mets/structMap/@TYPE The type attribute of the structural map (structMap) is set to value “PHYSICAL” from the vocabulary -->
+
     <!-- CSIP82 mets/structMap/@LABEL The value must be “CSIP StructMap” -->
     <!-- CSIP83 mets/structMap/@ID -->
     <div ID="Structmap_Div_ID" LABEL="IP_18006_1REP">
@@ -119,6 +127,7 @@
       <div ID="struct-map-reps-sub-div" LABEL="Representations/rep1">
         <mptr LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/METS.xml" xlink:title="ID_Rep1" ></mptr>
         </div>  
+
       <div ID="Structmap_Div_ID_Schemas" LABEL="Schemas" CONTENTIDS="ID_schemas"/>
     </div>
   </structMap>
