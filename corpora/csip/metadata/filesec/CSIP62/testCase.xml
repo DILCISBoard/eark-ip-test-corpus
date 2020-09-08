@@ -1,0 +1,23 @@
+<!-- Root element for an individual test case, allows these to be wrapped into
+XML lists -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
+  testable="UNKNOWN">
+  <!-- Unique ID for the test case -->
+  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP62"/>
+  <!-- URL references to requirements for convenient lookup -->
+  <references>
+    <reference requirementId="CSIP62" URL="http://earkcsip.dilcis.eu/#CSIP62"/>
+  </references>
+  <!-- The full text of the requirement. -->
+  <requirementText>An added attribute which describes the specific content information type specification used for the transferred content. The attribute is mandatory to use when the file group catagorization is Representations. The vocabulary is going to evolve under the care of the DILCIS Board as additional content information type specifications are developed.
+</requirementText>
+  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
+  <description></description>
+  <!-- List of requirments that this test case depends on in addition to the
+  main requirememt, e.g. general requirments on the form of IDs -->
+  <dependencies>
+  </dependencies>
+  <!-- A list of the validation rules derived from the test case -->
+  <rules>
+  </rules>
+</testCase>
