@@ -26,7 +26,7 @@ Scope & Coverage
 ### Specification coverage
 An ideal validation corpus should be a physical demonstration of each and every requirement stated in the Common Specification. In testing terms, this aspiration is expressed as 100% coverage of the specification. The progress towards this milestone can be expressed as a percentage coverage of the specification requirements.
 
-While this is the most important metric, it's not easy to provide an objective, automatable measure. The A2 specification group will be the aribiter here.
+While this is the most important metric, it's not easy to provide an objective, automatable measure. The A2 specification group will be the arbiter here.
 
 ### Out of scope
 There are some test case and corpus examples that we consider to be explicitly out of scope
