@@ -23,7 +23,7 @@ test case thread. It might be that the requirement is too complex and could be
 broken down. If this isn't the case then there  will be a one to many
 relationship between specification requirements and test cases. The test cases
 provide fine-grained, detailed demonstrations of pass and fail conditions for
-the requirments.
+the requirements.
 
 There should be pass and fail corpus packages for each test case, although it's possible that multiple test cases share a single "pass" case for brevity.
 
@@ -38,7 +38,7 @@ When quoting XML XPaths or file system paths please state the full path for
 clarity.
 
 #### Rule error messages
-Error messages assigned to rules should be consise and specific. Consider the
+Error messages assigned to rules should be concise and specific. Consider the
 CSIP requirement description for the `mets@TYPE` attribute.
 
 > Mandatory in this specification. The TYPE attribute must be used for identifying the type of the package (genre), for example ERMS, RDBMS, digitised construction plans. However, there is no fixed vocabulary and as such implementers are welcome to use values most suitable for their needs.
