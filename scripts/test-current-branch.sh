@@ -20,7 +20,7 @@ echo "Parsed branch:" $currentBranch
 # Pick up Travis' PR branch if it exists
 echo "Travis branch:" $TRAVIS_BRANCH
 if [[ -v $TRAVIS_BRANCH ]]; then
-    currentBranch=$TRAVIS_BRANCH
+    currentBranch="$TRAVIS_BRANCH"
 fi
 echo "Post Travis branch:" $currentBranch
 # IF integration then test find and run all test cases
