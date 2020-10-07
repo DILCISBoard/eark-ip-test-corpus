@@ -16,10 +16,13 @@ export SCRIPT_DIR
 
 # Obtain current git branch name and take appropriate action:
 currentBranch="$(git rev-parse --abbrev-ref HEAD)"
+echo "Parsed branch:" $currentBranch
 # Pick up Travis' PR branch if it exists
+echo "Travis branch:" $TRAVIS_BRANCH
 if [[ -v $TRAVIS_BRANCH ]]; then
     currentBranch=$TRAVIS_BRANCH
 fi
+echo "Post Travis branch:" $currentBranch
 # IF integration then test find and run all test cases
 if [[ "$currentBranch" == "integration" ]]
 then
