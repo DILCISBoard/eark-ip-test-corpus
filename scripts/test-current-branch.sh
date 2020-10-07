@@ -19,13 +19,12 @@ currentBranch="$(git rev-parse --abbrev-ref HEAD)"
 echo "Parsed branch:" $currentBranch
 # Pick up Travis' PR branch if it exists
 echo "Travis branch:" $TRAVIS_BRANCH
-if [[ -v $TRAVIS_BRANCH ]]; then
-    currentBranch="$TRAVIS_BRANCH"
+if [[ -v TRAVIS_BRANCH ]]; then
+    currentBranch=TRAVIS_BRANCH
 fi
 echo "Post Travis branch:" $currentBranch
 # IF integration then test find and run all test cases
-if [[ "$currentBranch" == "integration" ]]
-then
+if [[ "$currentBranch" == "integration" ]]; then
   echo "Processing all test cases"
   find ./corp* -type f -iname "testcase.xml"
   # Loop through all testCase.xml files under a filtered subset and call the test case processor
