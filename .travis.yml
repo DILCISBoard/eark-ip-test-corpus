@@ -5,6 +5,15 @@ python:
   - "3.5"
   - "3.6"
 
+install:
+  # Install the Python dependencies for XML processing and debug
+  - sudo apt-get install -y python-dev libxml2-dev libxslt1-dev python3-dev
+  # Build and install the IP validator
+  - cd ..
+  - git clone --single-branch --branch feat/cli https://github.com/E-ARK-Software/py-rest-ip-validator.git
+  - cd py-rest-ip-validator
+  - pip install .[testing]
+  - cd ../eark-ip-test-corpus
 
 # command to run tests
 script:
