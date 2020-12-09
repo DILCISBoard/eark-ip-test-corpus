@@ -1,0 +1,29 @@
+<testCase>
+   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR8" />
+  <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR8
+  </reference>
+  <description>
+      If any other metadata are available, they CAN be included in separate sub-folders, for example an additional folder named other.
+  </description>
+  <dependencies>
+    <dependency specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR10" />
+  </dependencies>
+  <rules>
+    <rule id="1">
+        <description>The 'metadata' folder CAN include additional sub-folder</description>
+        <error level="INFO">
+            <message>
+		    Additional sub-folder found in 'metadata' folder folder
+		    </message>
+        </error>
+		<package name="metadata_folder_has_folder_other">
+			<path>pass\metadata_folder_has_folder_other</path>
+		    <description>Positive testcase. 'metadata' folder includes sub-folder named 'other'.</description>
+        </package>
+		<package name="metadata_folder_has_folder_metadata">
+			<path>pass\metadata_folder_has_folder_metadata</path>
+		    <description>Positive testcase. 'metadata' folder includes sub-folder named 'metadata'.</description>
+        </package>
+    </rule>
+  </rules>
+</testCase>
