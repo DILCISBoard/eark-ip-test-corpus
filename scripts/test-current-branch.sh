@@ -24,23 +24,32 @@ fi
 if [[ "$currentBranch" == "integration" ]]; then
   echo $currentBranch": processing all test cases..."
   # Loop through all testCase.xml files under a filtered subset and call the test case processor
+  finalStatus=0
   while IFS= read -r -d '' CASE
   do
     ip-check -t "$CASE"
+    exitStatus=$?
+    if [[ $exitStatus != 0 ]]; then
+      echo "FAILED CASE:" $CASE
+      finalStatus=$exitStatus
+    fi
   done <    <(find ./corp* -type f -iname "testcase.xml" -print0)
+  echo "Exit Status:"$finalStatus
+  exit $finalStatus
   # ELSE assume a single test case
-  else
-    # Parse test case ID from branch
-    testCase="$(echo $currentBranch | awk -F/ '{print $NF}')"
-    echo "Processing test case:" $testCase
-    # Locate test case files via find
-    while IFS= read -r -d '' CASE
-    do
-      # call test case runner on single test case file
-      ip-check -t "$CASE"
-      exitStatus=$?
-      exit $exitStatus
-    done <    <(find . -path \*/${testCase^^}/\* -iname "testcase.xml" -print0)
+else
+  # Parse test case ID from branch
+  testCase="$(echo $currentBranch | awk -F/ '{print $NF}')"
+  echo "Processing test case:" $testCase
+  # Locate test case files via find
+  while IFS= read -r -d '' CASE
+  do
+    # call test case runner on single test case file
+    ip-check -t "$CASE"
+    exitStatus=$?
+    echo "Exit Status:"$exitStatus
+    exit $exitStatus
+  done <    <(find . -path \*/${testCase^^}/\* -iname "testcase.xml" -print0)
 fi
 # Test case processer routine:
 # IF testCase@testable == FALSE (untestable)
