@@ -1,23 +1,51 @@
-<!-- Root element for an individual test case, allows these to be wrapped into
-XML lists -->
-<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
-  <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP11"/>
-  <!-- URL references to requirements for convenient lookup -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="CSIP" version="2.0.4" requirementId="CSIP11"/>
   <references>
     <reference requirementId="CSIP11" URL="http://earkcsip.dilcis.eu/#CSIP11"/>
   </references>
-  <!-- The full text of the requirement. -->
-  <requirementText>The role of the mandatory agent is “CREATOR”.
-</requirementText>
-  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
-  <!-- List of requirments that this test case depends on in addition to the
-  main requirememt, e.g. general requirments on the form of IDs -->
-  <dependencies>
-  </dependencies>
-  <!-- A list of the validation rules derived from the test case -->
+  <requirementText>
+    <name>Agent role</name>
+    <location>mets/metsHdr/agent[@ROLE='CREATOR']</location>
+    <description>
+      The mandatory agent element MUST have a @ROLE attribute with the value "CREATOR".
+    </description>
+    <cardinality>1..1</cardinality>
+    <level>MUST</level>
+  </requirementText>
+  <description>
+    mets/metsHdr/agent/@ROLE MUST exist.
+    mets/metsHdr/agent/@ROLE MUST have the value 'CREATOR'.
+  </description>
+  <dependencies />
   <rules>
+    <!--  The rule "mets/metsHdr/agent/@ROLE MUST exist" is tested for by schema
+          validation, as mets.xsd defines the attribute as use="required." Thus,
+          no rule description or corpus packages here. -->
+    <rule id="1">
+      <description>mets/metsHdr/agent/@ROLE MUST have the value 'CREATOR'.</description>
+      <error level="ERROR">
+        <message>
+          mets/metsHdr/agent/@ROLE has incorrect value. MUST be: attribute exists and has the value 'CREATOR'.
+        </message>
+      </error>
+      <corpusPackages>
+        <!--  Ideally, there should be an invalid IP for each specific enumeration
+              value, as this is the only certain way to test that the validator
+              reports an error on any one of them. This should be automated as
+              mets.xsd allows 7 values that are not acceptable by CSIP. -->
+        <package name="mets-xml_metsHdr_agent_ROLE_EDITOR" isValid="FALSE">
+          <path>invalid/mets-xml_metsHdr_agent_ROLE_EDITOR</path>
+          <description>
+            METS.xml file has mets/metsHdr/agent/@ROLE = "EDITOR".
+          </description>
+        </package>
+        <package name="minimal_IP_with_1_representation" isValid="TRUE">
+          <path>valid/minimal_IP_with_1_representation</path>
+          <description>
+            Minimal IP that matches all MUST requirements.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
   </rules>
 </testCase>
