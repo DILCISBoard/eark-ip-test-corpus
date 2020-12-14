@@ -8,7 +8,7 @@
     http://www.w3.org/1999/xlink schemas/xlink.xsd 
     https://DILCIS.eu/XML/METS/CSIPExtensionMETS schemas/CSIPExtensionMETS.xsd" 
   OBJID="IP_18006_CSIP17_1" TYPE="Databases" csip:CONTENTINFORMATIONTYPE="SIARD2"
-  PROFILE="http://www.eark-project.com/METS/IP.xml">
+  PROFILE="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml">
   <!-- CSIP1 - mets/@OBJID -->
   <!-- CSIP2 - mets/@TYPE -->
   <!-- CSIP4 - mets/@csip:CONTENTTYPESPECIFICATION -->
