@@ -3,10 +3,10 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP29"/>
+  <id specification="CSIP" version="2.0.4" requirementId="CSIP30"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
-    <reference requirementId="CSIP29" URL="http://earkcsip.dilcis.eu/#CSIP29"/>
+    <reference requirementId="CSIP30" URL="http://earkcsip.dilcis.eu/#CSIP30"/>
   </references>
   <!-- The full text of the requirement. -->
   <requirementText>The checksum of the linked file.</requirementText>
