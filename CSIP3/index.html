@@ -24,11 +24,8 @@
     <div class="card-body">
       <h5 class="card-title">CSIP:CSIP3</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text">Other Content Category</p>
-      <p class="card-text">
-      When the mets/@TYPE attribute has the value "OTHER" the mets/@csip:OTHERTYPE attribute MUST be used to declare the content category of the package/representation.
-      See also: Content Category, https://earkcsip.dilcis.eu/#VocabularyContentCategory
-    </p>
+      <p class="card-text"></p>
+      <p class="card-text"></p>
     </div>
   </div>
 
@@ -46,7 +43,26 @@
           mets/@csip:OTHERTYPE attribute has a value that MUST instead be used for mets/@TYPE. MUST be: mets/@csip:OTHERTYPE MUST describe a content category that falls outside of the VocabularyContentCategory vocabulary.
         </p>
           <p class="card-text">Packages: 
-    <a class="badge badge-secondary" href="./mets-xml_mets_TYPE_OTHER_and_csip-OTHERTYPE_vocabulary_1/index.html"> mets-xml_mets_TYPE_OTHER_and_csip-OTHERTYPE_vocabulary_1</a>&nbsp;<a class="badge badge-secondary" href="./minimal_IP_with_1_rep_mets_TYPE_OTHER/index.html"> minimal_IP_with_1_rep_mets_TYPE_OTHER</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_mets_TYPE_OTHER_and_csip-OTHERTYPE_vocabulary_1/index.html">mets-xml_mets_TYPE_OTHER_and_csip-OTHERTYPE_vocabulary_1</a></td>
+          <td>Invalid</td>
+          <td></td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_rep_mets_TYPE_OTHER/index.html">minimal_IP_with_1_rep_mets_TYPE_OTHER</a></td>
+          <td>Valid</td>
+          <td></td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>
@@ -63,7 +79,26 @@
           mets/@csip:OTHERTYPE exists although mets/@TYPE is not "OTHER". MUST be: mets/@csip:OTHERTYPE MUST only exist if mets/@TYPE = "OTHER".
         </p>
           <p class="card-text">Packages: 
-    <a class="badge badge-secondary" href="./mets-xml_mets_TYPE_not_OTHER_and_csip-OTHERTYPE_exists/index.html"> mets-xml_mets_TYPE_not_OTHER_and_csip-OTHERTYPE_exists</a>&nbsp;<a class="badge badge-secondary" href="./minimal_IP_with_1_rep_mets_TYPE_OTHER/index.html"> minimal_IP_with_1_rep_mets_TYPE_OTHER</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_mets_TYPE_not_OTHER_and_csip-OTHERTYPE_exists/index.html">mets-xml_mets_TYPE_not_OTHER_and_csip-OTHERTYPE_exists</a></td>
+          <td>Invalid</td>
+          <td></td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_rep_mets_TYPE_OTHER/index.html">minimal_IP_with_1_rep_mets_TYPE_OTHER</a></td>
+          <td>Valid</td>
+          <td></td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>

@@ -24,11 +24,8 @@
     <div class="card-body">
       <h5 class="card-title">CSIP:CSIP2</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text">Content Category</p>
-      <p class="card-text">
-      The mets/@TYPE attribute MUST be used to declare the category of the content held in the package, e.g. book, journal, stereograph, video, etc.. Legal values are defined in a fixed vocabulary. When the content category used falls outside of the defined vocabulary the mets/@TYPE value must be set to “OTHER” and the specific value declared in mets/@csip:OTHERTYPE. The vocabulary will develop under the curation of the DILCIS Board as additional content information type specifications are produced.
-      See also: Content Category, https://earkcsip.dilcis.eu/#VocabularyContentCategory
-    </p>
+      <p class="card-text"></p>
+      <p class="card-text"></p>
     </div>
   </div>
 
@@ -46,7 +43,26 @@
           mets/@TYPE attribute does not exist. MUST be: attribute exists and has a value.
         </p>
           <p class="card-text">Packages: 
-    <a class="badge badge-secondary" href="./mets-xml_mets_TYPE_attribute_not_exist/index.html"> mets-xml_mets_TYPE_attribute_not_exist</a>&nbsp;<a class="badge badge-secondary" href="./minimal_IP_with_1_representation/index.html"> minimal_IP_with_1_representation</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_mets_TYPE_attribute_not_exist/index.html">mets-xml_mets_TYPE_attribute_not_exist</a></td>
+          <td>Invalid</td>
+          <td></td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_representation/index.html">minimal_IP_with_1_representation</a></td>
+          <td>Valid</td>
+          <td></td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>
@@ -63,7 +79,30 @@
           mets/@TYPE attribute has incorrect value. MUST be: attribute has a value from the VocabularyContentCategory as defined by DILCIS.
         </p>
           <p class="card-text">Packages: 
-    <a class="badge badge-secondary" href="./mets-xml_mets_TYPE_attribute_value_incorrect/index.html"> mets-xml_mets_TYPE_attribute_value_incorrect</a>&nbsp;<a class="badge badge-secondary" href="./minimal_IP_with_1_representation/index.html"> minimal_IP_with_1_representation</a>&nbsp;<a class="badge badge-secondary" href="./valid_minimal_mets_TYPE_value_vocabulary_1/index.html"> valid_minimal_mets_TYPE_value_vocabulary_1</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_mets_TYPE_attribute_value_incorrect/index.html">mets-xml_mets_TYPE_attribute_value_incorrect</a></td>
+          <td>Invalid</td>
+          <td></td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_representation/index.html">minimal_IP_with_1_representation</a></td>
+          <td>Valid</td>
+          <td></td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./valid_minimal_mets_TYPE_value_vocabulary_1/index.html">valid_minimal_mets_TYPE_value_vocabulary_1</a></td>
+          <td>Valid</td>
+          <td></td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>
@@ -80,7 +119,26 @@
           mets/@csip:OTHERTYPE attribute does not exist. MUST be: If mets/@TYPE = “OTHER” then mets/@csip:OTHERTYPE MUST exist and have a value.
         </p>
           <p class="card-text">Packages: 
-    <a class="badge badge-secondary" href="./mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist/index.html"> mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist</a>&nbsp;<a class="badge badge-secondary" href="./valid_minimal_mets_TYPE_value_OTHER/index.html"> valid_minimal_mets_TYPE_value_OTHER</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist/index.html">mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist</a></td>
+          <td>Invalid</td>
+          <td></td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./valid_minimal_mets_TYPE_value_OTHER/index.html">valid_minimal_mets_TYPE_value_OTHER</a></td>
+          <td>Valid</td>
+          <td></td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>
@@ -97,7 +155,26 @@
           mets/@csip:OTHERTYPE attribute has no value. MUST be: If mets/@TYPE = “OTHER” then mets/@csip:OTHERTYPE MUST exist and have a value.
         </p>
           <p class="card-text">Packages: 
-    <a class="badge badge-secondary" href="./mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value/index.html"> mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value</a>&nbsp;<a class="badge badge-secondary" href="./valid_minimal_mets_TYPE_value_OTHER/index.html"> valid_minimal_mets_TYPE_value_OTHER</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value/index.html">mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value</a></td>
+          <td>Invalid</td>
+          <td></td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./valid_minimal_mets_TYPE_value_OTHER/index.html">valid_minimal_mets_TYPE_value_OTHER</a></td>
+          <td>Valid</td>
+          <td></td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>

@@ -41,7 +41,22 @@
           <h6 class="card-subtitle text-muted">There should be an XML element named dmdSec in the mets.xml</h6>
           <p class="card-text">WARNING: The element mets/dmdSec does not exist in METS.xml. It SHOULD be there.</p>
           <p class="card-text">Packages: 
-    <a class="badge badge-secondary" href="./IP_18000_CSIP17_1/index.html"> IP_18000_CSIP17_1</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./IP_18000_CSIP17_1/index.html">IP_18000_CSIP17_1</a></td>
+          <td>Valid</td>
+          <td></td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>
@@ -58,7 +73,22 @@
           <p class="card-text">WARNING: One or more mets/dmdSec elements exist(s). No file(s) found in metadata/descriptive. File(s) SHOULD be
           there.</p>
           <p class="card-text">Packages: 
-    <a class="badge badge-primary" href="./IP_18000_CSIP17_2/index.html"> IP_18000_CSIP17_2</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-primary"><a href="./IP_18000_CSIP17_2/index.html">IP_18000_CSIP17_2</a></td>
+          <td>Valid</td>
+          <td>StructureStatus.WellFormed</td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>
@@ -75,7 +105,22 @@
           <p class="card-text">ERROR: One or more file(s) found in the directory metadata/descriptive. The dmdSec-element in METS.xml 'Must be used if descriptive metadata for the
           package content is available'</p>
           <p class="card-text">Packages: 
-    <a class="badge badge-primary" href="./IP_18000_CSIP17_3/index.html"> IP_18000_CSIP17_3</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-primary"><a href="./IP_18000_CSIP17_3/index.html">IP_18000_CSIP17_3</a></td>
+          <td>Invalid</td>
+          <td>StructureStatus.WellFormed</td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>

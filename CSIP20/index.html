@@ -41,7 +41,22 @@
           <h6 class="card-subtitle text-muted">There SHOULD be an STATUS attribute for optional element dmdSec in the mets.xml</h6>
           <p class="card-text">WARNING: mets/dmdSec/@STATUS does not exists. It SHOULD be there, it is not a MUST.</p>
           <p class="card-text">Packages: 
-    <a class="badge badge-primary" href="./IP_18000_CSIP20_1/index.html"> IP_18000_CSIP20_1</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-primary"><a href="./IP_18000_CSIP20_1/index.html">IP_18000_CSIP20_1</a></td>
+          <td>Valid</td>
+          <td>StructureStatus.WellFormed</td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>
@@ -56,7 +71,34 @@
           <h6 class="card-subtitle text-muted">The value of attribute mets/dmd/@STATUS MUST be either "SUPERSEDED" or "CURRENT"</h6>
           <p class="card-text">ERROR: The value of optional attribute mets/dmd/@STATUS is invalid. It MUST be either "SUPERSEDED" or "CURRENT".</p>
           <p class="card-text">Packages: 
-    <a class="badge badge-primary" href="./IP_18000_CSIP20_2/index.html"> IP_18000_CSIP20_2</a>&nbsp;<a class="badge badge-primary" href="./IP_18000_CSIP20_3/index.html"> IP_18000_CSIP20_3</a>&nbsp;<a class="badge badge-primary" href="./IP_18000_CSIP20_4/index.html"> IP_18000_CSIP20_4</a>&nbsp;<a class="badge badge-primary" href="./IP_18000_CSIP20_5/index.html"> IP_18000_CSIP20_5</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-primary"><a href="./IP_18000_CSIP20_2/index.html">IP_18000_CSIP20_2</a></td>
+          <td>Invalid</td>
+          <td>StructureStatus.WellFormed</td>
+        </tr><tr>
+          <td class="table-primary"><a href="./IP_18000_CSIP20_3/index.html">IP_18000_CSIP20_3</a></td>
+          <td>Invalid</td>
+          <td>StructureStatus.WellFormed</td>
+        </tr><tr>
+          <td class="table-primary"><a href="./IP_18000_CSIP20_4/index.html">IP_18000_CSIP20_4</a></td>
+          <td>Valid</td>
+          <td>StructureStatus.WellFormed</td>
+        </tr><tr>
+          <td class="table-primary"><a href="./IP_18000_CSIP20_5/index.html">IP_18000_CSIP20_5</a></td>
+          <td>Valid</td>
+          <td>StructureStatus.WellFormed</td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>

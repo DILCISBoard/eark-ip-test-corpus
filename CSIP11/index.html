@@ -24,10 +24,8 @@
     <div class="card-body">
       <h5 class="card-title">CSIP:CSIP11</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text">Agent role</p>
-      <p class="card-text">
-      The mandatory agent element MUST have a @ROLE attribute with the value "CREATOR".
-    </p>
+      <p class="card-text"></p>
+      <p class="card-text"></p>
     </div>
   </div>
 
@@ -45,7 +43,26 @@
           mets/metsHdr/agent/@ROLE has incorrect value. MUST be: attribute exists and has the value 'CREATOR'.
         </p>
           <p class="card-text">Packages: 
-    <a class="badge badge-secondary" href="./mets-xml_metsHdr_agent_ROLE_EDITOR/index.html"> mets-xml_metsHdr_agent_ROLE_EDITOR</a>&nbsp;<a class="badge badge-secondary" href="./minimal_IP_with_1_representation/index.html"> minimal_IP_with_1_representation</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_metsHdr_agent_ROLE_EDITOR/index.html">mets-xml_metsHdr_agent_ROLE_EDITOR</a></td>
+          <td>Invalid</td>
+          <td></td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_representation/index.html">minimal_IP_with_1_representation</a></td>
+          <td>Valid</td>
+          <td></td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>

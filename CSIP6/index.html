@@ -24,10 +24,8 @@
     <div class="card-body">
       <h5 class="card-title">CSIP:CSIP6</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text">METS Profile</p>
-      <p class="card-text">
-      The URL of the METS profile that the information package conforms with.
-    </p>
+      <p class="card-text"></p>
+      <p class="card-text"></p>
     </div>
   </div>
 
@@ -45,7 +43,26 @@
           mets/@PROFILE attribute does not exist. MUST be: attribute exists and has a value that is a URL.
         </p>
           <p class="card-text">Packages: 
-    <a class="badge badge-secondary" href="./mets-xml_mets_PROFILE_not_exist/index.html"> mets-xml_mets_PROFILE_not_exist</a>&nbsp;<a class="badge badge-secondary" href="./minimal_IP_with_1_representation/index.html"> minimal_IP_with_1_representation</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_mets_PROFILE_not_exist/index.html">mets-xml_mets_PROFILE_not_exist</a></td>
+          <td>Invalid</td>
+          <td></td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_representation/index.html">minimal_IP_with_1_representation</a></td>
+          <td>Valid</td>
+          <td></td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>
@@ -62,7 +79,26 @@
           mets/@PROFILE has incorrect value. MUST be: mets/@PROFILE has a value that is a URL to the METS profile XML document that the IP conforms with.
         </p>
           <p class="card-text">Packages: 
-    <a class="badge badge-secondary" href="./mets-xml_mets_PROFILE_empty/index.html"> mets-xml_mets_PROFILE_empty</a>&nbsp;<a class="badge badge-secondary" href="./minimal_IP_with_1_representation/index.html"> minimal_IP_with_1_representation</a>&nbsp;
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_mets_PROFILE_empty/index.html">mets-xml_mets_PROFILE_empty</a></td>
+          <td>Invalid</td>
+          <td></td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_representation/index.html">minimal_IP_with_1_representation</a></td>
+          <td>Valid</td>
+          <td></td>
+        </tr>
+    </tbody>
+  </table>
 </p>
         </div>
       </div>
