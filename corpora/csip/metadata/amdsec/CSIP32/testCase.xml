@@ -3,14 +3,14 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP32"/>
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP32"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP32" URL="http://earkcsip.dilcis.eu/#CSIP32"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>For recording information about preservation events the standard PREMIS is used. The PREMIS metadata must be either embedded or linked in a digital provenance metadata (digiprovMD) element.
-    It is mandatory to include one digiprovMD element for each external PREMIS file placed in the “metadata/preservation” section, or for each embedded set of PREMIS metadata.<description/><cardinality>0..n</cardinality><level>SHOULD</level>
+  <requirementText>For recording information about preservation the standard PREMIS is used. It is mandatory to include one digiprovMD-element for each piece of PREMIS metadata.
+    The use if PREMIS in METS is following the recommendations in the 2017 version of PREMIS in METS Guidelines.<description/><cardinality>0..n</cardinality><level>SHOULD</level>
   </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
   <description>
