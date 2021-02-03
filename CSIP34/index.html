@@ -23,7 +23,7 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">E-ARK CSIP:CSIP34</h5>
-      <h5 class="card-subtitle text-muted">Testable: UNKNOWN Schema: False</h5>
+      <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
       <p class="card-text"></p>
       <p class="card-text"></p>
     </div>
@@ -32,6 +32,74 @@
   <h2>Rules</h2>
   
   <ul class="list-group list-group-flush">
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:1 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">The status-attribute should exist</h6>
+          <p class="card-text">WARNING: The amdSec-element has no status-attribute.</p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./IP_amdSec_missing_status_attribute/index.html">IP_amdSec_missing_status_attribute</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP/index.html">minimal_IP</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:2 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">The status-attribute for the amdSec-element should contain a value as taken from the vocubulary</h6>
+          <p class="card-text">ERROR: The value is not found in the vocabulary</p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./IP_amdSec_status_attribute_wrong_value/index.html">IP_amdSec_status_attribute_wrong_value</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP/index.html">minimal_IP</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
     
   </ul>
 
