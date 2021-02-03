@@ -13,7 +13,7 @@ XML lists -->
     Cardianlity: 0..1 SHOULD
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description>The mdRef-element SHOULD be there. Therefore a warning should be presented if a package has no mdRef-element. 
+  <description>The mdRef-element SHOULD be there. Therefore a warning should be presented if a package has no mdRef-element.
     The problem here is that the correctness of there being a mdRef-element or not really relies on whether there is a descriptive metadata file or not. The current CSIP21 does not take this into consideration.</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
