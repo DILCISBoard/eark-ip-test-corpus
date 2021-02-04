@@ -23,7 +23,7 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">E-ARK CSIP:CSIP60</h5>
-      <h5 class="card-subtitle text-muted">Testable: UNKNOWN Schema: True</h5>
+      <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
       <p class="card-text"></p>
       <p class="card-text"></p>
     </div>
@@ -32,6 +32,44 @@
   <h2>Rules</h2>
   
   <ul class="list-group list-group-flush">
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:1 Packages:0/3</h5>
+          <h6 class="card-subtitle text-muted">The package METS document MUST contain at least one mets/fileSec/fileGrp element with a use attribute of "Documentation".</h6>
+          <p class="card-text">WARNING: An information package METS document must contain a mets/fileSec/fileGrp@USE="Documentation" element.</p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./no_doc_file_grp/index.html">no_doc_file_grp</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./single_doc_file_grp/index.html">single_doc_file_grp</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./multi_doc_file_grp/index.html">multi_doc_file_grp</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
     
   </ul>
 

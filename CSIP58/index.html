@@ -37,9 +37,9 @@
     <li class="list-group-item">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Rule:1 Packages:0/1</h5>
-          <h6 class="card-subtitle text-muted">If dmdSec/mdRef-element is present there MUST be a CHECKSUMTYPE-attribute</h6>
-          <p class="card-text">ERROR: mets/dmdSec/mdRef/@CHECKSUMTYPE does not exist in METS.xml. @CHECKSUMTYPE is a mandatory attribute according to CS IP if the mdRef-element is present.</p>
+          <h5 class="card-title">Rule:1 Packages:0/3</h5>
+          <h6 class="card-subtitle text-muted">The package METS document SHOULD contain a single mets/filesec element only</h6>
+          <p class="card-text">WARNING: An information package METS document should contain a single mets/filesec only.</p>
           <p class="card-text">Packages: 
   <table data-toggle="table">
     <thead class="thead-dark">
@@ -51,7 +51,15 @@
     </thead>
     <tbody>
       <tr>
-          <td class="table-secondary"><a href="./IP_18000_CSIP30_1/index.html">IP_18000_CSIP30_1</a></td>
+          <td class="table-secondary"><a href="./no_file_sec/index.html">no_file_sec</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./single_file_sec/index.html">single_file_sec</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./multi_file_sec/index.html">multi_file_sec</a></td>
           <td>Invalid</td>
           <td>Invalid</td>
         </tr>
