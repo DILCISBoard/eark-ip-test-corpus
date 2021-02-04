@@ -24,8 +24,17 @@
     <div class="card-body">
       <h5 class="card-title">E-ARK CSIP:CSIP18</h5>
       <h5 class="card-subtitle text-muted">Testable: FALSE Schema: True</h5>
-      <p class="card-text"></p>
-      <p class="card-text"></p>
+      <p class="card-text">CSIP18 is a requirement which is identical with 26 other requirements in CS IP, since it is a requirement for the use of ID's in accordance with the XML-standard. IDs are used multiple times in the elements of METS. The requirement links to http://earkcsip.dilcis.eu/#the-use-of-identifiers
+    
+    The requirements for the use of identifiers are several:
+    
+    There MUST be one ID-attribute. (Will be tested with general schema validation)
+    ID MUST begin with a letter, or an underscore character (‘_’). (Will be tested with general schema validation)
+    ID MUST contain no characters other than letters, digits, hyphens, underscores, full stops, and certain combining and extension characters. (Will be tested with general schema validation)
+    ID MUST start with a prefix, followed by the value of the identifier.
+    It is required that any selected prefix is used consistently throughout the package.
+    It MUST be unique within the package. (Will be tested with general schema validation)
+    4, and 5 is hard to test, as there is no place where the prefix can be identified.</p>
     </div>
   </div>
 

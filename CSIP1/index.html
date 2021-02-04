@@ -24,8 +24,13 @@
     <div class="card-body">
       <h5 class="card-title">CSIP:CSIP1</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text"></p>
-      <p class="card-text"></p>
+      <p class="card-text">
+    mets/@OBJID MUST exist.
+    mets/@OBJID MUST have a non-empty value.
+    mets/@OBJID SHOULD be:
+    a) For the package METS document, @OBJID SHOULD be equal to the name/ID of the package, i.e. the name of the package root folder;
+    b) For a representation level METS document, @OBJID SHOULD be equal to the name/ID of the representation, i.e. the name of the representation folder.
+  </p>
     </div>
   </div>
 

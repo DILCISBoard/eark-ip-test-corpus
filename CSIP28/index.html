@@ -24,8 +24,12 @@
     <div class="card-body">
       <h5 class="card-title">E-ARK CSIP:CSIP28</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text"></p>
-      <p class="card-text"></p>
+      <p class="card-text">File creation date - dmdSec/mdRef/@created - The date the linked file was created.
+    It has cardinality '1..1' and level 'MUST' in CSIP.
+    It is optional according to its XML Schema.
+    Rule needed for the existence of the attribute CREATED for element dmdSec/mdRef.
+    ERROR if it does not exists.
+  There is no need for a check for blank or NULL values in the attribute since the mets schema will only tolerate dateTime values</p>
     </div>
   </div>
 

@@ -24,8 +24,15 @@
     <div class="card-body">
       <h5 class="card-title">CSIP:CSIP30</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text"></p>
-      <p class="card-text"></p>
+      <p class="card-text">It has cardinality '1..1' and level 'MUST' in CSIP.
+    It is mandatory in CSIP but optional in METS.
+    Rule needed for the existence of the attribute CHECKSUMTYPE for element dmdSec/mdRef.
+    ERROR if it does not exists.
+    
+    There is a dependency to CSIP29, since this attribute hold the value of the checksumtype for the linked file.
+    
+    The tests that check if checksumtype and checksum is correct can be found in CSIP29.
+  </p>
     </div>
   </div>
 

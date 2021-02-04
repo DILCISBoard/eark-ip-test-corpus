@@ -24,8 +24,14 @@
     <div class="card-body">
       <h5 class="card-title">E-ARK CSIP:CSIP29</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text"></p>
-      <p class="card-text"></p>
+      <p class="card-text">It is mandatory in CS IP but optional in METS.
+    Therefore it should test:
+    
+    whether the attribute exists
+    whether the checksum is correct.
+    
+    There is a dependency to CSIP30, since it must be stated what kind of checksum type it is before it can be checked whether the checksum is correct or not.
+  </p>
     </div>
   </div>
 

@@ -24,8 +24,15 @@
     <div class="card-body">
       <h5 class="card-title">E-ARK CSIP:CSIP26</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text"></p>
-      <p class="card-text"></p>
+      <p class="card-text">Specifies the IANA mime type for the linked file.
+    Requires two rules and at least two corpus packages:
+    Rule for the existence of the attribute MIMETYPE for element dmdSec/mdRef.
+    ERROR if it does not exists
+    Rule for the value of the attribute MIMETYPE for element dmdSec/mdRef.
+    WARNING if it is not on the list.
+    
+    How do we handle lists of valid values? Do we create a valid package for each valid value? And one invalid package for an invalid value?
+    Are we supposed to check against IANA? http://www.iana.org/assignments/media-types/media-types.xhtml </p>
     </div>
   </div>
 

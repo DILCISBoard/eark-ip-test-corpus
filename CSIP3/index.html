@@ -24,8 +24,13 @@
     <div class="card-body">
       <h5 class="card-title">CSIP:CSIP3</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text"></p>
-      <p class="card-text"></p>
+      <p class="card-text">
+    If mets/@TYPE = "OTHER" then mets/@csip:OTHERTYPE:
+    - MUST exist;
+    - MUST have a string value declaring the content category of the package/representation;
+    - MUST NOT have a value from the VocabularyContentCategory because these vocabulary values MUST be used for the attribute mets/@TYPE.
+    If mets/@csip:OTHERTYPE exists then mets/@TYPE MUST be "OTHER".
+  </p>
     </div>
   </div>
 

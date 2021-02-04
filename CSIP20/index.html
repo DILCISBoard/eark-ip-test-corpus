@@ -24,8 +24,13 @@
     <div class="card-body">
       <h5 class="card-title">E-ARK CSIP:CSIP20</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text"></p>
-      <p class="card-text"></p>
+      <p class="card-text">Quote: Status of the metadata. Used to indicate the currency of the package. If used the two values “SUPERSEDED” or “CURRENT” from the vocabulary is used. See also: dmdSec status
+  Comment: This testcase is for requirement CSIP20, which relates to descriptive metadata; the optional dmdSec elements in the mets.xml file.
+  The requirement CSIP20 is not stringent and therefore difficult to test, it is based on nested conditions - and optional elements.
+  I takes two rules to validate the requirement:
+  Rule 1: The attribute is optional.
+  Rule 2: If the attribute exists the value of it is “SUPERSEDED” or “CURRENT” according to http://earkcsip.dilcis.eu/schema/DILCISVocabulariesIP.xml
+  </p>
     </div>
   </div>
 

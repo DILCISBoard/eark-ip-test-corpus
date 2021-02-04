@@ -24,8 +24,13 @@
     <div class="card-body">
       <h5 class="card-title">E-ARK CSIP:CSIP27</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text"></p>
-      <p class="card-text"></p>
+      <p class="card-text"> Size of the linked file in bytes - dmdSec/mdRef/@SIZE
+    It has cardinality '1..1' and level 'MUST' in CSIP.
+    It is optional according to its XML Schema.
+    
+    Rule needed for the existence of the attribute SIZE for element dmdSec/mdRef.
+    ERROR if it does not exists.
+    Ensure test set contains inconsistent sizes, i.e. stated size and actual file size differ.</p>
     </div>
   </div>
 
