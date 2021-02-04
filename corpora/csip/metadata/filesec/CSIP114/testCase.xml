@@ -1,0 +1,42 @@
+<!-- Root element for an individual test case, allows these to be wrapped into
+XML lists -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
+  testable="TRUE">
+  <!-- Unique ID for the test case -->
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP114"/>
+  <!-- URL references to requirements for convenient lookup -->
+  <references>
+    <reference requirementId="CSIP114" URL="http://earkcsip.dilcis.eu/#CSIP114"/>
+  </references>
+  <!-- The full text of the requirement. -->
+  <requirementText>A pointer to the METS document describing the representation or pointers to the content being transferred must be present in one or more file groups with mets/fileSec/fileGrp/@USE attribute value “Representations”.</requirementText>
+  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
+  <description>This requirment mandates that there must be at least one mets/fileSec/fileGrp element with a USE attribute set to 'Representations' but there can be more.</description>
+  <!-- List of requirments that this test case depends on in addition to the
+  main requirememt, e.g. general requirments on the form of IDs -->
+  <dependencies>
+  </dependencies>
+  <!-- A list of the validation rules derived from the test case -->
+  <rules>
+    <rule id="1">
+      <description>The package METS document MUST contain at least one mets/fileSec/fileGrp element with a use attribute of "Representations".</description>
+      <error level="WARNING">
+        <message>An information package METS document must contain a mets/fileSec/fileGrp@USE="Representations" element.</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="no_rep_file_grp">
+          <path>./no_rep_file_grp</path>
+          <description>The package root METS document has no mets/fileSec/fileGrp@USE="Representations" element.</description>
+        </package>
+        <package isValid="TRUE" name="single_rep_file_grp">
+          <path>./doc_file_grp</path>
+          <description>The package root METS document has a single mets/fileSec/fileGrp@USE="Representations" element.</description>
+        </package>
+        <package isValid="TRUE" name="multi_rep_file_grp">
+          <path>./multi_rep_file_grp</path>
+          <description>The package root METS document has multiple mets/fileSec/fileGrp@USE="Representations" elements.</description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
