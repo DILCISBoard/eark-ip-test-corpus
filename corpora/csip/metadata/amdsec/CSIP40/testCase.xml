@@ -13,7 +13,8 @@ XML lists -->
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
   <description>MIMETYPE is an optional attribute in METS but a mandatory attribute in CSIP. The values in the attribute are by the METS schema defined as string and it is actually possible according to the schema to put anything in this attribute. 
-    In the METS schema this is the documentation: "MIMETYPE (string/O): The IANA MIME media type for the associated file or wrapped content. Some values for this attribute can be found on the IANA website." In the CSIP it is my interpretation that the values has to be taken from the website</description>
+    In the METS schema this is the documentation: "MIMETYPE (string/O): The IANA MIME media type for the associated file or wrapped content. Some values for this attribute can be found on the IANA website." 
+    In the CSIP it is my interpretation that the values has to be taken from the website.</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
@@ -45,6 +46,22 @@ XML lists -->
         <package isValid="FALSE" name="mdRef_wrong_MIMETYPE">
           <path>invalid/mdRef_wrong_MIMETYPE</path>
           <description>A package where the MIMETYPE-value is not from the list</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP_with_schemas">
+          <path>valid/minimal_IP_with_schemas</path>
+          <description>Minimal IP</description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="3">
+      <description>MIMETYPE values should not be more than 256 characters long</description>
+      <error level="WARNING">
+        <message>MIMETYPE values should not be more than 256 characters long - is the value actually a MIMETYPE?</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="mdRef_MIMETYPE_too_much_content">
+          <path>invalid/mdRef_MIMETYPE_too_much_content</path>
+          <description>A package where the MIMETYPE value is bigger that 256 characters</description>
         </package>
         <package isValid="TRUE" name="minimal_IP_with_schemas">
           <path>valid/minimal_IP_with_schemas</path>
