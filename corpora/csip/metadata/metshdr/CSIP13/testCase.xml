@@ -4,10 +4,11 @@
     <reference requirementId="CSIP13" URL="http://earkcsip.dilcis.eu/#CSIP13"/>
   </references>
   <requirementText>
-    <name>Agent type</name>
+    <name>Agent other type</name>
     <location>mets/metsHdr/agent[@OTHERTYPE='SOFTWARE']</location>
     <description>
       The mandatory agent element MUST have a @OTHERTYPE attribute with the value "SOFTWARE".
+      See also: Other agent type, https://earkcsip.dilcis.eu/#VocabularyAgentOtherType.
     </description>
     <cardinality>1..1</cardinality>
     <level>MUST</level>
