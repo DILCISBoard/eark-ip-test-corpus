@@ -3,7 +3,7 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP58"/>
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP58"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP58" URL="http://earkcsip.dilcis.eu/#CSIP58"/>
