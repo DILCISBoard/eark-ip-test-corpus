@@ -23,14 +23,90 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">E-ARK CSIP:CSIP80</h5>
-      <h5 class="card-subtitle text-muted">Testable: UNKNOWN Schema: True</h5>
-      <p class="card-text">None</p>
+      <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
+      <p class="card-text">
+        At least one structural map element must be present and follow all the requirements given in the CSIP. 
+        The tricky question seen from a validation perspective is how to determine and validate the correct structMap if for example two structMap exist which only partially live up to the requirements.
+        The suggestion here is to let mets/structMap[@LABEL='CSIP']  (see CSIP82) determine that the StructMap elemement is the one to be validated. CSIP82 states: "The mets/structMap/@LABEL attribute value is set to “CSIP” from the vocabulary." 
+        and has the cardinality 1..1. This is also reflected in the explanatory text above the table with the StrucMap-requirements:
+        "The structMap element’s @LABEL attribute is mandatory and must have the value “CSIP”. 
+        The @LABEL attribute distinguishes the CSIP mandated structural maps from other structural maps. NOTE this means that the “CSIP” @LABEL value should be treated as a unique id and not applied to other structMap elements!"
+        
+    </p>
     </div>
   </div>
 
   <h2>Rules</h2>
   
   <ul class="list-group list-group-flush">
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:1 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">There should be one structMap-element in the METS.xml with a @LABEL attribute value "CSIP"</h6>
+          <p class="card-text">ERROR: There is no structMap-element with the @LABEL attribute value "CSIP". It MUST be there.</p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./IP_missing_strucMap_label_attribue_value/index.html">IP_missing_strucMap_label_attribue_value</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_schemas/index.html">minimal_IP_with_schemas</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:2 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">There should maximum one structMap-element in the METS.xml with a @LABEL attribute value "CSIP"</h6>
+          <p class="card-text">ERROR: There is more than one structMap-element with the @LABEL attribute value "CSIP".</p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./IP_two_strucMap_label_attribue_value/index.html">IP_two_strucMap_label_attribue_value</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_schemas/index.html">minimal_IP_with_schemas</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
     
   </ul>
 
