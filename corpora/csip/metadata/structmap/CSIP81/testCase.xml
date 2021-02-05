@@ -3,7 +3,7 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
           testable="TRUE">
     <!-- Unique ID for the test case -->
-    <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP81"/>
+    <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP81"/>
     <!-- URL references to requirements for convenient lookup -->
     <references>
         <reference requirementId="CSIP81" URL="http://earkcsip.dilcis.eu/#CSIP81"/>
@@ -12,11 +12,10 @@ XML lists -->
     <requirementText>The type attribute of the structural map (structMap) is set to value “PHYSICAL” from the vocabualry.
     </requirementText>
     <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-    <description></description>
+    <description>
     The type attribute of the structural map (structMap) MUST be present
-    The type attribute value MUST be "PHYSICAL"
+    The type attribute value MUST be "PHYSICAL" </description>
     <dependencies>
-        CSIP 1
     </dependencies>
     <!-- A list of the validation rules derived from the test case -->
     <rules>
@@ -29,28 +28,37 @@ XML lists -->
             </error>
             <corpusPackages>
                 <!-- Details of corpus packages designed to test this validation rule. -->
-                <package name="IP_18000_CSIP81_1" isValid="FALSE">
-                    <path>/corpora/csip/metadata/structMap/CSIP81/IP_18000_CSIPCSIP81_1</path>
+                <package name="IP_missing_type_attribute" isValid="FALSE">
+                    <path>invalid/IP_missing_type_attribute</path>
                     <!-- Full description of corpus package features. -->
-                    <description> TODO!!! structMap/@TYPE attribute does not exist</description>
+                    <description>IP with missing structMap/@TYPE attribute</description>
                 </package>
+                <package isValid="TRUE" name="minimal_IP_with_schemas">
+                    <path>valid/minimal_IP_with_schemas</path>
+                    <description>Minimal IP</description>
+                </package>
+                
             </corpusPackages>
         </rule>
-        <rule id="1">
+        <rule id="2">
             <description>structMap/@TYPE attribute value MUST be "PHYSICAL".</description>
             <error level="ERROR">
                 <message>
-                    structMap/@TYPE attribute value is not "PHYSICAL". MUST be: attribute value MUST be "PHYSICAK"
+                    structMap/@TYPE attribute value is not "PHYSICAL". Attribute value MUST be "PHYSICAL"
                 </message>
             </error>
             <corpusPackages>
                 <!-- Details of corpus packages designed to test this validation rule. -->
-                <package name="IP_18000_CSIP81_2" isValid="FALSE">
-                    <path>/corpora/csip/metadata/structMap/CSIP81/IP_18000_CSIPCSIP81_2</path>
+                <package name="IP_wrong_TYPE_attribute_value" isValid="FALSE">
+                    <path>invalid/IP_wrong_TYPE_attribute_value</path>
                     <!-- Full description of corpus package features. -->
-                    <description> TODO!!! structMap/@TYPE value is "ELSE"</description>
+                    <description> structMap/@TYPE value is "ELSE"</description>
                 </package>
-            </corpusPackages>
+                <package isValid="TRUE" name="minimal_IP_with_schemas">
+                    <path>valid/minimal_IP_with_schemas</path>
+                    <description>Minimal IP</description>
+                </package>
+             </corpusPackages>
         </rule>
     </rules>
 </testCase>
