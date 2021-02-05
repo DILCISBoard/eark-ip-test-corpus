@@ -18,7 +18,7 @@
     http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd"
   OBJID="mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value" 
   TYPE="OTHER"  
-  OTHERTYPE = ""
+  csip:OTHERTYPE=""
   PROFILE="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml">
 
   <!-- CSIP117 mets/metsHdr - Package header - [1..1] -->
