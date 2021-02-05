@@ -22,15 +22,55 @@
   
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">E-ARK CSIP:CSIP14</h5>
-      <h5 class="card-subtitle text-muted">Testable: UNKNOWN Schema: True</h5>
-      <p class="card-text">None</p>
+      <h5 class="card-title">CSIP:CSIP14</h5>
+      <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
+      <p class="card-text">
+    The mets/metsHdr/agent with @ROLE='CREATOR' MUST have:
+    - mets/metsHdr/agent/name MUST exist exactly once.
+    - mets/metsHdr/agent/name MUST have text content.
+    - mets/metsHdr/agent/name text content MUST record the name of the software tool used to create the IP.</p>
     </div>
   </div>
 
   <h2>Rules</h2>
   
   <ul class="list-group list-group-flush">
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:1 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">For the CSIP mandatory agent element, mets/metsHdr/agent/name MUST have text content.</h6>
+          <p class="card-text">ERROR: 
+          The CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) mets/metsHdr/agent/name has no text content. MUST be: element exists and has text content that records the name of the software tool used to create the IP.
+        </p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_metsHdr_agent_name_empty/index.html">mets-xml_metsHdr_agent_name_empty</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_representation/index.html">minimal_IP_with_1_representation</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
     
   </ul>
 
