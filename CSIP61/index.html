@@ -22,15 +22,57 @@
   
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">E-ARK CSIP:CSIP61</h5>
-      <h5 class="card-subtitle text-muted">Testable: UNKNOWN Schema: True</h5>
-      <p class="card-text">This has an untestable feel to it</p>
+      <h5 class="card-title">CSIP:CSIP61</h5>
+      <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
+      <p class="card-text">
+    If at least one mets/amdSec/digiprovMD exists
+    and at least one of them is relevant to the current mets/fileSec/fileGrp</p>
     </div>
   </div>
 
   <h2>Rules</h2>
   
   <ul class="list-group list-group-flush">
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:1 Packages:0/3</h5>
+          <h6 class="card-subtitle text-muted">If a mets/fileSec/fileGrp/@ADMID exists, its value must equal to a mets/amdSec/digiprovMD/@ID, or a space-separated list of them.</h6>
+          <p class="card-text">WARNING: 
+          mets/fileSec/fileGrp/@ADMID refers to an incorrect @ID. MUST be: If mets/fileSec/fileGrp/@ADMID exists, its value MUST equal to a mets/amdSec/digiprovMD/@ID.
+        </p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_fileGrp_ADMID_incorrect_ref/index.html">mets-xml_fileGrp_ADMID_incorrect_ref</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./mets-xml_fileGrp_ADMID_incorrect_ref2/index.html">mets-xml_fileGrp_ADMID_incorrect_ref2</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_representation_plus_mets-xml_SHOULD_MAY_items/index.html">minimal_IP_with_1_representation_plus_mets-xml_SHOULD_MAY_items</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
     
   </ul>
 

@@ -22,15 +22,88 @@
   
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">E-ARK CSIP:CSIP62</h5>
-      <h5 class="card-subtitle text-muted">Testable: UNKNOWN Schema: True</h5>
-      <p class="card-text">None</p>
+      <h5 class="card-title">CSIP:CSIP62</h5>
+      <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
+      <p class="card-text">
+    </p>
     </div>
   </div>
 
   <h2>Rules</h2>
   
   <ul class="list-group list-group-flush">
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:1 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">If mets/fileSec/fileGrp/@USE = "Representations" then mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE MUST exist.</h6>
+          <p class="card-text">ERROR: 
+          mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE attribute does not exist. MUST be: if mets/fileSec/fileGrp/@USE = "Representations" then mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE MUST exist and have a value from VocabularyContentInformationTypeSpecification.
+        </p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./root_mets_fileGrp_CONTENTINFORMATIONTYPE_not_exist/index.html">root_mets_fileGrp_CONTENTINFORMATIONTYPE_not_exist</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_representation_plus_mets-xml_SHOULD_items/index.html">minimal_IP_with_1_representation_plus_mets-xml_SHOULD_items</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:2 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">If mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE exists, it MUST have a value from the VocabularyContentInformationTypeSpecification.</h6>
+          <p class="card-text">ERROR: 
+          mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE attribute has incorrect value. MUST be: mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE has a value from the VocabularyContentInformationTypeSpecification.
+        </p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./root_mets_fileGrp_CONTENTINFORMATIONTYPE_incorrect/index.html">root_mets_fileGrp_CONTENTINFORMATIONTYPE_incorrect</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_representation_plus_mets-xml_SHOULD_items/index.html">minimal_IP_with_1_representation_plus_mets-xml_SHOULD_items</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
     
   </ul>
 
