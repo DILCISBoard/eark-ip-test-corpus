@@ -30,7 +30,7 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_agent_note_not_exist" isValid="FALSE">
-          <path>invalid/mets-xml_metsHdr_agent_note_not_exist</path>
+          <path>mets-xml_metsHdr_agent_note_not_exist</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) does not have mets/metsHdr/agent/note.
           </description>
@@ -55,7 +55,7 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_agent_note_2_instances" isValid="FALSE">
-          <path>invalid/mets-xml_metsHdr_agent_note_2_instances</path>
+          <path>mets-xml_metsHdr_agent_note_2_instances</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has two mets/metsHdr/agent/note child elements.
           </description>
@@ -77,7 +77,7 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_agent_note_empty" isValid="FALSE">
-          <path>invalid/mets-xml_metsHdr_agent_note_empty</path>
+          <path>mets-xml_metsHdr_agent_note_empty</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/note = "".
           </description>
