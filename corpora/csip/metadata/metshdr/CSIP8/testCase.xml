@@ -29,7 +29,7 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_LASTMODDATE_not_exist" isValid="FALSE">
-          <path>invalid/mets-xml_metsHdr_LASTMODDATE_not_exist</path>
+          <path>mets-xml_metsHdr_LASTMODDATE_not_exist</path>
           <description>
             METS.xml file has no mets/metsHdr/@LASTMODDATE attribute.
           </description>
@@ -56,7 +56,7 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_LASTMODDATE_in_future" isValid="FALSE">
-          <path>invalid/mets-xml_metsHdr_LASTMODDATE_in_future</path>
+          <path>mets-xml_metsHdr_LASTMODDATE_in_future</path>
           <description>
             METS.xml file has mets/metsHdr/@LASTMODDATE = "2038-01-18T12:00:00".
             <!-- Creating a static file that includes a date in the future is
