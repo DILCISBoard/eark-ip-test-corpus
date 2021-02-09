@@ -32,7 +32,7 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_OAISPACKAGETYPE_attribute_not_exist" isValid="FALSE">
-          <path>invalid/mets-xml_metsHdr_OAISPACKAGETYPE_attribute_not_exist</path>
+          <path>mets-xml_metsHdr_OAISPACKAGETYPE_attribute_not_exist</path>
           <description>
             METS.xml file has no mets/metsHdr/@csip:OAISPACKAGETYPE attribute.
           </description>
@@ -54,7 +54,7 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_OAISPACKAGETYPE_attribute_value_incorrect" isValid="FALSE">
-          <path>invalid/mets-xml_metsHdr_OAISPACKAGETYPE_attribute_value_incorrect</path>
+          <path>mets-xml_metsHdr_OAISPACKAGETYPE_attribute_value_incorrect</path>
           <description>
             METS.xml file has mets/metsHdr/@csip:OAISPACKAGETYPE = "random_string_e2368caa08a1cbbe2e8d5b96ab34a41e".
           </description>
