@@ -34,7 +34,7 @@
               reports an error on any one of them. This should be automated as
               mets.xsd allows 7 values that are not acceptable by CSIP. -->
         <package name="mets-xml_metsHdr_agent_ROLE_EDITOR" isValid="FALSE">
-          <path>invalid/mets-xml_metsHdr_agent_ROLE_EDITOR</path>
+          <path>mets-xml_metsHdr_agent_ROLE_EDITOR</path>
           <description>
             METS.xml file has mets/metsHdr/agent/@ROLE = "EDITOR".
           </description>
