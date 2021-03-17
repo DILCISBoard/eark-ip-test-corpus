@@ -1,0 +1,67 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="SIP" version="2.0.4" requirementId="SIP1"/>
+  <references>
+    <reference requirementId="SIP1" URL="https://earksip.dilcis.eu/#SIP1"/>
+  </references>
+  <requirementText>
+    <name>Package name</name>
+    <location>mets/@LABEL</location>
+    <description>
+      An optional short text describing the contents of the package, e.g. "Accounting records of 2017".
+    </description>
+    <cardinality>0..1</cardinality>
+    <level>MAY</level>
+  </requirementText>
+  <description>
+    mets/@LABEL MAY exist.
+    If mets/@LABEL exists then it MUST have a value.
+    If mets/@LABEL exists then its value MUST describe the contents of the package.<!-- Untestable -->
+  </description>
+  <dependencies />
+  <rules>
+    <rule id="1">
+      <description>mets/@LABEL MAY exist.</description>
+      <error level="INFO">
+        <message>
+          mets/@LABEL attribute does not exist. MAY be: mets/@LABEL exists and its value is a short text describing the contents of the package.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets-root_LABEL_not_exist" isValid="FALSE">
+          <path>invalid/mets-root_LABEL_not_exist</path>
+          <description>
+            METS.xml file has no mets/@LABEL attribute.
+          </description>
+        </package>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
+          <description>
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>If mets/@LABEL exists then it MUST have a value.</description>
+      <error level="INFO">
+        <message>
+          mets/@LABEL attribute has no value. MUST be: if mets/@LABEL exists then it MUST have a value that is a short text describing the contents of the package.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets-root_LABEL_no_value" isValid="FALSE">
+          <path>invalid/mets-root_LABEL_no_value</path>
+          <description>
+            METS.xml file has mets/@LABEL = "".
+          </description>
+        </package>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
+          <description>
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
