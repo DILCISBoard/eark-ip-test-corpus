@@ -14,7 +14,7 @@ XML lists -->
     The structural map comprises a single division.	1..1 MUST
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description>A div-element is mandatory according to the METS.xsd and therefor no validation rules are added for this requirement</description>
+  <description>A div-element is mandatory according to the METS.xsd and therefore no validation rules are added for this requirement</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
