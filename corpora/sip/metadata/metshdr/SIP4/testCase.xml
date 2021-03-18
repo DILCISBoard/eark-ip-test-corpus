@@ -1,0 +1,77 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="SIP" version="2.0.4" requirementId="SIP4"/>
+  <references>
+    <reference requirementId="SIP4" URL="https://earksip.dilcis.eu/#SIP4"/>
+  </references>
+  <requirementText>
+    <name>OAIS Package type information</name>
+    <location>mets/metsHdr/@csip:OAISPACKAGETYPE</location>
+    <description>
+      @csip:OAISPACKAGETYPE is used with the value "SIP".
+      See also: OAIS Package type, https://earksip.dilcis.eu/#VocabularyOAISPackageType
+    </description>
+    <cardinality>1..1</cardinality>
+    <level>MUST</level>
+  </requirementText>
+  <description>
+    mets/metsHdr/@csip:OAISPACKAGETYPE MUST exist.
+    mets/metsHdr/@csip:OAISPACKAGETYPE MUST have the value "SIP".
+  </description>
+  <dependencies>
+    <dependency requirementId="VocabularyOAISPackageType" URL="https://earksip.dilcis.eu/#VocabularyOAISPackageType">
+      https://earkcsip.dilcis.eu/schema/CSIPVocabularyOAISPackageType.xml
+    </dependency>
+  </dependencies>
+  <rules>
+    <rule id="1">
+      <description>mets/metsHdr/@csip:OAISPACKAGETYPE MUST exist.</description>
+      <error level="ERROR">
+        <message>
+          mets/metsHdr/@csip:OAISPACKAGETYPE attribute does not exist. MUST be: attribute exists and has the value "SIP".
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="SIP_metsHdr_OAISPACKAGETYPE_not_exist" isValid="FALSE">
+          <path>invalid/SIP_metsHdr_OAISPACKAGETYPE_not_exist</path>
+          <description>
+            METS.xml file has no mets/metsHdr/@csip:OAISPACKAGETYPE attribute.
+          </description>
+        </package>
+        <package name="minimal_SIP" isValid="TRUE">
+          <path>valid/minimal_SIP</path>
+          <description>
+            Minimal SIP that matches all MUST requirements.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>mets/metsHdr/@csip:OAISPACKAGETYPE MUST have the value "SIP".</description>
+      <error level="ERROR">
+        <message>
+          mets/metsHdr/@csip:OAISPACKAGETYPE attribute has incorrect value. MUST be: mets/metsHdr/@csip:OAISPACKAGETYPE = "SIP".
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="SIP_metsHdr_OAISPACKAGETYPE_value_incorrect" isValid="FALSE">
+          <path>invalid/SIP_metsHdr_OAISPACKAGETYPE_value_incorrect</path>
+          <!--  In order to test this rule, the validator must let the user
+              choose the specification that is used. For all other rules,
+              spec selection could be automated, i.e. the validator could
+              first validate for CSIP compliance, then look at
+              mets/metsHdr/@csip:OAISPACKAGETYPE to run another validation
+              round for the package-specific specification. -->
+          <description>
+            METS.xml file has mets/metsHdr/@csip:OAISPACKAGETYPE = "AIP".
+          </description>
+        </package>
+        <package name="minimal_SIP" isValid="TRUE">
+          <path>valid/minimal_SIP</path>
+          <description>
+            Minimal SIP that matches all MUST requirements.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
