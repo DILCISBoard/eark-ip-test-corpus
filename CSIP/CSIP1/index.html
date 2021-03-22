@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css" rel="stylesheet">
+
+  <title>E-ARK Specifications | Case | CSIP1</title>
+</head>
+<body>
+  
+  <link href="./static/css/theme.css" rel="stylesheet">
+
+  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Ninth navbar example">
+      <div class="container">
+        <a class="navbar-brand" href="https://dilcisboard.github.io/eark-ip-test-corpus/">E-ARK Corpora</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample07XL">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="https://dilcisboard.github.io/eark-ip-test-corpus/">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP">CSIP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP">SIP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP">DIP</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container" role="main">
+      
+  <h1>Case CSIP1</h1>
+  
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">CSIP:CSIP1</h5>
+      <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
+      <p class="card-text">
+    mets/@OBJID MUST exist.
+    mets/@OBJID MUST have a non-empty value.
+    mets/@OBJID SHOULD be:
+    a) For the package METS document, @OBJID SHOULD be equal to the name/ID of the package, i.e. the name of the package root folder;
+    b) For a representation level METS document, @OBJID SHOULD be equal to the name/ID of the representation, i.e. the name of the representation folder.
+  </p>
+    </div>
+  </div>
+
+  <h2>Rules</h2>
+  
+  <ul class="list-group list-group-flush">
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:1 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">mets/@OBJID MUST exist.</h6>
+          <p class="card-text">ERROR: 
+          mets/@OBJID attribute does not exist. MUST be: attribute exists and has a value.
+        </p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_mets_OBJID_attribute_not_exist/index.html">mets-xml_mets_OBJID_attribute_not_exist</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_representation/index.html">minimal_IP_with_1_representation</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:2 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">mets/@OBJID MUST have a non-empty value.</h6>
+          <p class="card-text">ERROR: 
+          mets/@OBJID attribute value is empty. MUST be: attribute exists and has a value.
+        </p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_mets_OBJID_attribute_value_empty/index.html">mets-xml_mets_OBJID_attribute_value_empty</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_representation/index.html">minimal_IP_with_1_representation</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:3 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">
+        If the METS document is in the root folder, mets/@OBJID SHOULD be equal to the package ID (i.e. the name of the root folder).
+      </h6>
+          <p class="card-text">WARNING: 
+          mets/@OBJID attribute value not equal to the proper ID. SHOULD be: mets/@OBJID is equal to the package ID.
+        </p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./root_mets_file_mets-xml_mets_OBJID_not_equal_to_package_ID/index.html">root_mets_file_mets-xml_mets_OBJID_not_equal_to_package_ID</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_representation/index.html">minimal_IP_with_1_representation</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:4 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">
+       If the METS document is in a representation folder, mets/@OBJID SHOULD be equal to the representation ID (i.e. the name of the representation folder).
+      </h6>
+          <p class="card-text">WARNING: 
+          mets/@OBJID attribute value not equal to the proper ID. SHOULD be: mets/@OBJID is equal to the representation ID.
+        </p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./rep_mets_file_mets-xml_mets_OBJID_not_equal_to_rep_ID/index.html">rep_mets_file_mets-xml_mets_OBJID_not_equal_to_rep_ID</a></td>
+          <td>Invalid</td>
+          <td>Invalid</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./valid_minimal_with_one_representation/index.html">valid_minimal_with_one_representation</a></td>
+          <td>Valid</td>
+          <td>Invalid</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
+    
+  </ul>
+
+
+    </div>
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+  
+  
+
+</body>
+</html>
