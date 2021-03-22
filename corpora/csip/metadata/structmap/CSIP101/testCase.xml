@@ -15,7 +15,7 @@ XML lists -->
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
   <description>A warning is thrown if there is no div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP', and an error is thrown if there are more than one
-    div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</description>
+    div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'. Identical with CSIP103</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
