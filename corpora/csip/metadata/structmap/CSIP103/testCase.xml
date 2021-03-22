@@ -1,9 +1,9 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP103"/>
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP103"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP103" URL="http://earkcsip.dilcis.eu/#CSIP103"/>
@@ -12,12 +12,45 @@ XML lists -->
   <requirementText>The file division (div) element in the package uses the value "Representations" as the value for the attribute LABEL.
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
+  <description>A warning is thrown if there is no div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP', and an error is thrown if there are more than one
+    div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'. Identical with CSIP101</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
   </dependencies>
   <!-- A list of the validation rules derived from the test case -->
   <rules>
-  </rules>
+      <rule id="1">
+        <description>There SHOULD be a div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</description>
+        <error level="WARNING">
+          <message>There SHOULD be a div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</message>
+        </error>
+        <corpusPackages>
+          <package isValid="FALSE" name="no_div_label_Representations">
+            <path>invalid\no_div_label_Representations</path>
+            <description>There is no div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</description>
+          </package>
+          <package isValid="TRUE" name="minimal_IP">
+            <path>valid\minimal_IP</path>
+            <description>Minimal IP</description>
+          </package>
+        </corpusPackages>
+      </rule>
+      <rule id="2">
+        <description>There MUST be mamximum one div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</description>
+        <error level="ERROR">
+          <message>There MUST be mamximum one div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</message>
+        </error>
+        <corpusPackages>
+          <package isValid="FALSE" name="two_div_elements_with_label_metadata">
+            <path>invalid\two_div_elements_with_label_Representations</path>
+            <description>Package with two div-elements with @LABEL='Representations'</description>
+          </package>
+          <package isValid="TRUE" name="minimal_IP">
+            <path>valid\minimal_IP</path>
+            <description>Minimal IP</description>
+          </package>
+        </corpusPackages>
+      </rule>
+    </rules>
 </testCase>
