@@ -28,8 +28,8 @@ XML lists -->
           <path>./no_rep_file_grp</path>
           <description>The package root METS document has no mets/fileSec/fileGrp@USE="Representations" element.</description>
         </package>
-        <package isValid="TRUE" name="single_rep_file_grp">
-          <path>./doc_file_grp</path>
+        <package isValid="TRUE" name="minimal_IP_with_1_representation">
+          <path>./minimal_IP_with_1_representation</path>
           <description>The package root METS document has a single mets/fileSec/fileGrp@USE="Representations" element.</description>
         </package>
         <package isValid="TRUE" name="multi_rep_file_grp">
