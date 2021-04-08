@@ -30,13 +30,13 @@
               <a class="nav-link active" aria-current="page" href="https://dilcisboard.github.io/eark-ip-test-corpus/">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP">CSIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP/">CSIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP">SIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP/">SIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP">DIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP/">DIP</a>
             </li>
           </ul>
         </div>
@@ -50,12 +50,8 @@
     <div class="card-body">
       <h5 class="card-title">CSIP:CSIP8</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text">
-    If the package has been modified, mets/metsHdr/@LASTMODDATE MUST exist.
-    If mets/metsHdr/@LASTMODDATE exists, it MUST have a value that is a date.
-    If mets/metsHdr/@LASTMODDATE exists, its value MUST be the actual date the package was modified.
-    If mets/metsHdr/@LASTMODDATE exists, its value MUST be a date not in the future.
-  </p>
+      <p class="card-text">Branch: csip/metsHdr/csip8</p>
+      <p class="card-text">Path: corpora/csip/metadata/metshdr/CSIP8/testCase.xml</p>
     </div>
   </div>
 
@@ -67,7 +63,7 @@
     <li class="list-group-item">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Rule:1 Packages:1/2</h5>
+          <h5 class="card-title">Rule:1 Packages:2/2</h5>
           <h6 class="card-subtitle text-muted">If the package has been modified, mets/metsHdr/@LASTMODDATE MUST exist.</h6>
           <p class="card-text">WARNING: 
           mets/metsHdr/@LASTMODDATE attribute does not exist. SHOULD be: If the package has been modified, the attribute MUST exist and have a value that is a date in the format of xsd:dateTime.
@@ -89,7 +85,7 @@
         </tr><tr>
           <td class="table-secondary"><a href="./mets-xml_metsHdr_LASTMODDATE_OK/index.html">mets-xml_metsHdr_LASTMODDATE_OK</a></td>
           <td>Valid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr>
     </tbody>
   </table>
@@ -103,7 +99,7 @@
     <li class="list-group-item">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Rule:2 Packages:1/2</h5>
+          <h5 class="card-title">Rule:2 Packages:2/2</h5>
           <h6 class="card-subtitle text-muted">If mets/metsHdr/@LASTMODDATE exists, its value MUST be a date not in the future.</h6>
           <p class="card-text">ERROR: 
           mets/metsHdr/@LASTMODDATE value is a date in the future. SHOULD be: If the package has been modified, the value MUST indicate the date of last modification, which cannot be in the future.
@@ -125,7 +121,7 @@
         </tr><tr>
           <td class="table-secondary"><a href="./mets-xml_metsHdr_LASTMODDATE_OK/index.html">mets-xml_metsHdr_LASTMODDATE_OK</a></td>
           <td>Valid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr>
     </tbody>
   </table>

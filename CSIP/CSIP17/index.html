@@ -30,13 +30,13 @@
               <a class="nav-link active" aria-current="page" href="https://dilcisboard.github.io/eark-ip-test-corpus/">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP">CSIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP/">CSIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP">SIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP/">SIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP">DIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP/">DIP</a>
             </li>
           </ul>
         </div>
@@ -48,15 +48,10 @@
   
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">E-ARK CSIP:CSIP17</h5>
+      <h5 class="card-title">CSIP:CSIP17</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text">This testcase is for requirement CSIP17, which relates to descriptive metadata; the optional dmdSec
-    elements in the mets.xml file and to the optional files in the folder metadata/descriptive. The requirement CSIP17
-    is not stringent and therefore difficult to test, it is based on conditions and optional elements.
-    Quote from CSIP17: Must be used if descriptive metadata for the package content is available. Each descriptive metadata section
-    (dmdSec) contains one description and thus is repeated when more descriptions are available. It is possible to
-    transfer metadata in a package using just the descriptive metadata section/or adminstrative metadata
-    section.</p>
+      <p class="card-text">Branch: csip/dmdSec/CSIP17</p>
+      <p class="card-text">Path: corpora/csip/metadata/dmdsec/CSIP17/testCase.xml</p>
     </div>
   </div>
 
@@ -68,7 +63,7 @@
     <li class="list-group-item">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Rule:1 Packages:0/1</h5>
+          <h5 class="card-title">Rule:1 Packages:2/1</h5>
           <h6 class="card-subtitle text-muted">There should be an XML element named dmdSec in the mets.xml</h6>
           <p class="card-text">WARNING: The element mets/dmdSec does not exist in METS.xml. It SHOULD be there.</p>
           <p class="card-text">Packages: 
@@ -84,7 +79,7 @@
       <tr>
           <td class="table-secondary"><a href="./IP_18000_CSIP17_1/index.html">IP_18000_CSIP17_1</a></td>
           <td>Valid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr>
     </tbody>
   </table>
@@ -98,7 +93,7 @@
     <li class="list-group-item">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Rule:2 Packages:1/1</h5>
+          <h5 class="card-title">Rule:2 Packages:2/1</h5>
           <h6 class="card-subtitle text-muted">When one or more mets/dmdSec element exist in mets.xml there SHOULD be files in the folder
         metadata/descriptive</h6>
           <p class="card-text">WARNING: One or more mets/dmdSec elements exist(s). No file(s) found in metadata/descriptive. File(s) SHOULD be
@@ -130,7 +125,7 @@
     <li class="list-group-item">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Rule:3 Packages:1/1</h5>
+          <h5 class="card-title">Rule:3 Packages:2/1</h5>
           <h6 class="card-subtitle text-muted">When one or more files in the folder metadata/descriptive exist there should be one or more
         mets/dmdSec element(s) in mets.xml</h6>
           <p class="card-text">ERROR: One or more file(s) found in the directory metadata/descriptive. The dmdSec-element in METS.xml 'Must be used if descriptive metadata for the

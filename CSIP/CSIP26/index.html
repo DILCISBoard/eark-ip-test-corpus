@@ -30,13 +30,13 @@
               <a class="nav-link active" aria-current="page" href="https://dilcisboard.github.io/eark-ip-test-corpus/">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP">CSIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP/">CSIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP">SIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP/">SIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP">DIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP/">DIP</a>
             </li>
           </ul>
         </div>
@@ -48,17 +48,10 @@
   
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">E-ARK CSIP:CSIP26</h5>
+      <h5 class="card-title">CSIP:CSIP26</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text">Specifies the IANA mime type for the linked file.
-    Requires two rules and at least two corpus packages:
-    Rule for the existence of the attribute MIMETYPE for element dmdSec/mdRef.
-    ERROR if it does not exists
-    Rule for the value of the attribute MIMETYPE for element dmdSec/mdRef.
-    WARNING if it is not on the list.
-    
-    How do we handle lists of valid values? Do we create a valid package for each valid value? And one invalid package for an invalid value?
-    Are we supposed to check against IANA? http://www.iana.org/assignments/media-types/media-types.xhtml </p>
+      <p class="card-text">Branch: csip/dmdSec/CSIP26</p>
+      <p class="card-text">Path: corpora/csip/metadata/dmdsec/CSIP26/testCase.xml</p>
     </div>
   </div>
 
@@ -70,7 +63,7 @@
     <li class="list-group-item">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Rule:1 Packages:1/1</h5>
+          <h5 class="card-title">Rule:1 Packages:3/1</h5>
           <h6 class="card-subtitle text-muted">Tests whether MIMETYPE-attribute exists in METS</h6>
           <p class="card-text">ERROR: The element mets/dmdSec/mdRef in METS.xml does not have a MIMETYPE-attribute. It MUST be there according to CS IP.</p>
           <p class="card-text">Packages: 
@@ -100,7 +93,7 @@
     <li class="list-group-item">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Rule:2 Packages:1/1</h5>
+          <h5 class="card-title">Rule:2 Packages:3/1</h5>
           <h6 class="card-subtitle text-muted">Tests whether MIMETYPE-attribute has a value</h6>
           <p class="card-text">WARNING: The element mets/dmdSec/mdRef in METS.xml has a MIMETYPE-attribute with no value. It SHOULD be there.</p>
           <p class="card-text">Packages: 
@@ -130,7 +123,7 @@
     <li class="list-group-item">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Rule:3 Packages:1/1</h5>
+          <h5 class="card-title">Rule:3 Packages:3/1</h5>
           <h6 class="card-subtitle text-muted">Tests whether MIMETYPE-attribute has a correct value</h6>
           <p class="card-text">WARNING: The element mets/dmdSec/mdRef in METS.xml has a MIMETYPE-attribute which it not on the IANA list. See http://www.iana.org/assignments/media-types/media-types.xhtml for the list of valid MIMETYPES </p>
           <p class="card-text">Packages: 

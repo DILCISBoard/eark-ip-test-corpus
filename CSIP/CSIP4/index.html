@@ -30,13 +30,13 @@
               <a class="nav-link active" aria-current="page" href="https://dilcisboard.github.io/eark-ip-test-corpus/">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP">CSIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP/">CSIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP">SIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP/">SIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP">DIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP/">DIP</a>
             </li>
           </ul>
         </div>
@@ -50,14 +50,8 @@
     <div class="card-body">
       <h5 class="card-title">CSIP:CSIP4</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text">
-    If the METS document is at the package level (i.e. in the root folder) then mets/@csip:CONTENTINFORMATIONTYPE SHOULD (i.e. is recommended to) exist.
-    If the METS document is at the representation level (i.e. in the /representations folder) then mets/@csip:CONTENTINFORMATIONTYPE MUST exist.
-    If mets/@csip:CONTENTINFORMATIONTYPE exists, it MUST have a value from the VocabularyContentInformationTypeSpecification as defined by DILCIS Board.
-    If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.
-    
-    Note: there is ambiguity around the case where an IP with one representation has only the root METS.xml (such a configuration is allowed by CSIP v.2.0.3). It could be said that such root METS.xml actually serves as representation METS.xml and thus mets/@csip:CONTENTINFORMATIONTYPE MUST exist. The interpretation here is that this is not the case, i.e. METS.xml is "representation level" only if it is located in /representations folder.
-  </p>
+      <p class="card-text">Branch: csip/mets-root/csip4</p>
+      <p class="card-text">Path: corpora/csip/metadata/mets-root/CSIP4/testCase.xml</p>
     </div>
   </div>
 
@@ -89,11 +83,11 @@
       <tr>
           <td class="table-secondary"><a href="./root_mets_file_mets-xml_mets_csip-CONTENTINFORMATIONTYPE_not_exist/index.html">root_mets_file_mets-xml_mets_csip-CONTENTINFORMATIONTYPE_not_exist</a></td>
           <td>Invalid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr><tr>
           <td class="table-secondary"><a href="./minimal_IP_with_1_rep_plus_mets-xml_SHOULD_nodes/index.html">minimal_IP_with_1_rep_plus_mets-xml_SHOULD_nodes</a></td>
           <td>Valid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr>
     </tbody>
   </table>
@@ -127,11 +121,11 @@
       <tr>
           <td class="table-secondary"><a href="./rep_mets_file_mets-xml_mets_csip-CONTENTINFORMATIONTYPE_not_exist/index.html">rep_mets_file_mets-xml_mets_csip-CONTENTINFORMATIONTYPE_not_exist</a></td>
           <td>Invalid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr><tr>
           <td class="table-secondary"><a href="./minimal_IP_with_1_rep_rep_mets_file_exists/index.html">minimal_IP_with_1_rep_rep_mets_file_exists</a></td>
           <td>Valid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr>
     </tbody>
   </table>
@@ -163,11 +157,11 @@
       <tr>
           <td class="table-secondary"><a href="./mets-xml_mets_csip-CONTENTINFORMATIONTYPE_value_incorrect/index.html">mets-xml_mets_csip-CONTENTINFORMATIONTYPE_value_incorrect</a></td>
           <td>Invalid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr><tr>
           <td class="table-secondary"><a href="./minimal_IP_with_1_rep_plus_mets-xml_SHOULD_nodes/index.html">minimal_IP_with_1_rep_plus_mets-xml_SHOULD_nodes</a></td>
           <td>Valid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr>
     </tbody>
   </table>
@@ -199,11 +193,11 @@
       <tr>
           <td class="table-secondary"><a href="./mets-xml_mets_csip-CONTENTINFORMATIONTYPE_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_not_exist/index.html">mets-xml_mets_csip-CONTENTINFORMATIONTYPE_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_not_exist</a></td>
           <td>Invalid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr><tr>
           <td class="table-secondary"><a href="./minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_OTHER/index.html">minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_OTHER</a></td>
           <td>Valid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr>
     </tbody>
   </table>
@@ -235,11 +229,11 @@
       <tr>
           <td class="table-secondary"><a href="./mets-xml_mets_csip-CONTENTINFORMATIONTYPE_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_no_value/index.html">mets-xml_mets_csip-CONTENTINFORMATIONTYPE_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_no_value</a></td>
           <td>Invalid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr><tr>
           <td class="table-secondary"><a href="./minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_OTHER/index.html">minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_OTHER</a></td>
           <td>Valid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr>
     </tbody>
   </table>

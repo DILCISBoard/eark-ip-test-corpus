@@ -30,13 +30,13 @@
               <a class="nav-link active" aria-current="page" href="https://dilcisboard.github.io/eark-ip-test-corpus/">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP">CSIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP/">CSIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP">SIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP/">SIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP">DIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP/">DIP</a>
             </li>
           </ul>
         </div>
@@ -48,9 +48,10 @@
   
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">E-ARK CSIP:CSIP50</h5>
+      <h5 class="card-title">CSIP:CSIP50</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text">This is 1:1 with the METS requirement. Any value other than "simple" will break the xml according to the METS schema </p>
+      <p class="card-text">Branch: csip/amdSec/CSIP50</p>
+      <p class="card-text">Path: corpora/csip/metadata/amdsec/CSIP50/testCase.xml</p>
     </div>
   </div>
 
@@ -63,8 +64,8 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Rule:1 Packages:0/2</h5>
-          <h6 class="card-subtitle text-muted">Value has to be "simple"</h6>
-          <p class="card-text">ERROR: The value has to be: "simple"</p>
+          <h6 class="card-subtitle text-muted">The attribute xlink_type MUST exist in the mptr-element like this: @xlink:type='simple'</h6>
+          <p class="card-text">ERROR: The attribute xlink_type MUST exist in the mptr-element like this: @xlink:type='simple'</p>
           <p class="card-text">Packages: 
   <table data-toggle="table">
     <thead class="thead-dark">
@@ -76,13 +77,13 @@
     </thead>
     <tbody>
       <tr>
-          <td class="table-secondary"><a href="./wrong_value_xlink_type/index.html">wrong_value_xlink_type</a></td>
+          <td class="table-secondary"><a href="./structMap_missing_xlink_type/index.html">structMap_missing_xlink_type</a></td>
           <td>Invalid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr><tr>
           <td class="table-secondary"><a href="./minimal_IP_with_schemas/index.html">minimal_IP_with_schemas</a></td>
           <td>Valid</td>
-          <td>Invalid</td>
+          <td>Not found</td>
         </tr>
     </tbody>
   </table>

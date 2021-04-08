@@ -30,13 +30,13 @@
               <a class="nav-link active" aria-current="page" href="https://dilcisboard.github.io/eark-ip-test-corpus/">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP">CSIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP/">CSIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP">SIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP/">SIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP">DIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP/">DIP</a>
             </li>
           </ul>
         </div>
@@ -48,15 +48,124 @@
   
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">E-ARK CSIP:CSIP64</h5>
-      <h5 class="card-subtitle text-muted">Testable: UNKNOWN Schema: True</h5>
-      <p class="card-text">None</p>
+      <h5 class="card-title">CSIP:CSIP64</h5>
+      <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
+      <p class="card-text">Branch: csip/filesec/csip64</p>
+      <p class="card-text">Path: corpora/csip/metadata/filesec/CSIP64/testCase.xml</p>
     </div>
   </div>
 
   <h2>Rules</h2>
   
   <ul class="list-group list-group-flush">
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:1 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">For each mets/fileSec/fileGrp that exists, mets/fileSec/fileGrp/@USE MUST exist.</h6>
+          <p class="card-text">ERROR: 
+          mets/fileSec/fileGrp/@USE attribute does not exist. MUST be: For each mets/fileSec/fileGrp that exists, mets/fileSec/fileGrp/@USE MUST exist.
+        </p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_fileGrp_USE_not_exist/index.html">mets-xml_fileGrp_USE_not_exist</a></td>
+          <td>Invalid</td>
+          <td>Not found</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_rep_plus_mets-xml_SHOULD_items/index.html">minimal_IP_with_1_rep_plus_mets-xml_SHOULD_items</a></td>
+          <td>Valid</td>
+          <td>Not found</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:2 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">mets/fileSec/fileGrp/@USE value MUST begin with or equal to a value from VocabularyFileGrpAndStructMapDivisionLabel.</h6>
+          <p class="card-text">ERROR: 
+          mets/fileSec/fileGrp/@USE attribute has incorrect value. MUST be: mets/fileSec/fileGrp/@USE value MUST begin with or equal to a value from VocabularyFileGrpAndStructMapDivisionLabel.
+        </p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_fileGrp_USE_vocabulary_mismatch/index.html">mets-xml_fileGrp_USE_vocabulary_mismatch</a></td>
+          <td>Invalid</td>
+          <td>Not found</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_rep_plus_mets-xml_SHOULD_items/index.html">minimal_IP_with_1_rep_plus_mets-xml_SHOULD_items</a></td>
+          <td>Valid</td>
+          <td>Not found</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
+    
+      
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule:3 Packages:0/2</h5>
+          <h6 class="card-subtitle text-muted">mets/fileSec/fileGrp/@USE value MUST match an existing folder path in the package, case insensitive.</h6>
+          <p class="card-text">ERROR: 
+          mets/fileSec/fileGrp/@USE attribute has incorrect value. MUST be: mets/fileSec/fileGrp/@USE value MUST match an existing folder path in the package, case insensitive.
+        </p>
+          <p class="card-text">Packages: 
+  <table data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="expected">Expected Result</th>
+        <th data-field="rules">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td class="table-secondary"><a href="./mets-xml_fileGrp_USE_folder_mismatch/index.html">mets-xml_fileGrp_USE_folder_mismatch</a></td>
+          <td>Invalid</td>
+          <td>Not found</td>
+        </tr><tr>
+          <td class="table-secondary"><a href="./minimal_IP_with_1_rep_plus_mets-xml_SHOULD_items/index.html">minimal_IP_with_1_rep_plus_mets-xml_SHOULD_items</a></td>
+          <td>Valid</td>
+          <td>Not found</td>
+        </tr>
+    </tbody>
+  </table>
+</p>
+        </div>
+      </div>
+    </li>
+
     
   </ul>
 

@@ -30,13 +30,13 @@
               <a class="nav-link active" aria-current="page" href="https://dilcisboard.github.io/eark-ip-test-corpus/">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP">CSIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP/">CSIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP">SIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP/">SIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP">DIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP/">DIP</a>
             </li>
           </ul>
         </div>
@@ -48,16 +48,10 @@
   
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">E-ARK CSIP:CSIP29</h5>
+      <h5 class="card-title">CSIP:CSIP29</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text">It is mandatory in CS IP but optional in METS.
-    Therefore it should test:
-    
-    whether the attribute exists
-    whether the checksum is correct.
-    
-    There is a dependency to CSIP30, since it must be stated what kind of checksum type it is before it can be checked whether the checksum is correct or not.
-  </p>
+      <p class="card-text">Branch: csip/dmdSec/csip29</p>
+      <p class="card-text">Path: corpora/csip/metadata/dmdsec/CSIP29/testCase.xml</p>
     </div>
   </div>
 
@@ -69,7 +63,7 @@
     <li class="list-group-item">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Rule:1 Packages:1/1</h5>
+          <h5 class="card-title">Rule:1 Packages:4/1</h5>
           <h6 class="card-subtitle text-muted">If dmdSec/mdRef-element is present there MUST be at CHECKSUM-attribute</h6>
           <p class="card-text">ERROR: mets/dmdSec/mdRef/@CHECKSUM does not exist in METS.xml. @CHECKSUM is a mandatory attribute according to CS IP.</p>
           <p class="card-text">Packages: 
@@ -99,7 +93,7 @@
     <li class="list-group-item">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Rule:2 Packages:3/3</h5>
+          <h5 class="card-title">Rule:2 Packages:4/3</h5>
           <h6 class="card-subtitle text-muted">If dmdSec/mdRef-element is present there MUST be a CHECKSUM-attribute value that corresponds to the file's checksum</h6>
           <p class="card-text">ERROR: mets/dmdSec/mdRef/@CHECKSUM has a value in METS.xml that does not match the actual file's checksum </p>
           <p class="card-text">Packages: 

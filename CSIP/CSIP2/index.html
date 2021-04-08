@@ -30,13 +30,13 @@
               <a class="nav-link active" aria-current="page" href="https://dilcisboard.github.io/eark-ip-test-corpus/">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP">CSIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/CSIP/">CSIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP">SIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/SIP/">SIP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP">DIP</a>
+              <a class="nav-link" href="https://dilcisboard.github.io/eark-ip-test-corpus/DIP/">DIP</a>
             </li>
           </ul>
         </div>
@@ -50,165 +50,14 @@
     <div class="card-body">
       <h5 class="card-title">CSIP:CSIP2</h5>
       <h5 class="card-subtitle text-muted">Testable: TRUE Schema: True</h5>
-      <p class="card-text">
-    mets/@TYPE MUST exist.
-    mets/@TYPE MUST have a value from the VocabularyContentCategory as defined by DILCIS Board.
-    If mets/@TYPE = “OTHER” then mets/@csip:OTHERTYPE MUST exist and have a value.
-  </p>
+      <p class="card-text">Branch: csip/struct/csipstr2</p>
+      <p class="card-text">Path: corpus/structure/CSIPSTR2/testCase.xml</p>
     </div>
   </div>
 
   <h2>Rules</h2>
   
   <ul class="list-group list-group-flush">
-    
-      
-    <li class="list-group-item">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Rule:1 Packages:0/2</h5>
-          <h6 class="card-subtitle text-muted">mets/@TYPE MUST exist.</h6>
-          <p class="card-text">ERROR: 
-          mets/@TYPE attribute does not exist. MUST be: attribute exists and has a value.
-        </p>
-          <p class="card-text">Packages: 
-  <table data-toggle="table">
-    <thead class="thead-dark">
-      <tr>
-        <th data-field="name">Name</th>
-        <th data-field="expected">Expected Result</th>
-        <th data-field="rules">Result</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td class="table-secondary"><a href="./mets-xml_mets_TYPE_attribute_not_exist/index.html">mets-xml_mets_TYPE_attribute_not_exist</a></td>
-          <td>Invalid</td>
-          <td>Invalid</td>
-        </tr><tr>
-          <td class="table-secondary"><a href="./minimal_IP_with_1_representation/index.html">minimal_IP_with_1_representation</a></td>
-          <td>Valid</td>
-          <td>Invalid</td>
-        </tr>
-    </tbody>
-  </table>
-</p>
-        </div>
-      </div>
-    </li>
-
-    
-      
-    <li class="list-group-item">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Rule:2 Packages:0/3</h5>
-          <h6 class="card-subtitle text-muted">mets/@TYPE MUST have a value from the VocabularyContentCategory as defined by DILCIS Board.</h6>
-          <p class="card-text">ERROR: 
-          mets/@TYPE attribute has incorrect value. MUST be: attribute has a value from the VocabularyContentCategory as defined by DILCIS.
-        </p>
-          <p class="card-text">Packages: 
-  <table data-toggle="table">
-    <thead class="thead-dark">
-      <tr>
-        <th data-field="name">Name</th>
-        <th data-field="expected">Expected Result</th>
-        <th data-field="rules">Result</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td class="table-secondary"><a href="./mets-xml_mets_TYPE_attribute_value_incorrect/index.html">mets-xml_mets_TYPE_attribute_value_incorrect</a></td>
-          <td>Invalid</td>
-          <td>Invalid</td>
-        </tr><tr>
-          <td class="table-secondary"><a href="./minimal_IP_with_1_representation/index.html">minimal_IP_with_1_representation</a></td>
-          <td>Valid</td>
-          <td>Invalid</td>
-        </tr><tr>
-          <td class="table-secondary"><a href="./valid_minimal_mets_TYPE_value_vocabulary_1/index.html">valid_minimal_mets_TYPE_value_vocabulary_1</a></td>
-          <td>Valid</td>
-          <td>Invalid</td>
-        </tr>
-    </tbody>
-  </table>
-</p>
-        </div>
-      </div>
-    </li>
-
-    
-      
-    <li class="list-group-item">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Rule:3 Packages:0/2</h5>
-          <h6 class="card-subtitle text-muted">If mets/@TYPE = “OTHER” then mets/@csip:OTHERTYPE MUST exist.</h6>
-          <p class="card-text">ERROR: 
-          mets/@csip:OTHERTYPE attribute does not exist. MUST be: If mets/@TYPE = “OTHER” then mets/@csip:OTHERTYPE MUST exist and have a value.
-        </p>
-          <p class="card-text">Packages: 
-  <table data-toggle="table">
-    <thead class="thead-dark">
-      <tr>
-        <th data-field="name">Name</th>
-        <th data-field="expected">Expected Result</th>
-        <th data-field="rules">Result</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td class="table-secondary"><a href="./mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist/index.html">mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist</a></td>
-          <td>Invalid</td>
-          <td>Invalid</td>
-        </tr><tr>
-          <td class="table-secondary"><a href="./valid_minimal_mets_TYPE_value_OTHER/index.html">valid_minimal_mets_TYPE_value_OTHER</a></td>
-          <td>Valid</td>
-          <td>Invalid</td>
-        </tr>
-    </tbody>
-  </table>
-</p>
-        </div>
-      </div>
-    </li>
-
-    
-      
-    <li class="list-group-item">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Rule:4 Packages:0/2</h5>
-          <h6 class="card-subtitle text-muted">If mets/@TYPE = “OTHER” then mets/@csip:OTHERTYPE MUST exist and have a value.</h6>
-          <p class="card-text">ERROR: 
-          mets/@csip:OTHERTYPE attribute has no value. MUST be: If mets/@TYPE = “OTHER” then mets/@csip:OTHERTYPE MUST exist and have a value.
-        </p>
-          <p class="card-text">Packages: 
-  <table data-toggle="table">
-    <thead class="thead-dark">
-      <tr>
-        <th data-field="name">Name</th>
-        <th data-field="expected">Expected Result</th>
-        <th data-field="rules">Result</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td class="table-secondary"><a href="./mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value/index.html">mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value</a></td>
-          <td>Invalid</td>
-          <td>Invalid</td>
-        </tr><tr>
-          <td class="table-secondary"><a href="./valid_minimal_mets_TYPE_value_OTHER/index.html">valid_minimal_mets_TYPE_value_OTHER</a></td>
-          <td>Valid</td>
-          <td>Invalid</td>
-        </tr>
-    </tbody>
-  </table>
-</p>
-        </div>
-      </div>
-    </li>
-
     
   </ul>
 
