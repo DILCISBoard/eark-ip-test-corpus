@@ -110,7 +110,7 @@
     <!-- CSIP84 mets/structMap[@LABEL='CSIP']/div - Main structural division - [1..1] -->
     <!-- CSIP85 mets/structMap[@LABEL='CSIP']/div/@ID - Main structural division identifier - [1..1] -->
     <!-- CSIP86 mets/structMap[@LABEL='CSIP']/div/@LABEL - Main structural division label - [1..1] -->
-    <div ID="ID-root-mets-structMap-div-main" LABEL="minimal_IP_with_1_representation">
+    <div ID="ID-root-mets-structMap-div-main" LABEL="no_rep_file_grp">
       <!-- CSIP88 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Metadata'] - Metadata division - [1..1] -->
       <!-- CSIP89 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Metadata']/@ID - Metadata division identifier - [1..1] -->
       <!-- CSIP90 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Metadata'] - Metadata division label - [1..1] -->
