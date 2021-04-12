@@ -3,6 +3,7 @@
   <references>
     <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR14</reference>
   </references>
+  <requirementText>The Information Package MAY be extended with additional sub-folders.</requirementText>
   <description>
       The Information Package folder and representation folder CAN be extended with additional sub-folders:
   </description>
