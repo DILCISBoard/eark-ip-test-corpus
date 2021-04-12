@@ -1,7 +1,7 @@
 <testCase>
    <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR14" />
   <references>
-    <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR14</reference>
+    <reference requirementId="CSIPSTR14" URL="http://earkcsip.dilcis.eu/#CSIPSTR14" />
   </references>
   <requirementText>The Information Package MAY be extended with additional sub-folders.</requirementText>
   <description>
