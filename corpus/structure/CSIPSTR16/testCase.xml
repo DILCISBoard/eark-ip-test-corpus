@@ -1,8 +1,9 @@
 <testCase>
-   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR16" />
+  <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR16" />
   <references>
     <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR16</reference>
   </references>
+  <requirementText>We recommend including any supplementary documentation for the package or a specific representation within the package. Supplementary documentation SHOULD be placed in a sub-folder called documentation within the Information Package root folder and/or the representation folder.</requirementText>
   <description>
       We recommend including any supplementary documentation for the package or a specific representation within the package. Supplementary documentation SHOULD be placed in a sub-folder called documentation within the Information Package root folder and/or the representation folder.
   </description>
