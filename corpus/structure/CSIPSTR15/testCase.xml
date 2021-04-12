@@ -5,7 +5,7 @@
   <description>
       We recommend including all schema documents for any structured metadata within package. These schema documents SHOULD be placed in a sub-folder called schemas within the Information Package root folder.
   </description>
-  </dependencies>
+  <dependencies/>
   <rules>
     <rule id="1">
       <description>Schema documents SHOULD be placed in a sub-folder called "schemas" within the Information Package root folder.</description>
