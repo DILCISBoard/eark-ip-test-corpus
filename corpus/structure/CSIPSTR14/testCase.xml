@@ -1,5 +1,5 @@
 <testCase>
-   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR14" />
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIPSTR14"/>
   <references>
     <reference requirementId="CSIPSTR14" URL="http://earkcsip.dilcis.eu/#CSIPSTR14" />
   </references>
