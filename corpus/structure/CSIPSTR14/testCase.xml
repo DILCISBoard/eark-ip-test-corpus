@@ -8,7 +8,7 @@
       The Information Package folder and representation folder CAN be extended with additional sub-folders:
   </description>
   <dependencies>
-    <dependency specification="CSIP" version="2018-09-18" section="4.1" requirementId="CSIPSTR10" URL="https://earkcsip.dilcis.eu/#CSIPSTR10" />
+    <dependency requirementId="CSIPSTR10" URL="https://earkcsip.dilcis.eu/#CSIPSTR10" />
   </dependencies>
   <rules>
     <rule id="1">
