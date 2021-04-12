@@ -11,7 +11,7 @@ XML lists -->
   <!-- The full text of the requirement. -->
   <requirementText>Representation METS pointer
     mets/structMap[@LABEL='CSIP']/div/div/mptr
-    The division <div> of the specific representation includes one occurrence of the METS pointer <mptr> element, pointing to the appropriate representation METS file.
+    The division of the specific representation includes one occurrence of the METS pointer element, pointing to the appropriate representation METS file.
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
   <description>All fileGrps with the @USE="Representations" must also be presented in the structMap. CSIP108 and CSIP109 are intrinsically linked together and therefore is the same testcase.</description>
