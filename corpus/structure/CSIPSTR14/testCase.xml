@@ -1,7 +1,8 @@
 <testCase>
    <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR14" />
-  <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR14
-  </reference>
+  <references>
+    <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR14</reference>
+  </references>
   <description>
       The Information Package folder and representation folder CAN be extended with additional sub-folders:
   </description>
