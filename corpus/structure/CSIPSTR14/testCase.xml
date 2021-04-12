@@ -19,11 +19,11 @@
 		</message>
 		</error>
         <corpusPackages>
-		    <package name="representation_folder_has_additional_folder">
+		    <package name="representation_folder_has_additional_folder" isValid="TRUE">
 		        <path>pass\representation_folder_has_additional_folder</path>
 		        <description>Positive testcase. The representation folder has additional folder</description>
 		    </package>
-		    <package name="IP_folder_and_rep_folder_have_additional_folder">
+		    <package name="IP_folder_and_rep_folder_have_additional_folder" isValid="TRUE">
 		        <path>pass\IP_folder_and_rep_folder_have_additional_folder</path>
 		        <description>The IP folder and representation folder have additional folders</description>
 		    </package>
@@ -37,11 +37,11 @@
 		    </message>
        </error>
 	   <corpusPackages>
-		    <package name="IP_folder_has_additional_folder">
+		    <package name="IP_folder_has_additional_folder" isValid="TRUE">
 		        <path>pass\IP_folder_has_additional_folder</path>
 		        <description>Positive testcase. The IP has additional folder</description>
 		    </package>
-		    <package name="IP_folder_and_rep_folder_have_additional_folder">
+		    <package name="IP_folder_and_rep_folder_have_additional_folder" isValid="TRUE">
 		        <path>pass\IP_folder_and_rep_folder_have_additional_folder</path>
 		        <description>The IP folder and representation folder have additional folders</description>
 		    </package>
