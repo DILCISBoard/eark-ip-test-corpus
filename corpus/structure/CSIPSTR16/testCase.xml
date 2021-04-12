@@ -1,7 +1,9 @@
-<testCase>
-  <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR16" />
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
+  testable="FALSE">
+  <!-- Unique ID for the test case -->
+  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIPSTR16"/>
   <references>
-    <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR16</reference>
+    <reference requirementId="CSIPSTR16" URL="http://earkcsip.dilcis.eu/#CSIPSTR16"/>
   </references>
   <requirementText>We recommend including any supplementary documentation for the package or a specific representation within the package. Supplementary documentation SHOULD be placed in a sub-folder called documentation within the Information Package root folder and/or the representation folder.</requirementText>
   <description>
@@ -17,7 +19,7 @@
 		</message>
 		</error>
         <corpusPackages>
-		    <package name="subfolder_documentation_in_IP_folder">
+		    <package name="subfolder_documentation_in_IP_folder" isValid="TRUE">
 		        <path>pass\subfolder_documentation_in_IP_folder</path>
 		        <description>Positive testcase. The Information Package has sub-folder "documentation".</description>
 		    </package>
@@ -31,7 +33,7 @@
 		</message>
 		</error>
         <corpusPackages>
-		    <package name="subfolder_documentation_in_representation_folder">
+		    <package name="subfolder_documentation_in_representation_folder" isValid="TRUE">
 		        <path>pass\subfolder_documentation_in_representation_folder</path>
 		        <description>Positive testcase. The representation folder has sub-folder "documentation".</description>
 		    </package>
