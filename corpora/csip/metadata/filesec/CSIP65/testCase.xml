@@ -1,24 +1,45 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="TRUE"> <!-- Normal schema validation -->
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP65"/>
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP65"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP65" URL="http://earkcsip.dilcis.eu/#CSIP65"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>An identifier for the file group used for referencing inside the package. It must be unique within the package.
-The ID must follow the rules for xml:id described in the chapter of the textual description of CSIP named "General requirements for the use of metadata"
-</requirementText>
+  <requirementText>File group identifier
+    mets/fileSec/fileGrp/@ID
+    An xml:id identifier for the file group used for internal package references. It must be unique within the package.
+  </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
+  <description>The requirement links to http://earkcsip.dilcis.eu/#the-use-of-identifiers and simple xml-validation will catch if IDs are not unique. This will be tested by normal schema validation. However, the ID-attribute is optional according to METS.xsd, so this testcase has one rule to check if the ID-attribute exists</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
   </dependencies>
   <!-- A list of the validation rules derived from the test case -->
   <rules>
+    <rule id="1">
+      <description>There MUST be an ID-attribute on every fileGrp</description>
+      <error level="ERROR">
+        <message>There MUST be an ID-attribute on every fileGrp</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="fileSec_missing_ID_attribute_at_fileGrp">
+          <path>invalid/fileSec_missing_ID_attribute_at_fileGrp</path>
+          <description>A package with a missing ID-attribute at one fileGrp</description>
+        </package>
+        <package isValid="FALSE" name="fileSec_missing_ID_attribute_at_fileGrps">
+          <path>invalid/fileSec_missing_ID_attribute_at_fileGrps</path>
+          <description>A package with a missing ID-attribute at two fileGrps</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP">
+          <path>valid\minimal_IP</path>
+          <description>Minimal IP</description>
+        </package>
+      </corpusPackages>
+    </rule>
   </rules>
 </testCase>
