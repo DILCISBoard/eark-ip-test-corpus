@@ -43,7 +43,7 @@ XML lists -->
         <message>The size of the file is not the size that is given in the SIZE-attribute</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdRef_wrong_SIZE">
+        <package isValid="FALSE" name="file_wrong_SIZE">
           <path>invalid/file_wrong_SIZE</path>
           <description>A package where the wrong size is given on 2 different files</description>
         </package>
