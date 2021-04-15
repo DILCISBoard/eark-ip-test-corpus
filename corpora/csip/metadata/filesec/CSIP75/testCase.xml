@@ -1,18 +1,20 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="FALSE"> <!-- normal schema validation -->
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP75"/>
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP75"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP75" URL="http://earkcsip.dilcis.eu/#CSIP75"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>If descriptive metadata has been described per file this attribute points to the file's descriptive metadata.
+  <requirementText>	File reference to descriptive metadata
+    mets/fileSec/fileGrp/file/@DMDID
+    If descriptive metadata has been provided per file this attribute refers to the file’s descriptive metadata by ID.
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
+  <description>This attribute has the cardinality of 0..1 and moscow-level MAY which is also the case in METS.xsd. There could be a test to see how many files have original file IDs, but this is at a nice-to-have-level and not really a requirement so all in all there are no rules connected with this testcase</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
