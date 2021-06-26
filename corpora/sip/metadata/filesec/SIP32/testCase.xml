@@ -1,0 +1,74 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="SIP" version="2.0.4" requirementId="SIP32"/>
+  <references>
+    <reference requirementId="SIP32" URL="https://earksip.dilcis.eu/#SIP32"/>
+  </references>
+  <requirementText>
+    <name>File format name</name>
+    <location>mets/fileSec/fileGrp/file/@sip:FILEFORMATNAME</location>
+    <description>
+      An optional attribute may be used if the MIMETYPE is not sufficient for the purposes of processing the information package.
+      Example: "Extensible Markup Language"
+      Example: "PDF/A"
+      Example: "ISO/IEC 26300:2006"
+    </description>
+    <cardinality>0..1</cardinality>
+    <level>MAY</level>
+  </requirementText>
+  <description>
+    mets/fileSec/fileGrp/file/@sip:FILEFORMATNAME MAY exist.
+    If mets/fileSec/fileGrp/file/@sip:FILEFORMATNAME exists then it MUST have a value.
+    The value MUST record the name of the file format.<!-- Untestable -->
+  </description>
+  <dependencies>
+    <dependency requirementId="CSIP68" URL="https://earkcsip.dilcis.eu/#CSIP68">
+      @sip:FILEFORMATNAME should be used only if MIMETYPE is not sufficient.
+    </dependency>
+  </dependencies>
+  <rules>
+    <rule id="1">
+      <description>mets/fileSec/fileGrp/file/@sip:FILEFORMATNAME MAY exist.</description>
+      <error level="INFO">
+        <message>
+          mets/fileSec/fileGrp/file/@sip:FILEFORMATNAME does not exist. MAY be: the attribute exists and its value records the name of the file format.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="fileSec_fileGrp_file_sipFILEFORMATNAME_not_exist" isValid="FALSE">
+          <path>invalid/fileSec_fileGrp_file_sipFILEFORMATNAME_not_exist</path>
+          <description>
+            SIP where the METS.xml file has a mets/fileSec/fileGrp/file element with no @sip:FILEFORMATNAME attribute.
+          </description>
+        </package>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
+          <description>
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>If mets/fileSec/fileGrp/file/@sip:FILEFORMATNAME exists then it MUST have a value.</description>
+      <error level="WARNING"><!-- Empty values are not explicitly prohibited but go against the logic of the specification. -->
+        <message>
+          mets/fileSec/fileGrp/file/@sip:FILEFORMATNAME value is empty. MUST be: if the attribute exists then it MUST have a value that records the name of the file format.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="fileSec_fileGrp_file_sipFILEFORMATNAME_value_empty" isValid="FALSE">
+          <path>invalid/fileSec_fileGrp_file_sipFILEFORMATNAME_value_empty</path>
+          <description>
+            A SIP with METS.xml file that has a mets/fileSec/fileGrp/file/@sip:FILEFORMATNAME = "".
+          </description>
+        </package>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
+          <description>
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
