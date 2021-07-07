@@ -1,23 +1,55 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP105"/>
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP105"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP105" URL="http://earkcsip.dilcis.eu/#CSIP105"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>When the transfer consist of representations there are one representation div present for each representation
+  <requirementText>	Representation division
+    mets/structMap[@LABEL='CSIP']/div/div
+    When a package consists of multiple representations, each described by a representation level METS.xml document, there is a discrete representation div element for each representation.
+    Each representation div references the representation level METS.xml document, documenting the structure of the package and its constituent representations.
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
-  <!-- List of requirments that this test case depends on in addition to the
+  <description>Linked together with CSIP107. The validation tool should traverse the representations folder to see how many representation METS.xmls exist in the representation folders. </description>
+  <!-- List of requirements that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
+    <dependency requirementId="CSIP107" URL="http://earkcsip.dilcis.eu/#CSIP107"></dependency>
   </dependencies>
   <!-- A list of the validation rules derived from the test case -->
   <rules>
+    <rule id="1">
+      <description>There SHOULD be a div-element for each representation METS.xml in the representation folder with the path in @LABEL</description>
+      <error level="WARNING">
+        <message>There are one or more representation METS.xml in the package which are not mentioned in mets/structMap. The path to each representation METS.xml should exist as a value in mets/structMap[@LABEL='CSIP']/div/div/@LABEL</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="missing_mention_of_rep_in_structMap">
+          <path>invalid\missing_mention_of_rep_in_structMap</path>
+          <description>A package where one representation METS.xml in the package  are not mentioned in mets/structMap</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP">
+          <path>valid\minimal_IP</path>
+          <description>Minimal IP</description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>There MUST not be div-element  with a path in @LABEL to a representation METS.xml which does not exist</description>
+      <error level="ERROR">
+        <message>There are one or more paths given in mets/structMap[@LABEL='CSIP']/div/div/@LABEL which does not direct to an existing file</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="path_to_nonexisting_rep_METS">
+          <path>invalid\path_to_nonexisting_rep_METS</path>
+          <description>There is one path given in mets/structMap[@LABEL='CSIP']/div/div/@LABEL which does not direct to an existing file</description>
+        </package>
+      </corpusPackages>
+    </rule>
   </rules>
 </testCase>
