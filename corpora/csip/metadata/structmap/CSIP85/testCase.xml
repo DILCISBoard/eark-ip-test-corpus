@@ -1,19 +1,19 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="FALSE"> <!-- normal schema validation -->
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP85"/>
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP85"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP85" URL="http://earkcsip.dilcis.eu/#CSIP85"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>Mandatory, identifier must be unique within the package.
-The ID must follow the rules for xml:id described in the chapter of the textual description of CSIP named "General requirements for the use of metadata"
+  <requirementText>mets/structMap[@LABEL='CSIP']/div/@ID
+    Mandatory, xml:id identifier must be unique within the package.
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
+  <description>The requirement links to http://earkcsip.dilcis.eu/#the-use-of-identifiers and simple xml-validation will catch if IDs are not unique. Therefore it is considered out of scope within this test corpus.</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
