@@ -1,19 +1,20 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="FALSE">   <!-- Normal schema validation -->
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP67"/>
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP67"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP67" URL="http://earkcsip.dilcis.eu/#CSIP67"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>A unique identifier for this file across the package.
-The ID must follow the rules for xml:id described in the chapter of the textual description of CSIP named "General requirements for the use of metadata"
+  <requirementText>File identifier
+    mets/fileSec/fileGrp/file/@ID
+    A unique xml:id identifier for this file across the package.
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
+  <description>The requirement links to http://earkcsip.dilcis.eu/#the-use-of-identifiers and simple xml-validation will catch if IDs are not unique. This will be tested by normal schema validation. The attribute is mandatory according to the METS.xsd</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
