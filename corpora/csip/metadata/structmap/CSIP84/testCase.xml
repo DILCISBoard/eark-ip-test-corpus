@@ -1,18 +1,20 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="FALSE"> <!-- is validated by schema -->
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP84"/>
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP84"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP84" URL="http://earkcsip.dilcis.eu/#CSIP84"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>The structural map consist of one main division.
+  <requirementText>Main structural division
+    mets/structMap[@LABEL='CSIP']/div
+    The structural map comprises a single division.	1..1 MUST
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
+  <description>A div-element is mandatory according to the METS.xsd and therefore no validation rules are added for this requirement</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
