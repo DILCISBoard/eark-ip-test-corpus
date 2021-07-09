@@ -1,0 +1,72 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="SIP" version="2.0.4" requirementId="SIP2"/>
+  <references>
+    <reference requirementId="SIP2" URL="https://earksip.dilcis.eu/#SIP2"/>
+  </references>
+  <requirementText>
+    <name>METS Profile</name>
+    <location>mets/@PROFILE</location>
+    <description>
+      The value is set to "https://earksip.dilcis.eu/profile/E-ARK-SIP.xml".
+    </description>
+    <cardinality>1..1</cardinality>
+    <level>MUST</level>
+  </requirementText>
+  <description>
+    mets/@PROFILE MUST exist.
+    mets/@PROFILE MUST have the value "https://earksip.dilcis.eu/profile/E-ARK-SIP.xml".
+  </description>
+  <dependencies />
+  <rules>
+    <rule id="1">
+      <description>mets/@PROFILE MUST exist.</description>
+      <error level="ERROR">
+        <message>
+          mets/@PROFILE attribute does not exist. MUST be: attribute exists and has the value "https://earksip.dilcis.eu/profile/E-ARK-SIP.xml".
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="sip_mets_PROFILE_not_exist" isValid="FALSE">
+          <path>invalid/sip_mets_PROFILE_not_exist</path>
+          <description>
+            METS.xml file has no mets/@PROFILE attribute.
+          </description>
+        </package>
+        <package name="minimal_SIP" isValid="TRUE">
+          <path>valid/minimal_SIP</path>
+          <description>
+            Minimal SIP that matches all MUST requirements.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>mets/@PROFILE MUST have the value "https://earksip.dilcis.eu/profile/E-ARK-SIP.xml".</description>
+      <error level="ERROR">
+        <message>
+          mets/@PROFILE has incorrect value. MUST be: mets/@PROFILE = "https://earksip.dilcis.eu/profile/E-ARK-SIP.xml".
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="sip_mets_PROFILE_empty" isValid="FALSE">
+          <path></path>
+          <description>
+            METS.xml file has mets/@PROFILE = "".
+          </description>
+        </package>
+        <package name="sip_mets_PROFILE_value_incorrect" isValid="FALSE">
+          <path></path>
+          <description>
+            METS.xml file has mets/@PROFILE = "random_string_ePWn3j2295".
+          </description>
+        </package>
+        <package name="minimal_SIP" isValid="TRUE">
+          <path>valid/minimal_SIP</path>
+          <description>
+            Minimal SIP that matches all MUST requirements.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
