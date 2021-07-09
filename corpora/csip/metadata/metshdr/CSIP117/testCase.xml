@@ -1,0 +1,43 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="CSIP" version="2.0.4" requirementId="CSIP117"/>
+  <references>
+    <reference requirementId="CSIP117" URL="http://earkcsip.dilcis.eu/#CSIP117"/>
+  </references>
+  <requirementText>
+    <name>Package header</name>
+    <location>mets/metsHdr</location>
+    <description>
+      General element for describing the package.
+    </description>
+    <cardinality>1..1</cardinality>
+    <level>MUST</level>
+  </requirementText>
+  <description>
+    mets/metsHdr MUST exist.
+  </description>
+  <dependencies />
+  <rules>
+    <rule id="1">
+      <description>mets/metsHdr MUST exist.</description>
+      <error level="ERROR">
+        <message>
+          mets/metsHdr element does not exist. MUST be: element exists.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets-xml_metsHdr_not_exist" isValid="FALSE">
+          <path>invalid/mets-xml_metsHdr_not_exist</path>
+          <description>
+            METS.xml file has no mets/metsHdr element.
+          </description>
+        </package>
+        <package name="minimal_IP_with_1_representation" isValid="TRUE">
+          <path>valid/minimal_IP_with_1_representation</path>
+          <description>
+            Minimal IP that matches all MUST requirements.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
