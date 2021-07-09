@@ -1,0 +1,91 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="SIP" version="2.0.4" requirementId="SIP6"/>
+  <references>
+    <reference requirementId="SIP6" URL="https://earksip.dilcis.eu/#SIP6"/>
+  </references>
+  <requirementText>
+    <name>Previous Submission agreement</name>
+    <location>mets/metsHdr/altRecordID</location>
+    <description>
+      An optional reference to a previous submission agreement(s) which the information may have belonged to.
+      @TYPE is used with the value "PREVIOUSSUBMISSIONAGREEMENT".
+      Example: FM 12-2387/12726, 2007-09-19
+      Example: http://submissionagreement.kb.se/dnr331-1144-2011/20120711/
+      Note: It is recommended to use a machine-readable format for a better description of a submission agreement.
+      For example, the submission agreement developed by Docuteam GmbH http://www.loc.gov/standards/mets/profiles/00000041.xml
+      See also: Alternative record ID's, https://earksip.dilcis.eu/#VocabularyaltrecordIDTYPE.
+    </description>
+    <cardinality>0..n</cardinality>
+    <level>MAY</level>
+  </requirementText>
+  <description>
+    mets/metsHdr/altRecordID[@TYPE='PREVIOUSSUBMISSIONAGREEMENT'] MAY exist.
+    If mets/metsHdr/altRecordID[@TYPE='PREVIOUSSUBMISSIONAGREEMENT'] exists then it MUST have a text node with a reference to a previous submission agreement associated with the package.
+  </description>
+  <dependencies>
+    <dependency requirementId="VocabularyaltrecordIDTYPE" URL="https://earksip.dilcis.eu/#VocabularyaltrecordIDTYPE">
+      http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml
+    </dependency>
+  </dependencies>
+  <rules>
+    <rule id="1">
+      <description>mets/metsHdr/altRecordID[@TYPE='PREVIOUSSUBMISSIONAGREEMENT'] MAY exist.</description>
+      <error level="INFO">
+        <message>
+          mets/metsHdr/altRecordID[@TYPE='PREVIOUSSUBMISSIONAGREEMENT'] does not exist. MAY be: mets/metsHdr/altRecordID[@TYPE='PREVIOUSSUBMISSIONAGREEMENT'] exists and its text is a reference to a previous submission agreement associated with the package.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="SIP_metsHdr_altRecordID_PREVIOUSSUBMISSIONAGREEMENT_not_exist" isValid="FALSE">
+          <path>invalid/SIP_metsHdr_altRecordID_PREVIOUSSUBMISSIONAGREEMENT_not_exist</path>
+          <description>
+            SIP where the METS.xml file has no mets/metsHdr/altRecordID element with TYPE = 'PREVIOUSSUBMISSIONAGREEMENT'.
+          </description>
+        </package>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
+          <description>
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
+          </description>
+        </package>
+        <package name="SIP_metsHdr_altRecordID_PREVIOUSSUBMISSIONAGREEMENT_2_instances" isValid="TRUE">
+          <path>invalid/SIP_metsHdr_altRecordID_PREVIOUSSUBMISSIONAGREEMENT_2_instances</path>
+          <description>
+            minimal_SIP_plus_mets_SHOULD_MAY_items with METS.xml file that has 2 instances of mets/metsHdr/altRecordID[@TYPE='PREVIOUSSUBMISSIONAGREEMENT']
+            <!-- For example:
+              <altRecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">AAA-001</altRecordID>
+              <altRecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">AAA-002</altRecordID>
+            -->
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>If mets/metsHdr/altRecordID[@TYPE='PREVIOUSSUBMISSIONAGREEMENT'] exists then it MUST have a text node.</description>
+      <error level="INFO">
+        <message>
+          mets/metsHdr/altRecordID[@TYPE='PREVIOUSSUBMISSIONAGREEMENT'] element has no text node. MUST be: if mets/metsHdr/altRecordID[@TYPE='PREVIOUSSUBMISSIONAGREEMENT'] exists then it MUST have a text node with a reference to a previous submission agreement associated with the package.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="SIP_metsHdr_altRecordID_PREVIOUSSUBMISSIONAGREEMENT_no_text" isValid="FALSE">
+          <path>invalid/SIP_metsHdr_altRecordID_PREVIOUSSUBMISSIONAGREEMENT_no_text</path>
+          <description>
+            A SIP with METS.xml file that:
+            - has mets/metsHdr/altRecordID element with mets/metsHdr/altRecordID/@TYPE = 'PREVIOUSSUBMISSIONAGREEMENT'
+            - no text node (i.e. nothing between altRecordID tags)
+            <!-- For example:
+              <altRecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT"></altRecordID>).
+            -->
+          </description>
+        </package>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
+          <description>
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
