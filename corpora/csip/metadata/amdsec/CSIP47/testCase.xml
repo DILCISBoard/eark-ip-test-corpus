@@ -27,12 +27,12 @@ XML lists -->
         <message>The rightsMD-element has no status-attribute.</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_rightsMD_missing_status_attribute">
+        <package isValid="FALSE" isImplemented="TRUE" name="IP_rightsMD_missing_status_attribute">
           <path>invalid/IP_rightsMD_missing_status_attribute</path>
           <description>The package has an amdSec-element with no status-attribute</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
-          <path>valid/minimal_IP</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description></description>
         </package>
       </corpusPackages>
@@ -43,12 +43,12 @@ XML lists -->
         <message>The value is not found in the vocabulary</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_rightsMD_status_attribute_wrong_value">
+        <package isValid="FALSE" isImplemented="TRUE" name="IP_rightsMD_status_attribute_wrong_value">
           <path>invalid/IP_rightsMD_status_attribute_wrong_value</path>
           <description>The package has an rightsMD-element with a status-attribute which holds the value "TEST"</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
-          <path>valid/minimal_IP</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description></description>
         </package>
       </corpusPackages>
