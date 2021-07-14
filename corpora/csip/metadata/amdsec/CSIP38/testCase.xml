@@ -25,12 +25,12 @@ XML lists -->
         <message>There MUST exist a xlink:href-attribute per mdRef-element</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdRef_missing_xlink_href">
+        <package isValid="FALSE" isImplemented="TRUE" name="mdRef_missing_xlink_href">
           <path>invalid/mdRef_missing_xlink_href</path>
           <description>IP with no xlink:href attribute</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
-          <path>valid/minimal_IP</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description></description>
         </package>
       </corpusPackages>
@@ -41,12 +41,12 @@ XML lists -->
         <message>The xlink:href-pointer must point to an existing file</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdRef_wrong_reference">
+        <package isValid="FALSE" isImplemented="TRUE" name="mdRef_wrong_reference">
           <path>invalid/mdRef_wrong_reference</path>
           <description>IP with a value in xlink:href that does not point to a file within the IP</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
-          <path>valid/minimal_IP</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description></description>
         </package>
       </corpusPackages>
