@@ -29,10 +29,10 @@ XML lists -->
       <corpusPackages>
         <package isValid="FALSE" name="fileSec_fileGrp_file_FLocat_missing_xlink_type">
           <path>invalid/fileSec_fileGrp_file_FLocat_missing_xlink_type</path>
-          <description>IP with no attribute xlink_type in mpt</description>
+          <description>METS.xml that has a mets/fileSec/fileGrp/file/FLocat without @xlink:type attribute</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" name="minimal_IP_with_1_representation">
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
