@@ -25,12 +25,12 @@ XML lists -->
         <message>The CREATED-attribute MUST exist</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdRef_missing_CREATED_attribute">
+        <package isValid="FALSE" isImplemented="TRUE" name="mdRef_missing_CREATED_attribute">
           <path>invalid/mdRef_missing_CREATED_attribute</path>
           <description>A package with no CREATED-attribute</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
