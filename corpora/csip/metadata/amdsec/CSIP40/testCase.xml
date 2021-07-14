@@ -31,8 +31,8 @@ XML lists -->
           <path>valid/mdRef_missing_MIMETYPE</path>
           <description>A package where the MIIMETYPE-attribute is missing</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
@@ -47,8 +47,8 @@ XML lists -->
           <path>invalid/mdRef_wrong_MIMETYPE</path>
           <description>A package where the MIMETYPE-value is not from the list</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
@@ -63,8 +63,8 @@ XML lists -->
           <path>invalid/mdRef_MIMETYPE_too_much_content</path>
           <description>A package where the MIMETYPE value is bigger that 256 characters</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
