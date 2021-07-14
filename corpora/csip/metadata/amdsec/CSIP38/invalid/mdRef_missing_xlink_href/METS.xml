@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- Minimal IP with one representation -->
-<!-- This file is designed to be compliant with CSIP v.2.0.3, 08.01.2020, https://earkcsip.dilcis.eu/ -->
-<!-- Note: the values of ID attributes are chosen to ease understanding, but they could be anything that satisfies the requirements of xml:ID and CSIP. -->
+<!--  Minimal IP with one representation that fulfils all MUST, SHOULD and
+      MAY requirements of CSIP. "Minimal" refers to the attempt to meet
+      the requirements with the least amount of complexity, e.g. have only
+      a single payload file. An exception to minimalism is the choice of
+      IDs - they are descriptive for the sake of readability. Underscores
+      are used in IDs because many text editors interpret an underscored
+      string as a single word (as opposed to a string separated with
+      hyphens, which is interpreted as separate words), allowing for
+      highlighting of other occurrences, selection by doubleclicking etc.
 
-<!-- CSIP1 mets/@OBJID - Package Identifier - [1..1] -->
-<!-- CSIP2 mets/@TYPE - Content Category - [1..1] -->
-<!-- CSIP6 mets/@PROFILE - METS Profile - [1..1] -->
-<!-- Section 5.3.1. - mets root element MUST define all relevant namespaces and locations of XML schemas using the @xmlns and @xsi:schemaLocation attributes. -->
+      The package, incl. this METS file, is designed to be compliant with
+      CSIP v.2.0.4, 2020-06-12, https://earkcsip.dilcis.eu/ -->
 <mets 
   xmlns="http://www.loc.gov/METS/" 
   xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" 
@@ -21,155 +25,85 @@
   csip:OTHERTYPE="Textual works - Manuscripts"
   csip:CONTENTINFORMATIONTYPE="OTHER"
   csip:OTHERCONTENTINFORMATIONTYPE="SIARDUK" 
-  
-  PROFILE="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml"> <!-- SIARDUK=SIARD United Kingdom -->
-  
-  <!-- CSIP117 mets/metsHdr - Package header - [1..1] -->
-  <!-- CSIP7   mets/metsHdr/@CREATEDATE - Package creation date - [1..1] -->
-  <!-- CSIP8   mets/metsHdr/@LASTMODDATE - Package last modification date - [0..1] -->
-  <!-- CSIP9   mets/metsHdr/@csip:OAISPACKAGETYPE - OAIS Package type information - [1..1] -->
-  <metsHdr CREATEDATE="2019-04-14T20:00:00" LASTMODDATE="2021-05-27T18:00:00" csip:OAISPACKAGETYPE="SIP">
-    <!-- CSIP10 mets/metsHdr/agent - Agent - [1..n] -->
-    <!-- CSIP11 mets/metsHdr/agent[@ROLE='CREATOR'] - Agent role - [1..1] -->
-    <!-- CSIP12 mets/metsHdr/agent[@TYPE='OTHER'] - Agent type - [1..1] -->
-    <!-- CSIP13 mets/metsHdr/agent[@OTHERTYPE='SOFTWARE'] - Agent other type - [1..1] -->
+  PROFILE="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml"> 
+
+  <metsHdr CREATEDATE="2019-04-14T20:00:00" LASTMODDATE="2021-07-04T19:00:00" csip:OAISPACKAGETYPE="SIP">
     <agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
-      <!-- CSIP14 mets/metsHdr/agent/name - Agent name - [1..1] -->
       <name>E-ARK Corpus Team</name>
-      <!-- CSIP15 mets/metsHdr/agent/note - Agent additional information - [1..1] -->
-      <!-- CSIP16 mets/metsHdr/agent/note[@csip:NOTETYPE='SOFTWARE VERSION'] - Classification of the agent additional information - [1..1] -->
       <note csip:NOTETYPE="SOFTWARE VERSION">1.0</note>
     </agent>
   </metsHdr>
-  <dmdSec ID="dmd-ead-file" CREATED="2018-04-24T14:37:49" STATUS="CURRENT">
-  	<mdRef LOCTYPE="URL" MDTYPE="EAD" xlink:type="simple" xlink:href="metadata/descriptive/ead2002.xml" MIMETYPE="application/xml" SIZE="54153" CREATED="2021-05-27T18:37:49" CHECKSUM="77f0ec0a36a10f8aef447753658b3cddeb3085d672fd8d34e93f132a63057fcb" CHECKSUMTYPE="SHA-256"></mdRef>
+
+  <dmdSec ID="ID_dmdsec_package_ead_file" CREATED="2018-04-24T14:37:49" STATUS="CURRENT">
+    <mdRef LOCTYPE="URL" MDTYPE="EAD" xlink:type="simple" xlink:href="metadata/descriptive/package_archival_descriptions_ead2002.xml" MIMETYPE="application/xml" SIZE="54770" CREATED="2021-05-27T18:37:49" CHECKSUM="05657c2a5fc2fa16436ed806a8b26e17dbda64a1803cab8b9ba1e3ab5d93bcfe" CHECKSUMTYPE="SHA-256"></mdRef>
   </dmdSec>
+  <dmdSec ID="ID_dmdsec_rep1_ead_file" CREATED="2018-04-24T14:37:49" STATUS="CURRENT">
+    <mdRef LOCTYPE="URL" MDTYPE="EAD" xlink:type="simple" xlink:href="representations/rep1/metadata/descriptive/rep1_archival_descriptions_ead2002.xml" MIMETYPE="application/xml" SIZE="54445" CREATED="2021-05-27T18:37:49" CHECKSUM="e8bf8e00e5bbb44eee598199b3423115e1b60bc5247eede3e40f673c7bd6d2e1" CHECKSUMTYPE="SHA-256"></mdRef>
+  </dmdSec>
+  <!-- CSIP38   mets/amdSec/digiprovMD/mdRef/@xlink:href - INCORRECT -->
   <amdSec>
-	<rightsMD ID="digiprov-premis-file-2" STATUS="CURRENT" >
-		<mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/premis2.xml" MDTYPE="PREMIS" MIMETYPE="text/xml" SIZE="64253" CREATED="2021-06-01T11:46:52" CHECKSUM="14a07cb1b3fe6a4f661e180a4cdf7ab70ff86ace29524837bf52d3b4ebedd0e9" CHECKSUMTYPE="SHA-256" />
-	</rightsMD>
- 	<digiprovMD ID="digiprov-premis-file-1" STATUS="CURRENT" >
-		<mdRef LOCTYPE="URL" xlink:type="simple" MDTYPE="PREMIS" MIMETYPE="text/xml" SIZE="54035" CREATED="2021-05-31T09:50:52" CHECKSUM="5801b63778436da5256403789fa56378ab7ed8b83fba76a903f6961acf50d2b3" CHECKSUMTYPE="SHA-256" />
-	</digiprovMD>
+    <rightsMD ID="ID_rightsmd_premis_file" STATUS="CURRENT" >
+      <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/package_preservation_meta_premis_v3.xml" MDTYPE="PREMIS" MIMETYPE="text/xml" SIZE="16698" CREATED="2021-06-01T11:46:52" CHECKSUM="ac9126e7789229b976fbbbaa14e8a3ccb818e01faa87faeae6f929a92c9b5381" CHECKSUMTYPE="SHA-256" />
+    </rightsMD>
+    <digiprovMD ID="ID_digiprovmd_premis_file" STATUS="CURRENT" >
+      <mdRef LOCTYPE="URL" xlink:type="simple" MDTYPE="PREMIS" MIMETYPE="text/xml" SIZE="24399" CREATED="2021-05-31T09:50:52" CHECKSUM="e2725de3cf8bcf6d57c2214712679775d87ececa15c3a0628b893a078420adfc" CHECKSUMTYPE="SHA-256" />
+    </digiprovMD>
   </amdSec>
 
-
-  <!-- CSIP58 mets/fileSec - File section - [0..1], but its presence is strongly recommended -->
-  <!-- CSIP59 mets/fileSec/@ID - File section identifier - [1..1] -->
-  <fileSec ID="ID-root-mets-fileSec">
-    <!-- CSIP60 mets/fileSec/fileGrp[@USE='Documentation'] - Documentation file group - [1..n] -->
-    <!-- CSIP62 mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE - Content Information Type Specification - [0..1], but mandatory when @USE = "Representations." Note: the wording of CSIP62 is a bit unclear regarding mets/@TYPE = "Mixed," but the interpretation here is that the attribute is only mandatory when @USE = "Representations." -->
-    <!-- CSIP64 mets/fileSec/fileGrp/@USE - Description of the use of the file group - [1..1] -->
-    <!-- CSIP65 mets/fileSec/fileGrp/@ID - File group identifier [1..1] -->
-    <fileGrp USE="Documentation" ID="ID-root-mets-fileSec-fileGrp-Documentation">
-      <!-- CSIP66 mets/fileSec/fileGrp/file - File - [1..n] -->
-      <!-- CSIP67 mets/fileSec/fileGrp/file/@ID - File identifier - [1..1] -->
-      <!-- CSIP68 mets/fileSec/fileGrp/file/@MIMETYPE - File mimetype - [1..1] -->
-      <!-- CSIP69 mets/fileSec/fileGrp/file/@SIZE - File size - [1..1] -->
-      <!-- CSIP70 mets/fileSec/fileGrp/file/@CREATED - File creation date - [1..1] -->
-      <!-- CSIP71 mets/fileSec/fileGrp/file/@CHECKSUM - File checksum - [1..1] -->
-      <!-- CSIP72 mets/fileSec/fileGrp/file/@CHECKSUMTYPE - File checksum - [1..1] -->
-      <file ID="ID-root-mets-fileSec-fileGrp-Doc-file-doc1" MIMETYPE="text/plain" SIZE="40" CREATED="2020-04-15T15:32:18" CHECKSUM="f57dbbddf87f18043c2029d978749318" CHECKSUMTYPE="MD5" ADMID="digiprov-premis-file-1" DMDID="dmd-ead-file" >
-        <!-- CSIP76 mets/fileSec/fileGrp/file/FLocat - File locator reference - [1..1]-->
-        <!-- CSIP77 mets/fileSec/fileGrp/file/FLocat[@LOCTYPE='URL'] - Type of locator - [1..1] -->
-        <!-- CSIP78 mets/fileSec/fileGrp/file/FLocat[@xlink:type='simple'] - Type of link - [1..1] -->
-        <!-- CSIP79 mets/fileSec/fileGrp/file/FLocat/@xlink:href - Resource location - [1..1] -->
+  <fileSec ID="ID_root_mets_fileSec">
+    <fileGrp ID="ID_root_mets_fileSec_fileGrp_Documentation" USE="Documentation">
+      <file ID="ID_root_mets_fileSec_fileGrp_Doc_file_doc1" MIMETYPE="text/plain" SIZE="40" CREATED="2020-04-15T15:32:18" CHECKSUM="f57dbbddf87f18043c2029d978749318" CHECKSUMTYPE="MD5" ADMID="ID_rightsmd_premis_file" DMDID="ID_dmdsec_package_ead_file" >
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/Doc1.txt" />
       </file>
     </fileGrp>
-    <!-- CSIP113 mets/fileSec/fileGrp[@USE='Schemas'] - Schemas file group - [1..n] -->
-    <!-- CSIP62  mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE - Content Information Type Specification - [0..1], but mandatory when @USE = "Representations." Note: the wording of CSIP62 is a bit unclear regarding mets/@TYPE = "Mixed," but the interpretation here is that the attribute is only mandatory when @USE = "Representations." -->
-    <!-- CSIP64  mets/fileSec/fileGrp/@USE - Description of the use of the file group - [1..1] -->
-    <!-- CSIP65  mets/fileSec/fileGrp/@ID - File group identifier [1..1] -->
-    <fileGrp USE="Schemas" ID="ID-root-mets-fileSec-fileGrp-Schemas">
-      <!-- CSIP66 mets/fileSec/fileGrp/file - File - [1..n] -->
-      <!-- CSIP67 mets/fileSec/fileGrp/file/@ID - File identifier - [1..1] -->
-      <!-- CSIP68 mets/fileSec/fileGrp/file/@MIMETYPE - File mimetype - [1..1] -->
-      <!-- CSIP69 mets/fileSec/fileGrp/file/@SIZE - File size - [1..1] -->
-      <!-- CSIP70 mets/fileSec/fileGrp/file/@CREATED - File creation date - [1..1] -->
-      <!-- CSIP71 mets/fileSec/fileGrp/file/@CHECKSUM - File checksum - [1..1] -->
-      <!-- CSIP72 mets/fileSec/fileGrp/file/@CHECKSUMTYPE - File checksum - [1..1] -->
-      <file ID="ID-root-mets-fileSec-fileGrp-Schemas-file-DILCISExtensionMETS-xsd" MIMETYPE="application/xml" SIZE="1633" CREATED="2020-01-08T00:00:00" CHECKSUM="e99c19b9ca1271c1d9bafed19c4bd50a" CHECKSUMTYPE="MD5">
-        <!-- CSIP76 mets/fileSec/fileGrp/file/FLocat - File locator reference - [1..1]-->
-        <!-- CSIP77 mets/fileSec/fileGrp/file/FLocat[@LOCTYPE='URL'] - Type of locator - [1..1] -->
-        <!-- CSIP78 mets/fileSec/fileGrp/file/FLocat[@xlink:type='simple'] - Type of link - [1..1] -->
-        <!-- CSIP79 mets/fileSec/fileGrp/file/FLocat/@xlink:href - Resource location - [1..1] -->
+    <fileGrp ID="ID_root_mets_fileSec_fileGrp_Schemas" USE="Schemas">
+      <file ID="ID_root_mets_fileSec_fileGrp_Schemas_file_DILCISExtensionMETS_xsd" MIMETYPE="application/xml" SIZE="1633" CREATED="2020-06-12T00:00:00" CHECKSUM="e99c19b9ca1271c1d9bafed19c4bd50a" CHECKSUMTYPE="MD5">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/DILCISExtensionMETS.xsd" />
       </file>
-      <file ID="ID-root-mets-fileSec-fileGrp-Schemas-file-METS-xsd" MIMETYPE="application/xml" SIZE="138326" CREATED="2019-10-31T00:00:00" CHECKSUM="7102b6ea435a3f0d8231d149818f2487" CHECKSUMTYPE="MD5">
-        <!-- CSIP76 mets/fileSec/fileGrp/file/FLocat - File locator reference - [1..1]-->
-        <!-- CSIP77 mets/fileSec/fileGrp/file/FLocat[@LOCTYPE='URL'] - Type of locator - [1..1] -->
-        <!-- CSIP78 mets/fileSec/fileGrp/file/FLocat[@xlink:type='simple'] - Type of link - [1..1] -->
-        <!-- CSIP79 mets/fileSec/fileGrp/file/FLocat/@xlink:href - Resource location - [1..1] -->
-        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/METS.xsd" />
+      <file ID="ID_root_mets_fileSec_fileGrp_Schemas_file_ead2002_xsd" MIMETYPE="application/xml" SIZE="98321" CREATED="2008-04-21T00:00:00" CHECKSUM="0856696bcef5c849eb10b95b808ab7c0" CHECKSUMTYPE="MD5">
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/ead2002.xsd" />
       </file>
-      <file ID="ID-root-mets-fileSec-fileGrp-Schemas-file-xlink-xsd" MIMETYPE="application/xml" SIZE="3180" CREATED="2004-11-15T00:00:00" CHECKSUM="6bdc7f9459a502964f889d70a335cece" CHECKSUMTYPE="MD5">
-        <!-- CSIP76 mets/fileSec/fileGrp/file/FLocat - File locator reference - [1..1]-->
-        <!-- CSIP77 mets/fileSec/fileGrp/file/FLocat[@LOCTYPE='URL'] - Type of locator - [1..1] -->
-        <!-- CSIP78 mets/fileSec/fileGrp/file/FLocat[@xlink:type='simple'] - Type of link - [1..1] -->
-        <!-- CSIP79 mets/fileSec/fileGrp/file/FLocat/@xlink:href - Resource location - [1..1] -->
+      <file ID="ID_root_mets_fileSec_fileGrp_Schemas_file_mets_xsd" MIMETYPE="application/xml" SIZE="138326" CREATED="2019-10-31T00:00:00" CHECKSUM="7102b6ea435a3f0d8231d149818f2487" CHECKSUMTYPE="MD5">
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/mets.xsd" />
+      </file>
+      <file ID="ID_root_mets_fileSec_fileGrp_Schemas_file_xlink_xsd" MIMETYPE="application/xml" SIZE="3180" CREATED="2004-11-15T00:00:00" CHECKSUM="6bdc7f9459a502964f889d70a335cece" CHECKSUMTYPE="MD5">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/xlink.xsd" />
       </file>
+      <file ID="ID_root_mets_fileSec_fileGrp_Schemas_file_premis-v3-0_xsd" MIMETYPE="application/xml" SIZE="52845" CREATED="2016-01-18T00:00:00" CHECKSUM="60dfc63a796c507af85c6ab635bfdf8e" CHECKSUMTYPE="MD5">
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/premis-v3-0.xsd" />
+      </file>
     </fileGrp>
-    <!-- CSIP114 mets/fileSec/fileGrp[@USE='Representations'] - Representations file group - [1..n] -->
-    <!-- CSIP62  mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE - Content Information Type Specification - [0..1], but mandatory when @USE = "Representations" -->
-    <!-- CSIP64  mets/fileSec/fileGrp/@USE - Description of the use of the file group - [1..1] -->
-    <!-- CSIP65  mets/fileSec/fileGrp/@ID - File group identifier [1..1] -->
-    <fileGrp csip:CONTENTINFORMATIONTYPE="OTHER" csip:OTHERCONTENTINFORMATIONTYPE="NONE" USE="Representations/rep1" ID="ID-root-mets-fileSec-fileGrp-Representations-rep1" ADMID="digiprov-premis-file-2">
-      <!-- CSIP66 mets/fileSec/fileGrp/file - File - [1..n] -->
-      <!-- CSIP67 mets/fileSec/fileGrp/file/@ID - File identifier - [1..1] -->
-      <!-- CSIP68 mets/fileSec/fileGrp/file/@MIMETYPE - File mimetype - [1..1] -->
-      <!-- CSIP69 mets/fileSec/fileGrp/file/@SIZE - File size - [1..1] -->
-      <!-- CSIP70 mets/fileSec/fileGrp/file/@CREATED - File creation date - [1..1] -->
-      <!-- CSIP71 mets/fileSec/fileGrp/file/@CHECKSUM - File checksum - [1..1] -->
-      <!-- CSIP72 mets/fileSec/fileGrp/file/@CHECKSUMTYPE - File checksum - [1..1] -->
-      <file ID="ID-root-mets-fileSec-fileGrp-Representations-rep1-data-file1" MIMETYPE="text/plain" SIZE="12" CREATED="2019-04-12T18:40:24" CHECKSUM="a9308bde501cfd1d91ce4e5e861c8971" CHECKSUMTYPE="MD5" OWNERID="file-5.2/45.14" >
-        <!-- CSIP76 mets/fileSec/fileGrp/file/FLocat - File locator reference - [1..1]-->
-        <!-- CSIP77 mets/fileSec/fileGrp/file/FLocat[@LOCTYPE='URL'] - Type of locator - [1..1] -->
-        <!-- CSIP78 mets/fileSec/fileGrp/file/FLocat[@xlink:type='simple'] - Type of link - [1..1] -->
-        <!-- CSIP79 mets/fileSec/fileGrp/file/FLocat/@xlink:href - Resource location - [1..1] -->
-        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/data/plain_text_document.txt" />
+    <fileGrp ID="ID_root_mets_fileSec_fileGrp_rep1_Schemas" USE="Schemas">
+      <file ID="ID_root_mets_fileSec_fileGrp_rep1_Schemas_file_UAM_arh_xsd" MIMETYPE="application/xml" SIZE="56269" CREATED="2013-11-20T00:00:00" CHECKSUM="3b0a4858a498b080bbb272d48e59c649" CHECKSUMTYPE="MD5">
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/schemas/Estonian_UAM_arh_classification_scheme_v2.0.xsd" />
+      </file>
+      <file ID="ID_root_mets_fileSec_fileGrp_rep1_Schemas_file_premis-v2-1_xsd" MIMETYPE="application/xml" SIZE="57056" CREATED="2011-01-06T00:00:00" CHECKSUM="f8115667d6bf917f7c44e172d937fd5a" CHECKSUMTYPE="MD5">
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/schemas/premis-v2-1.xsd" />
+      </file>
+    </fileGrp>
+    <fileGrp ID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data" USE="Representations/rep1/data" ADMID="ID_rightsmd_premis_file ID_digiprovmd_premis_file" csip:CONTENTINFORMATIONTYPE="OTHER" csip:OTHERCONTENTINFORMATIONTYPE="NONE">
+      <file ID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data_file1" MIMETYPE="application/xml" SIZE="60589" CREATED="2019-04-12T18:40:24" CHECKSUM="183241e18688ba5fb6727ce53768cbbb" CHECKSUMTYPE="MD5" OWNERID="file-5.2/45.14" DMDID="ID_dmdsec_rep1_ead_file">
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/data/archival_record_xyz123_Estonian_UAM_arh.xml" />
       </file>
     </fileGrp>
   </fileSec>
 
-  <!-- CSIP80 mets/structMap - Structural description of the package - [1..n] -->
-  <!-- § 5.3.6. The internal structure of the structural map (expressed by div elements) follows the CSIP high level physical structure as described in Section 4, and groups metadata, representations, schemas, documentation and user-defined folders into discrete <div> elements -->
-  <!-- CSIP81 mets/structMap[@TYPE='PHYSICAL'] - [1..1] -->
-  <!-- CSIP82 mets/structMap[@LABEL='CSIP'] - Name of the structural description - [1..1] -->
-  <!-- CSIP83 mets/structMap[@LABEL='CSIP']/@ID - Structural description identifier - [1..1] -->
-  <structMap TYPE="PHYSICAL" LABEL="CSIP" ID="ID-root-mets-structMap">
-    <!-- CSIP84 mets/structMap[@LABEL='CSIP']/div - Main structural division - [1..1] -->
-    <!-- CSIP85 mets/structMap[@LABEL='CSIP']/div/@ID - Main structural division identifier - [1..1] -->
-    <!-- CSIP86 mets/structMap[@LABEL='CSIP']/div/@LABEL - Main structural division label - [1..1] -->
-    <div ID="ID-root-mets-structMap-div-main" LABEL="mdRef_missing_xlink_href">
-      <!-- CSIP88 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Metadata'] - Metadata division - [1..1] -->
-      <!-- CSIP89 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Metadata']/@ID - Metadata division identifier - [1..1] -->
-      <!-- CSIP90 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Metadata'] - Metadata division label - [1..1] -->
-      <div ID="ID-root-mets-structMap-div-div-metadata" LABEL="Metadata" ADMID="digiprov-premis-file-1 digiprov-premis-file-2" DMDID="dmd-ead-file"/>
-      <!-- CSIP93 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation'] - Documentation division - [0..1], but mandatory here because the Documentation fileGrp exists -->
-      <!-- CSIP94 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation']/@ID - Documentation division identifier - [1..1] -->
-      <!-- CSIP95 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation'] - Documentation division label - [1..1] -->
-      <div ID="ID-root-mets-structMap-div-div-documentation" LABEL="Documentation">
-        <!-- CSIP96  mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr - Documentation file referencing - [0..n], but mandatory here because the Documentation fileGrp exists -->
-        <!-- CSIP116 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr/@FILEID - Documentation file group reference pointer - [1..1] -->
-        <fptr FILEID="ID-root-mets-fileSec-fileGrp-Documentation"/>
+  <structMap ID="ID_root_mets_structMap" TYPE="PHYSICAL" LABEL="CSIP">
+    <div ID="ID_root_mets_structMap_div_main" LABEL="mdRef_missing_xlink_href">
+      <div ID="ID_root_mets_structMap_div_div_metadata" LABEL="Metadata" ADMID="ID_rightsmd_premis_file ID_digiprovmd_premis_file" DMDID="ID_dmdsec_package_ead_file ID_dmdsec_rep1_ead_file"/>
+      <div ID="ID_root_mets_structMap_div_div_documentation" LABEL="Documentation">
+        <fptr FILEID="ID_root_mets_fileSec_fileGrp_Documentation"/>
       </div>
-      <!-- CSIP97 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Schemas'] - Schema division - [0..1], but mandatory here because the Schemas fileGrp exists -->
-      <!-- CSIP98 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Schemas']/@ID - Schema division identifier - [1..1] -->
-      <!-- CSIP99 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Schemas'] - Schema division label - [1..1] -->
-      <div ID="ID-root-mets-structMap-div-div-schemas" LABEL="Schemas">
-        <!-- CSIP100 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Schemas']/fptr - Schema file reference - [0..n], but mandatory here because the Schemas fileGrp exists -->
-        <!-- CSIP118 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Schemas']/fptr/@FILEID - Schema file group reference - [1..1] -->
-        <fptr FILEID="ID-root-mets-fileSec-fileGrp-Schemas"/>
+      <div ID="ID_root_mets_structMap_div_div_schemas" LABEL="Schemas">
+        <fptr FILEID="ID_root_mets_fileSec_fileGrp_Schemas"/>
       </div>
-      <!-- CSIP101 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Representations'] - Content division - [0..1], but mandatory here because the pagkage contains a representation -->
-      <!-- CSIP102 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Representations']/@ID - Content division identifier - [1..1] -->
-      <!-- CSIP103 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Representations'] - Content division label - [1..1] -->
-      <div ID="ID-root-mets-structMap-div-div-representations" LABEL="Representations">
-        <!-- CSIP104 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Representations']/fptr - Content division file references - [0..n], but mandatory here because the Representations fileGrp exists -->
-        <!-- CSIP119 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Representations']/fptr/@FILEID - Content division file group references - [1..1] -->
-        <fptr FILEID="ID-root-mets-fileSec-fileGrp-Representations-rep1"/>
+      <div ID="ID_root_mets_structMap_div_div_representations_rep1" LABEL="Representations/rep1">
+        <div ID="ID_root_mets_structMap_div_div_representations_rep1_data" LABEL="Representations/rep1/data">
+          <fptr FILEID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data"/>
+        </div>
+        <div ID="ID_root_mets_structMap_div_div_representations_rep1_schemas" LABEL="Representations/rep1/schemas">
+          <fptr FILEID="ID_root_mets_fileSec_fileGrp_rep1_Schemas"/>
+        </div>
       </div>
     </div>
   </structMap>

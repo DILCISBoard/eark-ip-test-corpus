@@ -43,7 +43,12 @@ Changes in version 3.0:
 16. mdSec removed.  The mdSec definition and all references to it.    
 ********************************************************************************************   
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.loc.gov/premis/v3" targetNamespace="http://www.loc.gov/premis/v3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://www.loc.gov/premis/v3" 
+	targetNamespace="http://www.loc.gov/premis/v3" 
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified">
 	<!--   		
 An instance is 
 (1) One or more of <object>, <event>, <agent>, <rights> all wrapped within a <premis> container; or
@@ -293,7 +298,7 @@ For an object of type file: <object xsi:type="file"> will mean that the complexT
 			<xs:element ref="agentIdentifierType"/>
 			<xs:element ref="agentIdentifierValue"/>
 		</xs:sequence>
-		<xs:attribute name="simpleLink" type="xs:anyURI"/>
+		<xs:attribute  name="simpleLink" type="xs:anyURI"/>
 	</xs:complexType>
     
     <!--
@@ -324,7 +329,7 @@ For an object of type file: <object xsi:type="file"> will mean that the complexT
 			<xs:element ref="contentLocationType"/>
 			<xs:element ref="contentLocationValue"/>
 		</xs:sequence>
-		<xs:attribute name="simpleLink" type="xs:anyURI"/>
+		<xs:attribute  name="simpleLink" type="xs:anyURI"/>
 	</xs:complexType>
 	
     <!--
@@ -448,7 +453,7 @@ For an object of type file: <object xsi:type="file"> will mean that the complexT
 			<xs:element ref="eventIdentifierType"/>
 			<xs:element ref="eventIdentifierValue"/>
 		</xs:sequence>
-		<xs:attribute name="simpleLink" type="xs:anyURI"/>
+		<xs:attribute  name="simpleLink" type="xs:anyURI"/>
 	</xs:complexType>
     
 	<!--
@@ -528,7 +533,7 @@ For an object of type file: <object xsi:type="file"> will mean that the complexT
 			<xs:element ref="formatRegistryKey"/>
 			<xs:element ref="formatRegistryRole" minOccurs="0"/>
 		</xs:sequence>
-		<xs:attribute name="simpleLink" type="xs:anyURI"/>
+		<xs:attribute  name="simpleLink" type="xs:anyURI"/>
 	</xs:complexType>
 
 	<!--  
@@ -587,7 +592,7 @@ For an object of type file: <object xsi:type="file"> will mean that the complexT
 			<xs:element ref="linkingAgentRole" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="LinkAgentXmlID" type="xs:IDREF"/>
-		<xs:attribute name="simpleLink" type="xs:anyURI"/>
+		<xs:attribute  name="simpleLink" type="xs:anyURI"/>
 	</xs:complexType>
 	
     <!--  
@@ -603,7 +608,7 @@ New in 3.0
             <xs:element ref="linkingEnvironmentRole" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="LinkEventXmlID" type="xs:IDREF"/>
-        <xs:attribute name="simpleLink" type="xs:anyURI"/>
+        <xs:attribute  name="simpleLink" type="xs:anyURI"/>
     </xs:complexType>
 	
     <!--  
@@ -615,7 +620,7 @@ New in 3.0
 			<xs:element ref="linkingEventIdentifierValue"/>
 		</xs:sequence>
 		<xs:attribute name="LinkEventXmlID" type="xs:IDREF"/>
-		<xs:attribute name="simpleLink" type="xs:anyURI"/>
+		<xs:attribute  name="simpleLink" type="xs:anyURI"/>
 	</xs:complexType>
     
 	<!--
@@ -628,7 +633,7 @@ New in 3.0
 			<xs:element ref="linkingObjectRole" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="LinkObjectXmlID" type="xs:IDREF"/>
-		<xs:attribute name="simpleLink" type="xs:anyURI"/>
+		<xs:attribute  name="simpleLink" type="xs:anyURI"/>
 	</xs:complexType>
 	
 	<!--  
@@ -640,7 +645,7 @@ New in 3.0
 			<xs:element ref="linkingRightsStatementIdentifierValue"/>
 		</xs:sequence>
 		<xs:attribute name="LinkPermissionStatementXmlID" type="xs:IDREF"/>
-		<xs:attribute name="simpleLink" type="xs:anyURI"/>
+		<xs:attribute  name="simpleLink" type="xs:anyURI"/>
 	</xs:complexType>
     
 	<!--  
@@ -666,7 +671,7 @@ New in 3.0
 			<xs:element ref="objectIdentifierType"/>
 			<xs:element ref="objectIdentifierValue"/>
 		</xs:sequence>
-		<xs:attribute name="simpleLink" type="xs:anyURI"/>
+		<xs:attribute  name="simpleLink" type="xs:anyURI"/>
 	</xs:complexType>
     
 	<!--  
@@ -675,7 +680,7 @@ New in 3.0
 	<xs:complexType name="originalNameComplexType">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
-				<xs:attribute name="simpleLink" type="xs:anyURI"/>
+				<xs:attribute  name="simpleLink" type="xs:anyURI"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -731,7 +736,7 @@ Renamed in 3.0.  Was relatedEventIdentification
 			<xs:element ref="relatedEventSequence" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="RelEventXmlID" type="xs:IDREF"/>
-		<xs:attribute name="simpleLink" type="xs:anyURI"/>
+		<xs:attribute  name="simpleLink" type="xs:anyURI"/>
 	</xs:complexType>
 	<!--  
 ****************relatedObjectIdentifierComplexType
@@ -746,7 +751,7 @@ Renamed in 3.0.  Was relatedEventIdentification
 			<xs:element ref="relatedObjectSequence" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="RelObjectXmlID" type="xs:IDREF"/>
-		<xs:attribute name="simpleLink" type="xs:anyURI"/>
+		<xs:attribute  name="simpleLink" type="xs:anyURI"/>
 	</xs:complexType>
 	<!--  
 ****************relationshipComplexType
@@ -809,7 +814,7 @@ Renamed in 3.0.  Was relatedEventIdentification
 			<xs:element ref="rightsStatementIdentifierType"/>
 			<xs:element ref="rightsStatementIdentifierValue"/>
 		</xs:sequence>
-		<xs:attribute name="simpleLink" type="xs:anyURI"/>
+		<xs:attribute  name="simpleLink" type="xs:anyURI"/>
 	</xs:complexType>
     
 	<!--  
@@ -839,7 +844,7 @@ Renamed in 3.0.  Was relatedEventIdentification
 				<xs:element ref="signatureInformationExtension" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
 <!-- -->
-		    <xs:element ref="signatureInformationExtension" maxOccurs="unbounded"/>
+		    <xs:element ref="signatureInformationExtension"  maxOccurs="unbounded"/>
 		<!-- -->
 		</xs:choice>
 	</xs:complexType>
@@ -1064,7 +1069,7 @@ Renamed in 3.0.  Was relatedEventIdentification
 	<xs:element name="creatingApplication" type="creatingApplicationComplexType"/>
     <xs:element name="environmentFunction" type="environmentFunctionComplexType"/>
     <xs:element name="environmentDesignation" type="environmentDesignationComplexType"/>
-    <xs:element name="environmentRegistry" type="environmentRegistryComplexType"/>                    
+    <xs:element  name="environmentRegistry" type="environmentRegistryComplexType"/>                    
     <xs:element name="eventDetailInformation" type="eventDetailInformationComplexType"/>
     <xs:element name="eventIdentifier" type="eventIdentifierComplexType"/>
 	<xs:element name="eventOutcomeDetail" type="eventOutcomeDetailComplexType"/>
