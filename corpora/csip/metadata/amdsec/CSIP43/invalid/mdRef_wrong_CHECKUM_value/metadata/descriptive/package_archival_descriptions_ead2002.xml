@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This is a placeholder for an EAD2002 file that contains archival
+      descriptions about the whole package, excluding the specifics of
+      representations/rep1. It is a somewhat artificial arrangement for a
+      package with just one representation, but there might be situations
+      that justify it, e.g. if several flavours of the same package exist
+      or if a set of packages with different payloads share common
+      higher-level descriptions.
+      
+      In reality, it is a random EAD file because the content of EAD files
+      is not in the scope of the current corpus package. -->
+<ead xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:isbn:1-931666-22-9" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.archivesportaleurope.eu/profiles/APEnet_EAD.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd" audience="external">
+   <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b" repositoryencoding="iso15511" scriptencoding="iso15924" relatedencoding="MARC21">
+      <eadid identifier="EE-RA_EAA.M-9" countrycode="EE" mainagencycode="EE-RA" url="http://ais.ra.ee/index.php?module=202&amp;op=4&amp;tyyp=2&amp;kokku=1&amp;id=214000001131">EAA.M-9</eadid>
+      <filedesc>
+         <titlestmt>
+            <titleproper encodinganalog="245">Moori kolhoos</titleproper>
+         </titlestmt>
+      </filedesc>
+      <revisiondesc>
+         <change>
+            <date/>
+            <item>Converted_APE_EAD_version_1.1.3</item>
+         </change>
+      </revisiondesc>
+   </eadheader>
+   <archdesc level="fonds" type="inventory" encodinganalog="3.1.4" relatedencoding="ISAD(G)v2">
+      <did>
+         <unitid encodinganalog="3.1.1" type="call number">EAA.M-9</unitid>
+         <unitdate calendar="gregorian" era="ce" normal="1949-01-01/1960-12-31" encodinganalog="3.1.3">1949-1960</unitdate>
+         <unittitle encodinganalog="3.1.2">Moori kolhoos</unittitle>
+         <origination encodinganalog="3.2.1" label="final">
+            <corpname>1949-1960 Moori kolhoos</corpname>
+         </origination>
+         <langmaterial encodinganalog="3.4.3"/>
+         <repository>Rahvusarhiiv</repository>
+      </did>
+      <dsc type="othertype">
+         <c level="fonds" id="d3e25" encodinganalog="3.1.4">
+            <did>
+               <unitid type="call number" encodinganalog="3.1.1">EAA.M-9</unitid>
+               <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1949-01-01/1960-12-31">1949-1960</unitdate>
+               <unittitle encodinganalog="3.1.2" type="est">Moori kolhoos</unittitle>
+            </did>
+            <c level="series" id="d3e33" encodinganalog="3.1.4">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.</unitid>
+                  <unittitle encodinganalog="3.1.2" type="est">Juhatuse-, üld- ja volinike koosolekute protokollid</unittitle>
+               </did>
+               <c level="file" id="d3e39" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.1</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1949-04-10/1951-11-17">10.04.1949-17.11.1951</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Juhatuse- ja üldkoosolekute protokollid</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e47" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.8</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1950-10-17/1952-12-30">17.10.1950-30.12.1952</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Üldkoosolekute protokollid</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e55" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.23</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1953-01-24/1954-12-27">24.01.1953-27.12.1954</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Juhatuse- ja üldkoosolekute protokollid</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e63" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.35</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1955-01-21/1955-12-03">21.01.1955-03.12.1955</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Juhatuse- ja üldkoosolekute protokollid</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e71" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.41</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1956-01-05/1956-12-19">05.01.1956-19.12.1956</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Juhatuse- ja üldkoosolekute protokollid</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e79" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.53</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1957-01-05/1957-12-01">05.01.1957-01.12.1957</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Juhatuse- ja üldkoosolekute protokollid</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e87" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.62</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1958-01-13/1958-12-23">13.01.1958-23.12.1958</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Juhatuse- ja üldkoosolekute protokollid</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e95" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.70</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1959-02-06/1959-12-17">06.02.1959-17.12.1959</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Juhatuse- ja üldkoosolekute protokollid</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e103" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.78</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1960-01-03/1969-12-26">03.01.1960-26.12.1969</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Juhatuse- ja üldkoosolekute protokollid</unittitle>
+                  </did>
+               </c>
+            </c>
+            <c level="series" id="d3e111" encodinganalog="3.1.4">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.</unitid>
+                  <unittitle encodinganalog="3.1.2" type="est">Põhikiri</unittitle>
+               </did>
+               <c level="file" id="d3e117" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.54</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1957-05-14/1957-05-14">14.05.1957</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Põhikiri</unittitle>
+                  </did>
+               </c>
+            </c>
+            <c level="series" id="d3e125" encodinganalog="3.1.4">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.</unitid>
+                  <unittitle encodinganalog="3.1.2" type="est">Kõrgemalseisvate asutuste otsused</unittitle>
+               </did>
+               <c level="file" id="d3e131" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.29</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1954-10-23/1954-10-23">23.10.1954</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Saarepeedi Küla TSN Täitevkomitee otusus nr 5 põhikirja rikkumise kohta Moori kolhoosis</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e139" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.40</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1956-03-30/1956-05-19">30.03.1956-19.05.1956</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Viljandi Rajooni TSN Täitevkomitee otsused</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e147" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.52</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1957-01-19/1957-03-29">19.01.1957-29.03.1957</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Viljandi Rajooni TSN Täitevkomitee otsused</unittitle>
+                  </did>
+               </c>
+            </c>
+            <c level="series" id="d3e155" encodinganalog="3.1.4">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.</unitid>
+                  <unittitle encodinganalog="3.1.2" type="est">Eelarve, plaanid, aruanded</unittitle>
+               </did>
+               <c level="subseries" id="d3e161" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9..</unitid>
+                     <unittitle encodinganalog="3.1.2" type="est">Eelarved</unittitle>
+                  </did>
+                  <c level="file" id="d3e167" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.30</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1954-01-01/1954-12-31">1954</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tulude-kulude eelarve</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e175" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.42</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1956-01-01/1956-12-31">1956</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tulude-kulude eelarve</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e183" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.55</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1957-01-01/1957-12-31">1957</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tulude-kulude eelarve</unittitle>
+                     </did>
+                  </c>
+               </c>
+               <c level="subseries" id="d3e191" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9..</unitid>
+                     <unittitle encodinganalog="3.1.2" type="est">Plaanid</unittitle>
+                  </did>
+                  <c level="file" id="d3e197" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.71</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1956-01-01/1960-12-31">1956-1960</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Põllumajanduse arendamise seitsmeaasta perspektiivplaani põhinäitajad</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e205" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.72</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1959-01-01/1960-12-31">1959-1960</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Põllumajanduse arendamise plaani põhinäitajad</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e213" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.3</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1949-01-01/1949-12-31">1949</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tootmisplaan koos tulude-kulude eelarvega</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e221" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.9</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1950-01-01/1950-12-31">1950</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tootmisplaan</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e229" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.13</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1951-01-01/1951-12-31">1951</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tootmisplaan</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e237" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.20</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1952-01-01/1952-12-31">1952</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tootmisplaan koos tulude-kulude eelarvega</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e245" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.24</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1953-01-01/1953-12-31">1953</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tootmisplaan koos tulude-kulude eelarvega</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e253" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.32</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1954-01-01/1954-12-31">1954</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tootmisplaan</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e261" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.37</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1955-01-01/1955-12-31">1955</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tootmisplaan koos tulude-kulude eelarvega</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e269" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.45</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1956-01-01/1956-12-31">1956</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tootmisplaan</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e278" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.57</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1957-01-01/1957-12-31">1957</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tootmisplaan</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e286" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.64</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1958-01-01/1958-12-31">1958</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tootmisplaan</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e294" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.73</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1959-01-01/1959-12-31">1959</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tootmis-finantsplaan</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e302" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.79</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1960-01-01/1960-12-31">1960</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Tootmis-finantsplaan</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e310" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.31</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1954-01-01/1954-12-31">1954</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Põllumajanduse arendamise riiklik plaan</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e318" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.36</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1955-01-01/1956-12-31">1955-1956</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Põllumajanduse arendamise plaani põhinäitajad</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e326" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.43</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1956-01-01/1960-12-31">1956-1960</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Põllumajanduse arendamise kuuenda viisaasta plaani põhinäitajad</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e334" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.44</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1956-01-01/1957-12-31">1956-1957</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Põllumajanduse arendamise plaani põhinäitajad</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e342" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.56</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1957-01-01/1958-12-31">1957-1958</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Põllumajanduse arendamise plaani põhinäitajad</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e350" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.63</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1958-01-01/1959-12-31">1958-1959</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Põllumajanduse arendamise plaani põhinäitajad</unittitle>
+                     </did>
+                  </c>
+               </c>
+               <c level="subseries" id="d3e358" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9..</unitid>
+                     <unittitle encodinganalog="3.1.2" type="est">Aruanded</unittitle>
+                  </did>
+                  <c level="file" id="d3e364" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.4</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1949-01-01/1949-12-31">1949</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Aastaaruanne</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e372" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.10</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1950-01-01/1950-12-31">1950</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Aastaaruanne</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e380" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.21</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1952-01-01/1952-12-31">1952</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Aastaaruanne</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e388" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.25</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1953-01-01/1953-12-31">1953</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Aastaaruanne</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e396" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.33</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1954-01-01/1954-12-31">1954</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Aastaaruanne</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e404" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.38</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1955-01-01/1955-12-31">1955</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Aastaaruanne</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e412" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.46</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1956-01-01/1956-12-31">1956</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Aastaaruanne</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e420" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.58</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1958-01-01/1958-12-31">1958</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Aastaaruanne</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e428" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.65</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1958-01-01/1958-12-31">1958</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Aastaaruanne</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e436" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.74</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1959-01-01/1959-12-31">1959</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Aastaaruanne</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e445" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.80</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1960-01-01/1960-12-31">1960</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Aastaaruanne</unittitle>
+                     </did>
+                  </c>
+               </c>
+            </c>
+            <c level="series" id="d3e453" encodinganalog="3.1.4">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.</unitid>
+                  <unittitle encodinganalog="3.1.2" type="est">Rahaliste ja naturaaltulude ja nende jaotuse arvestus</unittitle>
+               </did>
+               <c level="file" id="d3e459" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.5</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1949-01-01/1949-12-31">1949</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Naturaaltulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e467" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.6</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1949-01-01/1949-12-31">1949</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Rahaliste tulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e475" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.11</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1950-01-01/1950-12-31">1950</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Naturaaltulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e483" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.12</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1950-01-01/1950-12-31">1950</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Rahaliste tulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e491" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.15</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1951-01-01/1951-12-31">1951</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Naturaaltulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e499" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.16</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1951-01-01/1951-12-31">1951</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Rahaliste tulude ja nende joatuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e507" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.17</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1951-01-01/1951-12-31">1951</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Rahaliste tulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e515" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.22</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1952-01-01/1952-12-31">1952</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Naturaaltulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e523" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.27</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1953-01-01/1953-12-31">1953</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Naturaaltulude ja nende jaotuse arvestuse raramat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e531" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.34</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1954-01-01/1954-12-31">1954</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Naturaaltulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e540" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.39</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1955-01-01/1955-12-31">1955</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Rahaliste tulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e548" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.50</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1956-01-01/1956-12-31">1956</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Naturaaltulude ja nende jaotuse arvestamise raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e556" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.51</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1956-01-01/1956-12-31">1956</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Rahaliste tulude ja nende jaotamise arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e564" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.60</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1957-01-01/1957-12-31">1957</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Naturaaltulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e572" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.61</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1957-01-01/1957-12-31">1957</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Rahaliste tulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e580" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.68</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1958-01-01/1958-12-31">1958</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Naturaaltulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e588" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.69</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1958-01-01/1958-12-31">1958</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Rahaliste tulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e596" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.76</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1959-01-01/1959-12-31">1959</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Naturaaltulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e604" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.77</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1959-01-01/1959-12-31">1959</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Rahaliste tulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e612" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.83</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1960-01-01/1960-12-31">1960</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Naturaaltulude ja nende jaotuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+            </c>
+            <c level="series" id="d3e620" encodinganalog="3.1.4">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.</unitid>
+                  <unittitle encodinganalog="3.1.2" type="est">Maakorralduse dokumendid</unittitle>
+               </did>
+               <c level="file" id="d3e626" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.47</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1956-01-01/1956-12-31">1956</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Külvikordade põhistus</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e634" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.28a</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1953-01-01/1953-12-31">1953</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Välispiiride dešifreerimise toimik</unittitle>
+                  </did>
+               </c>
+            </c>
+            <c level="series" id="d3e642" encodinganalog="3.1.4">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.</unitid>
+                  <unittitle encodinganalog="3.1.2" type="est">Muu</unittitle>
+               </did>
+               <c level="file" id="d3e648" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.14</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1951-02-01/1953-11-28">02.1951-28.11.1953</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Nõuande raamat</unittitle>
+                  </did>
+               </c>
+            </c>
+            <c level="series" id="d3e656" encodinganalog="3.1.4">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.</unitid>
+                  <unittitle encodinganalog="3.1.2" type="est">Aktid</unittitle>
+               </did>
+               <c level="subseries" id="d3e662" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9..</unitid>
+                     <unittitle encodinganalog="3.1.2" type="est">Revideerimise aktid</unittitle>
+                  </did>
+                  <c level="file" id="d3e668" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.26</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1953-03-01/1953-12-24">01.03.1953-24.12.1953</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Kolhoosi tegevuse revideerimise aktid</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e676" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.48</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1956-04-29/1956-04-29">29.04.1956</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Aastaaruande revideerimise akt</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e684" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.49</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1956-08-23/1957-04-26">23.08.1956-26.04.1957</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Kolhoosi tegevuse revideerimise aktid</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e692" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.66</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1958-08-28/1958-11-19">28.08.1958-19.11.1958</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Kolhoosi tegevuse revideerimise aktid</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e700" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.75</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1959-04-23/1959-05-09">23.04.1959-09.05.1959</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Kolhoosi tegevuse revideerimise aktid</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e708" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.82</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1960-04-07/1960-11-25">07.04.1960-25.11.1960</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Kolhoosi tegevuse revideerimise aktid</unittitle>
+                     </did>
+                  </c>
+               </c>
+               <c level="subseries" id="d3e716" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9..</unitid>
+                     <unittitle encodinganalog="3.1.2" type="est">Varade aktid</unittitle>
+                  </did>
+                  <c level="file" id="d3e722" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.2</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1949-04-20/1953-07-19">20.04.1949-19.07.1953</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Vara ühistamise aktid</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e730" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.7</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1949-01-01/1949-12-31">1949</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Inventariraamat</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e738" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.18</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1951-01-01/1951-12-31">1951</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Inventariraamat</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e746" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.19</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1951-01-01/1951-12-31">1951</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Inventariraamat</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e754" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.28</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1953-01-01/1953-12-31">1953</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Inventariraamat</unittitle>
+                     </did>
+                  </c>
+               </c>
+               <c level="subseries" id="d3e762" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9..</unitid>
+                     <unittitle encodinganalog="3.1.2" type="est">Eekspluatatsiooni andmise aktid </unittitle>
+                  </did>
+                  <c level="file" id="d3e768" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.59</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1957-05-21/1957-12-25">21.05.1957-25.12.1957</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Uue tootmis- ja administratiivhoone vastuvõtmise akt ning osut-müügi lepingud</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e776" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.67</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1958-10-09/1958-12-26">09.10.1958-26.12.1958</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Kuivendusobjektide ekspluatatsiooni andmise aktid ning ostu-müügi lepingud</unittitle>
+                     </did>
+                  </c>
+                  <c level="file" id="d3e784" encodinganalog="3.1.4">
+                     <did>
+                        <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.81</unitid>
+                        <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1960-05-05/1960-11-18">05.05.1960-18.11.1960</unitdate>
+                        <unittitle encodinganalog="3.1.2" type="est">Jamsu objektide drenaaži rekonstrueerimise projekti koondkokkuvõtted koos ekspluatatsiooni andmise aktidega</unittitle>
+                     </did>
+                  </c>
+               </c>
+            </c>
+            <c level="series" id="d3e792" encodinganalog="3.1.4">
+               <did>
+                  <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.</unitid>
+                  <unittitle encodinganalog="3.1.2" type="est">Loomakasvatusdokumendid</unittitle>
+               </did>
+               <c level="file" id="d3e798" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.84</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1949-01-01/1949-12-31">1949</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Karjakontrollraamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e806" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.85</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1950-01-01/1950-12-31">1950</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Karjakontrollraamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e814" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.86</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1952-01-01/1952-12-31">1952</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Karjakontrollraamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e822" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.87</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1954-01-01/1956-12-31">1954-1956</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Karjakontrollraamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e830" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.88</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1957-01-01/1957-12-31">1957</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Karjakontroll- ja söödakulutuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e838" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.89</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1958-01-01/1958-12-31">1958</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Karjakontroll- ja söödakulutuse arvestuse raamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e846" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.90</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1958-01-01/1958-12-31">1958</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Veiste boniteerimise koondkokkuvõte</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e854" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.91</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1960-01-01/1960-12-31">1960</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Karjakontrollraamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e862" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.92</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1960-01-01/1960-12-31">1960</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Karjakontrollraamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e870" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.93</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1961-01-01/1961-12-31">1961</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Karjakontrollraamat</unittitle>
+                  </did>
+               </c>
+               <c level="file" id="d3e879" encodinganalog="3.1.4">
+                  <did>
+                     <unitid type="call number" encodinganalog="3.1.1">EAA.M-9.1.94</unitid>
+                     <unitdate encodinganalog="3.1.3" era="ce" calendar="gregorian" normal="1961-01-01/1961-12-31">1961</unitdate>
+                     <unittitle encodinganalog="3.1.2" type="est">Karjakontrollraamat</unittitle>
+                  </did>
+               </c>
+            </c>
+         </c>
+      </dsc>
+   </archdesc>
+</ead>
