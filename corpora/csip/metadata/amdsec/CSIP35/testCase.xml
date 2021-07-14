@@ -26,12 +26,12 @@ XML lists -->
         <message>The digiprovMD-element should have a mdRef-element</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_amdSec_missing_mdRef_element">
+        <package isValid="FALSE" isImplemented="TRUE" name="IP_amdSec_missing_mdRef_element">
           <path>invalid/IP_amdSec_missing_mdRef_element</path>
           <description>The package has an empty digiprovMD-element</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description></description>
         </package>
       </corpusPackages>
