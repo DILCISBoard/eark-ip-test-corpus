@@ -25,7 +25,7 @@ XML lists -->
          <message>The MDTYPE attribute must exist</message>
        </error>
        <corpusPackages>
-         <package isValid="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+         <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
            <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
            <description>Minimal IP</description>
          </package>
@@ -37,7 +37,7 @@ XML lists -->
         <message>The value in the MDTYPE attribute must be a valid value according to the schema</message>
       </error>
       <corpusPackages>
-        <package isValid="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
           <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
