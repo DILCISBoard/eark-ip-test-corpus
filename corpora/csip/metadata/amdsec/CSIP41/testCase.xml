@@ -25,11 +25,11 @@ XML lists -->
         <message>There MUST exist a SIZE-attribute in mdRef (so that the size of the referenced file can be recorded)</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdRef_missing_SIZE_attribute">
+        <package isValid="FALSE" isImplemented="TRUE" name="mdRef_missing_SIZE_attribute">
           <path>invalid/mdRef_missing_SIZE_attribute</path>
           <description>A package where the SIZE-attribute is missing</description>
         </package>
-        <package isValid="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
           <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
@@ -41,11 +41,11 @@ XML lists -->
         <message>The size of the file is not the size that is given in the SIZE-attribute</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdRef_wrong_SIZE">
+        <package isValid="FALSE" isImplemented="TRUE" name="mdRef_wrong_SIZE">
           <path>invalid/mdRef_wrong_SIZE</path>
           <description>A package where the wrong size is given</description>
         </package>
-        <package isValid="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
           <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
