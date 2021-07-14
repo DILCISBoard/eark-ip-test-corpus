@@ -27,11 +27,11 @@ XML lists -->
         <message>The amdSec-element has no status-attribute.</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_amdSec_missing_status_attribute">
+        <package isValid="FALSE" isImplemented="TRUE" name="IP_amdSec_missing_status_attribute">
           <path>invalid/IP_amdSec_missing_status_attribute</path>
           <description>The package has a mets/amdSec/digiprovMD with no status-attribute</description>
         </package>
-        <package isValid="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
           <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description></description>
         </package>
@@ -43,11 +43,11 @@ XML lists -->
         <message>The value is not found in the vocabulary</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_amdSec_status_attribute_wrong_value">
+        <package isValid="FALSE" isImplemented="TRUE" name="IP_amdSec_status_attribute_wrong_value">
           <path>invalid/IP_amdSec_status_attribute_wrong_value</path>
           <description>The package has a mets/amdSec/digiprovMD with a status-attribute which holds the value "TEST"</description>
         </package>
-        <package isValid="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
           <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description></description>
         </package>
