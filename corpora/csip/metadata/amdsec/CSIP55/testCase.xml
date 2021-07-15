@@ -12,7 +12,7 @@ XML lists -->
   <requirementText>Creation date of the referenced file.
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description>This attribute is optional in METS.xsd but mandatory in CSIP43. The METS.xs requires a datetime datatype, so nu further need to set up extra rules other than making sure the attribute exists.</description>
+  <description>This attribute is optional in METS.xsd but mandatory in CSIP55. The METS.xsd requires a datetime datatype, so no further need to set up extra rules other than making sure the attribute exists.</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
@@ -25,12 +25,12 @@ XML lists -->
         <message>The CREATED-attribute MUST exist</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdRef_missing_CREATED_attribute">
+        <package isValid="FALSE" isImplemented="TRUE" name="mdRef_missing_CREATED_attribute">
           <path>invalid/mdRef_missing_CREATED_attribute</path>
           <description>A package with no CREATED-attribute</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
