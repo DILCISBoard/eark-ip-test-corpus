@@ -41,13 +41,13 @@ XML lists -->
             </error>
             <corpusPackages>
                 <!-- Details of corpus packages designed to test this validation rule. -->
-                <package name="IP_missing_strucMap_label_attribue_value" isValid="FALSE">
+                <package name="IP_missing_strucMap_label_attribue_value" isValid="FALSE" isImplemented="TRUE">
                     <path>invalid/IP_missing_strucMap_label_attribue_value</path>
                     <!-- Full description of corpus package features. -->
                     <description> Contains no structMap element in Root METS and Representation METS with the @LABEL attribute value "CSIP".</description>
                 </package>
-                <package isValid="TRUE" name="minimal_IP_with_schemas">
-                    <path>valid/minimal_IP_with_schemas</path>
+                <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+                    <path>valid/minimal_IP_with_1_representation</path>
                     <description>Minimal IP</description>
                 </package>
             </corpusPackages>
@@ -62,13 +62,13 @@ XML lists -->
             </error>
             <corpusPackages>
                 <!-- Details of corpus packages designed to test this validation rule. -->
-                <package name="IP_two_strucMap_label_attribue_value" isValid="FALSE">
+                <package name="IP_two_strucMap_label_attribue_value" isValid="FALSE" isImplemented="TRUE">
                     <path>invalid/IP_two_strucMap_label_attribue_value</path>
                     <!-- Full description of corpus package features. -->
                     <description> Contains two structMap elements in Root METS and Representation METS with the @LABEL attribute value "CSIP". </description>
                 </package>
-                <package isValid="TRUE" name="minimal_IP_with_schemas">
-                    <path>valid/minimal_IP_with_schemas</path>
+                <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+                    <path>valid/minimal_IP_with_1_representation</path>
                     <description>Minimal IP</description>
                 </package>
             </corpusPackages>
