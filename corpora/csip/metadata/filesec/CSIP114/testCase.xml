@@ -24,16 +24,16 @@ XML lists -->
         <message>An information package METS document must contain a mets/fileSec/fileGrp@USE="Representations" element.</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="no_rep_file_grp">
-          <path>./no_rep_file_grp</path>
+        <package isValid="FALSE" isImplemented="TRUE" name="no_rep_file_grp">
+          <path>invalid/no_rep_file_grp</path>
           <description>The package root METS document has no mets/fileSec/fileGrp@USE="Representations" element.</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_1_representation">
-          <path>./minimal_IP_with_1_representation</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>The package root METS document has a single mets/fileSec/fileGrp@USE="Representations" element.</description>
         </package>
-        <package isValid="TRUE" name="multi_rep_file_grp">
-          <path>./multi_rep_file_grp</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="multi_rep_file_grp">
+          <path>invalid/multi_rep_file_grp</path>
           <description>The package root METS document has multiple mets/fileSec/fileGrp@USE="Representations" elements.</description>
         </package>
       </corpusPackages>
