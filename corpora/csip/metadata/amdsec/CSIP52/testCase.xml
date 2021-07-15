@@ -12,8 +12,7 @@ XML lists -->
   <requirementText>Specifies the type of metadata in the linked file. Value is taken from the list provided by the standard.
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description>MDTYPE is mandatory according to the METS.xsd. And the allowed values are defined in the schema. So this requirement is identical to the requirement in the METS schema.
-    But I have created rules and packages nonetheless</description>
+  <description>MDTYPE is mandatory according to the METS.xsd. And the allowed values are defined in the schema. So this requirement is identical to the requirement in the METS schema. Existence of mandatory attribute and check of valid values handled by XML Schema Validation, thus no need for invalid test packages.</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
@@ -26,12 +25,8 @@ XML lists -->
         <message>The MDTYPE attribute must exist</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdRef_missing_MDTYPE">
-          <path>invalid/mdRef_missing_MDTYPE</path>
-          <description>The MDTYPE attribute is missing</description>
-        </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
@@ -42,12 +37,8 @@ XML lists -->
         <message>The value in the MDTYPE attribute must be a valid value according to the schema</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdRef_wrong_MDTYPE_value">
-          <path>invalid/mdRef_wrong_MDTYPE_value</path>
-          <description>The value in the MDTYPE attribute is E-ARK</description>
-        </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
