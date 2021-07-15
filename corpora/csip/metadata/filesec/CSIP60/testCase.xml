@@ -1,27 +1,42 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP60"/>
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP60"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP60" URL="http://earkcsip.dilcis.eu/#CSIP60"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>There are one or more file group (fileGrp) elements present grouping the transfered files in the main catagorization of; Documentation, Schemas and Representations.
-In one or more file groups with the catagorization of "Documentation" all documetation pertaining to the transfered information is present.
-In one or more file groups with the catagorization of "Schemas" all XML-schemas pertaining to the transfered XML documents is present.
-In one or more file groups with the catagorization of "Representations" the data being transfered is present or in one file group the data for each representation is present.
-To make the catagorization easier the different files being transfered should be placed in folders with names folowing the catagorization
-</requirementText>
+  <requirementText>All documentation pertaining to the transferred content is placed in one or more file group elements with mets/fileSec/fileGrp/@USE attribute value “Documentation”.</requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
+  <description>This requirment mandates that there must be at least one mets/fileSec/fileGrp element with a USE attribute set to 'Documentation' but there can be more.</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
   </dependencies>
   <!-- A list of the validation rules derived from the test case -->
   <rules>
+    <rule id="1">
+      <description>The package METS document MUST contain at least one mets/fileSec/fileGrp element with a use attribute of "Documentation".</description>
+      <error level="WARNING">
+        <message>An information package METS document must contain a mets/fileSec/fileGrp@USE="Documentation" element.</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" isImplemented="TRUE" name="no_doc_file_grp">
+          <path>invalid/no_doc_file_grp</path>
+          <description>The package root METS document has no mets/fileSec/fileGrp@USE="Documentation" element.</description>
+        </package>
+        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+          <path>valid/minimal_IP_with_1_representation</path>
+          <description>The package root METS document has a single mets/fileSec/fileGrp@USE="Documentation" element.</description>
+        </package>
+        <package isValid="TRUE" isImplemented="TRUE" name="multi_doc_file_grp">
+          <path>invalid/multi_doc_file_grp</path>
+          <description>The package root METS document has multiple mets/fileSec/fileGrp@USE="Documentation" elements.</description>
+        </package>
+      </corpusPackages>
+    </rule>
   </rules>
 </testCase>
