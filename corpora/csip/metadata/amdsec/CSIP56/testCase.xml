@@ -25,28 +25,28 @@ XML lists -->
         <message>There MUST exist a CHECKSUM-attribute</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdrRef_missing_CHECKSUM_attribute">
-          <path>invalid/mdrRef_missing_CHECKSUM_attribute</path>
+        <package isValid="FALSE" isImplemented="TRUE" name="mdRef_missing_CHECKSUM_attribute">
+          <path>invalid/mdRef_missing_CHECKSUM_attribute</path>
           <description>A package where the CHECKSUM-attribute is missing</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
     </rule>
     <rule id="2">
-      <description>The checksum information MUST be the same as the actual checksum value for the file. Note that calculation need to be done by also taking in what CHECKSUMTYPE is given in CSIP45</description>
+      <description>The checksum information MUST be the same as the actual checksum value for the file. Note that calculation need to be done by also taking in what CHECKSUMTYPE is given in CSIP57</description>
       <error level="ERROR">
         <message>The checksum value for the file is not identical with the checksum value that is given</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdRef_wrong_CHECKUM_value">
+        <package isValid="FALSE" isImplemented="TRUE" name="mdRef_wrong_CHECKUM_value">
           <path>invalid/mdRef_wrong_CHECKUM_value</path>
           <description></description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
