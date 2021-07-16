@@ -1,23 +1,94 @@
-<!-- Root element for an individual test case, allows these to be wrapped into
-XML lists -->
-<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
-  <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP62"/>
-  <!-- URL references to requirements for convenient lookup -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="CSIP" version="2.0.4" requirementId="CSIP62"/>
   <references>
     <reference requirementId="CSIP62" URL="http://earkcsip.dilcis.eu/#CSIP62"/>
   </references>
-  <!-- The full text of the requirement. -->
-  <requirementText>An added attribute which describes the specific content information type specification used for the transferred content. The attribute is mandatory to use when the file group catagorization is Representations. The vocabulary is going to evolve under the care of the DILCIS Board as additional content information type specifications are developed.
-</requirementText>
-  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
-  <!-- List of requirments that this test case depends on in addition to the
-  main requirememt, e.g. general requirments on the form of IDs -->
+  <requirementText>
+    <name>Content Information Type Specification</name>
+    <location>mets/fileSec/fileGrp[@USE='Representations']/@csip:CONTENTINFORMATIONTYPE</location>
+    <description>
+      An added attribute which states the name of the content information type specification used to create the package.
+      The vocabulary will evolve under the curation of the DILCIS Board as additional content information type specifications are developed.
+      This attribute is mandatory when the mets/fileSec/fileGrp/@USE attribute value is "Representations".
+      When the "Package type" value is "Mixed" and/or the file group describes a "Representation", then this element states the content information type specification used for the file group.
+      See also: Content information type specification, https://earkcsip.dilcis.eu/#VocabularyContentInformationTypeSpecification.
+    </description>
+    <cardinality>0..1</cardinality>
+    <level>SHOULD</level>
+  </requirementText>
+  <description>
+    <!--  The requirement text is ambiguous, with these two statements in conflict:
+          1. mets/fileSec/fileGrp[@USE='Representations']/@csip:CONTENTINFORMATIONTYPE
+          2. When the "Package type" value is "Mixed" and/or the file group describes a "Representation"
+          The interpretation used here is that statement 1 is correct.
+    -->
+    If mets/fileSec/fileGrp/@USE = "Representations" then mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE MUST exist.
+    If mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE exists, it MUST have a value from the VocabularyContentInformationTypeSpecification.
+  </description>
   <dependencies>
+    <dependency requirementId="VocabularyContentInformationTypeSpecification" URL="https://earkcsip.dilcis.eu/#VocabularyContentInformationTypeSpecification">
+      https://earkcsip.dilcis.eu/schema/CSIPVocabularyContentInformationType.xml
+    </dependency>
   </dependencies>
-  <!-- A list of the validation rules derived from the test case -->
   <rules>
+    <rule id="1">
+      <description>If mets/fileSec/fileGrp/@USE = "Representations" then mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE MUST exist.</description>
+      <error level="ERROR">
+        <message>
+          mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE attribute does not exist. MUST be: if mets/fileSec/fileGrp/@USE = "Representations" then mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE MUST exist and have a value from VocabularyContentInformationTypeSpecification.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="root_mets_fileGrp_CONTENTINFORMATIONTYPE_not_exist" isValid="FALSE">
+          <path>invalid/root_mets_fileGrp_CONTENTINFORMATIONTYPE_not_exist</path>
+          <description>
+            METS.xml file is located in the root folder.
+            There is a fileGrp with mets/fileSec/fileGrp/@USE = "Representations".
+            The attribute mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE does not exist.
+          </description>
+        </package>
+        <!--  It seems most efficient to have one valid package for all SHOULD
+              requirements - there are about 20 of them, so the alternative would
+              be to have 20 rule-specific valid packages. -->
+        <package name="minimal_IP_with_1_representation_plus_mets-xml_SHOULD_items" isValid="TRUE">
+          <path>valid/minimal_IP_with_1_representation_plus_mets-xml_SHOULD_items</path>
+          <description>
+            Minimal IP that matches all MUST requirements, plus all SHOULD requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>If mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE exists, it MUST have a value from the VocabularyContentInformationTypeSpecification.</description>
+      <error level="ERROR">
+        <message>
+          mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE attribute has incorrect value. MUST be: mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE has a value from the VocabularyContentInformationTypeSpecification.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="root_mets_fileGrp_CONTENTINFORMATIONTYPE_incorrect" isValid="FALSE">
+          <path>invalid/root_mets_fileGrp_CONTENTINFORMATIONTYPE_incorrect</path>
+          <description>
+            METS.xml file is located in the root folder.
+            There is a fileGrp with mets/fileSec/fileGrp/@USE = "Representations".
+            The attribute mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE = "random_string_du92Neib57zjMWren".
+          </description>
+        </package>
+        <!--  It seems most efficient to have one valid package for all SHOULD
+              requirements - there are about 20 of them, so the alternative would
+              be to have 20 rule-specific valid packages. -->
+        <!--  Ideally, there should be a valid IP for each specific vocabulary
+              value, as this is the only certain way to test that the validator
+              accepts any one of them. This should be automated as
+              VocabularyContentInformationTypeSpecification currently allows 7
+              different values. -->
+        <package name="minimal_IP_with_1_representation_plus_mets-xml_SHOULD_items" isValid="TRUE">
+          <path>valid/minimal_IP_with_1_representation_plus_mets-xml_SHOULD_items</path>
+          <description>
+            Minimal IP that matches all MUST requirements, plus all SHOULD requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
   </rules>
 </testCase>
