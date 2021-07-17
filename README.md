@@ -10,9 +10,9 @@ Quick Start
 
 Introduction
 ------------
-This repository is home to the E-ARK information package validation test corpus. The corpus comprises a set of information packages, each is intended to violate the [E-ARK Common Specification for Information Packages](DILCISBoard/E-ARK-CSIP) **(CSIP)** in a single specific way. The corpus serves two purposes:
+This repository is home to the E-ARK information package validation test corpus. The corpus comprises a set of information packages, each is intended to violate the [E-ARK Common Specification for Information Packages](https://github.com/DILCISBoard/E-ARK-CSIP/) **(CSIP)** in a single specific way. The corpus serves two purposes:
 
-- It provides a set of information package samples that can be used to test software validators for the CSIP, this includes our [own validator](DILCISBoard/rest-ip-validator).
+- It provides a set of information package samples that can be used to test software validators for the CSIP, this includes our [own validator](https://github.com/E-ARK-Software/py-rest-ip-validator).
 - The creation of the corpus tests our understanding of the current specification document. Every test case represents a simple, implemented example of a validation error or warning with accompanying valid cases.
 __________
 
