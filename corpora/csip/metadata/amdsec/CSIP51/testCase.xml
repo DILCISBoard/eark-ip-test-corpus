@@ -1,23 +1,53 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP51"/>
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP51"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP51" URL="http://earkcsip.dilcis.eu/#CSIP51"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>The actual location of the resource. We  recommend recording a URL type filepath within this attribute.
+  <requirementText>The actual location of the resource. We recommend recording a URL type filepath within this attribute.
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
-  <!-- List of requirments that this test case depends on in addition to the
-  main requirememt, e.g. general requirments on the form of IDs -->
-  <dependencies>
-  </dependencies>
-  <!-- A list of the validation rules derived from the test case -->
-  <rules>
-  </rules>
-</testCase>
+  <description>The attribute is optional in METS but mandatory in CSIP51.</description>
+  <!-- List of requirments that this test case depends on in addition to the 	  main requirememt, e.g. general requirments on the form of IDs -->
+  <dependencies>	   </dependencies>
+  <!-- A list of the validation rules derived from the test case -->	  <!-- A list of the validation rules derived from the test case -->
+  <rules>	 
+    <rule id="1">
+      <description>There MUST exist a xlink:href-attribute per mdRef-element</description>
+      <error level="ERROR">
+        <message>There MUST exist a xlink:href-attribute per mdRef-element</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="mdRef_missing_xlink_href">
+          <path>invalid/mdRef_missing_xlink_href</path>
+          <description>IP with no xlink:href attribute</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP">
+          <path>valid/minimal_IP</path>
+          <description></description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>The xlink:href-pointer must point to an existing file</description>
+      <error level="ERROR">
+        <message>The xlink:href-pointer must point to an existing file</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="mdRef_wrong_reference">
+          <path>invalid/mdRef_wrong_reference</path>
+          <description>IP with a value in xlink:href that does not point to a file within the IP</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP">
+          <path>valid/minimal_IP</path>
+          <description></description>
+        </package>
+      </corpusPackages>
+    </rule>
+  	  </rules>
+	</testCase>
