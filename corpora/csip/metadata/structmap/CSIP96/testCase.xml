@@ -29,12 +29,12 @@ XML lists -->
         <message>All fileGrps with the @USE="Documentation" must be presented in the structMap via mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr </message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="fileGrp_documentation_but_missing_structMap">
+        <package isValid="FALSE" isImplemented="TRUE" name="fileGrp_documentation_but_missing_structMap">
           <path>invalid\fileGrp_documentation_but_missing_structMap</path>
           <description>A package where there is a fileGrp with @USE="Documentation" but there is no structMap [@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
-          <path>valid\minimal_IP</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
@@ -45,12 +45,12 @@ XML lists -->
         <message>The structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr points to a fileGrp that does not have @USE="Documentation"</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="structMap_does_not_point_at_documentation">
+        <package isValid="FALSE" isImplemented="TRUE" name="structMap_does_not_point_at_documentation">
           <path>invalid\structMap_does_not_point_at_documentation</path>
           <description>A package which has a documentation filepointer that points to a filegroup that does not have @USE="Documentation"</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
-          <path>valid\minimal_IP</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
