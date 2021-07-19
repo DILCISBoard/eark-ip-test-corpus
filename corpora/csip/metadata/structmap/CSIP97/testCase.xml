@@ -29,12 +29,12 @@ The CSIP97 requirement is only at a should-level, and that leads to the interpre
         <message>There SHOULD be a div-element with the @LABEL='Schemas' nested in the div-element with the @LABEL='CSIP'</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="no_div_label_Schemas">
+        <package isValid="FALSE" isImplemented="TRUE" name="no_div_label_Schemas">
           <path>invalid\no_div_label_Schemas</path>
           <description>There is no div-element with the @LABEL='Schemas' nested in the div-element with the @LABEL='CSIP'</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
-          <path>valid\minimal_IP</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
@@ -45,12 +45,12 @@ The CSIP97 requirement is only at a should-level, and that leads to the interpre
         <message>There MUST be mamximum one div-element with the @LABEL='Schemas' nested in the div-element with the @LABEL='CSIP'</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="two_div_elements_with_label_metadata">
+        <package isValid="FALSE" isImplemented="TRUE" name="two_div_elements_with_label_Schemas">
           <path>invalid\two_div_elements_with_label_Schemas</path>
           <description>Package with two div-elements with @LABEL='Schemas'</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
-          <path>valid\minimal_IP</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
