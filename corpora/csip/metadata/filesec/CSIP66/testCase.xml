@@ -27,12 +27,12 @@ XML lists -->
         <message>FileGrps MUST have minimum 1 file</message>
       </error>
       <corpusPackages>
-        <package isValid="TRUE" name="fileSec_fileGrp_missing_file">
+        <package isValid="FALSE" isImplemented="TRUE" name="fileSec_fileGrp_missing_file">
           <path>invalid/fileSec_fileGrp_missing_file</path>
           <description>A package with a fileGrp that has no file elements in it</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
-          <path>valid\minimal_IP</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
         
