@@ -22,7 +22,7 @@
     https://github.com/DILCISBoard/E-ARK-CSIP/issues/570. The cases of there
     being no schema division or more than one schema division
     are handled in CSIP97. Consequently, there is only one rule left for
-    CSIP97:
+    CSIP99:
       If the schema division exists, it MUST have @LABEL='Schemas'.
 
     This, however, is not reliably testable with algorithms of reasonable
