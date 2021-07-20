@@ -23,7 +23,7 @@
     https://github.com/DILCISBoard/E-ARK-CSIP/issues/570. The cases of
     there being no 'Representations' division or more than one
     'Representations' division are handled in CSIP101. Consequently, there
-    is only one rule left for CSIP101:
+    is only one rule left for CSIP103:
       If the 'Representations' division exists, it MUST have @LABEL='Representations'.
 
     This, however, is not reliably testable with algorithms of reasonable
