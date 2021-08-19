@@ -110,52 +110,5 @@
         </package>
       </corpusPackages>
     </rule>
-    <rule id="4">
-      <!--  Rule 5 (the check for existence and value) covers it, but to make the
-            error messages more precise, it makes sense to include a separate
-            rule for existence only. -->
-      <description>If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist.</description>
-      <error level="ERROR">
-        <message>
-          mets/@csip:OTHERCONTENTINFORMATIONTYPE attribute does not exist. MUST be: If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.
-        </message>
-      </error>
-      <corpusPackages>
-        <package name="mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_not_exist" isValid="FALSE">
-          <path>invalid/mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_not_exist</path>
-          <description>
-            METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE attribute does not exist.
-          </description>
-        </package>
-        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
-          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
-          <description>
-            Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
-          </description>
-        </package>
-      </corpusPackages>
-    </rule>
-    <rule id="5">
-      <description>If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.</description>
-      <error level="ERROR">
-        <message>
-          mets/@csip:OTHERCONTENTINFORMATIONTYPE attribute has no value. MUST be: If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.
-        </message>
-      </error>
-      <corpusPackages>
-        <package name="mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_no_value" isValid="FALSE">
-          <path>invalid/mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_no_value</path>
-          <description>
-            METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "".
-          </description>
-        </package>
-        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
-          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
-          <description>
-            Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
-          </description>
-        </package>
-      </corpusPackages>
-    </rule>
   </rules>
 </testCase>
