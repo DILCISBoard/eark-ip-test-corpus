@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.3" requirementId="CSIP5"/>
+  <id specification="CSIP" version="2.0.4" requirementId="CSIP5"/>
   <references>
     <reference requirementId="CSIP5" URL="https://earkcsip.dilcis.eu/#CSIP5"/>
   </references>
@@ -18,9 +18,10 @@
   <description>
     If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE:
     - MUST exist;
-    - MUST have a string value declaring the content information type of the package/representation;
-    - MUST NOT have a value from the VocabularyContentInformationTypeSpecification because these vocabulary values MUST be used for the attribute mets/@csip:CONTENTINFORMATIONTYPE.
-    If mets/@csip:OTHERCONTENTINFORMATIONTYPE exists then mets/@csip:CONTENTINFORMATIONTYPE MUST be "OTHER".
+    - MUST have a string value declaring the content information type of the package/representation.
+    If mets/@csip:OTHERCONTENTINFORMATIONTYPE exists then:
+    - it MUST NOT have a value from the VocabularyContentInformationTypeSpecification because these vocabulary values MUST be used for the attribute mets/@csip:CONTENTINFORMATIONTYPE.
+    - mets/@csip:CONTENTINFORMATIONTYPE MUST be "OTHER".
   </description>
   <dependencies>
     <dependency requirementId="CSIP4" URL="https://earkcsip.dilcis.eu/#CSIP4">
@@ -34,8 +35,54 @@
     <!--  The following rules are included in the test case for CSIP4 and not repeated here:
           - "If mets/@csip:CONTENTINFORMATIONTYPE = 'OTHER' then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist."
           - "If mets/@csip:CONTENTINFORMATIONTYPE = 'OTHER' then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value."-->
-    <!-- This rule is implicit in the specification and is important for CSIP4 and CSIP5 to work as intended. -->
     <rule id="1">
+      <!--  Rule 2 (the check for existence and value) covers it, but to make the
+            error messages more precise, it makes sense to include a separate
+            rule for existence only. -->
+      <description>If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist.</description>
+      <error level="ERROR">
+        <message>
+          mets/@csip:OTHERCONTENTINFORMATIONTYPE attribute does not exist. MUST be: If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_not_exist" isValid="FALSE">
+          <path>invalid/mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_not_exist</path>
+          <description>
+            METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE attribute does not exist.
+          </description>
+        </package>
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
+          <description>
+            Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a non-empty value.</description>
+      <error level="ERROR">
+        <message>
+          mets/@csip:OTHERCONTENTINFORMATIONTYPE attribute value is empty. MUST be: If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a non-empty value.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_no_value" isValid="FALSE">
+          <path>invalid/mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_no_value</path>
+          <description>
+            METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "".
+          </description>
+        </package>
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
+          <description>
+            Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="3">
       <description>If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST NOT have a value from the VocabularyContentInformationTypeSpecification because these vocabulary values MUST be used for the attribute mets/@csip:CONTENTINFORMATIONTYPE.</description>
       <error level="ERROR">
         <message>
@@ -47,22 +94,21 @@
           value, as this is the only certain way to test that the validator
           checks for all of them. This should be automated as
           VocabularyContentInformationTypeSpecification currently allows 7 different values. -->
-        <package name="mets-xml_mets_csip-CONTENTINFORMATIONTYPE_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_vocabulary_1" isValid="FALSE">
-          <path></path>
+        <package name="mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_vocabulary_1" isValid="FALSE">
+          <path>invalid/mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_vocabulary_1</path>
           <description>
             METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "ERMS".
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_OTHER" isValid="TRUE">
-          <path></path>
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
           </description>
         </package>
       </corpusPackages>
     </rule>
-    <!-- This rule is implicit in the specification and is important for CSIP4 and CSIP5 to work as intended. -->
-    <rule id="2">
+    <rule id="4">
       <description>If mets/@csip:OTHERCONTENTINFORMATIONTYPE exists then mets/@csip:CONTENTINFORMATIONTYPE MUST be "OTHER".</description>
       <error level="ERROR">
         <message>
@@ -70,14 +116,14 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_csip-CONTENTINFORMATIONTYPE_not_OTHER_and_csip-OTHERCONTENTINFORMATIONTYPE_exists" isValid="FALSE">
-          <path></path>
+        <package name="mets_csip_CONTENTINFORMATIONTYPE_not_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_exists" isValid="FALSE">
+          <path>invalid/mets_csip_CONTENTINFORMATIONTYPE_not_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_exists</path>
           <description>
             METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "ERMS" and mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_mets_csip-CONTENTINFORMATIONTYPE_OTHER" isValid="TRUE">
-          <path></path>
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
           </description>
