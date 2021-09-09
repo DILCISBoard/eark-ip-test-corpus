@@ -1,7 +1,7 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="FALSE">
   <!-- Unique ID for the test case -->
   <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP18"/>
   <!-- URL references to requirements for convenient lookup -->
@@ -13,12 +13,34 @@ XML lists -->
 The ID must follow the rules for xml:id described in the chapter of the textual description of CSIP named "General requirements for the use of metadata"
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
+  <description>CSIP18 is a requirement which is identical with 26 other requirements in CS IP, since it is a requirement for the use of ID's in accordance with the XML-standard. IDs are used multiple times in the elements of METS. The requirement links to http://earkcsip.dilcis.eu/#the-use-of-identifiers
+    
+    The requirements for the use of identifiers are several:
+    
+    There MUST be one ID-attribute. (Will be tested with general schema validation)
+    ID MUST begin with a letter, or an underscore character (‘_’). (Will be tested with general schema validation)
+    ID MUST contain no characters other than letters, digits, hyphens, underscores, full stops, and certain combining and extension characters. (Will be tested with general schema validation)
+    ID MUST start with a prefix, followed by the value of the identifier.
+    It is required that any selected prefix is used consistently throughout the package.
+    It MUST be unique within the package. (Will be tested with general schema validation)
+    4, and 5 is hard to test, as there is no place where the prefix can be identified.</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
   </dependencies>
   <!-- A list of the validation rules derived from the test case -->
-  <rules>
-  </rules>
+<rules>
+  <rule id="1">
+    <description>this is not a rule, Magritte. This testcase is not testable, but the rule elements are mandatory according to the current testCase.xsd</description>
+    <error level="INFO">
+      <message></message>
+    </error>
+    <corpusPackages>
+      <package isValid="TRUE" name="minimal_IP_with_schemas">
+        <path>\corpus\template-ip\minimal_IP_with_schemas</path>
+        <description>the minimal IP with schemas</description>
+      </package>
+    </corpusPackages>
+  </rule>
+</rules>
 </testCase>
