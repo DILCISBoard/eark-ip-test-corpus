@@ -1,0 +1,27 @@
+<testCase>
+   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR6" />
+  <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR6
+  </reference>
+  <description>
+   If preservation metadata are available, they SHOULD be included in sub-folder preservation.
+  </description>
+  <dependencies/>
+  <rules>
+    <rule id="1">
+      <description>If preservation metadata are available, they SHOULD be included in sub-folder preservation.</description>
+      <error level="INFO">
+        <message>
+		Preservation metadata described in METS.xml.
+		Sub-folder named "preservation" found in the metadata folder.
+		Sub-folder "preservation" contains following files:
+		</message>
+      </error>
+	   <corpusPackages>
+		  <package name="preservation_metadata_added">
+		    <path>pass\preservation_metadata_added</path>
+		    <description>Positive testcase. Preservation metadata described in METS.xml. Sub-folder named "preservation" included</description>
+		  </package>
+	  </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
