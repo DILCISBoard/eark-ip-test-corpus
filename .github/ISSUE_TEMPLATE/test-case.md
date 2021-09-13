@@ -1,6 +1,9 @@
 ---
 name: Test Case
 about: Test case initiation document to add to test case backlog
+title: ''
+labels: ''
+assignees: ''
 
 ---
 
