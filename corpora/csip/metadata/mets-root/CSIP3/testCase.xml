@@ -1,23 +1,87 @@
-<!-- Root element for an individual test case, allows these to be wrapped into
-XML lists -->
-<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
-  <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP3"/>
-  <!-- URL references to requirements for convenient lookup -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="CSIP" version="2.0.3" requirementId="CSIP3"/>
   <references>
-    <reference requirementId="CSIP3" URL="http://earkcsip.dilcis.eu/#CSIP3"/>
+    <reference requirementId="CSIP3" URL="https://earkcsip.dilcis.eu/#CSIP3"/>
   </references>
-  <!-- The full text of the requirement. -->
-  <requirementText>The @csip:OTHERTYPE attribute must be used for stating the general type of the package (genre) when @TYPE has the value "OTHER"
-</requirementText>
-  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
-  <!-- List of requirments that this test case depends on in addition to the
-  main requirememt, e.g. general requirments on the form of IDs -->
+  <requirementText>
+      <name>Other Content Category</name>
+      <location>mets[@TYPE='OTHER']/@csip:OTHERTYPE</location>
+    <description>
+      When the mets/@TYPE attribute has the value "OTHER" the mets/@csip:OTHERTYPE attribute MUST be used to declare the content category of the package/representation.
+      See also: Content Category, https://earkcsip.dilcis.eu/#VocabularyContentCategory
+    </description>
+    <cardinality>0..1</cardinality>
+    <!-- It is actually a MUST or more precisely, a "conditional MUST": if mets/@TYPE = "OTHER" then mets/@csip:OTHERTYPE MUST be used. -->
+    <level>SHOULD</level>
+  </requirementText>
+  <description>
+    If mets/@TYPE = "OTHER" then mets/@csip:OTHERTYPE:
+    - MUST exist;
+    - MUST have a string value declaring the content category of the package/representation;
+    - MUST NOT have a value from the VocabularyContentCategory because these vocabulary values MUST be used for the attribute mets/@TYPE.
+    If mets/@csip:OTHERTYPE exists then mets/@TYPE MUST be "OTHER".
+  </description>
   <dependencies>
+    <dependency requirementId="CSIP2" URL="https://earkcsip.dilcis.eu/#CSIP2">
+      The value of the other attribute determines the existence of this attribute.
+    </dependency>
+    <dependency requirementId="VocabularyContentCategory" URL="https://earkcsip.dilcis.eu/schema/CSIPVocabularyContentCategory.xml">
+      The value of the attribute MUST NOT be from the vocabulary.
+    </dependency>
   </dependencies>
-  <!-- A list of the validation rules derived from the test case -->
   <rules>
+    <!--  The following rules are included in the test case for CSIP2 and not repeated here:
+          - "If mets/@TYPE = "OTHER" then mets/@csip:OTHERTYPE MUST exist."
+          - "If mets/@TYPE = "OTHER" then mets/@csip:OTHERTYPE MUST exist and have a value."-->
+    <!-- This rule is implicit in the specification and is important for CSIP2 and CSIP3 to work as intended. -->
+    <rule id="1">
+      <description>If mets/@TYPE = "OTHER" then mets/@csip:OTHERTYPE MUST NOT have a value from the VocabularyContentCategory because these vocabulary values MUST be used for the attribute mets/@TYPE.</description>
+      <error level="ERROR">
+        <message>
+          mets/@csip:OTHERTYPE attribute has a value that MUST instead be used for mets/@TYPE. MUST be: mets/@csip:OTHERTYPE MUST describe a content category that falls outside of the VocabularyContentCategory vocabulary.
+        </message>
+      </error>
+      <corpusPackages>
+        <!-- Ideally, there should be an invalid IP for each specific vocabulary
+          value, as this is the only certain way to test that the validator
+          checks for all of them. This should be automated as
+          VocabularyContentCategory currently allows 25 different values. -->
+        <package name="mets_TYPE_OTHER_and_csip_OTHERTYPE_vocabulary_1" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/mets_TYPE_OTHER_and_csip_OTHERTYPE_vocabulary_1</path>
+          <description>
+            METS.xml file has mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works - Print".
+          </description>
+        </package>
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
+          <description>
+            Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works - Manuscripts".
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <!-- This rule is implicit in the specification and is important for CSIP2 and CSIP3 to work as intended. -->
+    <rule id="2">
+      <description>If mets/@csip:OTHERTYPE exists then mets/@TYPE MUST be "OTHER".</description>
+      <error level="ERROR">
+        <message>
+          mets/@csip:OTHERTYPE exists although mets/@TYPE is not "OTHER". MUST be: mets/@csip:OTHERTYPE MUST only exist if mets/@TYPE = "OTHER".
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets_TYPE_not_OTHER_and_csip_OTHERTYPE_exists" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/mets_TYPE_not_OTHER_and_csip_OTHERTYPE_exists</path>
+          <description>
+            METS.xml file has mets/@TYPE = "Textual works - Print", mets/@csip:OTHERTYPE = "Textual works - Manuscripts".
+          </description>
+        </package>
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
+          <description>
+            Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works - Manuscripts".
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
   </rules>
 </testCase>
