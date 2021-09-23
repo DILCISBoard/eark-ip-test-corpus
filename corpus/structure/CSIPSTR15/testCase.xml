@@ -1,0 +1,30 @@
+<!-- Root element for an individual test case, allows these to be wrapped into
+XML lists -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
+  testable="TRUE">
+  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIPSTR15"/>
+  <references>
+    <reference requirementId="CSIPSTR15" URL="http://earkcsip.dilcis.eu/#CSIPSTR15"/>
+  </references>
+  <requirementText>We recommend including all XML schema documents for any structured metadata within package. These schema documents SHOULD be placed in a sub-folder called schemas within the Information Package root folder and/or the representation folder.</requirementText>
+  <description>
+      We recommend including all schema documents for any structured metadata within package. These schema documents SHOULD be placed in a sub-folder called schemas within the Information Package root folder.
+  </description>
+  <dependencies/>
+  <rules>
+    <rule id="1">
+      <description>Schema documents SHOULD be placed in a sub-folder called "schemas" within the Information Package root folder.</description>
+      <error level="INFO">
+        <message>
+		Sub-folder called "schemas" found in the Information Package folder.
+		</message>
+		</error>
+        <corpusPackages>
+		    <package name="subfolder_schemas_in_IP_folder" isValid="TRUE">
+		        <path>pass\subfolder_schemas_in_IP_folder</path>
+		        <description>Positive testcase. The Information Package has sub-folder "schemas".</description>
+		    </package>
+        </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
