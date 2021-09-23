@@ -28,14 +28,14 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_LASTMODDATE_not_exist" isValid="FALSE">
-          <path>mets-xml_metsHdr_LASTMODDATE_not_exist</path>
+        <package name="metsHdr_LASTMODDATE_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/metsHdr_LASTMODDATE_not_exist</path>
           <description>
             METS.xml file has no mets/metsHdr/@LASTMODDATE attribute.
           </description>
         </package>
-        <package name="mets-xml_metsHdr_LASTMODDATE_OK" isValid="TRUE">
-          <path>valid/mets-xml_metsHdr_LASTMODDATE_OK</path>
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, and has mets/metsHdr/@LASTMODDATE = "2020-12-12T12:00:00".
           </description>
@@ -55,8 +55,8 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_LASTMODDATE_in_future" isValid="FALSE">
-          <path>mets-xml_metsHdr_LASTMODDATE_in_future</path>
+        <package name="metsHdr_LASTMODDATE_in_future" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/metsHdr_LASTMODDATE_in_future</path>
           <description>
             METS.xml file has mets/metsHdr/@LASTMODDATE = "2038-01-18T12:00:00".
             <!-- Creating a static file that includes a date in the future is
@@ -71,8 +71,8 @@
               Thus, it seems reasonable to set the date at 2038-01-18. -->
           </description>
         </package>
-        <package name="mets-xml_metsHdr_LASTMODDATE_OK" isValid="TRUE">
-          <path>valid/mets-xml_metsHdr_LASTMODDATE_OK</path>
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, and has mets/metsHdr/@LASTMODDATE = "2020-12-12T12:00:00".
           </description>
