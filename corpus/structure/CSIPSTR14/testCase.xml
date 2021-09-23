@@ -1,0 +1,54 @@
+<!-- Root element for an individual test case, allows these to be wrapped into
+XML lists -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIPSTR14"/>
+  <references>
+    <reference requirementId="CSIPSTR14" URL="http://earkcsip.dilcis.eu/#CSIPSTR14" />
+  </references>
+  <requirementText>The Information Package MAY be extended with additional sub-folders.</requirementText>
+  <description>
+      The Information Package folder and representation folder CAN be extended with additional sub-folders:
+  </description>
+  <dependencies>
+    <dependency requirementId="CSIPSTR10" URL="https://earkcsip.dilcis.eu/#CSIPSTR10" />
+  </dependencies>
+  <rules>
+    <rule id="1">
+      <description>The representation folder has an additional folder</description>
+      <error level="INFO">
+        <message>
+		Additional sub-folder found in representation folder
+		</message>
+		</error>
+        <corpusPackages>
+		    <package name="representation_folder_has_additional_folder" isValid="TRUE">
+		        <path>pass\representation_folder_has_additional_folder</path>
+		        <description>Positive testcase. The representation folder has additional folder</description>
+		    </package>
+		    <package name="IP_folder_and_rep_folder_have_additional_folder" isValid="TRUE">
+		        <path>pass\IP_folder_and_rep_folder_have_additional_folder</path>
+		        <description>The IP folder and representation folder have additional folders</description>
+		    </package>
+        </corpusPackages>
+    </rule>
+	<rule id="2">
+        <description>The IP folder has an additional folder</description>
+        <error level="INFO">
+            <message>
+		    Additional sub-folder found in Information Package folder
+		    </message>
+       </error>
+	   <corpusPackages>
+		    <package name="IP_folder_has_additional_folder" isValid="TRUE">
+		        <path>pass\IP_folder_has_additional_folder</path>
+		        <description>Positive testcase. The IP has additional folder</description>
+		    </package>
+		    <package name="IP_folder_and_rep_folder_have_additional_folder" isValid="TRUE">
+		        <path>pass\IP_folder_and_rep_folder_have_additional_folder</path>
+		        <description>The IP folder and representation folder have additional folders</description>
+		    </package>
+        </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
