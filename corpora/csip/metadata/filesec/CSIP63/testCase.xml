@@ -39,7 +39,7 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_fileGrp-CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_not_exist" isValid="FALSE">
+        <package name="CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_not_exist" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/mets-xml_fileGrp-CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_not_exist</path>
           <description>
             METS.xml file where:
@@ -47,8 +47,8 @@
             - mets/fileSec/fileGrp/@csip:OTHERCONTENTINFORMATIONTYPE attribute does not exist.
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_mets_fileGrp-CONTENTINFORMATIONTYPE_OTHER" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_rep_mets_fileGrp-CONTENTINFORMATIONTYPE_OTHER</path>
+        <package name="valid_IP_with_SHOULD_MAY_1" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/fileSec/fileGrp/@csip:OTHERCONTENTINFORMATIONTYPE = "Custom CITS".
           </description>
@@ -63,16 +63,16 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_fileGrp-CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_no_value" isValid="FALSE">
-          <path>invalid/mets-xml_fileGrp-CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_no_value</path>
+        <package name="CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_no_value" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_no_value</path>
           <description>
             METS.xml file where:
             - mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE = "OTHER",
             - mets/fileSec/fileGrp/@csip:OTHERCONTENTINFORMATIONTYPE = "".
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_mets_fileGrp-CONTENTINFORMATIONTYPE_OTHER" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_rep_mets_fileGrp-CONTENTINFORMATIONTYPE_OTHER</path>
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/fileSec/fileGrp/@csip:OTHERCONTENTINFORMATIONTYPE = "Custom CITS".
           </description>
@@ -92,14 +92,14 @@
           value, as this is the only certain way to test that the validator
           checks for all of them. This should be automated as
           VocabularyContentInformationTypeSpecification currently allows 7 different values. -->
-        <package name="mets-xml_fileGrp-CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_vocabulary_1" isValid="FALSE">
-          <path>invalid/mets-xml_fileGrp-CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_vocabulary_1</path>
+        <package name="CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_vocabulary_1" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_vocabulary_1</path>
           <description>
             METS.xml file has mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/fileSec/fileGrp/@csip:OTHERCONTENTINFORMATIONTYPE = "ERMS".
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_mets_fileGrp-CONTENTINFORMATIONTYPE_OTHER" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_rep_mets_fileGrp-CONTENTINFORMATIONTYPE_OTHER</path>
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/fileSec/fileGrp/@csip:OTHERCONTENTINFORMATIONTYPE = "Custom CITS".
           </description>
@@ -115,14 +115,14 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_fileGrp-CONTENTINFORMATIONTYPE_not_OTHER_and_OTHERCONTENTINFORMATIONTYPE_exists" isValid="FALSE">
-          <path>invalid/mets-xml_fileGrp-CONTENTINFORMATIONTYPE_not_OTHER_and_OTHERCONTENTINFORMATIONTYPE_exists</path>
+        <package name="CONTENTINFORMATIONTYPE_not_OTHER_and_OTHERCONTENTINFORMATIONTYPE_exists" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/CONTENTINFORMATIONTYPE_not_OTHER_and_OTHERCONTENTINFORMATIONTYPE_exists</path>
           <description>
             METS.xml file has mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE = "ERMS" and mets/fileSec/fileGrp/@csip:OTHERCONTENTINFORMATIONTYPE = "Custom CITS".
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_mets_fileGrp-CONTENTINFORMATIONTYPE_OTHER" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_rep_mets_fileGrp-CONTENTINFORMATIONTYPE_OTHER</path>
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/fileSec/fileGrp/@csip:OTHERCONTENTINFORMATIONTYPE = "Custom CITS".
           </description>
