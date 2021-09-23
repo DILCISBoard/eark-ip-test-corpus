@@ -40,14 +40,15 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_fileGrp_USE_not_exist" isValid="FALSE">
-          <path>invalid/mets-xml_fileGrp_USE_not_exist</path>
+        <package name="fileGrp_USE_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/fileGrp_USE_not_exist</path>
           <description>
             METS.xml file has a mets/fileSec/fileGrp with no mets/fileSec/fileGrp/@USE attribute.
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_plus_mets-xml_SHOULD_items" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_rep_plus_mets-xml_SHOULD_items</path>
+        <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_IP_with_1_representation
+		  </path>
           <description>
             Minimal IP that matches all MUST requirements, plus all SHOULD requirements (both for elements and attributes), incl.:
             - the folder "documentation" exists (CSIPSTR16)
@@ -64,8 +65,8 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_fileGrp_USE_vocabulary_mismatch" isValid="FALSE">
-          <path>invalid/mets-xml_fileGrp_USE_vocabulary_mismatch</path>
+        <package name="fileGrp_USE_vocabulary_mismatch" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/fileGrp_USE_vocabulary_mismatch</path>
           <description>
             METS.xml file has mets/fileSec/fileGrp/@USE = "random_string_e2368caa08a1cbbe2e8d5b96ab34a41e".
           </description>
@@ -75,8 +76,8 @@
               accepts any one of them. This should be automated as
               VocabularyFileGrpAndStructMapDivisionLabel currently allows 4
               different values. -->
-        <package name="minimal_IP_with_1_rep_plus_mets-xml_SHOULD_items" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_rep_plus_mets-xml_SHOULD_items</path>
+        <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements, plus all SHOULD requirements (both for elements and attributes), incl.:
             - the folder "documentation" exists (CSIPSTR16)
@@ -94,8 +95,8 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_fileGrp_USE_folder_mismatch" isValid="FALSE">
-          <path>invalid/mets-xml_fileGrp_USE_folder_mismatch</path>
+        <package name="fileGrp_USE_folder_mismatch" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/fileGrp_USE_folder_mismatch</path>
           <description>
             METS.xml file where:
             - mets/fileSec/fileGrp/@USE = "Representations/random_string_96ab34a41e".
@@ -105,8 +106,8 @@
             begins with a value from the vocabulary).
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_plus_mets-xml_SHOULD_items" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_rep_plus_mets-xml_SHOULD_items</path>
+        <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements, plus all SHOULD requirements (both for elements and attributes), incl.:
             - the folder "documentation" exists (CSIPSTR16)
