@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<archiveIndex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sa.dk/xmlns/diark/1.0" xsi:schemaLocation="http://www.sa.dk/xmlns/diark/1.0 ../Schemas/standard/archiveIndex.xsd">
+	<archiveInformationPackageID>AVID.SA.18003</archiveInformationPackageID>
+	<archivePeriodStart>1996-07-01</archivePeriodStart>
+	<archivePeriodEnd>1998-05-05</archivePeriodEnd>
+	<archiveInformationPacketType>false</archiveInformationPacketType>
+	<archiveCreatorList>
+		<creatorName>Northwind Traders</creatorName>
+		<creationPeriodStart>1996-07-01</creationPeriodStart>
+		<creationPeriodEnd>1998-05-05</creationPeriodEnd>
+	</archiveCreatorList>
+	<archiveType>true</archiveType>
+	<systemName>Northwind database</systemName>
+	<systemPurpose>Formålet for Northwind databasen er at være en eksempeldabase for Microsoft</systemPurpose>
+	<systemContent>Northwind databasen er en eksempeldatabase fra Microsoft, der, skal gengive at indeholde data fra et firma kaldet Northwind Traders, hvis virke består i at importere og eksportere specielle fødevarer rundt omkring i verden.  </systemContent>
+	<regionNum>false</regionNum>
+	<komNum>false</komNum>
+	<cprNum>false</cprNum>
+	<cvrNum>false</cvrNum>
+	<matrikNum>false</matrikNum>
+	<bbrNum>false</bbrNum>
+	<whoSygKod>false</whoSygKod>
+	<form> <!-- følgende FORM klassifikation kan selvfølgelig kun gælde myndigheder, følgende informationer er derfor dummy-tekst-->
+		<formVersion>2.0</formVersion>
+		<classList>
+			<formClass>60.30.05.UD</formClass>
+			<formClassText>Sagsadministration</formClassText>
+			<formClass>10.30.UD</formClass>
+			<formClassText>Forskning</formClassText>
+		</classList>
+	</form>
+	<containsDigitalDocuments>true</containsDigitalDocuments>   <containsGeodata>false</containsGeodata>   <containsResearchData>false</containsResearchData>   <researchSIP>false</researchSIP>   <documentsDisposal>false</documentsDisposal>   
+	<searchRelatedOtherRecords>false</searchRelatedOtherRecords>
+	<systemFileConcept>false</systemFileConcept>
+	<multipleDataCollection>false</multipleDataCollection>
+	<personalDataRestrictedInfo>false</personalDataRestrictedInfo>
+	<otherAccessTypeRestrictions>false</otherAccessTypeRestrictions>
+	<archiveApproval>SA</archiveApproval>
+	<archiveRestrictions>
+            </archiveRestrictions>
+</archiveIndex>
