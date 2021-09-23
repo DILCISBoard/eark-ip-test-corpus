@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.3" requirementId="CSIP6"/>
+  <id specification="CSIP" version="2.0.4" requirementId="CSIP6"/>
   <references>
     <reference requirementId="CSIP6" URL="http://earkcsip.dilcis.eu/#CSIP6"/>
   </references>
