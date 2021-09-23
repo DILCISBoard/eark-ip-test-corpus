@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<submissionAgreement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sa.dk/xmlns/diark/1.0" xsi:schemaLocation="http://www.sa.dk/xmlns/diark/1.0 ../Schemas/submission_agreement.xsd">
+    <InformationPackageID>IP_18006_SIARD2_1Rep_externallobs</InformationPackageID>
+    <InformationPackagedmd>Northwind database</InformationPackagedmd>
+    <InformationPackageContent> The Northwind database is a sample database used by Microsoft to demonstrate the features of some of its products, including SQL Server and Microsoft Access. 
+        The database contains the sales data for Northwind Traders, a fictitious specialty foods exportimport company. </InformationPackageContent>
+    <archivePeriodStart>1996-07-01</archivePeriodStart>
+    <archivePeriodEnd>1998-05-05</archivePeriodEnd>
+    <archiveCreatorList>
+        <creatorName>Microsoft</creatorName>
+        <creationPeriodStart>1996-07-01</creationPeriodStart>
+        <creationPeriodEnd>1998-05-05</creationPeriodEnd>
+    </archiveCreatorList>
+    <containsLOBs>true</containsLOBs>
+    <personalDataRestrictedInfo>false</personalDataRestrictedInfo>
+    <otherAccessTypeRestrictions>false</otherAccessTypeRestrictions>
+    <archiveApproval>SA</archiveApproval>
+    <archiveRestrictions>none</archiveRestrictions>
+</submissionAgreement>
+
