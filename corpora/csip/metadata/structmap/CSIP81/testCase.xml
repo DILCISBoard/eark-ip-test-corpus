@@ -9,7 +9,7 @@ XML lists -->
         <reference requirementId="CSIP81" URL="http://earkcsip.dilcis.eu/#CSIP81"/>
     </references>
     <!-- The full text of the requirement. -->
-    <requirementText>The type attribute of the structural map (structMap) is set to value “PHYSICAL” from the vocabualry.
+    <requirementText>The type attribute of the structural map (structMap) is set to value “PHYSICAL” from the vocabulary.
     </requirementText>
     <!-- Textual description of the test case, extra notes beyond the requirment text. -->
     <description>
@@ -28,13 +28,13 @@ XML lists -->
             </error>
             <corpusPackages>
                 <!-- Details of corpus packages designed to test this validation rule. -->
-                <package name="IP_missing_type_attribute" isValid="FALSE">
+                <package name="IP_missing_type_attribute" isValid="FALSE" isImplemented="TRUE">
                     <path>invalid/IP_missing_type_attribute</path>
                     <!-- Full description of corpus package features. -->
                     <description>IP with missing structMap/@TYPE attribute</description>
                 </package>
-                <package isValid="TRUE" name="minimal_IP_with_schemas">
-                    <path>valid/minimal_IP_with_schemas</path>
+                <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+                    <path>valid/minimal_IP_with_1_representation</path>
                     <description>Minimal IP</description>
                 </package>
                 
@@ -49,13 +49,13 @@ XML lists -->
             </error>
             <corpusPackages>
                 <!-- Details of corpus packages designed to test this validation rule. -->
-                <package name="IP_wrong_TYPE_attribute_value" isValid="FALSE">
+                <package name="IP_wrong_TYPE_attribute_value" isValid="FALSE" isImplemented="TRUE">
                     <path>invalid/IP_wrong_TYPE_attribute_value</path>
                     <!-- Full description of corpus package features. -->
                     <description> structMap/@TYPE value is "ELSE"</description>
                 </package>
-                <package isValid="TRUE" name="minimal_IP_with_schemas">
-                    <path>valid/minimal_IP_with_schemas</path>
+                <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+                    <path>valid/minimal_IP_with_1_representation</path>
                     <description>Minimal IP</description>
                 </package>
              </corpusPackages>
