@@ -70,7 +70,8 @@
   <xs:element name="requirementText">
     <xs:complexType mixed="true">
       <xs:sequence>
-        <xs:element name="nameAndLocation" type="xs:string" minOccurs="0"/>
+        <xs:element name="name" type="xs:string" minOccurs="0"/>
+        <xs:element name="location" type="xs:string" minOccurs="0"/>
         <xs:element name="description" type="xs:string" minOccurs="0"/>
         <xs:element name="cardinality" minOccurs="0">
           <xs:simpleType>
@@ -180,10 +181,10 @@
       <xs:attribute name="isValid" use="required">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-          The isValid attribute should be set TRUE for corpus packages that
-          shouldn't generate any validation messages, including WARNING or INFO
-          messages. The attribute is inappropriately named but changing it would
-          break too many existing test cases.
+            The isValid attribute should be set TRUE for corpus packages that
+            shouldn't generate any validation messages, including WARNING or INFO
+            messages. The attribute is inappropriately named but changing it would
+            break too many existing test cases.
           </xs:documentation>
         </xs:annotation>
         <xs:simpleType>
