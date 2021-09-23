@@ -1,30 +1,29 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.0-DRAFT" requirementId="CSIP1" />
+  <id specification="CSIP" version="2.0.4" requirementId="CSIP1" />
   <references>
     <reference requirementId="CSIP1" URL="http://earkcsip.dilcis.eu#CSIP1" />
   </references>
   <requirementText>
-    <nameAndLocation>
-      Content Identification
-      `mets/@OBJID`
-    </nameAndLocation>
+    <name>Package Identifier</name>
+    <location>mets/@OBJID</location>
     <description>
-      It is mandatory to use a content ID which is expressed with @OBJID. The value should be the same as the name or ID of the package (the name of the root folder) for the root METS document or the name and folder name for the representation. The OBJID must meet the principle of being unique at least across the repository.
+      The mets/@OBJID attribute is mandatory, its value is a string identifier for the METS document. For the package METS document, this should be the name/ID of the package, i.e. the name of the package root folder.
+For a representation level METS document this value records the name/ID of the representation, i.e. the name of the top-level representation folder.
     </description>
     <cardinality>1..1</cardinality>
     <level>MUST</level>
   </requirementText>
   <description>
-    @OBJID MUST be present.
-    @OBJID MUST have a non-empty value.
-    @OBJID SHOULD be:
-    a) For the METS document in the root folder, @OBJID SHOULD be equal to the package ID (i.e. the name of the root folder);
-    b) For a METS document in a representation folder, @OBJID SHOULD be equal to the representation ID (i.e. the name of the representation folder).
+    mets/@OBJID MUST exist.
+    mets/@OBJID MUST have a non-empty value.
+    mets/@OBJID SHOULD be:
+    a) For the package METS document, @OBJID SHOULD be equal to the name/ID of the package, i.e. the name of the package root folder;
+    b) For a representation level METS document, @OBJID SHOULD be equal to the name/ID of the representation, i.e. the name of the representation folder.
   </description>
   <dependencies />
   <rules>
     <rule id="1">
-      <description>@OBJID MUST be present (CSIP1).</description>
+      <description>mets/@OBJID MUST exist.</description>
       <error level="ERROR">
         <message>
           mets/@OBJID attribute does not exist. MUST be: attribute exists and has a value.
@@ -34,19 +33,19 @@
         <package name="mets-xml_mets_OBJID_attribute_not_exist" isValid="FALSE">
           <path></path>
           <description>
-            METS.xml file with no mets/@OBJID attribute.
+            METS.xml file has no mets/@OBJID attribute.
           </description>
         </package>
-        <package name="valid_minimal" isValid="TRUE">
+        <package name="minimal_IP_with_1_representation" isValid="TRUE">
           <path></path>
           <description>
-            Minimal folder structure and root METS.xml file, nothing optional included.
+            Minimal IP that matches all MUST requirements.
           </description>
         </package>
       </corpusPackages>
     </rule>
     <rule id="2">
-      <description>@OBJID MUST have a non-empty value (CSIP1).</description>
+      <description>mets/@OBJID MUST have a non-empty value.</description>
       <error level="ERROR">
         <message>
           mets/@OBJID attribute value is empty. MUST be: attribute exists and has a value.
@@ -56,24 +55,24 @@
         <package name="mets-xml_mets_OBJID_attribute_value_empty" isValid="FALSE">
           <path></path>
           <description>
-            METS.xml file with mets/@OBJID = "".
+            METS.xml file has mets/@OBJID = "".
           </description>
         </package>
-        <package name="valid_minimal" isValid="TRUE">
+        <package name="minimal_IP_with_1_representation" isValid="TRUE">
           <path></path>
           <description>
-            Minimal folder structure and root METS.xml file, nothing optional included.
+            Minimal IP that matches all MUST requirements.
           </description>
         </package>
       </corpusPackages>
     </rule>
     <rule id="3">
       <description>
-        If he METS document is in the root folder, @OBJID SHOULD be equal to the package ID (i.e. the name of the root folder).
+        If the METS document is in the root folder, mets/@OBJID SHOULD be equal to the package ID (i.e. the name of the root folder).
       </description>
       <error level="WARNING">
         <message>
-          mets/@OBJID attribute value not equal to the proper ID. SHOULD be: @OBJID is equal to the package ID.
+          mets/@OBJID attribute value not equal to the proper ID. SHOULD be: mets/@OBJID is equal to the package ID.
         </message>
       </error>
       <corpusPackages>
@@ -84,27 +83,21 @@
             The METS.xml file has mets/@OBJID not equal to root folder name.
           </description>
         </package>
-        <package name="valid_minimal" isValid="TRUE">
+        <package name="minimal_IP_with_1_representation" isValid="TRUE">
           <path></path>
           <description>
-            Minimal folder structure and root METS.xml file, nothing optional included.
-          </description>
-        </package>
-        <package name="valid_minimal_with_one_representation" isValid="TRUE">
-          <path></path>
-          <description>
-            Minimal folder structure and root METS.xml file; one representation with minimal METS.xml file.
+            Minimal IP that matches all MUST requirements.
           </description>
         </package>
       </corpusPackages>
     </rule>
     <rule id="4">
       <description>
-       If the METS document is in a representation folder, @OBJID SHOULD be equal to the representation ID (i.e. the name of the representation folder).
+       If the METS document is in a representation folder, mets/@OBJID SHOULD be equal to the representation ID (i.e. the name of the representation folder).
       </description>
       <error level="WARNING">
         <message>
-          mets/@OBJID attribute value not equal to the proper ID. SHOULD be: @OBJID is equal to the representation ID.
+          mets/@OBJID attribute value not equal to the proper ID. SHOULD be: mets/@OBJID is equal to the representation ID.
         </message>
       </error>
       <corpusPackages>
@@ -118,7 +111,7 @@
         <package name="valid_minimal_with_one_representation" isValid="TRUE">
           <path></path>
           <description>
-            Minimal folder structure and root METS.xml file; one representation with minimal METS.xml file.
+            Minimal IP that matches all MUST requirements.
           </description>
         </package>
       </corpusPackages>
