@@ -1,0 +1,72 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
+  testable="TRUE">
+    <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP101"/>
+    <references>
+    <reference requirementId="CSIP101" URL="https://earkcsip.dilcis.eu/#CSIP101"/>
+  </references>
+  <requirementText>
+    <name>Content division</name>
+    <location>mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Representations']</location>
+    <description>
+      When no representations are present the content referenced in the file section file group with @USE attribute value "Representations" is described in the structural map as a single sub division.
+    </description>
+    <cardinality>0..1</cardinality>
+    <level>SHOULD</level>
+  </requirementText>
+  <description>
+    A warning is thrown if there is no div-element with the
+    @LABEL='Representations' nested in the div-element with the
+    @LABEL='CSIP', and an error is thrown if there are more than one
+    div-element with the @LABEL='Representations' nested in the
+    div-element with the @LABEL='CSIP'.
+    
+    Note the difference:
+    - CSIP101 and CSIP103 apply to IPs with no representations and have
+    div/@LABEL='Representations'.
+    - CSIP105 and CSIP107 apply to IPs with
+    one or more representations and have
+    div/@LABEL='Representations/rep_folder_name'.
+  </description>
+  <dependencies>
+    <dependency requirementId="CSIP103" URL="https://earkcsip.dilcis.eu/#CSIP103"/>
+  </dependencies>
+  <rules>
+    <rule id="1">
+      <description>There SHOULD be a div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</description>
+        <!-- Ideally, this warning should be given only if no representations are
+        present but there is no explicit way to determine that. Indirect
+        indicators (e.g. the lack of files in /representations folder, lack of a
+        representation METS file) would have to be used, leaving the potential for
+        both false negatives and false positives. -->
+      <error level="WARNING">
+        <message>There SHOULD be a div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="no_div_label_Representations">
+          <path>invalid\no_div_label_Representations</path>
+          <description>There is no div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP">
+          <path>valid\minimal_IP</path>
+          <description>Minimal IP</description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>There MUST be maximum one div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</description>
+      <error level="ERROR">
+        <message>There MUST be maximum one div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="two_div_elements_with_label_metadata">
+          <path>invalid\two_div_elements_with_label_Representations</path>
+          <description>Package with two div-elements with @LABEL='Representations'</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP">
+          <path>valid\minimal_IP</path>
+          <description>Minimal IP</description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>

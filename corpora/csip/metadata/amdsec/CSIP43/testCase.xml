@@ -1,0 +1,56 @@
+<!-- Root element for an individual test case, allows these to be wrapped into
+XML lists -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
+  testable="TRUE">
+  <!-- Unique ID for the test case -->
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP43"/>
+  <!-- URL references to requirements for convenient lookup -->
+  <references>
+    <reference requirementId="CSIP43" URL="http://earkcsip.dilcis.eu/#CSIP43"/>
+  </references>
+  <!-- The full text of the requirement. -->
+  <requirementText>The checksum of the linked file.
+</requirementText>
+  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
+  <description>The CHECKSUM-attribute is optional in the METS.xsd but mandatory in CSIP43</description>
+  <!-- List of requirments that this test case depends on in addition to the
+  main requirememt, e.g. general requirments on the form of IDs -->
+  <dependencies>
+    <dependency requirementId="CSIP44" URL="http://earkcsip.dilcis.eu/#CSIP44"></dependency>
+  </dependencies>
+  <!-- A list of the validation rules derived from the test case -->
+  <rules>
+    <rule id="1">
+      <description>There MUST exist a CHECKSUM-attribute</description>
+      <error level="ERROR">
+        <message>There MUST exist a CHECKSUM-attribute</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="mdrRef_missing_CHECKSUM_attribute">
+          <path>invalid/mdrRef_missing_CHECKSUM_attribute</path>
+          <description>A package where the CHECKSUM-attribute is missing</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP_with_schemas">
+          <path>valid/minimal_IP_with_schemas</path>
+          <description>Minimal IP</description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>The checksum information MUST be the same as the actual checksum value for the file. Note that calculation need to be done by also taking in what CHECKSUMTYPE is given in CSIP45</description>
+      <error level="ERROR">
+        <message>The checksum value for the file is not identical with the checksum value that is given</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="mdRef_wrong_CHECKUM_value">
+          <path>invalid/mdRef_wrong_CHECKUM_value</path>
+          <description></description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP_with_schemas">
+          <path>valid/minimal_IP_with_schemas</path>
+          <description>Minimal IP</description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>

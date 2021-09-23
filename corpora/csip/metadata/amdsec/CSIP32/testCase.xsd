@@ -23,7 +23,7 @@
       </xs:attribute>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="id">
     <xs:complexType>
       <xs:attribute name="requirementId" use="required" type="xs:NCName"/>
@@ -31,7 +31,7 @@
       <xs:attribute name="version" use="required" type="xs:NMTOKEN"/>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="references">
     <xs:complexType>
       <xs:sequence>
@@ -66,7 +66,7 @@
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="requirementText">
     <xs:complexType mixed="true">
       <xs:sequence>
@@ -95,7 +95,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="dependencies">
     <xs:complexType>
       <xs:sequence>
@@ -130,7 +130,7 @@
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
-  
+
   <xs:element name="rules">
     <xs:complexType>
       <xs:sequence>

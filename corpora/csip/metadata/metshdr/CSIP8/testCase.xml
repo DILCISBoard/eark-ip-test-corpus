@@ -1,0 +1,83 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="CSIP" version="2.0.4" requirementId="CSIP8"/>
+  <references>
+    <reference requirementId="CSIP8" URL="http://earkcsip.dilcis.eu/#CSIP8"/>
+  </references>
+  <requirementText>
+    <name>Package last modification date</name>
+    <location>mets/metsHdr/@LASTMODDATE</location>
+    <description>
+      Is mandatory when the package has been modified.
+    </description>
+    <cardinality>0..1</cardinality>
+    <level>SHOULD</level>
+  </requirementText>
+  <description>
+    If the package has been modified, mets/metsHdr/@LASTMODDATE MUST exist.
+    If mets/metsHdr/@LASTMODDATE exists, it MUST have a value that is a date.
+    If mets/metsHdr/@LASTMODDATE exists, its value MUST be the actual date the package was modified.
+    If mets/metsHdr/@LASTMODDATE exists, its value MUST be a date not in the future.
+  </description>
+  <dependencies />
+  <rules>
+    <rule id="1">
+      <description>If the package has been modified, mets/metsHdr/@LASTMODDATE MUST exist.</description>
+      <error level="WARNING">
+        <message>
+          mets/metsHdr/@LASTMODDATE attribute does not exist. SHOULD be: If the package has been modified, the attribute MUST exist and have a value that is a date in the format of xsd:dateTime.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets-xml_metsHdr_LASTMODDATE_not_exist" isValid="FALSE">
+          <path>mets-xml_metsHdr_LASTMODDATE_not_exist</path>
+          <description>
+            METS.xml file has no mets/metsHdr/@LASTMODDATE attribute.
+          </description>
+        </package>
+        <package name="mets-xml_metsHdr_LASTMODDATE_OK" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_LASTMODDATE_OK</path>
+          <description>
+            Minimal IP that matches all MUST requirements, and has mets/metsHdr/@LASTMODDATE = "2020-12-12T12:00:00".
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <!--    Requirement "mets/metsHdr/@LASTMODDATE MUST have a value that is a
+            date" is tested for using XML Schema validation as mets.xsd defines
+            the attribute as type="xsd:dateTime". -->
+    <!--    Requirement "mets/metsHdr/@LASTMODDATE value MUST be the actual date
+            the package was created" is impossible to validate automatically -->
+    <rule id="2">
+      <description>If mets/metsHdr/@LASTMODDATE exists, its value MUST be a date not in the future.</description>
+      <error level="ERROR">
+        <message>
+          mets/metsHdr/@LASTMODDATE value is a date in the future. SHOULD be: If the package has been modified, the value MUST indicate the date of last modification, which cannot be in the future.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets-xml_metsHdr_LASTMODDATE_in_future" isValid="FALSE">
+          <path>mets-xml_metsHdr_LASTMODDATE_in_future</path>
+          <description>
+            METS.xml file has mets/metsHdr/@LASTMODDATE = "2038-01-18T12:00:00".
+            <!-- Creating a static file that includes a date in the future is
+              problematic, as the passage of time will at one point break
+              it. The obvious solution is to put the date as far as possible,
+              but this introduces potential errors from time processing bugs
+              in different data structures and algorithms. Out of a variety of
+              these (see
+              https://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs),
+              as of 2020-12-12, the most relevant seems to be the Unix 2038
+              problem (see https://en.wikipedia.org/wiki/Year_2038_problem).
+              Thus, it seems reasonable to set the date at 2038-01-18. -->
+          </description>
+        </package>
+        <package name="mets-xml_metsHdr_LASTMODDATE_OK" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_LASTMODDATE_OK</path>
+          <description>
+            Minimal IP that matches all MUST requirements, and has mets/metsHdr/@LASTMODDATE = "2020-12-12T12:00:00".
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>

@@ -1,0 +1,39 @@
+<!-- Root element for an individual test case, allows these to be wrapped into
+XML lists -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
+  testable="TRUE">
+  <!-- Unique ID for the test case -->
+  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP44"/>
+  <!-- URL references to requirements for convenient lookup -->
+  <references>
+    <reference requirementId="CSIP44" URL="http://earkcsip.dilcis.eu/#CSIP44"/>
+  </references>
+  <!-- The full text of the requirement. -->
+  <requirementText>The type of checksum following the value list present in the METS-standard which has been used for calculating the checksum for the referenced file.
+</requirementText>
+  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
+  <description>The CHECKSUMTYPE-attribute is optional in the METS.xsd but mandatory in CSIP44. There is a value list given in the METS.xsd and CSIP44 refers to this so no need to to add extra tests/rules for this</description>
+  <!-- List of requirments that this test case depends on in addition to the
+  main requirememt, e.g. general requirments on the form of IDs -->
+  <dependencies>
+  </dependencies>
+  <!-- A list of the validation rules derived from the test case -->
+  <rules>
+    <rule id="1">
+      <description>There MUST exist a CHECKSUMTYPE-attribute</description>
+      <error level="ERROR">
+        <message>There MUST exist a CHECKSUMTYPE-attribute</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="medRef_CHECKSUMTYPE_attribute_missing">
+          <path>invalid/medRef_CHECKSUMTYPE_attribute_missing</path>
+          <description>A package where the CHECKSUMTYPE-attribute is missing</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP_with_schemas">
+          <path>valid/minimal_IP_with_schemas</path>
+          <description>Minimal IP</description>
+        </package>      
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>

@@ -1,0 +1,57 @@
+<!-- Root element for an individual test case, allows these to be wrapped into
+XML lists -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
+  testable="TRUE">
+  <!-- Unique ID for the test case -->
+  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP47"/>
+  <!-- URL references to requirements for convenient lookup -->
+  <references>
+    <reference requirementId="CSIP47" URL="http://earkcsip.dilcis.eu/#CSIP47"/>
+  </references>
+  <!-- The full text of the requirement. -->
+  <requirementText>Indicates the status of the package using a fixed vocabulary.
+    See also: dmdSec status
+</requirementText>
+  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
+  <description>Status of the metadata. If used the two values “SUPERSEDED” or “CURRENT” from the vocabulary is used. 
+    The attribute is optionable via the METS schema and the METS standard, and there are no limits to the values in the attribute, so the CSIP tightens this</description>
+  <!-- List of requirments that this test case depends on in addition to the
+  main requirememt, e.g. general requirments on the form of IDs -->
+  <dependencies>
+  </dependencies>
+  <!-- A list of the validation rules derived from the test case -->
+  <rules>
+    <rule id="1">
+      <description>The status-attribute should exist</description>
+      <error level="WARNING">
+        <message>The rightsMD-element has no status-attribute.</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="IP_rightsMD_missing_status_attribute">
+          <path>invalid/IP_rightsMD_missing_status_attribute</path>
+          <description>The package has an amdSec-element with no status-attribute</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP">
+          <path>valid/minimal_IP</path>
+          <description></description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>The status-attribute for the amdSec-element should contain a value as taken from the vocubulary</description>
+      <error level="ERROR">
+        <message>The value is not found in the vocabulary</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="IP_rightsMD_status_attribute_wrong_value">
+          <path>invalid/IP_rightsMD_status_attribute_wrong_value</path>
+          <description>The package has an rightsMD-element with a status-attribute which holds the value "TEST"</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP">
+          <path>valid/minimal_IP</path>
+          <description></description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>

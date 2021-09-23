@@ -1,0 +1,114 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="CSIP" version="2.0.4" requirementId="CSIP4"/>
+  <references>
+    <reference requirementId="CSIP4" URL="https://earkcsip.dilcis.eu/#CSIP4"/>
+  </references>
+  <requirementText>
+    <name>Content Information Type Specification</name>
+    <location>mets/@csip:CONTENTINFORMATIONTYPE</location>
+    <description>
+      Used to declare the Content Information Type Specification used when creating the package. Legal values are defined in a fixed vocabulary. The attribute is mandatory for representation level METS documents. The vocabulary will evolve under the care of the DILCIS Board as additional Content Information Type Specifications are developed.
+      See also: Content information type specification, https://earkcsip.dilcis.eu/#VocabularyContentInformationTypeSpecification
+    </description>
+    <cardinality>0..1</cardinality>
+    <level>SHOULD</level>
+  </requirementText>
+  <description>
+    If the METS document is at the package level (i.e. in the root folder) then mets/@csip:CONTENTINFORMATIONTYPE SHOULD (i.e. is recommended to) exist.
+    If the METS document is at the representation level (i.e. in the /representations folder) then mets/@csip:CONTENTINFORMATIONTYPE MUST exist.
+    If mets/@csip:CONTENTINFORMATIONTYPE exists, it MUST have a value from the VocabularyContentInformationTypeSpecification as defined by DILCIS Board.
+    If mets/@csip:CONTENTINFORMATIONTYPE = "OTHER" then mets/@csip:OTHERCONTENTINFORMATIONTYPE MUST exist and have a value.
+    
+    Note: there is ambiguity around the case where an IP with one representation has only the root METS.xml (such a configuration is allowed by CSIP v.2.0.3). It could be said that such root METS.xml actually serves as representation METS.xml and thus mets/@csip:CONTENTINFORMATIONTYPE MUST exist. The interpretation here is that this is not the case, i.e. METS.xml is "representation level" only if it is located in /representations folder.
+  </description>
+  <dependencies>
+    <dependency requirementId="VocabularyContentInformationTypeSpecification" URL="https://earkcsip.dilcis.eu/schema/CSIPVocabularyContentInformationType.xml">
+      The value of the attribute MUST be from the vocabulary.
+    </dependency>
+  </dependencies>
+  <rules>
+    <rule id="1">
+      <description>
+        If the METS document is in the root folder, mets/@csip:CONTENTINFORMATIONTYPE SHOULD exist.
+      </description>
+      <error level="WARNING">
+        <message>
+          mets/@csip:CONTENTINFORMATIONTYPE attribute does not exist. SHOULD be: mets/@csip:CONTENTINFORMATIONTYPE exists and has a value from VocabularyContentInformationTypeSpecification.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="root_mets_file_mets_csip_CONTENTINFORMATIONTYPE_not_exist" isValid="FALSE">
+          <path>invalid/root_mets_file_mets_csip_CONTENTINFORMATIONTYPE_not_exist</path>
+          <description>
+            METS.xml file is located in the root folder.
+            The METS.xml file attribute mets/@csip:CONTENTINFORMATIONTYPE does not exist.
+          </description>
+        </package>
+        <!--  It seems most efficient to have one valid package for all SHOULD 
+              requirements - there are about 20 of them, so the alternative would
+              be to have 20 rule-specific valid packages. -->
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
+          <description>
+            Minimal IP that matches all MUST requirements, plus all SHOULD requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>
+        If the METS document is in the representations folder, mets/@csip:CONTENTINFORMATIONTYPE MUST exist.
+      </description>
+      <error level="ERROR">
+        <message>
+          mets/@csip:CONTENTINFORMATIONTYPE attribute does not exist. MUST be: mets/@csip:CONTENTINFORMATIONTYPE exists and has a value from VocabularyContentInformationTypeSpecification.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="rep_mets_file_mets_csip_CONTENTINFORMATIONTYPE_not_exist" isValid="FALSE">
+          <path>invalid/rep_mets_file_mets_csip_CONTENTINFORMATIONTYPE_not_exist</path>
+          <description>
+            METS.xml file is located in the /representations folder.
+            The METS.xml file attribute mets/@csip:CONTENTINFORMATIONTYPE does not exist.
+          </description>
+        </package>
+        <package name="minimal_IP_with_1_rep_rep_mets_file_exists" isValid="TRUE">
+          <path>valid/minimal_IP_with_1_rep_rep_mets_file_exists</path>
+          <description>
+            Minimal IP with 1 representation that matches all MUST requirements. Representation METS.xml exists and matches all MUST requirements.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="3">
+      <description>If mets/@csip:CONTENTINFORMATIONTYPE exists, it MUST have a value from the VocabularyContentInformationTypeSpecification as defined by DILCIS Board.</description>
+      <error level="ERROR">
+        <message>
+          mets/@csip:CONTENTINFORMATIONTYPE attribute has incorrect value. MUST be: mets/@csip:CONTENTINFORMATIONTYPE has a value from the VocabularyContentInformationTypeSpecification as defined by DILCIS.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets_csip_CONTENTINFORMATIONTYPE_value_incorrect" isValid="FALSE">
+          <path>invalid/mets_csip_CONTENTINFORMATIONTYPE_value_incorrect</path>
+          <description>
+            METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "random_string_du92Neib57zjMWren".
+          </description>
+        </package>
+        <!--  It seems most efficient to have one valid package for all SHOULD 
+              requirements - there are about 20 of them, so the alternative would
+              be to have 20 rule-specific valid packages. -->
+        <!--  Ideally, there should be a valid IP for each specific vocabulary 
+              value, as this is the only certain way to test that the validator 
+              accepts any one of them. This should be automated as 
+              VocabularyContentInformationTypeSpecification currently allows 7
+              different values. -->
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
+          <description>
+            Minimal IP that matches all MUST requirements, plus all SHOULD requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
