@@ -1,0 +1,27 @@
+<testCase>
+   <id specification="CSIP" version="2018-09-18" section="4.1" requirement="CSIPSTR7" />
+  <reference>https://github.com/DILCISBoard/E-ARK-CSIP/blob/master/specification/implementation/structure/index.md#CSIPSTR7
+  </reference>
+  <description>
+   If descriptive metadata are available, they SHOULD be included in sub-folder descriptive.
+  </description>
+  <dependencies/>
+  <rules>
+    <rule id="1">
+      <description>If descriptive metadata are available, they SHOULD be included in sub-folder descriptive.</description>
+      <error level="INFO">
+        <message>
+		Descriptive metadata described in METS.xml.
+		Sub-folder named "descriptive" found in the metadata folder.
+		Sub-folder "descriptive" contains following files:
+		</message>
+      </error>
+	   <corpusPackages>
+		  <package name="descriptive_metadata_added">
+		    <path>pass\descriptive_metadata_added</path>
+		    <description>Positive testcase. Descriptive metadata described in METS.xml. Sub-folder named "descriptive" included</description>
+		  </package>
+	  </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
