@@ -1,0 +1,84 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="SIP" version="2.0.4" requirementId="SIP3"/>
+  <references>
+    <reference requirementId="SIP3" URL="https://earksip.dilcis.eu/#SIP3"/>
+  </references>
+  <requirementText>
+    <name>Package status</name>
+    <location>metsHdr/@RECORDSTATUS</location>
+    <description>
+      A way of indicating the status of the package and to instruct the OAIS on how to properly handle the package. If not set, the expected behaviour is equal to NEW.
+      See also: Package status, https://earksip.dilcis.eu/#VocabularyRECORDSTATUS.
+    </description>
+    <cardinality>0..1</cardinality>
+    <level>MAY</level>
+  </requirementText>
+  <description>
+    metsHdr/@RECORDSTATUS MAY exist.
+    If metsHdr/@RECORDSTATUS exists then it MUST have a value from VocabularyRECORDSTATUS.
+  </description>
+    <dependencies>
+      <dependency requirementId="VocabularyRECORDSTATUS" URL="https://earksip.dilcis.eu/#VocabularyRECORDSTATUS">
+        http://earksip.dilcis.eu/schema/SIPVocabularyRecordStatus.xml
+      </dependency>
+    </dependencies>
+  <rules>
+    <rule id="1">
+      <description>metsHdr/@RECORDSTATUS MAY exist.</description>
+      <error level="INFO">
+        <message>
+          metsHdr/@RECORDSTATUS attribute does not exist. MAY be: metsHdr/@RECORDSTATUS exists and has a value from VocabularyRECORDSTATUS that instructs the OAIS on how to properly handle the package. Note: the attribute not being present is to be interpreted by the OAIS as metsHdr/@RECORDSTATUS = "NEW".
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="SIP_metsHdr_RECORDSTATUS_not_exist" isValid="FALSE">
+          <path>invalid/SIP_metsHdr_RECORDSTATUS_not_exist</path>
+          <description>
+            METS.xml file has no metsHdr/@RECORDSTATUS attribute.
+          </description>
+        </package>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+        <!--  It seems most efficient to have one valid package for all SHOULD
+              and MAY requirements - there are about 20 of them, so the 
+              alternative would be to have 20 rule-specific valid packages. -->
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
+          <description>
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>If metsHdr/@RECORDSTATUS exists then it MUST have a value from VocabularyRECORDSTATUS.</description>
+      <error level="INFO">
+        <message>
+          metsHdr/@RECORDSTATUS attribute has incorrect value. MUST be: if metsHdr/@RECORDSTATUS exists then it MUST have a value from VocabularyRECORDSTATUS.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="SIP_metsHdr_RECORDSTATUS_value_empty" isValid="FALSE">
+          <path>invalid/SIP_metsHdr_RECORDSTATUS_value_empty</path>
+          <description>
+            METS.xml file has metsHdr/@RECORDSTATUS = "".
+          </description>
+        </package>
+        <package name="SIP_metsHdr_RECORDSTATUS_incorrect" isValid="FALSE">
+          <path>invalid/SIP_metsHdr_RECORDSTATUS_incorrect</path>
+          <description>
+            METS.xml file has metsHdr/@RECORDSTATUS = "random_string_hEb1q84nv4P".
+          </description>
+        </package>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+        <!--  Ideally, there should be a valid IP for each specific vocabulary
+              value, as this is the only certain way to test that the validator
+              accepts any one of them. This should be automated as
+              VocabularyRECORDSTATUS currently allows 7 different values. -->
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
+          <description>
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
