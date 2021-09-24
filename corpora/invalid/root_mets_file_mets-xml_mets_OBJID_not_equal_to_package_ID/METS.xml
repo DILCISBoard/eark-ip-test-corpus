@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Minimal IP with one representation -->
+<!-- This file is designed to be compliant with CSIP v.2.0.3, 08.01.2020, https://earkcsip.dilcis.eu/ -->
+<!-- Note: the values of ID attributes are chosen to ease understanding, but they could be anything that satisfies the requirements of xml:ID and CSIP. -->
+
+<!-- CSIP1 mets/@OBJID - Package Identifier - [1..1] -->
+<!-- CSIP2 mets/@TYPE - Content Category - [1..1] -->
+<!-- CSIP6 mets/@PROFILE - METS Profile - [1..1] -->
+<!-- Section 5.3.1. - mets root element MUST define all relevant namespaces and locations of XML schemas using the @xmlns and @xsi:schemaLocation attributes. -->
+<mets 
+  xmlns="http://www.loc.gov/METS/" 
+  xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xsi:schemaLocation="
+    http://www.loc.gov/METS/ https://www.loc.gov/standards/mets/mets.xsd
+    https://DILCIS.eu/XML/METS/CSIPExtensionMETS http://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd
+    http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd"
+  OBJID="something_different_from_the_root_folder_name" 
+  TYPE="Mixed"  
+  PROFILE="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml">
+
+  <!-- CSIP117 mets/metsHdr - Package header - [1..1] -->
+  <!-- CSIP7   mets/metsHdr/@CREATEDATE - Package creation date - [1..1] -->
+  <!-- CSIP8   mets/metsHdr/@LASTMODDATE - Package last modification date - [0..1] -->
+  <!-- CSIP9   mets/metsHdr/@csip:OAISPACKAGETYPE - OAIS Package type information - [1..1] -->
+  <metsHdr CREATEDATE="2019-04-14T20:00:00" csip:OAISPACKAGETYPE="SIP">
+    <!-- CSIP10 mets/metsHdr/agent - Agent - [1..n] -->
+    <!-- CSIP11 mets/metsHdr/agent[@ROLE='CREATOR'] - Agent role - [1..1] -->
+    <!-- CSIP12 mets/metsHdr/agent[@TYPE='OTHER'] - Agent type - [1..1] -->
+    <!-- CSIP13 mets/metsHdr/agent[@OTHERTYPE='SOFTWARE'] - Agent other type - [1..1] -->
+    <agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
+      <!-- CSIP14 mets/metsHdr/agent/name - Agent name - [1..1] -->
+      <name>E-ARK Corpus Team</name>
+      <!-- CSIP15 mets/metsHdr/agent/note - Agent additional information - [1..1] -->
+      <!-- CSIP16 mets/metsHdr/agent/note[@csip:NOTETYPE='SOFTWARE VERSION'] - Classification of the agent additional information - [1..1] -->
+      <note csip:NOTETYPE="SOFTWARE VERSION">1.0</note>
+    </agent>
+  </metsHdr>
+
+  <!-- CSIP58 mets/fileSec - File section - [0..1], but its presence is strongly recommended -->
+  <!-- CSIP59 mets/fileSec/@ID - File section identifier - [1..1] -->
+  <fileSec ID="ID-root-mets-fileSec">
+    <!-- CSIP60 mets/fileSec/fileGrp[@USE='Documentation'] - Documentation file group - [1..n] -->
+    <!-- CSIP62 mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE - Content Information Type Specification - [0..1], but mandatory when @USE = "Representations." Note: the wording of CSIP62 is a bit unclear regarding mets/@TYPE = "Mixed," but the interpretation here is that the attribute is only mandatory when @USE = "Representations." -->
+    <!-- CSIP64 mets/fileSec/fileGrp/@USE - Description of the use of the file group - [1..1] -->
+    <!-- CSIP65 mets/fileSec/fileGrp/@ID - File group identifier [1..1] -->
+    <fileGrp USE="Documentation" ID="ID-root-mets-fileSec-fileGrp-Documentation">
+      <!-- CSIP66 mets/fileSec/fileGrp/file - File - [1..n] -->
+      <!-- CSIP67 mets/fileSec/fileGrp/file/@ID - File identifier - [1..1] -->
+      <!-- CSIP68 mets/fileSec/fileGrp/file/@MIMETYPE - File mimetype - [1..1] -->
+      <!-- CSIP69 mets/fileSec/fileGrp/file/@SIZE - File size - [1..1] -->
+      <!-- CSIP70 mets/fileSec/fileGrp/file/@CREATED - File creation date - [1..1] -->
+      <!-- CSIP71 mets/fileSec/fileGrp/file/@CHECKSUM - File checksum - [1..1] -->
+      <!-- CSIP72 mets/fileSec/fileGrp/file/@CHECKSUMTYPE - File checksum - [1..1] -->
+      <file ID="ID-root-mets-fileSec-fileGrp-Doc-file-doc1" MIMETYPE="text/plain" SIZE="40" CREATED="2020-04-15T15:32:18" CHECKSUM="f57dbbddf87f18043c2029d978749318" CHECKSUMTYPE="MD5">
+        <!-- CSIP76 mets/fileSec/fileGrp/file/FLocat - File locator reference - [1..1]-->
+        <!-- CSIP77 mets/fileSec/fileGrp/file/FLocat[@LOCTYPE='URL'] - Type of locator - [1..1] -->
+        <!-- CSIP78 mets/fileSec/fileGrp/file/FLocat[@xlink:type='simple'] - Type of link - [1..1] -->
+        <!-- CSIP79 mets/fileSec/fileGrp/file/FLocat/@xlink:href - Resource location - [1..1] -->
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/Doc1.txt" />
+      </file>
+    </fileGrp>
+    <!-- CSIP113 mets/fileSec/fileGrp[@USE='Schemas'] - Schemas file group - [1..n] -->
+    <!-- CSIP62  mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE - Content Information Type Specification - [0..1], but mandatory when @USE = "Representations." Note: the wording of CSIP62 is a bit unclear regarding mets/@TYPE = "Mixed," but the interpretation here is that the attribute is only mandatory when @USE = "Representations." -->
+    <!-- CSIP64  mets/fileSec/fileGrp/@USE - Description of the use of the file group - [1..1] -->
+    <!-- CSIP65  mets/fileSec/fileGrp/@ID - File group identifier [1..1] -->
+    <fileGrp USE="Schemas" ID="ID-root-mets-fileSec-fileGrp-Schemas">
+      <!-- CSIP66 mets/fileSec/fileGrp/file - File - [1..n] -->
+      <!-- CSIP67 mets/fileSec/fileGrp/file/@ID - File identifier - [1..1] -->
+      <!-- CSIP68 mets/fileSec/fileGrp/file/@MIMETYPE - File mimetype - [1..1] -->
+      <!-- CSIP69 mets/fileSec/fileGrp/file/@SIZE - File size - [1..1] -->
+      <!-- CSIP70 mets/fileSec/fileGrp/file/@CREATED - File creation date - [1..1] -->
+      <!-- CSIP71 mets/fileSec/fileGrp/file/@CHECKSUM - File checksum - [1..1] -->
+      <!-- CSIP72 mets/fileSec/fileGrp/file/@CHECKSUMTYPE - File checksum - [1..1] -->
+      <file ID="ID-root-mets-fileSec-fileGrp-Schemas-file-DILCISExtensionMETS-xsd" MIMETYPE="application/xml" SIZE="1633" CREATED="2020-01-08T00:00:00" CHECKSUM="e99c19b9ca1271c1d9bafed19c4bd50a" CHECKSUMTYPE="MD5">
+        <!-- CSIP76 mets/fileSec/fileGrp/file/FLocat - File locator reference - [1..1]-->
+        <!-- CSIP77 mets/fileSec/fileGrp/file/FLocat[@LOCTYPE='URL'] - Type of locator - [1..1] -->
+        <!-- CSIP78 mets/fileSec/fileGrp/file/FLocat[@xlink:type='simple'] - Type of link - [1..1] -->
+        <!-- CSIP79 mets/fileSec/fileGrp/file/FLocat/@xlink:href - Resource location - [1..1] -->
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/DILCISExtensionMETS.xsd" />
+      </file>
+      <file ID="ID-root-mets-fileSec-fileGrp-Schemas-file-METS-xsd" MIMETYPE="application/xml" SIZE="138326" CREATED="2019-10-31T00:00:00" CHECKSUM="7102b6ea435a3f0d8231d149818f2487" CHECKSUMTYPE="MD5">
+        <!-- CSIP76 mets/fileSec/fileGrp/file/FLocat - File locator reference - [1..1]-->
+        <!-- CSIP77 mets/fileSec/fileGrp/file/FLocat[@LOCTYPE='URL'] - Type of locator - [1..1] -->
+        <!-- CSIP78 mets/fileSec/fileGrp/file/FLocat[@xlink:type='simple'] - Type of link - [1..1] -->
+        <!-- CSIP79 mets/fileSec/fileGrp/file/FLocat/@xlink:href - Resource location - [1..1] -->
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/METS.xsd" />
+      </file>
+      <file ID="ID-root-mets-fileSec-fileGrp-Schemas-file-xlink-xsd" MIMETYPE="application/xml" SIZE="3180" CREATED="2004-11-15T00:00:00" CHECKSUM="6bdc7f9459a502964f889d70a335cece" CHECKSUMTYPE="MD5">
+        <!-- CSIP76 mets/fileSec/fileGrp/file/FLocat - File locator reference - [1..1]-->
+        <!-- CSIP77 mets/fileSec/fileGrp/file/FLocat[@LOCTYPE='URL'] - Type of locator - [1..1] -->
+        <!-- CSIP78 mets/fileSec/fileGrp/file/FLocat[@xlink:type='simple'] - Type of link - [1..1] -->
+        <!-- CSIP79 mets/fileSec/fileGrp/file/FLocat/@xlink:href - Resource location - [1..1] -->
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/xlink.xsd" />
+      </file>
+    </fileGrp>
+    <!-- CSIP114 mets/fileSec/fileGrp[@USE='Representations'] - Representations file group - [1..n] -->
+    <!-- CSIP62  mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE - Content Information Type Specification - [0..1], but mandatory when @USE = "Representations" -->
+    <!-- CSIP64  mets/fileSec/fileGrp/@USE - Description of the use of the file group - [1..1] -->
+    <!-- CSIP65  mets/fileSec/fileGrp/@ID - File group identifier [1..1] -->
+    <fileGrp csip:CONTENTINFORMATIONTYPE="MIXED" USE="Representations/rep1" ID="ID-root-mets-fileSec-fileGrp-Representations-rep1">
+      <!-- CSIP66 mets/fileSec/fileGrp/file - File - [1..n] -->
+      <!-- CSIP67 mets/fileSec/fileGrp/file/@ID - File identifier - [1..1] -->
+      <!-- CSIP68 mets/fileSec/fileGrp/file/@MIMETYPE - File mimetype - [1..1] -->
+      <!-- CSIP69 mets/fileSec/fileGrp/file/@SIZE - File size - [1..1] -->
+      <!-- CSIP70 mets/fileSec/fileGrp/file/@CREATED - File creation date - [1..1] -->
+      <!-- CSIP71 mets/fileSec/fileGrp/file/@CHECKSUM - File checksum - [1..1] -->
+      <!-- CSIP72 mets/fileSec/fileGrp/file/@CHECKSUMTYPE - File checksum - [1..1] -->
+      <file ID="ID-root-mets-fileSec-fileGrp-Representations-rep1-data-file1" MIMETYPE="text/plain" SIZE="12" CREATED="2019-04-12T18:40:24" CHECKSUM="a9308bde501cfd1d91ce4e5e861c8971" CHECKSUMTYPE="MD5">
+        <!-- CSIP76 mets/fileSec/fileGrp/file/FLocat - File locator reference - [1..1]-->
+        <!-- CSIP77 mets/fileSec/fileGrp/file/FLocat[@LOCTYPE='URL'] - Type of locator - [1..1] -->
+        <!-- CSIP78 mets/fileSec/fileGrp/file/FLocat[@xlink:type='simple'] - Type of link - [1..1] -->
+        <!-- CSIP79 mets/fileSec/fileGrp/file/FLocat/@xlink:href - Resource location - [1..1] -->
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/data/plain_text_document.txt" />
+      </file>
+    </fileGrp>
+  </fileSec>
+
+  <!-- CSIP80 mets/structMap - Structural description of the package - [1..n] -->
+  <!-- § 5.3.6. The internal structure of the structural map (expressed by div elements) follows the CSIP high level physical structure as described in Section 4, and groups metadata, representations, schemas, documentation and user-defined folders into discrete <div> elements -->
+  <!-- CSIP81 mets/structMap[@TYPE='PHYSICAL'] - [1..1] -->
+  <!-- CSIP82 mets/structMap[@LABEL='CSIP'] - Name of the structural description - [1..1] -->
+  <!-- CSIP83 mets/structMap[@LABEL='CSIP']/@ID - Structural description identifier - [1..1] -->
+  <structMap TYPE="PHYSICAL" LABEL="CSIP" ID="ID-root-mets-structMap">
+    <!-- CSIP84 mets/structMap[@LABEL='CSIP']/div - Main structural division - [1..1] -->
+    <!-- CSIP85 mets/structMap[@LABEL='CSIP']/div/@ID - Main structural division identifier - [1..1] -->
+    <!-- CSIP86 mets/structMap[@LABEL='CSIP']/div/@LABEL - Main structural division label - [1..1] -->
+    <div ID="ID-root-mets-structMap-div-main" LABEL="minimal_IP_with_1_representation">
+      <!-- CSIP88 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Metadata'] - Metadata division - [1..1] -->
+      <!-- CSIP89 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Metadata']/@ID - Metadata division identifier - [1..1] -->
+      <!-- CSIP90 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Metadata'] - Metadata division label - [1..1] -->
+      <div ID="ID-root-mets-structMap-div-div-metadata" LABEL="Metadata" />
+      <!-- CSIP93 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation'] - Documentation division - [0..1], but mandatory here because the Documentation fileGrp exists -->
+      <!-- CSIP94 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation']/@ID - Documentation division identifier - [1..1] -->
+      <!-- CSIP95 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation'] - Documentation division label - [1..1] -->
+      <div ID="ID-root-mets-structMap-div-div-documentation" LABEL="Documentation">
+        <!-- CSIP96  mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr - Documentation file referencing - [0..n], but mandatory here because the Documentation fileGrp exists -->
+        <!-- CSIP116 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr/@FILEID - Documentation file group reference pointer - [1..1] -->
+        <fptr FILEID="ID-root-mets-fileSec-fileGrp-Documentation"/>
+      </div>
+      <!-- CSIP97 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Schemas'] - Schema division - [0..1], but mandatory here because the Schemas fileGrp exists -->
+      <!-- CSIP98 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Schemas']/@ID - Schema division identifier - [1..1] -->
+      <!-- CSIP99 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Schemas'] - Schema division label - [1..1] -->
+      <div ID="ID-root-mets-structMap-div-div-schemas" LABEL="Schemas">
+        <!-- CSIP100 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Schemas']/fptr - Schema file reference - [0..n], but mandatory here because the Schemas fileGrp exists -->
+        <!-- CSIP118 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Schemas']/fptr/@FILEID - Schema file group reference - [1..1] -->
+        <fptr FILEID="ID-root-mets-fileSec-fileGrp-Schemas"/>
+      </div>
+      <!-- CSIP101 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Representations'] - Content division - [0..1], but mandatory here because the pagkage contains a representation -->
+      <!-- CSIP102 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Representations']/@ID - Content division identifier - [1..1] -->
+      <!-- CSIP103 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Representations'] - Content division label - [1..1] -->
+      <div ID="ID-root-mets-structMap-div-div-representations" LABEL="Representations">
+        <!-- CSIP104 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Representations']/fptr - Content division file references - [0..n], but mandatory here because the Representations fileGrp exists -->
+        <!-- CSIP119 mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Representations']/fptr/@FILEID - Content division file group references - [1..1] -->
+        <fptr FILEID="ID-root-mets-fileSec-fileGrp-Representations-rep1"/>
+      </div>
+    </div>
+  </structMap>
+</mets>
