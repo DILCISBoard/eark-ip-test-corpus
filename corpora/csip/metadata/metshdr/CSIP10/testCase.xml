@@ -1,23 +1,49 @@
-<!-- Root element for an individual test case, allows these to be wrapped into
-XML lists -->
-<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
-  <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP10"/>
-  <!-- URL references to requirements for convenient lookup -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="CSIP" version="2.0.4" requirementId="CSIP10"/>
   <references>
     <reference requirementId="CSIP10" URL="http://earkcsip.dilcis.eu/#CSIP10"/>
   </references>
-  <!-- The full text of the requirement. -->
-  <requirementText>One mandatory agent is used to describe the software used for creating the package. Other uses of agents are described in the own implementations extending profile.
-</requirementText>
-  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
-  <!-- List of requirments that this test case depends on in addition to the
-  main requirememt, e.g. general requirments on the form of IDs -->
-  <dependencies>
-  </dependencies>
-  <!-- A list of the validation rules derived from the test case -->
+  <requirementText>
+    <name>Agent</name>
+    <location>mets/metsHdr/agent</location>
+    <description>
+      A mandatory agent element records the software used to create the package. Other uses of agents may be described in any local implementations that extend the profile.
+    </description>
+    <cardinality>1..n</cardinality>
+    <level>MUST</level>
+  </requirementText>
+  <description>
+    mets/metsHdr/agent MUST exist one or more times.
+  </description>
+  <dependencies />
   <rules>
+    <rule id="1">
+      <description>mets/metsHdr/agent MUST exist one or more times.</description>
+      <error level="ERROR">
+        <message>
+          mets/metsHdr/agent element does not exist. MUST be: element exists one or more times.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets-xml_metsHdr_agent_not_exist" isValid="FALSE">
+          <path>mets-xml_metsHdr_agent_not_exist</path>
+          <description>
+            METS.xml file has no mets/metsHdr/agent element.
+          </description>
+        </package>
+        <package name="minimal_IP_with_1_representation" isValid="TRUE">
+          <path>valid/minimal_IP_with_1_representation</path>
+          <description>
+            Minimal IP that matches all MUST requirements.
+          </description>
+        </package>
+        <package name="minimal_IP_metsHdr_agent_2_instances" isValid="TRUE">
+          <path>valid/minimal_IP_metsHdr_agent_2_instances</path>
+          <description>
+            Minimal IP that matches all MUST requirements, and has two instances of mets/metsHdr/agent element.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
   </rules>
 </testCase>
