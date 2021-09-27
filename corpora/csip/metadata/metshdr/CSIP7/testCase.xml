@@ -58,7 +58,7 @@
         <package name="metsHdr_CREATEDATE_in_future" isValid="FALSE" isImplemented="FALSE">
           <path>invalid/metsHdr_CREATEDATE_in_future</path>
           <description>
-            METS.xml file has mets/metsHdr/@CREATEDATE = "2038-01-18T12:00:00".
+            METS.xml file has mets/metsHdr/@CREATEDATE = "2037-01-01T12:00:00".
             <!-- Creating a static file that includes a date in the future is
               problematic, as the passage of time will at one point break
               it. The obvious solution is to put the date as far as possible,
@@ -68,7 +68,10 @@
               https://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs),
               as of 2020-12-12, the most relevant seems to be the Unix 2038
               problem (see https://en.wikipedia.org/wiki/Year_2038_problem).
-              Thus, it seems reasonable to set the date at 2038-01-18. -->
+              The last correctly handled value is 2038-01-19T03:14:07, but
+              to provide ample buffer for time zones, server clock
+              discrepancies etc., it seems reasonable to set the date at
+              2037-01-01. -->
           </description>
         </package>
         <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="FALSE">
