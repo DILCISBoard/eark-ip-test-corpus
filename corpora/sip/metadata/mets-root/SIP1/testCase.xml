@@ -27,13 +27,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-root_LABEL_not_exist" isValid="FALSE">
-          <path>invalid/mets-root_LABEL_not_exist</path>
+        <package name="mets_root_LABEL_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/mets_root_LABEL_not_exist</path>
           <description>
             METS.xml file has no mets/@LABEL attribute.
           </description>
         </package>
-        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
           <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
           <description>
             Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
@@ -49,13 +49,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-root_LABEL_no_value" isValid="FALSE">
-          <path>invalid/mets-root_LABEL_no_value</path>
+        <package name="mets_root_LABEL_no_value" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/mets_root_LABEL_no_value</path>
           <description>
             METS.xml file has mets/@LABEL = "".
           </description>
         </package>
-        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
           <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
           <description>
             Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
