@@ -19,7 +19,7 @@ XML lists -->
   <rules>
     <!-- Individual validation rule entry, identified by a running number that's unique within the test case only -->
     <!-- Rule for the existence of a dmdSec element in mets.xml -->
-    
+
     <rule id="1">
       <!-- Text description of the validation rule -->
       <description>The Information Package folder MUST include a metadata file named `METS.xml`</description>
@@ -31,87 +31,87 @@ XML lists -->
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
         <package name="IP_18000_CSIPSTR4_1" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_1</path>
+          <path>IP_18000_CSIPSTR4_1</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. File METS.xml named in camelcase (Mets.xml)</description>
         </package>
         <package name="IP_18000_CSIPSTR4_2" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_2</path>
+          <path>IP_18000_CSIPSTR4_2</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. File METS.xml has extra lowercase character at back of the filename(METSa.xml)</description>
         </package>
         <package name="IP_18000_CSIPSTR4_3" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_3</path>
+          <path>IP_18000_CSIPSTR4_3</path>
           <!-- Full description of corpus package features. -->
-          <description>A package based on the minimal IP with schemas.  File METS.xml has extra lowercase character in front of the filename(aMETS.xml)</description>  
+          <description>A package based on the minimal IP with schemas.  File METS.xml has extra lowercase character in front of the filename(aMETS.xml)</description>
         </package>
         <package name="IP_18000_CSIPSTR4_4" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_4</path>
+          <path>IP_18000_CSIPSTR4_4</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. File METS.xml has extra lowercase character in the middle of the filename (MEaTS.xml)</description>
         </package>
         <package name="IP_18000_CSIPSTR4_5" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_5</path>
+          <path>IP_18000_CSIPSTR4_5</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. File METS.xml has extra uppercase character at back of the filename(METSA.xml)</description>
         </package>
         <package name="IP_18000_CSIPSTR4_6" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_6</path>
+          <path>IP_18000_CSIPSTR4_6</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas.File METS.xml has extra uppercase character in front of the filename(AMETS.xml)</description>
         </package>
         <package name="IP_18000_CSIPSTR4_7" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_7</path>
+          <path>IP_18000_CSIPSTR4_7</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. File METS.xml has extra uppercase character in the middle of the filename (MEATS.xml)</description>
         </package>
         <package name="IP_18000_CSIPSTR4_8" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_8</path>
+          <path>IP_18000_CSIPSTR4_8</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. File METS.xml has extension inside filename (METS.xml.xml)</description>
         </package>
         <package name="IP_18000_CSIPSTR4_9" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_9</path>
+          <path>IP_18000_CSIPSTR4_9</path>
           <!-- Full description of corpus package features. -->
         <description>A package based on the minimal IP with schemas. METS.xml named in lowercase (mets.xml)</description>
         </package>
         <package name="IP_18000_CSIPSTR4_10" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_10</path>
+          <path>IP_18000_CSIPSTR4_10</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Root folder does not include .xml file</description>
         </package>
         <package name="IP_18000_CSIPSTR4_11" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_11</path>
+          <path>IP_18000_CSIPSTR4_11</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. File METS.xml has a number at the back of the filename (METS1.xml)</description>
         </package>
         <package name="IP_18000_CSIPSTR4_12" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_12</path>
+          <path>IP_18000_CSIPSTR4_12</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. File METS.xml has a number in the front of the filename (1METS.xml</description>
         </package>
         <package name="IP_18000_CSIPSTR4_13" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_13</path>
+          <path>IP_18000_CSIPSTR4_13</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. File METS.xml has a number in the middle of the filename (ME1TS.xml)</description>
         </package>
         <package name="IP_18000_CSIPSTR4_14" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_14</path>
+          <path>IP_18000_CSIPSTR4_14</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Root folder includes a file named test.xml. METS.xml is missing.</description>
         </package>
         <package name="IP_18000_CSIPSTR4_15" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_15</path>
+          <path>IP_18000_CSIPSTR4_15</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. File METS.xml has sign after the required filename (METS_old.xml)</description>
         </package>
           <package name="IP_18000_CSIPSTR4_16" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_16</path>
+          <path>IP_18000_CSIPSTR4_16</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas.File METS.xml has sign before the required filename (old_METS.xml)</description>
         </package>
         <package name="IP_18000_CSIPSTR4_17" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR4/IP_18000_CSIPSTR4_17</path>
+          <path>IP_18000_CSIPSTR4_17</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. File METS.xml has sign in the middle of the required filename (ME_TS.xml)</description>
         </package>
