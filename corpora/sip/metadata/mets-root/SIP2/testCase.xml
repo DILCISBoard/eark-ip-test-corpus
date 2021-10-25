@@ -26,14 +26,14 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="sip_mets_PROFILE_not_exist" isValid="FALSE">
+        <package name="sip_mets_PROFILE_not_exist" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/sip_mets_PROFILE_not_exist</path>
           <description>
             METS.xml file has no mets/@PROFILE attribute.
           </description>
         </package>
-        <package name="minimal_SIP" isValid="TRUE">
-          <path>valid/minimal_SIP</path>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
           <description>
             Minimal SIP that matches all MUST requirements.
           </description>
@@ -48,20 +48,20 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="sip_mets_PROFILE_empty" isValid="FALSE">
-          <path></path>
+        <package name="sip_mets_PROFILE_empty" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/sip_mets_PROFILE_empty</path>
           <description>
             METS.xml file has mets/@PROFILE = "".
           </description>
         </package>
-        <package name="sip_mets_PROFILE_value_incorrect" isValid="FALSE">
-          <path></path>
+        <package name="sip_mets_PROFILE_value_incorrect" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/sip_mets_PROFILE_value_incorrect</path>
           <description>
             METS.xml file has mets/@PROFILE = "random_string_ePWn3j2295".
           </description>
         </package>
-        <package name="minimal_SIP" isValid="TRUE">
-          <path>valid/minimal_SIP</path>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
           <description>
             Minimal SIP that matches all MUST requirements.
           </description>
