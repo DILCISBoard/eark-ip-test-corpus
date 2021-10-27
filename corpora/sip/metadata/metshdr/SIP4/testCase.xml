@@ -31,14 +31,14 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="SIP_metsHdr_OAISPACKAGETYPE_not_exist" isValid="FALSE">
+        <package name="SIP_metsHdr_OAISPACKAGETYPE_not_exist" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/SIP_metsHdr_OAISPACKAGETYPE_not_exist</path>
           <description>
             METS.xml file has no mets/metsHdr/@csip:OAISPACKAGETYPE attribute.
           </description>
         </package>
-        <package name="minimal_SIP" isValid="TRUE">
-          <path>valid/minimal_SIP</path>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
           <description>
             Minimal SIP that matches all MUST requirements.
           </description>
@@ -53,7 +53,7 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="SIP_metsHdr_OAISPACKAGETYPE_value_incorrect" isValid="FALSE">
+        <package name="SIP_metsHdr_OAISPACKAGETYPE_value_incorrect" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/SIP_metsHdr_OAISPACKAGETYPE_value_incorrect</path>
           <!--  In order to test this rule, the validator must let the user
               choose the specification that is used. For all other rules,
@@ -65,8 +65,8 @@
             METS.xml file has mets/metsHdr/@csip:OAISPACKAGETYPE = "AIP".
           </description>
         </package>
-        <package name="minimal_SIP" isValid="TRUE">
-          <path>valid/minimal_SIP</path>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
           <description>
             Minimal SIP that matches all MUST requirements.
           </description>
