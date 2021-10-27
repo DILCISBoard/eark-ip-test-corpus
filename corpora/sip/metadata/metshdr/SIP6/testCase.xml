@@ -36,20 +36,20 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="SIP_metsHdr_altRecordID_PREVIOUSSUBMISSIONAGREEMENT_not_exist" isValid="FALSE">
-          <path>invalid/SIP_metsHdr_altRecordID_PREVIOUSSUBMISSIONAGREEMENT_not_exist</path>
+        <package name="altRecordID_PREVIOUSSUBMISSIONAGREEMENT_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/altRecordID_PREVIOUSSUBMISSIONAGREEMENT_not_exist</path>
           <description>
             SIP where the METS.xml file has no mets/metsHdr/altRecordID element with TYPE = 'PREVIOUSSUBMISSIONAGREEMENT'.
           </description>
         </package>
-        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
-          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
+        <package name="minimal_SIP_PREVIOUSSUBMISSIONAGREEMENT_1_instance" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_SIP_PREVIOUSSUBMISSIONAGREEMENT_1_instance</path>
           <description>
-            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes). METS.xml file has 1 instance of mets/metsHdr/altRecordID[@TYPE='PREVIOUSSUBMISSIONAGREEMENT']
           </description>
         </package>
-        <package name="SIP_metsHdr_altRecordID_PREVIOUSSUBMISSIONAGREEMENT_2_instances" isValid="TRUE">
-          <path>invalid/SIP_metsHdr_altRecordID_PREVIOUSSUBMISSIONAGREEMENT_2_instances</path>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
           <description>
             minimal_SIP_plus_mets_SHOULD_MAY_items with METS.xml file that has 2 instances of mets/metsHdr/altRecordID[@TYPE='PREVIOUSSUBMISSIONAGREEMENT']
             <!-- For example:
@@ -68,8 +68,8 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="SIP_metsHdr_altRecordID_PREVIOUSSUBMISSIONAGREEMENT_no_text" isValid="FALSE">
-          <path>invalid/SIP_metsHdr_altRecordID_PREVIOUSSUBMISSIONAGREEMENT_no_text</path>
+        <package name="altRecordID_PREVIOUSSUBMISSIONAGREEMENT_no_text" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/altRecordID_PREVIOUSSUBMISSIONAGREEMENT_no_text</path>
           <description>
             A SIP with METS.xml file that:
             - has mets/metsHdr/altRecordID element with mets/metsHdr/altRecordID/@TYPE = 'PREVIOUSSUBMISSIONAGREEMENT'
@@ -79,7 +79,7 @@
             -->
           </description>
         </package>
-        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
           <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
           <description>
             Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
