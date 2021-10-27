@@ -34,13 +34,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="fileSec_fileGrp_file_sipFILEFORMATNAME_not_exist" isValid="FALSE">
-          <path>invalid/fileSec_fileGrp_file_sipFILEFORMATNAME_not_exist</path>
+        <package name="FILEFORMATNAME_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/FILEFORMATNAME_not_exist</path>
           <description>
             SIP where the METS.xml file has a mets/fileSec/fileGrp/file element with no @sip:FILEFORMATNAME attribute.
           </description>
         </package>
-        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
           <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
           <description>
             Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
@@ -56,13 +56,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="fileSec_fileGrp_file_sipFILEFORMATNAME_value_empty" isValid="FALSE">
-          <path>invalid/fileSec_fileGrp_file_sipFILEFORMATNAME_value_empty</path>
+        <package name="FILEFORMATNAME_value_empty" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/FILEFORMATNAME_value_empty</path>
           <description>
             A SIP with METS.xml file that has a mets/fileSec/fileGrp/file/@sip:FILEFORMATNAME = "".
           </description>
         </package>
-        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
           <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
           <description>
             Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
