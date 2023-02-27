@@ -3,14 +3,14 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP21"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP21"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP21" URL="http://earkcsip.dilcis.eu/#CSIP21"/>
   </references>
   <!-- The full text of the requirement. -->
   <requirementText>Reference to the descriptive metadata file located in the “metadata” section of the IP.
-    Cardianlity: 0..1 SHOULD
+    Cardinality: 0..1 SHOULD
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
   <description>The mdRef-element SHOULD be there. Therefore a warning should be presented if a package has no mdRef-element.
@@ -23,7 +23,7 @@ XML lists -->
   <rules>
     <rule id="1">
       <description>The mdRef-element SHOULD be there</description>
-      <error level="ERROR">
+      <error level="WARNING">
         <message>There is no dmdSec/mdRef-element in METS.xml</message>
       </error>
       <corpusPackages>
@@ -35,7 +35,7 @@ XML lists -->
     </rule>
     <rule id="2">
       <description>The mdRef-element SHOULD be there</description>
-      <error level="WARNING">
+      <error level="ERROR">
         <message> There are files in the directory: /metadata/descriptive/ but there is no dmdSec/mdRef-element in METS.xml.</message>
       </error>
       <corpusPackages>
