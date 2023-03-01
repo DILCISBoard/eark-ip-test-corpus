@@ -80,7 +80,7 @@
     </rule>
     <rule id="3">
       <description>mets/metsHdr/altRecordID[@TYPE='SUBMISSIONAGREEMENT'] MAY exist only once.</description>
-      <error level="INFO">
+      <error level="ERROR">
         <message>
           mets/metsHdr/altRecordID[@TYPE='SUBMISSIONAGREEMENT'] exists more than once. MAY be: mets/metsHdr/altRecordID[@TYPE='SUBMISSIONAGREEMENT'] exists once and its text is a reference to the Submission Agreement associated with the package.
         </message>
