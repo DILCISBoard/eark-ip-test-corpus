@@ -34,7 +34,7 @@ XML lists -->
       </corpusPackages>
     </rule>
     <rule id="2">
-      <description>The mdRef-element SHOULD be there</description>
+      <description>The mdRef-element MUST be there if there are files in /metadata/descriptive/ </description>
       <error level="ERROR">
         <message> There are files in the directory: /metadata/descriptive/ but there is no dmdSec/mdRef-element in METS.xml.</message>
       </error>
