@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.4" requirementId="CSIP7"/>
+  <id specification="CSIP" version="2.1.0" requirementId="CSIP7"/>
   <references>
     <reference requirementId="CSIP7" URL="https://earkcsip.dilcis.eu/#CSIP7"/>
   </references>
@@ -7,15 +7,16 @@
     <name>Package creation date</name>
     <location>mets/metsHdr/@CREATEDATE</location>
     <description>
-      Records the date the package was created.
+mets/metsHdr/@CREATEDATE
+mets/metsHdr/@CREATEDATE records the date and time the package was created.
     </description>
     <cardinality>1..1</cardinality>
     <level>MUST</level>
   </requirementText>
   <description>
-    mets/metsHdr/@CREATEDATE MUST exist.
-    mets/metsHdr/@CREATEDATE MUST have a value that is a date.
-    mets/metsHdr/@CREATEDATE value MUST be the actual date the package was created.
+    mets/metsHdr/@CREATEDATE MUST exist is optional in the mets schema but mandatory in the CSIP7. A rule therefore has to be set up.
+    mets/metsHdr/@CREATEDATE MUST have a value that is a date. The value in this attribute is parsed against the mets schema to type="xsd:dateTime". A rule is therefore not being set up.  
+    mets/metsHdr/@CREATEDATE value MUST be the actual date the package was created. This is not testable.
   </description>
   <dependencies />
   <rules>
@@ -47,7 +48,7 @@
       
     <!--    Requirement "mets/metsHdr/@CREATEDATE value MUST be the actual date
             the package was created" is impossible to validate automatically -->
-    <rule id="2">
+   <!--     <rule id="2">
       <description>The value of mets/metsHdr/@CREATEDATE MUST be a date not in the future.</description>
       <error level="ERROR">
         <message>
@@ -59,7 +60,7 @@
           <path>invalid/metsHdr_CREATEDATE_in_future</path>
           <description>
             METS.xml file has mets/metsHdr/@CREATEDATE = "2037-01-01T12:00:00".
-            <!-- Creating a static file that includes a date in the future is
+             Creating a static file that includes a date in the future is
               problematic, as the passage of time will at one point break
               it. The obvious solution is to put the date as far as possible,
               but this introduces potential errors from time processing bugs
@@ -71,7 +72,7 @@
               The last correctly handled value is 2038-01-19T03:14:07, but
               to provide ample buffer for time zones, server clock
               discrepancies etc., it seems reasonable to set the date at
-              2037-01-01. -->
+              2037-01-01. 
           </description>
         </package>
         <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="FALSE">
@@ -79,8 +80,8 @@
           <description>
             Minimal IP that matches all MUST requirements, and has mets/metsHdr/@CREATEDATE = "2020-12-12T12:00:00".
           </description>
-        </package>
+        </package> 
       </corpusPackages>
-    </rule>
+    </rule> -->
   </rules>
 </testCase>
