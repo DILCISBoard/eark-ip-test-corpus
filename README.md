@@ -1,6 +1,7 @@
 eark-ip-test-corpus
 ===================
-Test corpus of E-ARK information packages to test validator functionality against the specification.
+
+The purpose of the E-ARK test corpus is to make it possible to see if any given validator is covering all the rules laid out in the specifications. 
 
 Quick Start
 -----------
@@ -10,29 +11,36 @@ Quick Start
 
 Introduction
 ------------
-This repository is home to the E-ARK information package validation test corpus. The corpus comprises a set of information packages, each is intended to violate the [E-ARK Common Specification for Information Packages](https://github.com/DILCISBoard/E-ARK-CSIP/) **(CSIP)** in a single specific way. The corpus serves two purposes:
+This repository is home to the E-ARK information package validation test corpus. 
 
-- It provides a set of information package samples that can be used to test software validators for the CSIP, this includes our [own validator](https://github.com/E-ARK-Software/py-rest-ip-validator).
+The E-ARK test corpus comprises a set of human readable and machine readable test cases which also includes E-ARK information packages that contain valid and invalid samples related to each of the requirements within the following specifications: 
+-	[the Common Specification for Information Packages](https://earkcsip.dilcis.eu/) - hereafter called CSIP
+-	[the E-ARK Specification for Submission Information Packages](https://earksip.dilcis.eu/) hereafter called SIP
+-	[the E-ARK Specification for Dissemination Information Packages](https://earkdip.dilcis.eu/) hereafter called DIP 
+
+The corpus serves two purposes:
+
+- It provides a set of information package samples that can be used to test software validators for the CSIP, SIP, and DIP, this includes our [own validator](https://github.com/E-ARK-Software/py-rest-ip-validator).
 - The creation of the corpus tests our understanding of the current specification document. Every test case represents a simple, implemented example of a validation error or warning with accompanying valid cases.
 __________
 
 Status
 ------
-The test corpus and validator are currently in early development, we'll provide a more detailed roadmap in November 2018.
+The test corpus is currently in development.
 __________
 
 Scope & Coverage
 ----------------
 ### Specification coverage
-An ideal validation corpus should be a physical demonstration of each and every requirement stated in the Common Specification. In testing terms, this aspiration is expressed as 100% coverage of the specification. The progress towards this milestone can be expressed as a percentage coverage of the specification requirements.
+An ideal validation corpus should be a physical demonstration of each and every requirement stated in the specifications. In testing terms, this aspiration is expressed as 100% coverage of the specification. The progress towards this milestone can be expressed as a percentage coverage of the specification requirements.
 
-While this is the most important metric, it's not easy to provide an objective, automatable measure. The A2 specification group will be the arbiter here.
 
 ### Out of scope
 There are some test case and corpus examples that we consider to be explicitly out of scope
 
 #### Testing METS schema validation
-We won't be providing test cases and corpus examples for issues that should be caught by automated XML parsing with XML schema validation enabled. The E-ARK CSIP METS implementation is based upon version 1.12 of the METS schema: https://www.loc.gov/standards/mets/version112/mets.xsd. We won't be creating test cases that represent a missing `mets` root element, the lack of a `structMap` element, or mis-spelled METS element and attribute names in general.
+We won't be providing test cases and corpus examples for issues that should be caught by automated XML parsing with XML schema validation enabled. The E-ARK CSIP METS implementation is based upon version 1.12 of the METS schema: https://www.loc.gov/standards/mets/version112/mets.xsd. 
+We won't be creating test cases that represent a missing `mets` root element, the lack of a `structMap` element, or mis-spelled METS element and attribute names in general.
 __________________
 
 #### Corpus Structure
@@ -45,7 +53,7 @@ Validation Corpus Creation
 The E-ARK Common Specification is the source of requirements and the yardstick by which progress is measured. The test corpus creation process is driven by the specification conditions. These requirements are read carefully and used to produce test cases. These documented test cases provide the backlog for the creation of corpus test packages. For each test case there should be corpus packages demonstrating the pass and fail conditions.
 
 ### Requirements to Test Cases
-While the aim is to produce test cases, analysis of the specification will also lead to improvements to the specification.  To illustrate, consider a seemingly simple requirement from the specifcation:
+While the aim is to produce test cases, analysis of the specification will also lead to improvements to the specification.  To illustrate, consider a seemingly simple requirement from the specification:
 
 > CSIP4: The Information Package folder MUST include a metadata file named `METS.xml`, which includes information about the identity and structure of the package and its components;
 
