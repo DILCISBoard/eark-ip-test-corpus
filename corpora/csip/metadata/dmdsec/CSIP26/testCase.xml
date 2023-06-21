@@ -3,7 +3,7 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP26"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP26"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP26" URL="http://earkcsip.dilcis.eu/#CSIP26"/>
@@ -29,7 +29,7 @@ XML lists -->
     <rule id="1">
       <description>Tests whether MIMETYPE-attribute exists in METS</description>
       <error level="ERROR">
-        <message>The element mets/dmdSec/mdRef in METS.xml does not have a MIMETYPE-attribute. It MUST be there according to CS IP.</message>
+        <message>The element mets/dmdSec/mdRef in METS.xml does not have a MIMETYPE-attribute. It MUST be there according to CSIP.</message>
       </error>
       <corpusPackages>
         <package isValid="FALSE" name="IP_18000_CSIP26_1">
@@ -56,7 +56,7 @@ XML lists -->
             <message>The element mets/dmdSec/mdRef in METS.xml has a MIMETYPE-attribute which it not on the IANA list. See http://www.iana.org/assignments/media-types/media-types.xhtml for the list of valid MIMETYPES </message>
           </error>
           <corpusPackages>
-            <package isValid="TRUE" name="IP_18000_CSIP26_3">
+            <package isValid="FALSE" name="IP_18000_CSIP26_3">
               <path>/corpora/csip/metadata/dmdSec/CSIP26/IP_18000_CSIP26_3</path>
               <description>This package has a MIMETYPE-attribute with a wrong value in mets/dmdSec/mdRef</description>
             </package>
