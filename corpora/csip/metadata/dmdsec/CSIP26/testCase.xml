@@ -16,7 +16,7 @@ XML lists -->
     Rule for the existence of the attribute MIMETYPE for element dmdSec/mdRef.
     ERROR if it does not exists
     Rule for the value of the attribute MIMETYPE for element dmdSec/mdRef.
-    WARNING if it is not on the list.
+    ERROR if it is not on the list.
     
     How do we handle lists of valid values? Do we create a valid package for each valid value? And one invalid package for an invalid value?
     Are we supposed to check against IANA? http://www.iana.org/assignments/media-types/media-types.xhtml </description>
@@ -40,11 +40,11 @@ XML lists -->
     </rule>
         <rule id="2">
           <description>Tests whether MIMETYPE-attribute has a value</description>
-          <error level="WARNING">
+          <error level="ERROR">
             <message>The element mets/dmdSec/mdRef in METS.xml has a MIMETYPE-attribute with no value. It SHOULD be there.</message>
           </error>
           <corpusPackages>
-            <package isValid="TRUE" name="IP_18000_CSIP26_2">
+            <package isValid="FALSE" name="IP_18000_CSIP26_2">
               <path>/corpora/csip/metadata/dmdSec/CSIP26/IP_18000_CSIP26_2</path>
               <description>This package has a MIMETYPE-attribute with no value in mets/dmdSec/mdRef</description>
             </package>
@@ -52,7 +52,7 @@ XML lists -->
     </rule>
         <rule id="3">
           <description>Tests whether MIMETYPE-attribute has a correct value</description>
-          <error level="WARNING">
+          <error level="ERROR">
             <message>The element mets/dmdSec/mdRef in METS.xml has a MIMETYPE-attribute which it not on the IANA list. See http://www.iana.org/assignments/media-types/media-types.xhtml for the list of valid MIMETYPES </message>
           </error>
           <corpusPackages>
