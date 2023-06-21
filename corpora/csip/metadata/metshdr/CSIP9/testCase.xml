@@ -37,12 +37,6 @@
             METS.xml file has no mets/metsHdr/@csip:OAISPACKAGETYPE attribute.
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_representation</path>
-          <description>
-            Minimal IP that matches all MUST requirements.
-          </description>
-        </package>
       </corpusPackages>
     </rule>
     <rule id="2">
@@ -57,16 +51,6 @@
           <path>mets-xml_metsHdr_OAISPACKAGETYPE_attribute_value_incorrect</path>
           <description>
             METS.xml file has mets/metsHdr/@csip:OAISPACKAGETYPE = "random_string_e2368caa08a1cbbe2e8d5b96ab34a41e".
-          </description>
-        </package>
-        <!--  Ideally, there should be a valid IP for each specific vocabulary
-              value, as this is the only certain way to test that the validator
-              accepts any one of them. This should be automated as
-              VocabularyOAISPackageType currently allows 5 different values. -->
-        <package name="valid_minimal_metsHdr_OAISPACKAGETYPE_value_vocabulary_1" isValid="TRUE">
-          <path>valid/valid_minimal_metsHdr_OAISPACKAGETYPE_value_vocabulary_1</path>
-          <description>
-            Minimal IP that meets all MUST requirements, and mets/metsHdr/@csip:OAISPACKAGETYPE value set to VocabularyOAISPackageType allowed value nr 1.
           </description>
         </package>
       </corpusPackages>
