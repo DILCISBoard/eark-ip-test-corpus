@@ -29,20 +29,16 @@
         </message>
       </error>
       <corpusPackages>
-        <!--  Ideally, there should be an invalid IP for each specific enumeration
-              value, as this is the only certain way to test that the validator
-              reports an error on any one of them. This should be automated as
-              mets.xsd allows 7 values that are not acceptable by CSIP. -->
-        <package name="mets-xml_metsHdr_agent_ROLE_EDITOR" isValid="FALSE">
-          <path>mets-xml_metsHdr_agent_ROLE_EDITOR</path>
+        <package name="mets-xml_metsHdr_agent_ROLE_CREATOR" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_ROLE_CREATOR</path>
           <description>
-            METS.xml file has mets/metsHdr/agent/@ROLE = "EDITOR".
+            METS.xml file has mets/metsHdr/agent/@ROLE = "CREATOR".
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_representation</path>
+        <package name="mets-xml_metsHdr_agent_ROLE_EDITOR" isValid="FALSE">
+          <path>invalid/mets-xml_metsHdr_agent_ROLE_EDITOR</path>
           <description>
-            Minimal IP that matches all MUST requirements.
+            METS.xml file has mets/metsHdr/agent/@ROLE = "EDITOR".
           </description>
         </package>
       </corpusPackages>
