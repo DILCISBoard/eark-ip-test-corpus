@@ -35,6 +35,13 @@
             METS.xml file has mets/metsHdr/agent/@ROLE = "CREATOR".
           </description>
         </package>
+        <package name="mets-xml_metsHdr_agent_ROLE_CREATOR_multiple_agents" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_ROLE_CREATOR_multiple_agents</path>
+          <description>
+            METS.xml file has mets/metsHdr/agent/@ROLE = "CREATOR". 
+            Multiple agents are allowed and creator is only required on one instance.
+          </description>
+        </package>
         <package name="mets-xml_metsHdr_agent_ROLE_EDITOR" isValid="FALSE">
           <path>invalid/mets-xml_metsHdr_agent_ROLE_EDITOR</path>
           <description>
