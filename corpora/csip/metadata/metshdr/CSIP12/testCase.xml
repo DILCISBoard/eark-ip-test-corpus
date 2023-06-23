@@ -28,15 +28,9 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_agent_TYPE_not_exist" isValid="FALSE">
-          <path>mets-xml_metsHdr_agent_TYPE_not_exist</path>
+          <path>invalid/mets-xml_metsHdr_agent_TYPE_not_exist</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has no mets/metsHdr/agent/@TYPE attribute.
-          </description>
-        </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_representation</path>
-          <description>
-            Minimal IP that matches all MUST requirements.
           </description>
         </package>
       </corpusPackages>
@@ -59,8 +53,8 @@
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/@TYPE = "INDIVIDUAL".
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_representation</path>
+        <package name="mets-xml_metsHdr_agent_TYPE_exist" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_TYPE_exist</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
