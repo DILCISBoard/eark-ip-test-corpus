@@ -3,13 +3,13 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP27"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP27"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP27" URL="http://earkcsip.dilcis.eu/#CSIP27"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>Size of the linked file in bytes.
+  <requirementText>Size of the referenced file in bytes. 1..1 MUST
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
   <description> Size of the linked file in bytes - dmdSec/mdRef/@SIZE
