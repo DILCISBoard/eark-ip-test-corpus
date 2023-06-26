@@ -3,32 +3,31 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="CSIP" version="2.0.4" requirementId="CSIP30"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP30"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP30" URL="http://earkcsip.dilcis.eu/#CSIP30"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>The checksum of the linked file.</requirementText>
-  <!-- Textual description of the test case, extra notes beyond the requirement text. -->
+  <requirementText>
+  File checksum type
+mets/dmdSec/mdRef/@CHECKSUMTYPE
+A value from the METS-standard which identifies the algorithm used to calculate the checksum for the referenced file. 1..1 MUST
+</requirementText>
+  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
   <description>It has cardinality '1..1' and level 'MUST' in CSIP.
     It is mandatory in CSIP but optional in METS.
     Rule needed for the existence of the attribute CHECKSUMTYPE for element dmdSec/mdRef.
     ERROR if it does not exists.
-    
+
     There is a dependency to CSIP29, since this attribute hold the value of the checksumtype for the linked file.
-    
-    The tests that check if checksumtype and checksum is correct can be found in CSIP29.
-  </description>
+    The tests that check if checksumtype and checksum is correct can be found in CSIP29.</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
-  <dependencies> 
-    <dependency requirementId="CSIP29" URL="http://earkcsip.dilcis.eu/#CSIP29"></dependency><!-- There is a dependency to CSIP29, since this attribute hold the value of the checksumtype for the linked file -->
-    <dependency requirementId="CSIP21" URL="http://earkcsip.dilcis.eu/#CSIP21"></dependency><!-- There is a dependency to CSIP21 since CSIP29 is only mandatory if mdRef is present  -->
-    <dependency requirementId="CSIP17" URL="http://earkcsip.dilcis.eu/#CSIP17"></dependency><!-- There is a dependency to CSIP17 since CSIP29 is only mandatory if dmdSec and mdRef is present -->
+  <dependencies>
   </dependencies>
   <!-- A list of the validation rules derived from the test case -->
-  <rules>
+ <rules>
     <rule id="1">
       <description>If dmdSec/mdRef-element is present there MUST be a CHECKSUMTYPE-attribute</description>
       <error level="ERROR">
