@@ -21,6 +21,8 @@ The creation date and time of the referenced file. 1..1 MUST
     Rule needed for the existence of the attribute CREATED for element dmdSec/mdRef.
     ERROR if it does not exists.
   There is no need for a check for blank or NULL values in the attribute since the mets schema will only tolerate dateTime values</description>
+  <cardinality>1..1</cardinality>
+<level>MUST</level>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
