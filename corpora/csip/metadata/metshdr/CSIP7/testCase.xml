@@ -1,23 +1,87 @@
-<!-- Root element for an individual test case, allows these to be wrapped into
-XML lists -->
-<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
-  <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP7"/>
-  <!-- URL references to requirements for convenient lookup -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="CSIP" version="2.1.0" requirementId="CSIP7"/>
   <references>
-    <reference requirementId="CSIP7" URL="http://earkcsip.dilcis.eu/#CSIP7"/>
+    <reference requirementId="CSIP7" URL="https://earkcsip.dilcis.eu/#CSIP7"/>
   </references>
-  <!-- The full text of the requirement. -->
-  <requirementText>@CREATEDATE describes the date of creation of the package.
-</requirementText>
-  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
-  <!-- List of requirments that this test case depends on in addition to the
-  main requirememt, e.g. general requirments on the form of IDs -->
-  <dependencies>
-  </dependencies>
-  <!-- A list of the validation rules derived from the test case -->
+  <requirementText>
+    <name>Package creation date</name>
+    <location>mets/metsHdr/@CREATEDATE</location>
+    <description>
+mets/metsHdr/@CREATEDATE
+mets/metsHdr/@CREATEDATE records the date and time the package was created.
+    </description>
+    <cardinality>1..1</cardinality>
+    <level>MUST</level>
+  </requirementText>
+  <description>
+    mets/metsHdr/@CREATEDATE MUST exist is optional in the mets schema but mandatory in the CSIP7. A rule therefore has to be set up.
+    mets/metsHdr/@CREATEDATE MUST have a value that is a date. The value in this attribute is parsed against the mets schema to type="xsd:dateTime". A rule is therefore not being set up.  
+    mets/metsHdr/@CREATEDATE value MUST be the actual date the package was created. This is not testable.
+  </description>
+  <dependencies />
   <rules>
+    <rule id="1">
+      <description>mets/metsHdr/@CREATEDATE MUST exist.</description>
+      <error level="ERROR">
+        <message>
+          mets/metsHdr/@CREATEDATE attribute does not exist. MUST be: attribute exists and has a value that is a date in the format of xsd:dateTime.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets-xml_metsHdr_CREATEDATE_not_exist" isValid="FALSE" isImplemented="FALSE">
+          <path>invalid/xml_metsHdr_CREATEDATE_not_exist</path>
+          <description>
+            METS.xml file has no mets/metsHdr/@CREATEDATE attribute.
+          </description>
+        </package>
+        <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="FALSE">
+          <path>valid/minimal_IP_with_1_representation</path>
+          <description>
+            Minimal IP that matches all MUST requirements.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <!--    Requirement "mets/metsHdr/@CREATEDATE MUST have a value that is a 
+            date" is tested for using XML Schema validation as mets.xsd defines
+            the attribute as type="xsd:dateTime". -->
+      
+    <!--    Requirement "mets/metsHdr/@CREATEDATE value MUST be the actual date
+            the package was created" is impossible to validate automatically -->
+   <!--     <rule id="2">
+      <description>The value of mets/metsHdr/@CREATEDATE MUST be a date not in the future.</description>
+      <error level="ERROR">
+        <message>
+          mets/metsHdr/@CREATEDATE value is a date in the future. MUST be: the value MUST indicate the date of package creation, which cannot be in the future.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="metsHdr_CREATEDATE_in_future" isValid="FALSE" isImplemented="FALSE">
+          <path>invalid/metsHdr_CREATEDATE_in_future</path>
+          <description>
+            METS.xml file has mets/metsHdr/@CREATEDATE = "2037-01-01T12:00:00".
+             Creating a static file that includes a date in the future is
+              problematic, as the passage of time will at one point break
+              it. The obvious solution is to put the date as far as possible,
+              but this introduces potential errors from time processing bugs
+              in different data structures and algorithms. Out of a variety of
+              these (see
+              https://en.wikipedia.org/wiki/Time_formatting_and_storage_bugs),
+              as of 2020-12-12, the most relevant seems to be the Unix 2038
+              problem (see https://en.wikipedia.org/wiki/Year_2038_problem).
+              The last correctly handled value is 2038-01-19T03:14:07, but
+              to provide ample buffer for time zones, server clock
+              discrepancies etc., it seems reasonable to set the date at
+              2037-01-01. 
+          </description>
+        </package>
+        <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="FALSE">
+          <path>valid/minimal_IP_with_1_representation</path>
+          <description>
+            Minimal IP that matches all MUST requirements, and has mets/metsHdr/@CREATEDATE = "2020-12-12T12:00:00".
+          </description>
+        </package> 
+      </corpusPackages>
+    </rule> -->
   </rules>
 </testCase>
