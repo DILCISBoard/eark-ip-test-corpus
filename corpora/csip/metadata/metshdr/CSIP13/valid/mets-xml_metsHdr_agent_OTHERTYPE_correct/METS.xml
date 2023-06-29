@@ -16,7 +16,7 @@
     http://www.loc.gov/METS/ https://www.loc.gov/standards/mets/mets.xsd
     https://DILCIS.eu/XML/METS/CSIPExtensionMETS http://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd
     http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd"
-  OBJID="minimal_IP_with_1_representation" 
+  OBJID="mets-xml_metsHdr_agent_OTHERTYPE_correct" 
   TYPE="Mixed"  
   PROFILE="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml">
 
@@ -29,7 +29,7 @@
     <!-- CSIP11 mets/metsHdr/agent[@ROLE='CREATOR'] - Agent role - [1..1] -->
     <!-- CSIP12 mets/metsHdr/agent[@TYPE='OTHER'] - Agent type - [1..1] -->
     <!-- CSIP13 mets/metsHdr/agent[@OTHERTYPE='SOFTWARE'] - Agent other type - [1..1] -->
-    <agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE=""random_string_e2368caa08a1cbbe2e8d5b96ab34a41e"">
+    <agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
       <!-- CSIP14 mets/metsHdr/agent/name - Agent name - [1..1] -->
       <name>E-ARK Corpus Team</name>
       <!-- CSIP15 mets/metsHdr/agent/note - Agent additional information - [1..1] -->
