@@ -3,13 +3,16 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP28"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP28"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP28" URL="http://earkcsip.dilcis.eu/#CSIP28"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>The date the linked file was created.
+  <requirementText>
+File size
+mets/dmdSec/mdRef/@SIZE
+The creation date and time of the referenced file. 1..1 MUST
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
   <description>File creation date - dmdSec/mdRef/@created - The date the linked file was created.
@@ -18,6 +21,8 @@ XML lists -->
     Rule needed for the existence of the attribute CREATED for element dmdSec/mdRef.
     ERROR if it does not exists.
   There is no need for a check for blank or NULL values in the attribute since the mets schema will only tolerate dateTime values</description>
+  <cardinality>1..1</cardinality>
+<level>MUST</level>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
@@ -27,7 +32,7 @@ XML lists -->
     <rule id="1">
       <description>If dmdSec/mdRef-element is present there MUST be at CREATED-attribute</description>
       <error level="ERROR">
-        <message>mets/dmdSec/mdRef/@CREATED does not exist in METS.xml. @CREATED is a mandatory attribute according to CS IP.</message>
+        <message>mets/dmdSec/mdRef/@CREATED does not exist in METS.xml. @CREATED is a mandatory attribute according to CSIP.</message>
       </error>
       <corpusPackages>
         <package isValid="FALSE" name="IP_18000_CSIP28_1">
