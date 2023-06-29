@@ -48,6 +48,12 @@
             METS.xml file has mets/metsHdr/agent/@ROLE = "EDITOR".
           </description>
         </package>
+        <package name="mets-xml_metsHdr_agent_all_criterias_different_objs" isValid="FALSE">
+          <path>invalid/mets-xml_metsHdr_agent_all_criterias_different_objs</path>
+          <description>
+            METS.xml file has all agent criterias but on different objects.
+          </description>
+        </package>
       </corpusPackages>
     </rule>
   </rules>
