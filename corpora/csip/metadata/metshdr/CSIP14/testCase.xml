@@ -20,9 +20,6 @@
   </description>
   <dependencies />
   <rules>
-    <!--  The rule "mets/metsHdr/agent/name MUST exist exactly once" is tested for by schema
-          validation, as mets.xsd defines the element as mandatory. Thus,
-          no rule description or corpus packages here. -->
     <rule id="1">
       <description>For the CSIP mandatory agent element, mets/metsHdr/agent/name MUST have text content.</description>
       <error level="ERROR">
@@ -32,15 +29,21 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_agent_name_empty" isValid="FALSE">
-          <path>mets-xml_metsHdr_agent_name_empty</path>
+          <path>invalid/mets-xml_metsHdr_agent_name_empty</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/name = "".
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_representation</path>
+        <package name="mets-xml_metsHdr_agent_name_element_missing" isValid="FALSE">
+          <path>invalid/mets-xml_metsHdr_agent_name_element_missing</path>
           <description>
-            Minimal IP that matches all MUST requirements.
+            METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has no mets/metsHdr/agent/name element.
+          </description>
+        </package>
+        <package name="mets-xml_metsHdr_agent_name_ok" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_name_ok</path>
+          <description>
+            METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/name = "Consolidation Team".
           </description>
         </package>
       </corpusPackages>
