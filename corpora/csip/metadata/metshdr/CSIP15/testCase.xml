@@ -1,23 +1,91 @@
-<!-- Root element for an individual test case, allows these to be wrapped into
-XML lists -->
-<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
-  <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP15"/>
-  <!-- URL references to requirements for convenient lookup -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="CSIP" version="2.0.4" requirementId="CSIP15"/>
   <references>
     <reference requirementId="CSIP15" URL="http://earkcsip.dilcis.eu/#CSIP15"/>
   </references>
-  <!-- The full text of the requirement. -->
-  <requirementText>The mandatory agent has a note providing the version information for the tool which was used to create the IP.
-</requirementText>
-  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
-  <!-- List of requirments that this test case depends on in addition to the
-  main requirememt, e.g. general requirments on the form of IDs -->
-  <dependencies>
-  </dependencies>
-  <!-- A list of the validation rules derived from the test case -->
+  <requirementText>
+    <name>Agent additional information</name>
+    <location>mets/metsHdr/agent/note</location>
+    <description>
+      The mandatory agent's note element records the version of the tool used to create the IP.
+    </description>
+    <cardinality>1..1</cardinality>
+    <level>MUST</level>
+  </requirementText>
+  <description>
+    The mets/metsHdr/agent with @ROLE='CREATOR' MUST have:
+    - mets/metsHdr/agent/note MUST exist.
+    - mets/metsHdr/agent/note MUST exist only once.
+    - mets/metsHdr/agent/note MUST have text content.
+    - mets/metsHdr/agent/note text content MUST record the version of the tool used to create the IP.<!-- Untestable-->
+  </description>
+  <dependencies />
   <rules>
+    <rule id="1">
+      <description>For the CSIP mandatory agent element, mets/metsHdr/agent/note MUST exist.</description>
+      <error level="ERROR">
+        <message>
+          The CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) mets/metsHdr/agent/note does not exist. MUST be: element exists and has text content that records the version of the tool used to create the IP.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets-xml_metsHdr_agent_note_not_exist" isValid="FALSE">
+          <path>invalid/mets-xml_metsHdr_agent_note_not_exist</path>
+          <description>
+            METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) does not have mets/metsHdr/agent/note.
+          </description>
+        </package>
+        <package name="mets-xml_metsHdr_agent_note_exist" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_note_exist</path>
+          <description>
+            Minimal IP that matches all MUST requirements.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>For the CSIP mandatory agent element, mets/metsHdr/agent/note MUST exist only once.</description>
+      <error level="ERROR">
+        <message>
+          The CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) mets/metsHdr/agent/note exists more than once. MUST be: element exists once and has text content that records the version of the tool used to create the IP.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets-xml_metsHdr_agent_note_2_instances" isValid="FALSE">
+          <path>invalid/mets-xml_metsHdr_agent_note_2_instances</path>
+          <description>
+            METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has two mets/metsHdr/agent/note child elements.
+          </description>
+        </package>
+        <package name="mets-xml_metsHdr_agent_note_conform.zip" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_note_conform.zip</path>
+          <description>
+            Minimal IP that matches all MUST requirements.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="3">
+      <description>For the CSIP mandatory agent element, mets/metsHdr/agent/note MUST have text content.</description>
+      <error level="ERROR">
+        <message>
+          The CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) mets/metsHdr/agent/note has no text content. MUST be: element exists and has text content that records the version of the tool used to create the IP.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="mets-xml_metsHdr_agent_note_empty" isValid="FALSE">
+          <path>mets-xml_metsHdr_agent_note_empty</path>
+          <description>
+            METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/note = "".
+          </description>
+        </package>
+        <package name="mets-xml_metsHdr_agent_note_conform.zip" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_note_conform.zip</path>
+          <description>
+            Minimal IP that matches all MUST requirements.
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
   </rules>
 </testCase>
