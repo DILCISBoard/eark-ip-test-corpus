@@ -16,7 +16,7 @@
     http://www.loc.gov/METS/ https://www.loc.gov/standards/mets/mets.xsd
     https://DILCIS.eu/XML/METS/CSIPExtensionMETS http://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd
     http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd"
-  OBJID="minimal_IP_with_1_representation" 
+  OBJID="mets-xml_metsHdr_agent_note_2_instances" 
   TYPE="Mixed"  
   PROFILE="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml">
 

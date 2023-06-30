@@ -30,13 +30,13 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_agent_note_not_exist" isValid="FALSE">
-          <path>mets-xml_metsHdr_agent_note_not_exist</path>
+          <path>invalid/mets-xml_metsHdr_agent_note_not_exist</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) does not have mets/metsHdr/agent/note.
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_representation</path>
+        <package name="mets-xml_metsHdr_agent_note_exist" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_note_exist</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -44,9 +44,6 @@
       </corpusPackages>
     </rule>
     <rule id="2">
-      <!--  This rule is needed to provide more informative error messages, i.e.
-            to differentiate between element missing and element present more than
-            once. -->
       <description>For the CSIP mandatory agent element, mets/metsHdr/agent/note MUST exist only once.</description>
       <error level="ERROR">
         <message>
@@ -55,13 +52,13 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_agent_note_2_instances" isValid="FALSE">
-          <path>mets-xml_metsHdr_agent_note_2_instances</path>
+          <path>invalid/mets-xml_metsHdr_agent_note_2_instances</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has two mets/metsHdr/agent/note child elements.
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_representation</path>
+        <package name="mets-xml_metsHdr_agent_note_conform.zip" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_note_conform.zip</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -82,8 +79,8 @@
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/note = "".
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_representation</path>
+        <package name="mets-xml_metsHdr_agent_note_conform.zip" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_note_conform.zip</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
