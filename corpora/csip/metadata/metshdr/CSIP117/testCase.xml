@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.4" requirementId="CSIP117"/>
+  <id specification="CSIP" version="2.1.0" requirementId="CSIP117"/>
   <references>
     <reference requirementId="CSIP117" URL="http://earkcsip.dilcis.eu/#CSIP117"/>
   </references>
@@ -26,15 +26,9 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_not_exist" isValid="FALSE">
-          <path>invalid/mets-xml_metsHdr_not_exist</path>
+          <path>mets-xml_metsHdr_not_exist</path>
           <description>
             METS.xml file has no mets/metsHdr element.
-          </description>
-        </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_representation</path>
-          <description>
-            Minimal IP that matches all MUST requirements.
           </description>
         </package>
       </corpusPackages>
