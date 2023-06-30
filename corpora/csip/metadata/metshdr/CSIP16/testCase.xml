@@ -42,8 +42,8 @@
               packages that have an optional agent that has no note/@csip:NOTETYPE,
               as this is a likely situation where a validator could raise false
               positives for the rule. -->
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_representation</path>
+        <package name="mets-xml_metsHdr_agent_note_NOTETYPE_valid" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_note_NOTETYPE_valid</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -75,8 +75,8 @@
               note/@csip:NOTETYPE != 'SOFTWARE VERSION',
               as this is a likely situation where a validator could raise false
               positives for the rule. -->
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_representation</path>
+        <package name="mets-xml_metsHdr_agent_note_NOTETYPE_valid" isValid="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_note_NOTETYPE_valid</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
