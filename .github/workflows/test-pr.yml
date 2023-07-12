@@ -21,9 +21,9 @@ jobs:
         with:
           files: corpora/**
 
-      - name: Run step if any file(s) in the docs folder change
+      - name: List changed corpora files
         if: steps.changed-corpora-files.outputs.any_changed == 'true'
         run: |
-          echo "One or more files in the docs folder has changed."
+          echo "One or more files in the corpora folder have changed."
           echo "List all the files that have changed: ${{ steps.changed-corpora-files.outputs.all_changed_files }}"
   
