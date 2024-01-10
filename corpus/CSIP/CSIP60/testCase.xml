@@ -3,7 +3,7 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP60"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP60"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP60" URL="http://earkcsip.dilcis.eu/#CSIP60"/>
@@ -11,7 +11,7 @@ XML lists -->
   <!-- The full text of the requirement. -->
   <requirementText>All documentation pertaining to the transferred content is placed in one or more file group elements with mets/fileSec/fileGrp/@USE attribute value “Documentation”.</requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description>This requirment mandates that there must be at least one mets/fileSec/fileGrp element with a USE attribute set to 'Documentation' but there can be more.</description>
+  <description>This requirement mandates that there must be at least one mets/fileSec/fileGrp element with a USE attribute set to 'Documentation' but there can be more.</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
