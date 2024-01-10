@@ -1,23 +1,42 @@
-<!-- Root element for an individual test case, allows these to be wrapped into
+﻿<!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP110"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP110"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP110" URL="http://earkcsip.dilcis.eu/#CSIP110"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>The actual location of the resource. We  recommend recording a URL type filepath within this attribute.
+  <requirementText>Resource location
+    mets/structMap/div/div/mptr/@xlink:href
+    The actual location of the resource. We recommend recording a URL type filepath within this attribute.
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
+  <description>The location of the resource should be the same as in the mets/structMap[@LABEL='CSIP']/div/div/@LABEL value as can be seen in CSIP107 unless the @LABEL-value is "Representations" which means the content is described in the METS.xml that we are looking at.</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
+    <dependency requirementId="CSIP107" URL="http://earkcsip.dilcis.eu/#CSIP107"></dependency>
   </dependencies>
   <!-- A list of the validation rules derived from the test case -->
   <rules>
+    <rule id="1">
+      <description>The location of the resource should be the same as in the mets/structMap[@LABEL='CSIP']/div/div/@LABEL value</description>
+      <error level="ERROR">
+        <message>The location of the resource should be the same as in the mets/structMap[@LABEL='CSIP']/div/div/@LABEL value</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="mptr_href_different_from_label_path">
+          <path>invalid\mptr_href_different_from_label_path</path>
+          <description>A package where the mets pointer is different from the mets/structMap[@LABEL='CSIP']/div/div/@LABEL values that are not Representations</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP">
+          <path>valid\minimal_IP</path>
+          <description>Minimal IP</description>
+        </package>
+      </corpusPackages>
+    </rule>
   </rules>
 </testCase>

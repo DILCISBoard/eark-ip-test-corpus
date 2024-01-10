@@ -1,23 +1,58 @@
 <!-- Root element for an individual test case, allows these to be wrapped into
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
+  testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP108"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP108"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP108" URL="http://earkcsip.dilcis.eu/#CSIP108"/>
   </references>
   <!-- The full text of the requirement. -->
-  <requirementText>The file group containing the files described in the package are referenced via the relevant file group identifier.
+  <requirementText>Representations division file referencing
+    mets/structMap[@LABEL='CSIP']/div/div/mptr/@xlink:title
+    The file group containing the files described in the package are referenced via the relevant file group identifier.
+    Related to the requirements CSIP114 which describes the “Representations” file group and CSIP65 which describes the file group identifier.
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
+  <description>All fileGrps with the @USE="Representations" must also be presented in the structMap. CSIP108 and CSIP109 are intrinsically linked together and therefore is the same testcase.</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
   </dependencies>
   <!-- A list of the validation rules derived from the test case -->
   <rules>
+    <rule id="1">
+      <description>All fileGrps with the @USE="Representations" must also be presented in the structMap via a mptr-element and an @xlink:title corresponding to the fileGrp-ID</description>
+      <error level="ERROR">
+        <message>All fileGrps with the @USE="Representations" must be presented in the structMap via mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Representations']/mptr </message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="fileGrp_Representations_but_missing_structMap">
+          <path>invalid\fileGrp_Representations_but_missing_structMap</path>
+          <description>A package where there is a fileGrp with @USE="Representations" but there is no structMap [@LABEL='CSIP']/div/div[@LABEL='Representations']/mptr @xlink:title</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP">
+          <path>valid\minimal_IP</path>
+          <description>Minimal IP</description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>A structMap[@LABEL='CSIP']/div/div[@LABEL='Representations']/mptr must point to a fileGrp with @USE="Representations"</description>
+      <error level="ERROR">
+        <message>The structMap[@LABEL='CSIP']/div/div[@LABEL='Representations']/mptr points to a fileGrp that does not have @USE="Representations"</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="structMap_does_not_point_at_Representations">
+          <path>invalid\structMap_does_not_point_at_Representations</path>
+          <description>A package which has a Representations metspointer that points to a filegroup that does not have @USE="Representations"</description>
+        </package>
+        <package isValid="TRUE" name="minimal_IP">
+          <path>valid\minimal_IP</path>
+          <description>Minimal IP</description>
+        </package>
+      </corpusPackages>
+    </rule>
   </rules>
 </testCase>
