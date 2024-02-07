@@ -1,0 +1,27 @@
+name: Build validator
+on:
+  workflow_run:
+    workflows: ["Setup python"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout validator repository
+        uses: actions/checkout@v4
+        with:
+          repository: E-ARK-Software/eark-validator
+          path: validator
+      - name: Configure virtual environment
+        run: |
+          virtualenv -p python3 venv
+          source venv/bin/activate
+      - name: Update pip and install required packages
+        run: |
+          pip install -U pip
+          pip install .
+      - name: Run validator
+        run: ip-check
+      
