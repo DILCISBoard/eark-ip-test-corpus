@@ -1,7 +1,5 @@
 name: Setup-python
 
-on: [push]
-
 jobs:
   setup:
     runs-on: ubuntu-latest
