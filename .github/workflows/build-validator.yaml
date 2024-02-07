@@ -1,8 +1,8 @@
-name: Build validator
+name: Build-validator
 on:
   workflow_run:
     workflows: 
-      - Setup python
+      - Setup-python
     types:
       - completed
 
