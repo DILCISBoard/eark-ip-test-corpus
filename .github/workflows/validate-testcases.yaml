@@ -31,4 +31,4 @@ jobs:
       - name: Print files
         run: ls -R
       - name: Check validator
-        run: validator/.ip-check
+        run: python -m validator/cli/app.py
