@@ -31,4 +31,4 @@ jobs:
       - name: Print files
         run: ls -R
       - name: Check validator
-        run: (cd /validator && exec /eark_validator/cli/app)
+        run: (cd validator && exec /eark_validator/cli/app)
