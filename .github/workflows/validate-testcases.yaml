@@ -26,7 +26,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install virtualenv
-          cd validator/eark_validator
+          cd validator
           echo "${PWD##*/}"
           virtualenv -p python3 venv
           source venv/bin/activate
