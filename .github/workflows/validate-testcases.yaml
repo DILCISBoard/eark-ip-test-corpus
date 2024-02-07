@@ -19,7 +19,7 @@ jobs:
           repository: E-ARK-Software/eark-validator
           path: validator
       - name: Set up Python 3.10
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
       - name: Print files
@@ -29,6 +29,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install validator/.
       - name: Print files
-        run: ls -R
+        run: ls -R   
       - name: Check validator
-        run: (cd validator && exec eark_validator/cli/app)
+        run: python validator/eark_validator/cli/app.py
