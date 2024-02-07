@@ -1,12 +1,13 @@
 name: Build validator
 on:
   workflow_run:
-    workflows: ["Setup python"]
+    workflows: 
+      - Setup python
     types:
       - completed
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout validator repository
