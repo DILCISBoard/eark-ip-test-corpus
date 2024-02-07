@@ -6,8 +6,7 @@ permissions:
   contents: read
 
 jobs:
-  checkout:
-    name: Checkout repositories
+  validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout corpus repository
@@ -19,19 +18,15 @@ jobs:
         with:
           repository: E-ARK-Software/eark-validator
           path: validator
-  build:
-    name: Build validator
-    runs-on: ubuntu-latest
-    steps:
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.10"
-    - name: Print files
-      run: ls -R
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install validator/.
-    - name: Check validator
-      run: ip-check
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Print files
+        run: ls -R
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install validator/.
+      - name: Check validator
+        run: ip-check

@@ -1,5 +1,12 @@
 name: Setup-python
 
+on:
+  workflow_run:
+    workflows: 
+      - Build-validator
+    types:
+      - completed
+
 jobs:
   setup:
     runs-on: ubuntu-latest
