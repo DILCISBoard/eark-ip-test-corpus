@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="FALSE">
+  testable="PARTIAL">
   <!-- Unique ID for the test case -->
   <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIPSTR16"/>
   <references>

@@ -3,10 +3,10 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="FALSE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP1"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIPSTR1"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
-    <reference requirementId="CSIP1" URL="http://earkcsip.dilcis.eu/#CSIP1"/>
+    <reference requirementId="CSIPSTR1" URL="http://earkcsip.dilcis.eu/#CSIPSTR1"/>
   </references>
   <!-- The full text of the requirement. -->
   <requirementText>Any Information Package MUST be included within a single physical root folder (known as the “Information Package root folder”)
@@ -18,6 +18,5 @@ XML lists -->
   <dependencies>
   </dependencies>
   <!-- A list of the validation rules derived from the test case -->
-  <rules>
-  </rules>
+
 </testCase>

@@ -13,7 +13,7 @@ XML lists -->
      The requirement links to http://earkcsip.dilcis.eu/#the-use-of-identifiers and simple xml-validation will catch if IDs are not unique.
      Therefore it is considered out of scope within this test corpus.</requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description>CSIP59 is another requirment that should be enforced by the METS schema validation</description>
+  <description>CSIP59 is another requirement that should be enforced by the METS schema validation</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>

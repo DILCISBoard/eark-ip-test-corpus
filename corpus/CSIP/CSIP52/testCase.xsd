@@ -9,7 +9,7 @@
         <xs:element ref="requirementText"/>
         <xs:element ref="description"/>
         <xs:element ref="dependencies"/>
-        <xs:element ref="rules"/>
+        <xs:element ref="rules" minOccurs="0"/>
       </xs:sequence>
       <xs:attribute name="testable" use="required">
         <xs:simpleType>

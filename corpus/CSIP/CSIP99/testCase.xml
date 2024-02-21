@@ -38,18 +38,4 @@
   <dependencies>
     <dependency requirementId="CSIP97" URL="https://earkcsip.dilcis.eu/#CSIP97"></dependency>
   </dependencies>
-  <rules>
-    <rule id="1">
-      <description>If the schema division exists, it MUST have @LABEL='Schemas'.</description>
-      <error level="ERROR">
-        <message>If the schema division exists, it MUST have @LABEL='Schemas'.</message>
-      </error>
-      <corpusPackages>
-        <package isValid="TRUE" isImplemented="FALSE" name="minimal_IP_with_1_representation">
-          <path>valid\minimal_IP_with_1_representation</path>
-          <description>Minimal IP</description>
-        </package>
-      </corpusPackages>
-    </rule>
-  </rules>
 </testCase>
