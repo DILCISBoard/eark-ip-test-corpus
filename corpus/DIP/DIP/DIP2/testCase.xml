@@ -1,0 +1,26 @@
+<!-- Root element for an individual test case, allows these to be wrapped into
+XML lists -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
+  testable="FALSE">
+  <!-- Unique ID for the test case -->
+  <id specification="DIP" version="2.0.4" requirementId="DIP2"/>
+  <!-- URL references to requirements for convenient lookup -->
+  <references>
+    <reference requirementId="DIP2" URL="https://earksip.dilcis.eu/#DIP2"/>
+  </references>
+  <!-- The full text of the requirement. -->
+  <requirementText>METS Profile
+    mets/@PROFILE
+    The value is set to “https://earkdip.dilcis.eu/profile/E-ARK-DIP.xml”.
+  </requirementText>
+  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
+  <description>This is considered out of scope. The existence of a profile-attribute is tested in the CSIP6 from the Common Specification for Information Pacakges. 
+    We have decided that it is the @OAISpackageType that states if an IP needs to live up to the DIP requirements by having the the value DIP, see the DIP3 requirement</description>
+  <!-- List of requirments that this test case depends on in addition to the
+  main requirememt, e.g. general requirments on the form of IDs -->
+  <dependencies>
+  </dependencies>
+  <!-- A list of the validation rules derived from the test case -->
+
+</testCase>
+

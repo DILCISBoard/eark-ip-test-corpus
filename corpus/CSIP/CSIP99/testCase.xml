@@ -1,0 +1,41 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
+  testable="FALSE">
+    <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP99"/>
+    <references>
+    <reference requirementId="CSIP99" URL="https://earkcsip.dilcis.eu/#CSIP99"/>
+  </references>
+  <requirementText>
+    <name>Schema division label</name>
+    <location>mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Schemas']</location>
+    <description>
+      The schema division div element's @LABEL attribute has the value "Schemas" from the vocabulary.
+      See also: File group names
+    </description>
+    <cardinality>1..1</cardinality>
+    <level>MUST</level>
+  </requirementText>
+  <description>
+    CSIP99 seems identical to CSIP97, but the authors of the specification
+    had a distinction in mind: "… the first requirement defines whether the
+    division itself is mandatory, the second defines the required label
+    value," see the issue "Redundancies and incompatible priority levels" at
+    https://github.com/DILCISBoard/E-ARK-CSIP/issues/570. The cases of there
+    being no schema division or more than one schema division
+    are handled in CSIP97. Consequently, there is only one rule left for
+    CSIP97:
+      If the schema division exists, it MUST have @LABEL='Schemas'.
+
+    This, however, is not reliably testable with algorithms of reasonable
+    complexity. Detecting a schema division that is not marked
+    @LABEL='Schemas' would require analysing indirect indicators (e.g. a
+    structMap/div with references to files in a folder named "schemas"), but
+    these cannot give enough confidence to announce a violation of a MUST
+    rule.
+
+    In sum, only valid IPs are meaningful for CSIP99 and the requirement is
+    effectively not testable.
+  </description>
+  <dependencies>
+    <dependency requirementId="CSIP97" URL="https://earkcsip.dilcis.eu/#CSIP97"></dependency>
+  </dependencies>
+</testCase>

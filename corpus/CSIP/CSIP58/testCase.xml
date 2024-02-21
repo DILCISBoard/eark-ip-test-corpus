@@ -1,0 +1,40 @@
+﻿<!-- Root element for an individual test case, allows these to be wrapped into
+XML lists -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
+  testable="TRUE">
+  <!-- Unique ID for the test case -->
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP58"/>
+  <!-- URL references to requirements for convenient lookup -->
+  <references>
+    <reference requirementId="CSIP58" URL="http://earkcsip.dilcis.eu/#CSIP58"/>
+  </references>
+  <!-- The full text of the requirement. -->
+  <requirementText>The transferred content is placed in the file section in different file group elements, described in other requirements.
+    Only a single file section (&lt;fileSec&gt;) element should be present.
+    It is possible to transfer just descriptive metadata and/or administrative metadata without files placed in this section.</requirementText>
+  <!-- Textual description of the test case, extra notes beyond the requirement text. -->
+  <description>Data issues, that is missing files on the file system or files with no METS reference are an integrity issue. </description>
+  <!-- List of requirments that this test case depends on in addition to the
+  main requirememt, e.g. general requirments on the form of IDs -->
+  <dependencies>
+  </dependencies>
+  <!-- A list of the validation rules derived from the test case -->
+  <rules>
+    <rule id="1">
+      <description>The package METS document SHOULD contain a single mets/filesec element only</description>
+      <error level="WARNING">
+        <message>An information package METS document should contain a single mets/filesec only.</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" name="no_file_sec">
+          <path>./no_file_sec</path>
+          <description>The package root METS document has no mets/filesec element.</description>
+        </package>
+        <package isValid="TRUE" name="single_file_sec">
+          <path>./single_file_sec</path>
+          <description>The package root METS document has a single mets/filesec element.</description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>

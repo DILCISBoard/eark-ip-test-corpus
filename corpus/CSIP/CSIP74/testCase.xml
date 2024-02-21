@@ -1,0 +1,24 @@
+<!-- Root element for an individual test case, allows these to be wrapped into
+XML lists -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
+  testable="FALSE">
+  <!-- Unique ID for the test case -->
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP74"/>
+  <!-- URL references to requirements for convenient lookup -->
+  <references>
+    <reference requirementId="CSIP74" URL="http://earkcsip.dilcis.eu/#CSIP74"/>
+  </references>
+  <!-- The full text of the requirement. -->
+  <requirementText>File reference to administrative metadata
+    mets/fileSec/fileGrp/file/@ADMID
+    If administrative metadata has been provided for the file this attribute refers to the file’s administrative metadata by ID
+</requirementText>
+  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
+  <description>This attribute has the cardinality of 0..1 and moscow-level MAY which is also the case in METS.xsd. There could be a test to see how many files have metadata file IDs, but this is at a nice-to-have-level and not really a requirement so all in all there are no rules connected with this testcase</description>
+  <!-- List of requirments that this test case depends on in addition to the
+  main requirememt, e.g. general requirments on the form of IDs -->
+  <dependencies>
+  </dependencies>
+  <!-- A list of the validation rules derived from the test case -->
+
+</testCase>

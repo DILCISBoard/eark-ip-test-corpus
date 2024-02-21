@@ -1,0 +1,25 @@
+<!-- Root element for an individual test case, allows these to be wrapped into
+XML lists -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
+  testable="FALSE">
+  <!-- Unique ID for the test case -->
+  <id specification="DIP" version="2.0.4" requirementId="DIP1"/>
+  <!-- URL references to requirements for convenient lookup -->
+  <references>
+    <reference requirementId="DIP1" URL="https://earksip.dilcis.eu/#DIP1"/>
+  </references>
+  <!-- The full text of the requirement. -->
+  <requirementText>Package Identifier
+    mets/@OBJID
+    Note that the value of the mets/@OBJID attribute for the DIP is expected to be different from the SIP and AIP to reflect the creation of a new package.
+  </requirementText>
+  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
+  <description>This is considered out of scope. THe requirement is not testable. Feedback will be given to the DIP specification</description>
+  <!-- List of requirments that this test case depends on in addition to the
+  main requirememt, e.g. general requirments on the form of IDs -->
+  <dependencies>
+  </dependencies>
+  <!-- A list of the validation rules derived from the test case -->
+
+</testCase>
+

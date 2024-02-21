@@ -1,0 +1,40 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="CSIP" version="2.1.0" requirementId="CSIP65"/>
+  <references>
+    <reference requirementId="CSIP65" URL="https://earkcsip.dilcis.eu/#CSIP65"/>
+    <reference requirementId="Sec521-the-use-of-identifiers" URL="https://earkcsip.dilcis.eu/#521-the-use-of-identifiers"/>
+  </references>
+  <requirementText>
+    <name>File group identifier</name>
+    <location>mets/fileSec/fileGrp/@ID</location>
+    <description>
+      An xml:id identifier for the file group used for internal package references. It must be unique within the package.
+    </description>
+    <cardinality>1..1</cardinality>
+    <level>MUST</level>
+  </requirementText>
+  <description>The requirement links to 5.2.1. The use of identifiers and is mostly handled by XML schema validation. However, the ID attribute is optional according to METS.xsd, so this testcase has one rule to check if the ID attribute exists</description>
+  <dependencies />
+  <rules>
+    <rule id="1">
+      <description>There MUST be an ID attribute on every fileGrp</description>
+      <error level="ERROR">
+        <message>There MUST be an ID attribute on every fileGrp</message>
+      </error>
+      <corpusPackages>
+        <package isValid="FALSE" isImplemented="FALSE" name="fileSec_missing_ID_attribute_at_fileGrp">
+          <path>invalid/fileSec_missing_ID_attribute_at_fileGrp</path>
+          <description>A package with a missing ID-attribute at one fileGrp</description>
+        </package>
+        <package isValid="FALSE" isImplemented="FALSE" name="fileSec_missing_ID_attribute_at_fileGrps">
+          <path>invalid/fileSec_missing_ID_attribute_at_fileGrps</path>
+          <description>A package with a missing ID attribute at two fileGrps</description>
+        </package>
+        <package isValid="TRUE" isImplemented="FALSE" name="minimal_IP_with_1_representation">
+          <path>valid\minimal_IP_with_1_representation</path>
+          <description>Minimal IP</description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
