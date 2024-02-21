@@ -1,0 +1,88 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="SIP" version="2.0.4" requirementId="SIP8"/>
+  <references>
+    <reference requirementId="SIP8" URL="https://earksip.dilcis.eu/#SIP8"/>
+  </references>
+  <requirementText>
+    <name>Previous archival reference code</name>
+    <location>mets/metsHdr/altRecordID</location>
+    <description>
+      In cases where the SIP originates from other institutions maintaining a reference code structure, this element can be used to record these reference codes and therefore support the provenance of the package when a whole archival description is not submitted with the submission.
+      @TYPE is used with the value "PREVIOUSREFERENCECODE".
+      Example: SE/FM/123/123.1/123.1.3
+      See also: Alternative record ID's, https://earksip.dilcis.eu/#VocabularyaltrecordIDTYPE.
+    </description>
+    <cardinality>0..n</cardinality>
+    <level>MAY</level>
+  </requirementText>
+  <description>
+    mets/metsHdr/altRecordID[@TYPE='PREVIOUSREFERENCECODE'] MAY exist.
+    If mets/metsHdr/altRecordID[@TYPE='PREVIOUSREFERENCECODE'] exists then it MUST have a text node that records a reference code that was used for the SIP in the institution where it originated from.
+  </description>
+  <dependencies>
+    <dependency requirementId="VocabularyaltrecordIDTYPE" URL="https://earksip.dilcis.eu/#VocabularyaltrecordIDTYPE">
+      http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml
+    </dependency>
+  </dependencies>
+  <rules>
+    <rule id="1">
+      <description>mets/metsHdr/altRecordID[@TYPE='PREVIOUSREFERENCECODE'] MAY exist.</description>
+      <error level="INFO">
+        <message>
+          mets/metsHdr/altRecordID[@TYPE='PREVIOUSREFERENCECODE'] does not exist. MAY be: mets/metsHdr/altRecordID[@TYPE='PREVIOUSREFERENCECODE'] exists and its text records a reference code that was used for the SIP in the institution where it originated from.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="altRecordID_PREVIOUSREFERENCECODE_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/altRecordID_PREVIOUSREFERENCECODE_not_exist</path>
+          <description>
+            SIP where the METS.xml file has no mets/metsHdr/altRecordID element with TYPE = 'PREVIOUSREFERENCECODE'.
+          </description>
+        </package>
+        <package name="minimal_SIP_PREVIOUSREFERENCECODE_1_instance" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_SIP_PREVIOUSREFERENCECODE_1_instance</path>
+          <description>
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes). METS.xml file has 1 instance of mets/metsHdr/altRecordID[@TYPE='PREVIOUSREFERENCECODE']
+          </description>
+        </package>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
+          <description>
+            minimal_SIP_plus_mets_SHOULD_MAY_items with METS.xml file that has 2 instances of mets/metsHdr/altRecordID[@TYPE='PREVIOUSREFERENCECODE']
+            <!-- For example:
+              <altRecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</altRecordID>
+              <altRecordID TYPE="PREVIOUSREFERENCECODE">AAA-002</altRecordID>
+            -->
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>If mets/metsHdr/altRecordID[@TYPE='PREVIOUSREFERENCECODE'] exists then it MUST have a text node.</description>
+      <error level="INFO">
+        <message>
+          mets/metsHdr/altRecordID[@TYPE='PREVIOUSREFERENCECODE'] element has no text node. MUST be: if mets/metsHdr/altRecordID[@TYPE='PREVIOUSREFERENCECODE'] exists then it MUST have a text node that records a reference code that was used for the SIP in the institution where it originated from.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="altRecordID_PREVIOUSREFERENCECODE_no_text" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/altRecordID_PREVIOUSREFERENCECODE_no_text</path>
+          <description>
+            A SIP with METS.xml file that:
+            - has mets/metsHdr/altRecordID element with mets/metsHdr/altRecordID/@TYPE = 'PREVIOUSREFERENCECODE'
+            - no text node (i.e. nothing between altRecordID tags)
+            <!-- For example:
+              <altRecordID TYPE="PREVIOUSREFERENCECODE"></altRecordID>).
+            -->
+          </description>
+        </package>
+        <package name="minimal_SIP_PREVIOUSREFERENCECODE_1_instance" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_SIP_PREVIOUSREFERENCECODE_1_instance</path>
+          <description>
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes). METS.xml file has 1 instance of mets/metsHdr/altRecordID[@TYPE='PREVIOUSREFERENCECODE']
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>
