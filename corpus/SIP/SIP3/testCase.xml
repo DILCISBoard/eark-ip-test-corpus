@@ -31,13 +31,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="SIP_metsHdr_RECORDSTATUS_not_exist" isValid="FALSE">
+        <package name="SIP_metsHdr_RECORDSTATUS_not_exist" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/SIP_metsHdr_RECORDSTATUS_not_exist</path>
           <description>
             METS.xml file has no metsHdr/@RECORDSTATUS attribute.
           </description>
         </package>
-        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
         <!--  It seems most efficient to have one valid package for all SHOULD
               and MAY requirements - there are about 20 of them, so the 
               alternative would be to have 20 rule-specific valid packages. -->
@@ -56,19 +56,19 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="SIP_metsHdr_RECORDSTATUS_value_empty" isValid="FALSE">
+        <package name="SIP_metsHdr_RECORDSTATUS_value_empty" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/SIP_metsHdr_RECORDSTATUS_value_empty</path>
           <description>
             METS.xml file has metsHdr/@RECORDSTATUS = "".
           </description>
         </package>
-        <package name="SIP_metsHdr_RECORDSTATUS_incorrect" isValid="FALSE">
+        <package name="SIP_metsHdr_RECORDSTATUS_incorrect" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/SIP_metsHdr_RECORDSTATUS_incorrect</path>
           <description>
             METS.xml file has metsHdr/@RECORDSTATUS = "random_string_hEb1q84nv4P".
           </description>
         </package>
-        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
         <!--  Ideally, there should be a valid IP for each specific vocabulary
               value, as this is the only certain way to test that the validator
               accepts any one of them. This should be automated as

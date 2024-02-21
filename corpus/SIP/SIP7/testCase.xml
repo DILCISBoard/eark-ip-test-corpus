@@ -1,0 +1,105 @@
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="SIP" version="2.0.4" requirementId="SIP7"/>
+  <references>
+    <reference requirementId="SIP7" URL="https://earksip.dilcis.eu/#SIP7"/>
+  </references>
+  <requirementText>
+    <name>Archival reference code</name>
+    <location>mets/metsHdr/altRecordID</location>
+    <description>
+      An optional reference code indicating where in the archival hierarchy the package shall be placed in the OAIS.
+      @TYPE is used with the value "REFERENCECODE".
+      Example: FM 12-2387/12726, 2007-09-19
+      See also: Alternative record ID's, https://earksip.dilcis.eu/#VocabularyaltrecordIDTYPE.
+    </description>
+    <cardinality>0..1</cardinality>
+    <level>MAY</level>
+  </requirementText>
+  <description>
+    mets/metsHdr/altRecordID[@TYPE='REFERENCECODE'] MAY exist.
+    If mets/metsHdr/altRecordID[@TYPE='REFERENCECODE'] exists then it MUST have a text node with a reference code indicating where in the archival hierarchy the package shall be placed in the OAIS.
+    mets/metsHdr/altRecordID[@TYPE='REFERENCECODE'] MAY exist only once.
+  </description>
+  <dependencies>
+    <dependency requirementId="VocabularyaltrecordIDTYPE" URL="https://earksip.dilcis.eu/#VocabularyaltrecordIDTYPE">
+      http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml
+    </dependency>
+  </dependencies>
+  <rules>
+    <rule id="1">
+      <description>mets/metsHdr/altRecordID[@TYPE='REFERENCECODE'] MAY exist.</description>
+      <error level="INFO">
+        <message>
+          mets/metsHdr/altRecordID[@TYPE='REFERENCECODE'] does not exist. MAY be: mets/metsHdr/altRecordID[@TYPE='REFERENCECODE'] exists and its text is a reference code indicating where in the archival hierarchy the package shall be placed in the OAIS.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="altRecordID_REFERENCECODE_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/altRecordID_REFERENCECODE_not_exist</path>
+          <description>
+            SIP where the METS.xml file has no mets/metsHdr/altRecordID element with TYPE = 'REFERENCECODE'.
+          </description>
+        </package>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
+          <description>
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="2">
+      <description>If mets/metsHdr/altRecordID[@TYPE='REFERENCECODE'] exists then it MUST have a text node.</description>
+      <error level="INFO">
+        <message>
+          mets/metsHdr/altRecordID[@TYPE='REFERENCECODE'] element has no text node. MUST be: if mets/metsHdr/altRecordID[@TYPE='REFERENCECODE'] exists then it MUST have text that is a reference code indicating where in the archival hierarchy the package shall be placed in the OAIS.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="altRecordID_REFERENCECODE_no_text" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/altRecordID_REFERENCECODE_no_text</path>
+          <description>
+            A SIP with METS.xml file that:
+            - has mets/metsHdr/altRecordID element with mets/metsHdr/altRecordID/@TYPE = 'REFERENCECODE'
+            - no text node (i.e. nothing between altRecordID tags)
+            <!-- For example:
+              <altRecordID TYPE="REFERENCECODE"></altRecordID>).
+            -->
+          </description>
+        </package>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
+          <description>
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <rule id="3">
+      <description>mets/metsHdr/altRecordID[@TYPE='REFERENCECODE'] MAY exist only once.</description>
+      <error level="INFO">
+        <message>
+          mets/metsHdr/altRecordID[@TYPE='REFERENCECODE'] exists more than once. MAY be: mets/metsHdr/altRecordID[@TYPE='REFERENCECODE'] exists once and its text is a reference code indicating where in the archival hierarchy the package shall be placed in the OAIS.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="altRecordID_REFERENCECODE_2_instances" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/altRecordID_REFERENCECODE_2_instances</path>
+          <description>
+            A SIP with METS.xml file that has 2 instances of mets/metsHdr/altRecordID[@TYPE='REFERENCECODE']
+            <!-- For example:
+              <altRecordID TYPE="REFERENCECODE">ABC-123</altRecordID>
+              <altRecordID TYPE="REFERENCECODE">DEF-456</altRecordID>
+            -->
+          </description>
+        </package>
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
+          <description>
+            Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
+</testCase>

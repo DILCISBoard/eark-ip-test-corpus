@@ -37,13 +37,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="SIP_metsHdr_altRecordID_SUBMISSIONAGREEMENT_not_exist" isValid="FALSE">
-          <path>invalid/SIP_metsHdr_altRecordID_SUBMISSIONAGREEMENT_not_exist</path>
+        <package name="altRecordID_SUBMISSIONAGREEMENT_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/altRecordID_SUBMISSIONAGREEMENT_not_exist</path>
           <description>
             SIP where the METS.xml file has no mets/metsHdr/altRecordID element with TYPE = 'SUBMISSIONAGREEMENT'.
           </description>
         </package>
-        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
           <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
           <description>
             Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
@@ -59,8 +59,8 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="SIP_metsHdr_altRecordID_SUBMISSIONAGREEMENT_no_text" isValid="FALSE">
-          <path>invalid/SIP_metsHdr_altRecordID_SUBMISSIONAGREEMENT_no_text</path>
+        <package name="altRecordID_SUBMISSIONAGREEMENT_no_text" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/altRecordID_SUBMISSIONAGREEMENT_no_text</path>
           <description>
             A SIP with METS.xml file that:
             - has mets/metsHdr/altRecordID element with mets/metsHdr/altRecordID/@TYPE = 'SUBMISSIONAGREEMENT'
@@ -70,7 +70,7 @@
             -->
           </description>
         </package>
-        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
           <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
           <description>
             Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
@@ -80,14 +80,14 @@
     </rule>
     <rule id="3">
       <description>mets/metsHdr/altRecordID[@TYPE='SUBMISSIONAGREEMENT'] MAY exist only once.</description>
-      <error level="ERROR">
+      <error level="INFO">
         <message>
           mets/metsHdr/altRecordID[@TYPE='SUBMISSIONAGREEMENT'] exists more than once. MAY be: mets/metsHdr/altRecordID[@TYPE='SUBMISSIONAGREEMENT'] exists once and its text is a reference to the Submission Agreement associated with the package.
         </message>
       </error>
       <corpusPackages>
-        <package name="SIP_metsHdr_altRecordID_SUBMISSIONAGREEMENT_2_instances" isValid="FALSE">
-          <path>invalid/SIP_metsHdr_altRecordID_SUBMISSIONAGREEMENT_2_instances</path>
+        <package name="altRecordID_SUBMISSIONAGREEMENT_2_instances" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/altRecordID_SUBMISSIONAGREEMENT_2_instances</path>
           <description>
             A SIP with METS.xml file that has 2 instances of mets/metsHdr/altRecordID[@TYPE='SUBMISSIONAGREEMENT']
             <!-- For example:
@@ -96,7 +96,7 @@
             -->
           </description>
         </package>
-        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE">
+        <package name="minimal_SIP_plus_mets_SHOULD_MAY_items" isValid="TRUE" isImplemented="TRUE">
           <path>valid/minimal_SIP_plus_mets_SHOULD_MAY_items</path>
           <description>
             Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
