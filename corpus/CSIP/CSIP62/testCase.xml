@@ -1,7 +1,7 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
   <id specification="CSIP" version="2.0.4" requirementId="CSIP62"/>
   <references>
-    <reference requirementId="CSIP62" URL="https://earkcsip.dilcis.eu/#CSIP62"/>
+    <reference requirementId="CSIP62" URL="http://earkcsip.dilcis.eu/#CSIP62"/>
   </references>
   <requirementText>
     <name>Content Information Type Specification</name>
@@ -20,22 +20,7 @@
     <!--  The requirement text is ambiguous, with these two statements in conflict:
           1. mets/fileSec/fileGrp[@USE='Representations']/@csip:CONTENTINFORMATIONTYPE
           2. When the "Package type" value is "Mixed" and/or the file group describes a "Representation"
-
-          Specifically: the XPath in statement 1 strictly limits the scope
-          to @USE='Representations', while in statement 2, the and/or part
-          implies @USE may also have some other value as long as "Package
-          type" value is "Mixed." The interpretation used here is that
-          statement 1 is correct.
-
-          Another issue is that the only requirement with the words
-          "Package type" in it is CSIP9 "OAIS Package type information"
-          but its vocabulary is SIP, AIP, DIP, AIU and AIC - no "Mixed" is
-          allowed. That is another reason to base the testcase on
-          statement 1.
-          
-          These problems are discussed in:
-          #647 CSIP62 ambiguities
-          https://github.com/DILCISBoard/E-ARK-CSIP/issues/647
+          The interpretation used here is that statement 1 is correct.
     -->
     If mets/fileSec/fileGrp/@USE = "Representations" then mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE MUST exist.
     If mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE exists, it MUST have a value from the VocabularyContentInformationTypeSpecification.
@@ -54,7 +39,7 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="fileGrp_CONTENTINFORMATIONTYPE_not_exist" isValid="FALSE">
+        <package name="fileGrp_CONTENTINFORMATIONTYPE_not_exist" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/fileGrp_CONTENTINFORMATIONTYPE_not_exist</path>
           <description>
             METS.xml file is located in the root folder.
@@ -62,7 +47,10 @@
             The attribute mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE does not exist.
           </description>
         </package>
-        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
+        <!--  It seems most efficient to have one valid package for all SHOULD
+              requirements - there are about 20 of them, so the alternative would
+              be to have 20 rule-specific valid packages. -->
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="TRUE">
           <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, plus all SHOULD requirements (both for elements and attributes).
@@ -78,7 +66,7 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="root_mets_fileGrp_CONTENTINFORMATIONTYPE_incorrect" isValid="FALSE">
+        <package name="root_mets_fileGrp_CONTENTINFORMATIONTYPE_incorrect" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/root_mets_fileGrp_CONTENTINFORMATIONTYPE_incorrect</path>
           <description>
             METS.xml file is located in the root folder.
@@ -86,12 +74,15 @@
             The attribute mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE = "random_string_du92Neib57zjMWren".
           </description>
         </package>
+        <!--  It seems most efficient to have one valid package for all SHOULD
+              requirements - there are about 20 of them, so the alternative would
+              be to have 20 rule-specific valid packages. -->
         <!--  Ideally, there should be a valid IP for each specific vocabulary
               value, as this is the only certain way to test that the validator
               accepts any one of them. This should be automated as
               VocabularyContentInformationTypeSpecification currently allows 7
               different values. -->
-        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="TRUE">
           <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, plus all SHOULD requirements (both for elements and attributes).
