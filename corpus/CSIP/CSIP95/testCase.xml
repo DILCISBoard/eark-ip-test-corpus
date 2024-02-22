@@ -2,7 +2,7 @@
   testable="FALSE">
     <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP95"/>
     <references>
-    <reference requirementId="CSIP95" URL="http://earkcsip.dilcis.eu/#CSIP95"/>
+    <reference requirementId="CSIP95" URL="https://earkcsip.dilcis.eu/#CSIP95"/>
   </references>
   <requirementText>
     <name>Documentation division label</name>
@@ -38,5 +38,18 @@
   <dependencies>
     <dependency requirementId="CSIP93" URL="http://earkcsip.dilcis.eu/#CSIP93"></dependency>
   </dependencies>
-
+  <rules>
+    <rule id="1">
+      <description>If the documentation division exists, it MUST have @LABEL='Documentation'.</description>
+      <error level="ERROR">
+        <message>If the documentation division exists, it MUST have @LABEL='Documentation'.</message>
+      </error>
+      <corpusPackages>
+        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+          <path>valid\minimal_IP_with_1_representation</path>
+          <description>Minimal IP</description>
+        </package>
+      </corpusPackages>
+    </rule>
+  </rules>
 </testCase>

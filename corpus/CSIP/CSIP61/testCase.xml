@@ -1,23 +1,69 @@
-<!-- Root element for an individual test case, allows these to be wrapped into
-XML lists -->
-<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
-  testable="UNKNOWN">
-  <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP61"/>
-  <!-- URL references to requirements for convenient lookup -->
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
+  <id specification="CSIP" version="2.0.4" requirementId="CSIP61"/>
   <references>
     <reference requirementId="CSIP61" URL="http://earkcsip.dilcis.eu/#CSIP61"/>
   </references>
-  <!-- The full text of the requirement. -->
-  <requirementText>If administrative metadata is has been provided on the file group (fileGrp) level this attribute points to the correct administrative metadata section.
-</requirementText>
-  <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description></description>
-  <!-- List of requirments that this test case depends on in addition to the
-  main requirememt, e.g. general requirments on the form of IDs -->
-  <dependencies>
-  </dependencies>
-  <!-- A list of the validation rules derived from the test case -->
+  <requirementText>
+    <name>Reference to administrative metadata</name>
+    <location>mets/fileSec/fileGrp/@ADMID</location>
+    <description>
+      If administrative metadata has been provided at file group mets/fileSec/fileGrp level this attribute refers to its administrative metadata section by ID.
+    </description>
+    <cardinality>0..1</cardinality>
+    <level>MAY</level>
+  </requirementText>
+  <description>
+    If at least one administrative metadata unit (i.e. a techMD, rightsMD, sourceMD or digiprovMD element under mets/amdSec) exists
+    and at least one of them is relevant to the current mets/fileSec/fileGrp<!-- UNTESTABLE -->
+    then mets/fileSec/fileGrp/@ADMID MAY refer to them by their @ID as a space-separated list of @ID values.
+  </description>
+  <dependencies />
   <rules>
-  </rules>
+    <rule id="1">
+      <!--  The datatype of mets/fileSec/fileGrp/@ADMID is xsd:IDREFS, which is
+            a space-separated list of xsd:IDREF, which in turn are values of
+            xsd:ID attributes from the same METS.xml file. Referential integrity
+            is checked by schema validators. However, these only check for
+            IDREF-ID match in general, ignoring the question of whether the ID
+            belongs to the right element. This rule covers that gap. -->
+      <description>If a mets/fileSec/fileGrp/@ADMID exists, its value must equal to an administrative metadata ID, or a space-separated list of them.</description>
+      <error level="WARNING"><!-- It's actually an ERROR, i.e. it's a "conditional MUST": @ADMID MAY exist, but if it does, it MUST point to a proper ID. -->
+        <message>
+          mets/fileSec/fileGrp/@ADMID refers to an incorrect @ID. MUST be: If mets/fileSec/fileGrp/@ADMID exists, its value MUST equal to an administrative metadata ID.
+        </message>
+      </error>
+      <corpusPackages>
+        <package name="fileGrp_ADMID_incorrect_ref" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/fileGrp_ADMID_incorrect_ref</path>
+          <description>
+            METS.xml file where the mets/fileSec/fileGrp/@ADMID value is an @ID from the current METS.xml, but it's not an administrative metadata ID.
+          </description>
+        </package>
+        <package name="fileGrp_ADMID_incorrect_ref2" isValid="FALSE" isImplemented="TRUE">
+        <!--  This package is for testing if the validator correctly handles
+              the case where @ADMID contains a list of @ID values. -->
+          <path>invalid/fileGrp_ADMID_incorrect_ref2</path>
+          <description>
+            METS.xml file where the mets/fileSec/fileGrp/@ADMID value is a list of @ID values from the current METS.xml, where the first one is an administrative metadata ID but the other one is not. For example: @ADMID = "a-correct-digiprovMD-ID a-fileGrp-ID".
+          </description>
+        </package>
+        <!--  It seems most efficient to have one valid package for all MAY
+              requirements - there are 8 of them, so the alternative would
+              be to have 8 rule-specific valid packages. -->
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
+          <description>
+            Minimal IP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes).
+          </description>
+        </package>
+      </corpusPackages>
+    </rule>
+    <!--  It is possible to check for the existense of mets/amdSec/*
+          and then for the existense of mets/fileSec/fileGrp/@ADMID, and
+          if the latter is not found for a fileGrp, raise a warning: "An
+          administrative metadata unit exists, but this fileGrp does not
+          reference it. You might want to check if the administrative
+          metadata is relevant to this fileGrp". However, this would
+          likely generate a lot of noise, so it is better not to have it. -->
+    </rules>
 </testCase>

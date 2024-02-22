@@ -9,7 +9,7 @@
         <xs:element ref="requirementText"/>
         <xs:element ref="description"/>
         <xs:element ref="dependencies"/>
-        <xs:element ref="rules" minOccurs="0"/>
+        <xs:element ref="rules"/>
       </xs:sequence>
       <xs:attribute name="testable" use="required">
         <xs:simpleType>
@@ -134,7 +134,7 @@
   <xs:element name="rules">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="rule"/>
+        <xs:element maxOccurs="unbounded" ref="rule"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
