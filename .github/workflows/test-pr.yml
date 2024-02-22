@@ -1,0 +1,29 @@
+name: PR QA
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    name: Test Changed Packages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Gather changed files from the corpora folder
+        id: changed-corpora-files
+        uses: tj-actions/changed-files@v37
+        with:
+          files: corpora/**
+
+      - name: List changed corpora files
+        if: steps.changed-corpora-files.outputs.any_changed == 'true'
+        run: |
+          echo "One or more files in the corpora folder have changed."
+          echo "List all the files that have changed: ${{ steps.changed-corpora-files.outputs.all_changed_files }}"
+  
