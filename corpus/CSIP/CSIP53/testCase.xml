@@ -27,12 +27,12 @@ XML lists -->
         <message>A MIMETYPE-attribute MUST be present in the mdRef-element</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdRef_missing_MIMETYPE">
+        <package isValid="FALSE" isImplemented="TRUE" name="mdRef_missing_MIMETYPE">
           <path>valid/mdRef_missing_MIMETYPE</path>
           <description>A package where the MIIMETYPE-attribute is missing</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
@@ -43,12 +43,12 @@ XML lists -->
         <message>The value MUST be taken from the IANA list https://www.iana.org/assignments/media-types/media-types.xhtml </message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdRef_wrong_MIMETYPE">
+        <package isValid="FALSE" isImplemented="TRUE" name="mdRef_wrong_MIMETYPE">
           <path>invalid/mdRef_wrong_MIMETYPE</path>
           <description>A package where the MIMETYPE-value is not from the list</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
@@ -59,12 +59,12 @@ XML lists -->
         <message>MIMETYPE values should not be more than 256 characters long - is the value actually a MIMETYPE?</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mdRef_MIMETYPE_too_much_content">
+        <package isValid="FALSE" isImplemented="TRUE" name="mdRef_MIMETYPE_too_much_content">
           <path>invalid/mdRef_MIMETYPE_too_much_content</path>
           <description>A package where the MIMETYPE value is bigger that 256 characters</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>

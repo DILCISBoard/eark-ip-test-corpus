@@ -28,12 +28,12 @@ XML lists -->
         <message>There MUST exist a CHECKSUM-attribute</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="file_missing_CHECKSUM_attribute">
+        <package isValid="FALSE" isImplemented="TRUE" name="file_missing_CHECKSUM_attribute">
           <path>invalid/file_missing_CHECKSUM_attribute</path>
           <description>A package where the CHECKSUM-attribute is missing</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
@@ -44,12 +44,12 @@ XML lists -->
         <message>The checksum value for the file is not identical with the checksum value that is given</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="file_wrong_CHECKSUM_value">
+        <package isValid="FALSE" isImplemented="TRUE" name="file_wrong_CHECKSUM_value">
           <path>invalid/file_wrong_CHECKSUM_value</path>
           <description>A package where a file has the wrong checksumvalue, for example a SHA-256 value when MD5 is given as checksumstype</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
-          <path>valid/minimal_IP_with_schemas</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>

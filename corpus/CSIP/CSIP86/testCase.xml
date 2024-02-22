@@ -28,28 +28,36 @@ XML lists -->
         <message>The @LABEL attribute MUST exist</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="CSIP86_missing_label_attribute">
+        <package isValid="FALSE" isImplemented="TRUE" name="CSIP86_missing_label_attribute">
           <path>invalid\CSIP86_missing_label_attribute</path>
           <description>An IP which has no @LABEL attribute at the structMap\div-element</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
-          <path>valid\minimal_IP</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
     </rule>
     <rule id="2">
-      <description>The value of the @LABEL attribute must be identical with the</description>
+      <description>The value of the @LABEL attribute must be identical with the @OBJID attribute value in METS root</description>
       <error level="ERROR">
         <message>The value in the @LABEL attribute must be the same as the @OBJID attribute value in METS root</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="different_OBJID_and_LABEL_value">
+        <package isValid="FALSE" isImplemented="TRUE" name="different_OBJID_and_LABEL_value">
           <path>invalid\different_OBJID_and_LABEL_value</path>
-          <description>The @LABEL-attribute in the Package METS is different from the package name and the @LABEL-attribute in the Representation METS is different from the representation name</description>
+          <description>The @LABEL-attribute in the Package METS is different from the package name.</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
-          <path>valid\minimal_IP</path>
+        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
+          <path>valid\minimal_IP_with_1_representation</path>
+          <description>Minimal IP</description>
+        </package>
+        <package isValid="FALSE" isImplemented="FALSE" name="different_OBJID_and_LABEL_value">
+          <path>invalid\different_OBJID_and_LABEL_value_rep</path>
+          <description>The @LABEL-attribute in the Representation METS is different from the representation name</description>
+        </package>
+        <package isValid="TRUE" isImplemented="FALSE" name="valid_IP_with_SHOULD_MAY_2_rep">
+          <path>valid\valid_IP_with_SHOULD_MAY_2_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
