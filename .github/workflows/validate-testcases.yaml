@@ -34,5 +34,7 @@ jobs:
           pip install .
       - name: Validate test cases
         run: |
+          ls -a
           cd corpus
+          ls -a
           ./validate-all-testcases
