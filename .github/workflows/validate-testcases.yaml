@@ -13,35 +13,26 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: corpus
+          ref: integration
       - name: Checkout validator repository
         uses: actions/checkout@v4
         with:
           repository: E-ARK-Software/eark-validator
           path: validator
-      - name: Set up Python 3.10
+          ref: integration
+      - name: Setup Python 3.10
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
-      - name: Create virtual environment
+      - name: Setup virtual environment
         run: |
           python -m pip install --upgrade pip
           python -m pip install virtualenv
           cd validator
-          echo "${PWD##*/}"
           virtualenv -p python3 venv
           source venv/bin/activate
-          python -m pip install --upgrade pip
           pip install .
-          ip-check
-      - name: Print files
-        run: ls -R  
-      - name: Install dependencies
+      - name: Validate test cases
         run: |
-          python -m pip install --upgrade pip
-          pip install .
-      - name: Print files
-        run: ls -R   
-      - name: Check validator
-        run: ip-check
-      - name: Check validator
-        run: python validator/eark_validator/cli/app.py
+          cd ../corpus
+          validate-all-testcases
