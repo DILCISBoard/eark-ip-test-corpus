@@ -35,4 +35,5 @@ jobs:
       - name: Validate test cases
         run: |
           cd corpus
+          chmod +rx ./validate-all-testcases
           ./validate-all-testcases
