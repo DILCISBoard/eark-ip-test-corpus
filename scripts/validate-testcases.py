@@ -16,7 +16,8 @@ failed_parsings = 0
 misssing_packages = 0
 skipped_validations = 0
 inconsistent_outputs = 0
-correct_validatons = 0
+correct_valid_validatons = 0
+correct_invalid_validatons = 0
 
 for test_case_path in sys.argv[1:]:
     total_test_cases += 1
@@ -63,10 +64,10 @@ for test_case_path in sys.argv[1:]:
                         print(f"Package {package_path} should be valid but output contains validation message.")
                         inconsistent_outputs += 1
                     else:
-                        correct_validatons += 1
+                        correct_valid_validatons += 1
                 else:
                     if any(x['rule_id'] == testcase_id for x in schematron_results):
-                        correct_validatons += 1
+                        correct_invalid_validatons += 1
                     else:
                         print(f"Package {package_path} should contains validation message described in testCase.xml.")
                         inconsistent_outputs += 1
@@ -78,7 +79,8 @@ for test_case_path in sys.argv[1:]:
                 
 print()
 print(f"Tried to validate {total_validations} packages from {total_rules} rules from {total_test_cases} test cases.")
-print(f"{correct_validatons} validations gave output that matches with expected value from testCase.xml")
+print(f"{correct_valid_validatons} validations gave output that matches with expected valid value from testCase.xml")
+print(f"{correct_invalid_validatons} validations gave output that matches with expected invalid value from testCase.xml")
 if failed_validations != 0:
     print(f"{failed_validations} validations failed.")
 if failed_parsings != 0:
