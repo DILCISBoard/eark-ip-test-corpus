@@ -55,9 +55,8 @@ for test_case_path in sys.argv[1:]:
             package_path = os.path.join(dir_path, relative_path)
 
             try:
-                jsonText = subprocess.check_output(['eark-validator', package_path]).splitlines()[1]
+                jsonText = subprocess.check_output(['eark-validator', package_path], text=True).splitlines()[1]
                 data = json.loads(jsonText)
-
                 schematron_results = data['metadata']['schematron_results']
                 if package.get('isValid') == 'TRUE':
                     if len(schematron_results) != 0:
