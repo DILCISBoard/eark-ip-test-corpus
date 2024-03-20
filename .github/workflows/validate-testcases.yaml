@@ -1,0 +1,32 @@
+name: Validate test cases
+
+on: [push]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout corpus repository
+        uses: actions/checkout@v4
+        with:
+          path: corpus
+          ref: integration
+      - name: Checkout validator repository
+        uses: actions/checkout@v4
+        with:
+          repository: E-ARK-Software/eark-validator
+          path: validator
+          ref: integration
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Validating test cases
+        run: |
+          python -m pip install --upgrade pip
+          pip install ./validator
+          chmod +rx ./corpus/validate-all-testcases
+          ./corpus/validate-all-testcases
