@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.4" requirementId="CSIP6"/>
+  <id specification="CSIP" version="2.1.0" requirementId="CSIP6"/>
   <references>
     <reference requirementId="CSIP6" URL="http://earkcsip.dilcis.eu/#CSIP6"/>
   </references>
@@ -26,13 +26,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_PROFILE_not_exist" isValid="FALSE">
+        <package name="mets-xml_mets_PROFILE_not_exist" isValid="FALSE" isImplemented="FALSE">
           <path></path>
           <description>
             METS.xml file has no mets/@PROFILE attribute.
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
+        <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="FALSE">
           <path></path>
           <description>
             Minimal IP that matches all MUST requirements.
@@ -77,13 +77,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_PROFILE_empty" isValid="FALSE">
+        <package name="mets-xml_mets_PROFILE_empty" isValid="FALSE" isImplemented="FALSE">
           <path></path>
           <description>
             METS.xml file has mets/@PROFILE = "".
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
+        <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="FALSE">
           <path></path>
           <description>
             Minimal IP that matches all MUST requirements.

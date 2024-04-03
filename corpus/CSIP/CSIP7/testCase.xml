@@ -28,7 +28,7 @@ mets/metsHdr/@CREATEDATE records the date and time the package was created.
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_CREATEDATE_not_exist" isValid="FALSE" isImplemented="FALSE">
+        <package name="mets-xml_metsHdr_CREATEDATE_not_exist" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/xml_metsHdr_CREATEDATE_not_exist</path>
           <description>
             METS.xml file has no mets/metsHdr/@CREATEDATE attribute.

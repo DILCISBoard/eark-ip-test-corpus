@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.4" requirementId="CSIP10"/>
+  <id specification="CSIP" version="2.1.0" requirementId="CSIP10"/>
   <references>
     <reference requirementId="CSIP10" URL="http://earkcsip.dilcis.eu/#CSIP10"/>
   </references>
@@ -25,19 +25,19 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_agent_not_exist" isValid="FALSE">
-          <path>mets-xml_metsHdr_agent_not_exist</path>
+        <package name="mets-xml_metsHdr_agent_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid\mets-xml_metsHdr_agent_not_exist</path>
           <description>
             METS.xml file has no mets/metsHdr/agent element.
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
+        <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
           <path>valid/minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
         </package>
-        <package name="minimal_IP_metsHdr_agent_2_instances" isValid="TRUE">
+        <package name="minimal_IP_metsHdr_agent_2_instances" isValid="TRUE" isImplemented="TRUE">
           <path>valid/minimal_IP_metsHdr_agent_2_instances</path>
           <description>
             Minimal IP that matches all MUST requirements, and has two instances of mets/metsHdr/agent element.

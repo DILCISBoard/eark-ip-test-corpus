@@ -32,14 +32,14 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_TYPE_attribute_not_exist" isValid="FALSE">
-          <path></path>
+        <package name="mets-xml_mets_TYPE_attribute_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid\mets-xml_mets_TYPE_attribute_not_exist</path>
           <description>
             METS.xml file has no mets/@TYPE attribute.
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path></path>
+        <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -54,14 +54,14 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_TYPE_attribute_value_incorrect" isValid="FALSE">
-          <path></path>
+        <package name="mets-xml_mets_TYPE_attribute_value_incorrect" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid\mets-xml_mets_TYPE_attribute_value_incorrect</path>
           <description>
             METS.xml file has mets/@TYPE = "random_string_n3ihcu63LdGb37kF7".
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path></path>
+        <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -69,13 +69,13 @@
         <!--  Ideally, there should be a valid IP for each specific vocabulary 
               value, as this is the only certain way to test that the validator 
               accepts any one of them. This should be automated as 
-              VocabularyContentCategory currently allows 25 different values. -->
+              VocabularyContentCategory currently allows 25 different values. 
         <package name="valid_minimal_mets_TYPE_value_vocabulary_1" isValid="TRUE">
           <path></path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@TYPE value set to VocabularyContentCategory allowed value nr 1.
           </description>
-        </package>
+        </package>-->
       </corpusPackages>
     </rule>
     <rule id="3">
@@ -86,14 +86,14 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist" isValid="FALSE">
-          <path></path>
+        <package name="mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid\mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist</path>
           <description>
             METS.xml file has mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE attribute does not exist.
           </description>
         </package>
-        <package name="valid_minimal_mets_TYPE_value_OTHER" isValid="TRUE">
-          <path></path>
+        <package name="valid_minimal_mets_TYPE_value_OTHER" isValid="TRUE" isImplemented="TRUE">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works – Manuscripts".
           </description>
@@ -108,14 +108,14 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value" isValid="FALSE">
-          <path></path>
+        <package name="mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid\mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value</path>
           <description>
             METS.xml file has mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "".
           </description>
         </package>
-        <package name="valid_minimal_mets_TYPE_value_OTHER" isValid="TRUE">
-          <path></path>
+        <package name="valid_minimal_mets_TYPE_value_OTHER" isValid="TRUE" isImplemented="TRUE">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works – Manuscripts".
           </description>

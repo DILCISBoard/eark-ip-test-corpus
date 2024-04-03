@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.4" requirementId="CSIP9"/>
+  <id specification="CSIP" version="2.1.0" requirementId="CSIP9"/>
   <references>
     <reference requirementId="CSIP9" URL="http://earkcsip.dilcis.eu/#CSIP9"/>
   </references>
@@ -31,8 +31,8 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_OAISPACKAGETYPE_attribute_not_exist" isValid="FALSE">
-          <path>mets-xml_metsHdr_OAISPACKAGETYPE_attribute_not_exist</path>
+        <package name="mets-xml_metsHdr_OAISPACKAGETYPE_attribute_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid\mets-xml_metsHdr_OAISPACKAGETYPE_attribute_not_exist</path>
           <description>
             METS.xml file has no mets/metsHdr/@csip:OAISPACKAGETYPE attribute.
           </description>
@@ -47,8 +47,8 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_OAISPACKAGETYPE_attribute_value_incorrect" isValid="FALSE">
-          <path>mets-xml_metsHdr_OAISPACKAGETYPE_attribute_value_incorrect</path>
+        <package name="mets-xml_metsHdr_OAISPACKAGETYPE_attribute_value_incorrect" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid\mets-xml_metsHdr_OAISPACKAGETYPE_attribute_value_incorrect</path>
           <description>
             METS.xml file has mets/metsHdr/@csip:OAISPACKAGETYPE = "random_string_e2368caa08a1cbbe2e8d5b96ab34a41e".
           </description>
