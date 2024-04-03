@@ -46,13 +46,13 @@
           value, as this is the only certain way to test that the validator
           checks for all of them. This should be automated as
           VocabularyContentCategory currently allows 25 different values. -->
-        <package name="mets-xml_mets_TYPE_OTHER_and_csip-OTHERTYPE_vocabulary_1" isValid="FALSE">
+        <package name="mets-xml_mets_TYPE_OTHER_and_csip-OTHERTYPE_vocabulary_1" isValid="FALSE" isImplemented="FALSE">
           <path></path>
           <description>
             METS.xml file has mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works - Print".
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_mets_TYPE_OTHER" isValid="TRUE">
+        <package name="minimal_IP_with_1_rep_mets_TYPE_OTHER" isValid="TRUE" isImplemented="FALSE">
           <path></path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works - Manuscripts".
@@ -69,13 +69,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_TYPE_not_OTHER_and_csip-OTHERTYPE_exists" isValid="FALSE">
+        <package name="mets-xml_mets_TYPE_not_OTHER_and_csip-OTHERTYPE_exists" isValid="FALSE" isImplemented="FALSE">
           <path></path>
           <description>
             METS.xml file has mets/@TYPE = "Textual works - Print", mets/@csip:OTHERTYPE = "Textual works - Manuscripts".
           </description>
         </package>
-        <package name="minimal_IP_with_1_rep_mets_TYPE_OTHER" isValid="TRUE">
+        <package name="minimal_IP_with_1_rep_mets_TYPE_OTHER" isValid="TRUE" isImplemented="FALSE">
           <path></path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works - Manuscripts".

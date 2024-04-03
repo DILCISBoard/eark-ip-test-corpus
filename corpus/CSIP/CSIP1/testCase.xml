@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.4" requirementId="CSIP1" />
+  <id specification="CSIP" version="2.1.0" requirementId="CSIP1" />
   <references>
     <reference requirementId="CSIP1" URL="http://earkcsip.dilcis.eu#CSIP1" />
   </references>
@@ -30,14 +30,14 @@ For a representation level METS document this value records the name/ID of the r
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_OBJID_attribute_not_exist" isValid="FALSE">
-          <path></path>
+        <package name="mets-xml_mets_OBJID_attribute_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid\mets-xml_mets_OBJID_attribute_not_exist"</path>
           <description>
             METS.xml file has no mets/@OBJID attribute.
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path></path>
+        <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -52,14 +52,14 @@ For a representation level METS document this value records the name/ID of the r
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_mets_OBJID_attribute_value_empty" isValid="FALSE">
-          <path></path>
+        <package name="mets-xml_mets_OBJID_attribute_value_empty" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid\mets-xml_mets_OBJID_attribute_value_empty</path>
           <description>
             METS.xml file has mets/@OBJID = "".
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path></path>
+        <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -76,15 +76,15 @@ For a representation level METS document this value records the name/ID of the r
         </message>
       </error>
       <corpusPackages>
-        <package name="root_mets_file_mets-xml_mets_OBJID_not_equal_to_package_ID" isValid="FALSE">
-          <path></path>
+        <package name="root_mets_file_mets-xml_mets_OBJID_not_equal_to_package_ID" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid\root_mets_file_mets-xml_mets_OBJID_not_equal_to_package_ID</path>
           <description>
             METS.xml file is located in the root folder.
             The METS.xml file has mets/@OBJID not equal to root folder name.
           </description>
         </package>
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path></path>
+        <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -101,15 +101,15 @@ For a representation level METS document this value records the name/ID of the r
         </message>
       </error>
       <corpusPackages>
-        <package name="rep_mets_file_mets-xml_mets_OBJID_not_equal_to_rep_ID" isValid="FALSE">
-          <path></path>
+        <package name="rep_mets_file_mets-xml_mets_OBJID_not_equal_to_rep_ID" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid\rep_mets_file_mets-xml_mets_OBJID_not_equal_to_rep_ID</path>
           <description>
             METS.xml file is located in root_ID/representations/rep_ID folder.
             The METS.xml file has mets/@OBJID not equal to rep_ID.
           </description>
         </package>
-        <package name="valid_minimal_with_one_representation" isValid="TRUE">
-          <path></path>
+        <package name="valid_minimal_with_one_representation" isValid="TRUE" isImplemented="TRUE">
+          <path>valid\minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>

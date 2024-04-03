@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.4" requirementId="CSIP8"/>
+  <id specification="CSIP" version="2.1.0" requirementId="CSIP8"/>
   <references>
     <reference requirementId="CSIP8" URL="http://earkcsip.dilcis.eu/#CSIP8"/>
   </references>
@@ -7,7 +7,7 @@
     <name>Package last modification date</name>
     <location>mets/metsHdr/@LASTMODDATE</location>
     <description>
-      Is mandatory when the package has been modified.
+      mets/metsHdr/@LASTMODDATE records the data and time the package was modified and is mandatory when the package has been modified.
     </description>
     <cardinality>0..1</cardinality>
     <level>SHOULD</level>
@@ -28,13 +28,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_LASTMODDATE_not_exist" isValid="FALSE">
-          <path>mets-xml_metsHdr_LASTMODDATE_not_exist</path>
+        <package name="mets-xml_metsHdr_LASTMODDATE_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>valid\mets-xml_metsHdr_LASTMODDATE_not_exist</path>
           <description>
             METS.xml file has no mets/metsHdr/@LASTMODDATE attribute.
           </description>
         </package>
-        <package name="mets-xml_metsHdr_LASTMODDATE_OK" isValid="TRUE">
+        <package name="mets-xml_metsHdr_LASTMODDATE_OK" isValid="TRUE" isImplemented="TRUE">
           <path>valid/mets-xml_metsHdr_LASTMODDATE_OK</path>
           <description>
             Minimal IP that matches all MUST requirements, and has mets/metsHdr/@LASTMODDATE = "2020-12-12T12:00:00".
@@ -55,8 +55,8 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_LASTMODDATE_in_future" isValid="FALSE">
-          <path>mets-xml_metsHdr_LASTMODDATE_in_future</path>
+        <package name="mets-xml_metsHdr_LASTMODDATE_in_future" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid\mets-xml_metsHdr_LASTMODDATE_in_future</path>
           <description>
             METS.xml file has mets/metsHdr/@LASTMODDATE = "2038-01-18T12:00:00".
             <!-- Creating a static file that includes a date in the future is
@@ -71,7 +71,7 @@
               Thus, it seems reasonable to set the date at 2038-01-18. -->
           </description>
         </package>
-        <package name="mets-xml_metsHdr_LASTMODDATE_OK" isValid="TRUE">
+        <package name="mets-xml_metsHdr_LASTMODDATE_OK" isValid="TRUE" isImplemented="TRUE">
           <path>valid/mets-xml_metsHdr_LASTMODDATE_OK</path>
           <description>
             Minimal IP that matches all MUST requirements, and has mets/metsHdr/@LASTMODDATE = "2020-12-12T12:00:00".

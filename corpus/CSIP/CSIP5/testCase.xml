@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.4" requirementId="CSIP5"/>
+  <id specification="CSIP" version="2.1.0" requirementId="CSIP5"/>
   <references>
     <reference requirementId="CSIP5" URL="https://earkcsip.dilcis.eu/#CSIP5"/>
   </references>
@@ -46,13 +46,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_not_exist" isValid="FALSE">
+        <package name="mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_not_exist" isValid="FALSE" isImplemented="FALSE">
           <path>invalid/mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_not_exist</path>
           <description>
             METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE attribute does not exist.
           </description>
         </package>
-        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="FALSE">
           <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
@@ -68,13 +68,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_no_value" isValid="FALSE">
+        <package name="mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_no_value" isValid="FALSE" isImplemented="FALSE">
           <path>invalid/mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_no_value</path>
           <description>
             METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "".
           </description>
         </package>
-        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="FALSE">
           <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
@@ -94,13 +94,13 @@
           value, as this is the only certain way to test that the validator
           checks for all of them. This should be automated as
           VocabularyContentInformationTypeSpecification currently allows 7 different values. -->
-        <package name="mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_vocabulary_1" isValid="FALSE">
+        <package name="mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_vocabulary_1" isValid="FALSE" isImplemented="FALSE">
           <path>invalid/mets_csip_CONTENTINFORMATIONTYPE_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_vocabulary_1</path>
           <description>
             METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "ERMS".
           </description>
         </package>
-        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="FALSE">
           <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
@@ -116,13 +116,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets_csip_CONTENTINFORMATIONTYPE_not_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_exists" isValid="FALSE">
+        <package name="mets_csip_CONTENTINFORMATIONTYPE_not_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_exists" isValid="FALSE" isImplemented="FALSE">
           <path>invalid/mets_csip_CONTENTINFORMATIONTYPE_not_OTHER_and_csip_OTHERCONTENTINFORMATIONTYPE_exists</path>
           <description>
             METS.xml file has mets/@csip:CONTENTINFORMATIONTYPE = "ERMS" and mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
           </description>
         </package>
-        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE">
+        <package name="valid_IP_with_SHOULD_MAY_1_rep" isValid="TRUE" isImplemented="FALSE">
           <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@csip:CONTENTINFORMATIONTYPE = "OTHER", mets/@csip:OTHERCONTENTINFORMATIONTYPE = "SIARDUK".
