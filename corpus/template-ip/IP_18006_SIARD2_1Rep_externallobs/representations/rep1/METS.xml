@@ -1,58 +1,72 @@
 <!-- a representation level METS file -->
 <!-- This representation level METS.xml file includes information about only the components of this segment of the representation -->
-<!-- This representation level METS.xml file is not aware of its own root level METS file or any other segments that may exists -->
+<!-- This representation level METS.xml file is not aware of its own package METS file or any other segments that may exists -->
 <mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns="http://www.loc.gov/METS/" 
 	xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance schemas/XMLSchema.xsd http://www.loc.gov/METS/ schemas/mets.xsd http://www.w3.org/1999/xlink schemas/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS schemas/CSIPExtensionMETS.xsd" 
 
- OBJID="IP_18006_SIARD2_1Rep_externallobs_rep1" TYPE="Databases" csip:CONTENTINFORMATIONTYPE="SIARD2" csip:OTHERCONTENTTYPESPECIFICATION="SIARD_2.1" LABEL="representations level METS file for a representation" csip:OAISPACKAGETYPE="SIP">
+ OBJID="rep1" TYPE="Databases" csip:CONTENTINFORMATIONTYPE="SIARD2" csip:OTHERCONTENTTYPESPECIFICATION="SIARD_2.1" 
+ LABEL="representations level METS file for a representation" csip:OAISPACKAGETYPE="SIP" PROFILE="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml">
 
-	<!-- Note that the OBJID can be replaced with any ID scheme. In this example IDs carring information are used to ease understanding -->
-	<!-- PROFILE is not used at the representations level METS -->
-	<metsHdr RECORDSTATUS="NEW" CREATEDATE="2015-12-14T14:20:00" 
+
+	<metsHdr RECORDSTATUS="NEW" CREATEDATE="2015-12-14T14:20:00" csip:OAISPACKAGETYPE="SIP"
 		LASTMODDATE="2015-12-14T14:20:00"> <!-- CS - LASTMODDATA only mandatory if different from CREATEDATA -->
 		<agent TYPE="OTHER" ROLE="CREATOR" OTHERTYPE="SOFTWARE"> <!-- CS mandatory -->
 			<name>E-ARK Corpus Team</name> <!-- CS optional -->
-			<note>VERSION=0.0.1</note> <!-- CS optional -->
+			<note csip:NOTETYPE="SOFTWARE VERSION">VERSION=0.0.1</note> <!-- CS optional -->
 		</agent>
 		<metsDocumentID>IP_18006_SIARD2_1Rep_externallobs_rep1</metsDocumentID> <!-- CS optional, recommended to be equal to OBJID -->
 	</metsHdr>
-	<dmdSec ID="ID_dmdSec_rep1" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
-		<mdRef  ID="ID.archiveIndex.rep1" LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2340" CREATED="2018-04-24T14:37:49.609+01:00" CHECKSUM="9B706A5D472B383C5A965639F4873E01D081B89DFEA16A7D8E072A60B4C6846F" CHECKSUMTYPE="SHA-256"/>
-	</dmdSec>
 	
-	<fileSec>
-		<!-- In these example IDs are carring information to ease understanding - they look like paths to ease understanding, but are just IDs, similar to the naming of namespaces - these IDs can be replaced with information less UUID -->
-		<fileGrp USE="E-ARK files representation IP_18006_SIARD2_1Rep_externallobs_rep1." ID="IP_18006_SIARD2_1Rep_externallobs_rep1"> <!-- this ID is just for internal reference -->
-			<!--CS requirement for value of USE: "E-ARK files representation [ID]" -->
-			<!-- schemas -->		
-			<fileGrp USE="schemas" ID="IP_18006_SIARD2_1Rep_externallobs_rep1.representations.schemas">  <!-- this ID is just for internal reference -->
-				<!-- METS.xsd -->
-				<file ID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.mets.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
-					CHECKSUM="75debd87e3d070e8590a393ac38483e4" CHECKSUMTYPE="MD5" SIZE="134223">
-					<FLocat LOCTYPE="URL" xlink:href="../../schemas/mets.xsd" xlink:type="simple"/>
-				</file>
-				<!-- mets_xlink.xsd -->
-				<file ID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.mets_xlink.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
-					CHECKSUM="0aaa1dd8380416f09ac607a06b3ec1a0" CHECKSUMTYPE="MD5" SIZE="3021">
-					<FLocat LOCTYPE="URL" xlink:href="../../schemas/mets_xlink.xsd" xlink:type="simple"/>
-				</file>
-				<!-- xlink.xsd -->
-				<file ID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.xlink.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
-					CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
-					<FLocat LOCTYPE="URL" xlink:href="../../schemas/xlink.xsd" xlink:type="simple"/>
-				</file>
-			</fileGrp>
-							
-			<!-- metadata -->				
-			<fileGrp USE="metadata" ID="IP_18006_SIARD2_1Rep_externallobs_rep1.representations.metadata">  <!-- this ID is just for internal reference -->
-				<!-- EAD and PREMIS have been described under dmdSec and amdSec and according to the CS they MUST NOT (or SHOULD?) be listed here -->
-			</fileGrp>
-			<fileGrp USE="data" ID="IP_18006_SIARD2_1Rep_externallobs_rep1.representations.data">  <!-- this ID is just for internal reference -->
+	
+	<dmdSec ID="uuid-4wqd8DD8-2561-4315-AC39-F941CBB138B4" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
+   <mdRef LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2381" CREATED="2018-04-24T14:37:49.609+01:00" 
+     CHECKSUM="4E17DBF6DAA8865750D514C3FDEE656AEB823C0DC396B72D0B6AE17419549005" CHECKSUMTYPE="SHA-256" MIMETYPE="text/xml"/>
+   </dmdSec>
+	
+	
+	<fileSec ID="ID_REP1_filesec">
+	
+	<!-- schemas -->		
+	<fileGrp USE="Schemas" ID="ID_schemas">
+		<!-- mets.xsd -->
+		<file ID="rep1_ID_mets_xsd" MIMETYPE="application/xml" SIZE="135700" CREATED="2018-05-01T14:20:00" CHECKSUM="4e9961dec3de72081e6142b28a437fb8" CHECKSUMTYPE="MD5">
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/mets.xsd"/>
+		</file>
+    
+		<!-- XMLSchema.xsd -->
+		<file ID="rep1_ID_XMLSchema_xsd" MIMETYPE="application/xml" CREATED="2015-12-14T14:20:00" CHECKSUM="94ed1a93ce3147d01bcb2fc1126255ed" CHECKSUMTYPE="MD5" SIZE="87677">
+        <FLocat LOCTYPE="URL" xlink:href="schemas/XMLSchema.xsd" xlink:type="simple"/>
+		</file>
+      
+		<!-- xlink.xsd -->
+		<file ID="rep1_ID_xlink_xsd" MIMETYPE="application/xml" CREATED="2015-12-14T14:20:00" CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
+        <FLocat LOCTYPE="URL" xlink:href="schemas/xlink.xsd" xlink:type="simple"/>
+		</file>
+      
+		<!-- CSIPExtensionMETS.xsd -->
+		<file ID="rep1_ID_CSIPExtensionMETS.xsd" MIMETYPE="application/xml" CREATED="2018-12-14T14:20:00" CHECKSUM="1a31b3aa3ae1e9b99e7a8b4618f3b485" CHECKSUMTYPE="MD5" SIZE="1673">
+        <FLocat LOCTYPE="URL" xlink:href="schemas/CSIPExtensionMETS.xsd" xlink:type="simple"/>
+		</file>
+    </fileGrp>	
+
+
+	<fileGrp USE="Documentation" ID="ID.AVID_documentation">  <!-- this ID is just for internal reference -->
+
+      <!-- ER diagramme -->
+      <file ID="IP_er_diagramme" USE="documentation" MIMETYPE="PNG"  CREATED="2015-12-14T14:20:00" 
+        CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5" SIZE="86453">
+        <FLocat LOCTYPE="URL" xlink:href="documentation/Northwind_ER_diagram.png" xlink:type="simple"/>
+      </file>	
+    </fileGrp>		
+
+	
+			
+	<fileGrp USE="data" ID="IP_18006_SIARD2_1Rep_externallobs_rep1.representations.data">  <!-- this ID is just for internal reference -->
 				<!-- The following fileGrp is for the SIARD files. Other files in this IP must have their own fileGrp -->
-				<fileGrp ID="ID_SIARD_FILES">
+	
 					<fileGrp ID="ID_SIARD_DDL">
 						<!-- the fileGrp for the central SIARD file named [databasename].siard -->
 						<file ID="ID_NORTHWIND.SIARD" csip:CONTENTINFORMATIONTYPE="SIARD2" csip:OTHERCONTENTTYPESPECIFICATION="SIARD_2.1" MIMETYPE="OTHER/SIARD" OWNERID="ID.AVID.RA.18006.NORTHWIND" 
@@ -118,70 +132,29 @@
 							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table4/lob15/record8.bin"/>
 						</file>
 					</fileGrp>
-				</fileGrp>
+					
 			</fileGrp>
-		</fileGrp>
 	</fileSec>
 	
-	<structMap TYPE="physical" LABEL="E-ARK structural map"> <!-- According to the CS v0.13 sec. 5.2, p 36 --> <!-- Modified by request of Jan Rörden -->
-		<div LABEL="IP_18006_SIARD2_1Rep_externallobs_rep1"> <!-- CS: LABEL value MUST be ID of the repr.-->
-			<div LABEL="schemas">
-				<fptr FILEID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.mets.xsd"/> <!-- this FILEID attr. has a ref. to the ID attribute in the <file> element in the <fileGrp> element in the <fileSec> element -->
-				<fptr FILEID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.mets_xlink.xsd"/> 
-				<fptr FILEID="IP_18006_SIARD2_1Rep_externallobs_rep1.schemas.xlink.xsd"/>
-			</div>
-			<div LABEL="documentation"></div>	
-			<div LABEL="metadata">
-				<div LABEL="descriptive"><!-- ead.xml has been described in the dmdSec in ROOT METS so nothing further to describe here according to CS--></div>	
-				<div LABEL="preservation"><!-- premis.xml have been described in the amdSec in ROOT METSso nothing further to describe here according to CS--></div>	
-				<div LABEL="other"></div>	
-			</div>
-			<div LABEL="data">
-				<div LABEL="SIARD LOBs as outside files">  
-					<!-- The Common Specification ver 013 on page 35 states that: 
-						"Inside the representation METS file <fptr> element is used to reference all files within the representation with no exceptions.-->
-					<!-- In this example we only have 17 files in the segment, in reality we should expect 10,000 if a segment size around 1 GB is desired.-->		
-					<!-- We have to reevaluate in the CS the cost and  benefit of another 10,000 elements in the structMap - they are already there as file elements with checksum -->
-					<fptr FILEID="s0.t2.c4.r1"/>	<!-- CS: there MUST be a fptr element for all files -->				
-					<fptr FILEID="s0.t2.c4.r2"/>
-					<fptr FILEID="s0.t2.c4.r3"/>
-					<fptr FILEID="s0.t2.c4.r4"/>
-					<fptr FILEID="s0.t2.c4.r5"/>
-					<fptr FILEID="s0.t2.c4.r6"/>
-					<fptr FILEID="s0.t2.c4.r7"/>
-					<fptr FILEID="s0.t2.c4.r8"/>
-					<fptr FILEID="s0.t4.c15.r1"/>
-					<fptr FILEID="s0.t4.c15.r2"/>
-					<fptr FILEID="s0.t4.c15.r3"/>
-					<fptr FILEID="s0.t4.c15.r4"/>
-					<fptr FILEID="s0.t4.c15.r5"/>
-					<fptr FILEID="s0.t4.c15.r6"/>
-					<fptr FILEID="s0.t4.c15.r7"/>
-					<fptr FILEID="s0.t4.c15.r8"/>
-					<fptr FILEID="s0.t4.c15.r9"/>	
-					<!-- In this example we only have 17 files in the segment, in reality we should expect 10,000 if a segment size around 1 GB is desired.-->		
-				</div>	
-			</div>
-		</div>
-	</structMap>
-	<structMap TYPE="foldersonly" LABEL="DILCIS CSIP struct map compact"> <!-- this structMap does not repeat all files in fileSec for the files in the representation-->
-		<div LABEL="IP_18006_SIARD2_1Rep_externallobs_rep1"> <!-- CS: LABEL value MUST be ID of the repr.-->
-			<div LABEL="schemas"></div>
-			<div LABEL="documentation"></div>	
-			<div LABEL="metadata">
-				<div LABEL="descriptive"><!-- ead.xml has been described in the dmdSec in ROOT METS so nothing further to describe here according to CS--></div>	
-				<div LABEL="preservation"><!-- premis.xml have been described in the amdSec in ROOT METS so nothing further to describe here according to CS--></div>	
-				<div LABEL="other"></div>	
-			</div>
-			<div LABEL="data">
-				<div LABEL="SIARD LOBs as outside files"> <!-- design proposal by Karin Bredenberg, Jan Rörden and Anders Bo Nielsen--> 
-					<fptr CONTENTIDS="ID.AVID.RA.18006"/>  <!-- note the use of CONTENTIDS attribute instead of more than 10,000 elements with FILEID attibutes-->
-					<!-- This design proposal clashed with the Common Specification ver 013 which on page 35 states that:
-					"Inside the representation METS file <fptr> element is used to reference all files within the representation with no exceptions.-->
-					<!-- In this example we only have 17 files in the segment, in reality we should expect 10,000 if a segment size around 1 GB is desired.-->		
-					<!-- We have to reevaluate in the CS the cost and  benefit of another 10,000 elements in the structMap - they are already there as file elements with checksum -->
-				</div>	
-			</div>
-		</div>
-	</structMap>	
+	<structMap TYPE="PHYSICAL" LABEL="CSIP" ID="StructmapID_rep1">
+    <!-- CSIP80 mets/structMap -->
+    <!-- CSIP81 mets/structMap/@TYPE The type attribute of the structural map (structMap) is set to value “PHYSICAL” from the vocabulary -->
+
+    <!-- CSIP82 mets/structMap/@LABEL The value must be “CSIP StructMap” -->
+    <!-- CSIP83 mets/structMap/@ID -->
+    <div ID="Structmap_Div_ID" LABEL="IP_18006_1REP1">
+      <!-- CSIP84 mets/structMap/div -->
+      <!-- CSIP85 mets/structMap/div/@ID -->
+      <!-- CSIP86 mets/structMap/div/@LABEL - The main division (div) element in the package uses the package ID as the value for the attribute LABEL.-->
+      <div ID="Structmap_Div_ID_Metadata" LABEL="Metadata"/>
+      <div ID="Structmap_Div_ID_Documentation" LABEL="Documentation"/>
+      <div ID="Structmap_Div_ID_Representations" LABEL="Representations"/>
+      <div ID="struct-map-reps-sub-div" LABEL="Representations/rep1">
+        <mptr LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/METS.xml" xlink:title="ID_Rep1" ></mptr>
+        </div>  
+
+      <div ID="Structmap_Div_ID_Schemas" LABEL="Schemas" CONTENTIDS="ID_schemas"/>
+    </div>
+  </structMap>
+  
 </mets>
