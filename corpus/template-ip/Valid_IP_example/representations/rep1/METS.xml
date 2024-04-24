@@ -1,0 +1,156 @@
+<!-- a representation level METS file -->
+<!-- This representation level METS.xml file includes information about only the components of this segment of the representation -->
+<!-- This representation level METS.xml file is not aware of its own package METS file or any other segments that may exists -->
+<mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://www.loc.gov/METS/" 
+	xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance schemas/XMLSchema.xsd http://www.loc.gov/METS/ schemas/mets.xsd http://www.w3.org/1999/xlink schemas/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS schemas/CSIPExtensionMETS.xsd" 
+
+ OBJID="rep1" TYPE="Databases" csip:CONTENTINFORMATIONTYPE="SIARD2" csip:OTHERCONTENTTYPESPECIFICATION="SIARD_2.1" 
+ LABEL="representations level METS file for a representation" csip:OAISPACKAGETYPE="SIP" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml">
+
+
+	<metsHdr RECORDSTATUS="NEW" CREATEDATE="2015-12-14T14:20:00" csip:OAISPACKAGETYPE="SIP"
+		LASTMODDATE="2015-12-14T14:20:00"> <!-- CS - LASTMODDATA only mandatory if different from CREATEDATA -->
+		<agent TYPE="OTHER" ROLE="CREATOR" OTHERTYPE="SOFTWARE"> <!-- CS mandatory -->
+			<name>E-ARK Corpus Team</name> <!-- CS optional -->
+			<note csip:NOTETYPE="SOFTWARE VERSION">VERSION=0.0.1</note> <!-- CS optional -->
+		</agent>
+		<metsDocumentID>IP_18006_SIARD2_1Rep_externallobs_rep1</metsDocumentID> <!-- CS optional, recommended to be equal to OBJID -->
+	</metsHdr>
+	
+	
+	<dmdSec ID="ID_archiveIndex_xml_rep1" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
+   <mdRef LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2381" CREATED="2018-04-24T14:37:49.609+01:00" 
+     CHECKSUM="4E17DBF6DAA8865750D514C3FDEE656AEB823C0DC396B72D0B6AE17419549005" CHECKSUMTYPE="SHA-256" MIMETYPE="text/xml"/>
+   </dmdSec>
+   
+	
+	
+	<fileSec ID="ID_REP1_filesec">
+	
+	<!-- schemas -->		
+	<fileGrp USE="Schemas" ID="ID_schemas">
+		<!-- mets.xsd -->
+		<file ID="ID_rep1_ID_mets_xsd" MIMETYPE="application/xml" SIZE="135700" CREATED="2018-05-01T14:20:00" CHECKSUM="3dcaf7c4c6f362f1e8baeaefca2d296f" CHECKSUMTYPE="MD5">
+        <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/mets.xsd"/>
+		</file>
+    
+		<!-- XMLSchema.xsd -->
+		<file ID="ID_rep1_ID_XMLSchema_xsd" MIMETYPE="application/xml" CREATED="2015-12-14T14:20:00" CHECKSUM="7eafc44f2e6f1381e2e3150520260fc6" CHECKSUMTYPE="MD5" SIZE="90211">
+        <FLocat LOCTYPE="URL" xlink:href="schemas/XMLSchema.xsd" xlink:type="simple"/>
+		</file>
+      
+		<!-- xlink.xsd -->
+		<file ID="ID_rep1_ID_xlink_xsd" MIMETYPE="application/xml" CREATED="2015-12-14T14:20:00" CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
+        <FLocat LOCTYPE="URL" xlink:href="schemas/xlink.xsd" xlink:type="simple"/>
+		</file>
+      
+		<!-- CSIPExtensionMETS.xsd -->
+		<file ID="ID_rep1_ID_CSIPExtensionMETS.xsd" MIMETYPE="application/xml" CREATED="2018-12-14T14:20:00" CHECKSUM="107189fa916b92e4f5e50bc659d8284d" CHECKSUMTYPE="MD5" SIZE="1712">
+        <FLocat LOCTYPE="URL" xlink:href="schemas/CSIPExtensionMETS.xsd" xlink:type="simple"/>
+		</file>
+    </fileGrp>	
+
+
+	<fileGrp USE="Documentation" ID="ID_AVID_documentation">  <!-- this ID is just for internal reference -->
+
+      <!-- ER diagramme -->
+      <file ID="ID_IP_er_diagramme" USE="documentation" MIMETYPE="image/png"  CREATED="2015-12-14T14:20:00" 
+        CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5" SIZE="86453">
+        <FLocat LOCTYPE="URL" xlink:href="documentation/Northwind_ER_diagram.png" xlink:type="simple"/>
+      </file>	
+    </fileGrp>		
+
+	
+			
+	<fileGrp USE="data" ID="IP_18006_SIARD2_1Rep_externallobs_rep1.representations.data">  <!-- this ID is just for internal reference -->
+				<!-- The following fileGrp is for the SIARD files. Other files in this IP must have their own fileGrp -->
+	
+					<fileGrp ID="ID_SIARD_DDL">
+						<!-- the fileGrp for the central SIARD file named [databasename].siard -->
+						<file ID="ID_NORTHWIND.SIARD" csip:CONTENTINFORMATIONTYPE="SIARD2" csip:OTHERCONTENTTYPESPECIFICATION="SIARD_2.1" MIMETYPE="OTHER/SIARD" OWNERID="ID.AVID.RA.18006.NORTHWIND" 
+							CHECKSUMTYPE="MD5"	CHECKSUM="ca8771f89a030f7e06cf77bad5f8fbb3" SIZE="54562">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/northwind.siard"/>
+							<transformFile TRANSFORMALGORITHM="ZIP64" TRANSFORMORDER="1" TRANSFORMTYPE="decompression"/>
+							<!-- note that ZIP32 is also allowed for SIARD -->
+						</file>
+					</fileGrp>
+					<!-- The following fileGrp is for a segment of the SIARD files. -->
+					<fileGrp ID="seg_0">
+						<!-- The following OWNERID=table no.row no.column. no -->
+						<!-- The following ID is equal to the OWNERID but does not need to be -->
+						<file ID="s0.t2.c4.r1" MIMETYPE="binary" OWNERID="s0.t2.c4.r1" CHECKSUMTYPE="MD5" CHECKSUM="74f24080fc9d234d3ac221b8e743c763" SIZE="10151">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table2/lob4/record0.bin"/>
+						</file>
+						<file ID="s0.t2.c4.r2" MIMETYPE="binary" OWNERID="s0.t2.c4.r2" CHECKSUMTYPE="MD5" CHECKSUM="22a0cbe8960b78ce48b07a285ce69e3c" SIZE="12107">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table2/lob4/record1.bin"/>
+						</file>
+						<file ID="s0.t2.c4.r3" MIMETYPE="binary" OWNERID="s0.t2.c4.r3" CHECKSUMTYPE="MD5" CHECKSUM="3e2f2028a9147c29bdcd36ed4e5f25b3" SIZE="12007">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table2/lob4/record2.bin"/>
+						</file>
+						<file ID="s0.t2.c4.r4" MIMETYPE="binary" OWNERID="s0.t2.c4.r4" CHECKSUMTYPE="MD5" CHECKSUM="12f588040e11cc2021ea37d46aa10c51" SIZE="9756">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table2/lob4/record3.bin"/>
+						</file>
+						<file ID="s0.t2.c4.r5" MIMETYPE="binary" OWNERID="s0.t2.c4.r5" CHECKSUMTYPE="MD5" CHECKSUM="e2d8ef03e1b24edd946820dbbf44fdfd" SIZE="12131">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table2/lob4/record4.bin"/>
+						</file>
+						<file ID="s0.t2.c4.r6" MIMETYPE="binary" OWNERID="s0.t2.c4.r6"	CHECKSUMTYPE="MD5" CHECKSUM="814a3eb95253c08137f70bcfc279e00f" SIZE="11280">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table2/lob4/record5.bin"/>
+						</file>
+						<file ID="s0.t2.c4.r7" MIMETYPE="binary" OWNERID="s0.t2.c4.r7" CHECKSUMTYPE="MD5" CHECKSUM="ee114cd7700f566b1f7c7e8e0f68ca0f" SIZE="12338">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table2/lob4/record6.bin"/>
+						</file>
+						<file ID="s0.t2.c4.r8" MIMETYPE="binary" OWNERID="s0.t2.c4.r8" CHECKSUMTYPE="MD5" CHECKSUM="2de1ac4c4e8ebb853e17db01af3fb7c3" SIZE="12069">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table2/lob4/record7.bin"/>
+						</file>
+						<file ID="s0.t4.c15.r1" MIMETYPE="binary" OWNERID="s0.t4.c15.r1" CHECKSUMTYPE="MD5" CHECKSUM="af1c21d8a01777470a52851def9db1c5" SIZE="12315">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table4/lob15/record0.bin"/>
+						</file>
+						<file ID="s0.t4.c15.r2" MIMETYPE="binary" OWNERID="s0.t4.c15.r2" CHECKSUMTYPE="MD5" CHECKSUM="93d7eb0220fdb69bb0c9f4385c741f12" SIZE="12295">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table4/lob15/record1.bin"/>
+						</file>
+						<file ID="s0.t4.c15.r3" MIMETYPE="binary" OWNERID="s0.t4.c15.r3" CHECKSUMTYPE="MD5" CHECKSUM="f5498d7caa5a2eb55786643a75b6b61c" SIZE="11372">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table4/lob15/record2.bin"/>
+						</file>
+						<file ID="s0.t4.c15.r4" MIMETYPE="binary" OWNERID="s0.t4.c15.r4" CHECKSUMTYPE="MD5" CHECKSUM="8e1a6c431ad8a2b25e5e19bee7649de8" SIZE="12121">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table4/lob15/record3.bin"/>
+						</file>
+						<file ID="s0.t4.c15.r5" MIMETYPE="binary" OWNERID="s0.t4.c15.r5" CHECKSUMTYPE="MD5" CHECKSUM="f4a0848773e3ad7b87d2d27340869b8d" SIZE="12163">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table4/lob15/record4.bin"/>
+						</file>
+						<file ID="s0.t4.c15.r6" MIMETYPE="binary" OWNERID="s0.t4.c15.r6" CHECKSUMTYPE="MD5" CHECKSUM="e3f6993081df534b23f22607c514ce6a" SIZE="11872">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table4/lob15/record5.bin"/>
+						</file>
+						<file ID="s0.t4.c15.r7" MIMETYPE="binary" OWNERID="s0.t4.c15.r7" CHECKSUMTYPE="MD5" CHECKSUM="7f123f42616160cce2eeef2d1fd7d48e" SIZE="11899">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table4/lob15/record6.bin"/>
+						</file>
+						<file ID="s0.t4.c15.r8" MIMETYPE="binary" OWNERID="s0.t4.c15.r8" CHECKSUMTYPE="MD5" CHECKSUM="0ad004fe137cf63835bba9418e32492d" SIZE="11949">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table4/lob15/record7.bin"/>
+						</file>
+						<file ID="s0.t4.c15.r9" MIMETYPE="binary" OWNERID="s0.t4.c15.r9" CHECKSUMTYPE="MD5" CHECKSUM="40a5309f5432d87cc9004ab4de65c868" SIZE="12203">
+							<FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/Northwind_lobseg_0/content/schema0/table4/lob15/record8.bin"/>
+						</file>
+					</fileGrp>
+					
+			</fileGrp>
+	</fileSec>
+	
+  <structMap ID="ID_StructmapID" TYPE="PHYSICAL" LABEL="CSIP">
+    <div ID="ID_struct-map-example-div" LABEL="csip-mets-example">
+      <div ID="ID_struct-map-metadata-div" LABEL="Metadata" DMDID="ID_archiveIndex_xml_rep1"></div>
+      <div ID="ID_struct-map-schema-div" LABEL="Schemas">
+        <fptr FILEID="ID_schemas"></fptr>
+      </div>
+	        <div ID="ID_struct-map-documentation-div" LABEL="Documentation">
+        <fptr FILEID="ID_AVID_documentation">
+        </fptr>
+      </div>
+      <div ID="ID_struct-map-reps-ing-div" LABEL="data">
+        <mptr LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/METS.xml" xlink:title="ID_Rep1" ></mptr>
+      </div>
+    </div>
+  </structMap>
+  
+</mets>

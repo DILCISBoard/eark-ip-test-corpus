@@ -48,7 +48,7 @@
               reports an error on any one of them. This should be automated as
               mets.xsd allows 2 values that are not acceptable by CSIP. -->
         <package name="mets-xml_metsHdr_agent_TYPE_INDIVIDUAL" isValid="FALSE">
-          <path>mets-xml_metsHdr_agent_TYPE_INDIVIDUAL</path>
+          <path>invalid/mets-xml_metsHdr_agent_TYPE_INDIVIDUAL</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/@TYPE = "INDIVIDUAL".
           </description>

@@ -7,13 +7,13 @@
   xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance schemas/XMLSchema.xsd http://www.loc.gov/METS/ schemas/mets.xsd 
     http://www.w3.org/1999/xlink schemas/xlink.xsd 
     https://DILCIS.eu/XML/METS/CSIPExtensionMETS schemas/CSIPExtensionMETS.xsd" 
-  OBJID="IP_18006_SIARD2_1Rep_externallobs" TYPE="Databases" csip:CONTENTINFORMATIONTYPE="SIARD2" 
-  PROFILE="http://www.eark-project.com/METS/IP.xml" csip:OAISPACKAGETYPE="AIP">
+  OBJID="Valid_IP_example" TYPE="Databases" csip:CONTENTINFORMATIONTYPE="SIARD2" 
+  PROFILE="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml" csip:OAISPACKAGETYPE="AIP">
   <!-- CSIP1 - mets/@OBJID -->
   <!-- CSIP2 - mets/@TYPE -->
   <!-- CSIP4 - mets/@csip:CONTENTTYPESPECIFICATION -->
   <!-- CSIP6 - mets/@PROFILE  The PROFILE attribute has to have as its value the URL of the used profile. When this profile is implemented as is the value is the URL for the official CS IP METS Profile. -->
-  <metsHdr CREATEDATE="2019-01-25T10:20:00" csip:OAISPACKAGETYPE="SIP" LASTMODDATE="2020-06-15T10:20:00">
+  <metsHdr CREATEDATE="2019-01-25T10:20:00" csip:OAISPACKAGETYPE="AIP" LASTMODDATE="2020-06-15T10:20:00">
     <!-- CSIP7 mets/@metsHdr@CREATEDATE -->
     <!-- CSIP9 mets/@metsHdr/@csip:OAISPACKAGETYPE -->
     <agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
@@ -29,20 +29,21 @@
     </agent>
   </metsHdr>
 
-  <dmdSec ID="uuid-4wqd8DD8-2561-4315-AC39-F941CBB138B4" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
-   <mdRef LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2340" CREATED="2018-04-24T14:37:49.609+01:00" 
-     CHECKSUM="9B706A5D472B383C5A965639F4873E01D081B89DFEA16A7D8E072A60B4C6846F" CHECKSUMTYPE="SHA-256"/>
+  <dmdSec ID="ID_archiveIndex.xml" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
+   <mdRef LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2381" CREATED="2018-04-24T14:37:49.609+01:00" 
+     CHECKSUM="4E17DBF6DAA8865750D514C3FDEE656AEB823C0DC396B72D0B6AE17419549005" CHECKSUMTYPE="SHA-256" MIMETYPE="text/xml"/>
    </dmdSec>
   
-  <dmdSec ID="uuid-48eg8DD8-2561-4315-AC39-F941CBB138B4" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
-    <mdRef LOCTYPE="URL" MDTYPE="OTHER" xlink:type="simple" xlink:href="metadata/submission_agreement/submission_agreement.xml" SIZE="86453" CREATED="2018-04-24T14:37:49.609+01:00" 
-      CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5"/>
+  <dmdSec ID="ID_submission_agreement.xml" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
+    <mdRef LOCTYPE="URL" MDTYPE="OTHER" xlink:type="simple" xlink:href="metadata/descriptive/submission_agreement.xml" SIZE="1376" CREATED="2018-04-24T14:37:49.609+01:00" 
+      CHECKSUM="1EDFDB31868D918BC17B2A12A6C0F64D" CHECKSUMTYPE="MD5" MIMETYPE="text/xml"/>
   </dmdSec>
 
 
   <amdSec>
-    <digiprovMD ID="uuid-48C18DD8-2561-4315-AC39-F941CBB138B4" CREATED="2018-04-24T14:47:52.783+01:00" STATUS="CURRENT">
-      <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/PREMIS3.xml" MDTYPE="PREMIS" MDTYPEVERSION="3.0" MIMETYPE="text/xml" SIZE="2854" CREATED="2018-04-24T14:37:52.783+01:00" CHECKSUM="d1dfa585dcc9d87268069dc58d5e47956434ec3db4087a75a3885d287f15126f" CHECKSUMTYPE="SHA-256" LABEL="premis2.xml"></mdRef>
+    <digiprovMD ID="ID_premis2.xml" CREATED="2018-04-24T14:47:52.783+01:00" STATUS="CURRENT">
+      <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/PREMIS3.xml" MDTYPE="PREMIS" MDTYPEVERSION="3.0" 
+	  MIMETYPE="text/xml" SIZE="5509" CREATED="2018-04-24T14:37:52.783+01:00" CHECKSUM="59975F80A4BB5C410D12079111C8F06DDF85AF13BA4A30E072EF028E1BE9518B" CHECKSUMTYPE="SHA-256" LABEL="premis2.xml"></mdRef>
     </digiprovMD>
   </amdSec>
   
@@ -88,47 +89,43 @@
       </file>
     </fileGrp>
     <!-- documentation -->		
-    <fileGrp USE="Documentation" ID="ID.AVID_documentation">  <!-- this ID is just for internal reference -->
-
-      <!-- Submission decision-->
-      <file ID="submission_decision" USE="documentation" MIMETYPE="TIFF"  CREATED="2015-12-14T14:20:00" 
-        CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5" SIZE="86453">
-        <FLocat LOCTYPE="URL" xlink:href="documentation\submission_decision.tif" xlink:type="simple"/>
-      </file>	
+    <fileGrp USE="Documentation" ID="ID_AVID_documentation">  <!-- this ID is just for internal reference -->
 
       <!-- ER diagramme -->
-      <file ID="IP_er_diagramme" USE="documentation" MIMETYPE="PNG"  CREATED="2015-12-14T14:20:00" 
+      <file ID="ID_IP_er_diagramme" USE="documentation" MIMETYPE="PNG"  CREATED="2015-12-14T14:20:00" 
         CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5" SIZE="86453">
-        <FLocat LOCTYPE="URL" xlink:href="documentation\Northwind ER diagram.png" xlink:type="simple"/>
+        <FLocat LOCTYPE="URL" xlink:href="documentation/Northwind_ER_diagram.png" xlink:type="simple"/>
       </file>	
     </fileGrp>			
 
     <fileGrp USE="Representations" csip:OAISPACKAGETYPE="SIP" csip:CONTENTINFORMATIONTYPE="SIARD2" csip:OTHERCONTENTTYPESPECIFICATION="SIARD_2.1" ID="ID_Rep1">
 
-      <file ID="IP_18006_SIARD2_1Rep_externallobs_METS.xml" USE="OTHER" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
+      <file ID="ID_IP_18006_SIARD2_1Rep_externallobs_METS.xml" USE="OTHER" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
 	     CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
-	     <FLocat LOCTYPE="URL" xlink:href="representations\rep1\METS.xml" xlink:type="simple"/>
+	     <FLocat LOCTYPE="URL" xlink:href="representations/rep1/METS.xml" xlink:type="simple"/>
 	   </file>	
 	 </fileGrp>
   </fileSec>
-  <structMap TYPE="PHYSICAL" LABEL="CSIP" ID="StructmapID_rep1">
-    <!-- CSIP80 mets/structMap -->
-    <!-- CSIP81 mets/structMap/@TYPE The type attribute of the structural map (structMap) is set to value “PHYSICAL” from the vocabulary -->
 
-    <!-- CSIP82 mets/structMap/@LABEL The value must be “CSIP StructMap” -->
-    <!-- CSIP83 mets/structMap/@ID -->
-    <div ID="Structmap_Div_ID" LABEL="IP_18006_1REP">
-      <!-- CSIP84 mets/structMap/div -->
-      <!-- CSIP85 mets/structMap/div/@ID -->
-      <!-- CSIP86 mets/structMap/div/@LABEL - The main division (div) element in the package uses the package ID as the value for the attribute LABEL.-->
-      <div ID="Structmap_Div_ID_Metadata" LABEL="Metadata"/>
-      <div ID="Structmap_Div_ID_Documentation" LABEL="Documentation"/>
-      <div ID="Structmap_Div_ID_Representations" LABEL="Representations"/>
-      <div ID="struct-map-reps-sub-div" LABEL="Representations/rep1">
+  
+  
+   <structMap ID="ID_StructmapID" TYPE="PHYSICAL" LABEL="CSIP">
+    <div ID="ID_struct-map-example-div" LABEL="csip-mets-example">
+      <div ID="ID_struct-map-metadata-div" LABEL="Metadata" ADMID="ID_premis2.xml" DMDID="ID_archiveIndex.xml ID_submission_agreement.xml">
+      </div>
+      <div ID="ID_struct-map-schema-div" LABEL="Schemas">
+        <fptr FILEID="ID_schemas">
+        </fptr>
+      </div>
+	        <div ID="ID_struct-map-documentation-div" LABEL="Documentation">
+        <fptr FILEID="ID_AVID_documentation">
+        </fptr>
+      </div>
+      <div ID="ID_struct-map-reps-ing-div" LABEL="Representations">
         <mptr LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/METS.xml" xlink:title="ID_Rep1" ></mptr>
-        </div>  
-
-      <div ID="Structmap_Div_ID_Schemas" LABEL="Schemas" CONTENTIDS="ID_schemas"/>
+      </div>
     </div>
   </structMap>
+  
+  
 </mets>
