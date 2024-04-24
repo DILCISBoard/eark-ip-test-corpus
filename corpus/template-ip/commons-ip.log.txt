@@ -1,0 +1,10 @@
+2024-04-24 10:24:13,824 [main] DEBUG (o.r.c.u.LogSystem) Operating system: Windows 11
+2024-04-24 10:24:13,824 [main] DEBUG (o.r.c.u.LogSystem) Architecture: amd64
+2024-04-24 10:24:13,824 [main] DEBUG (o.r.c.u.LogSystem) Version: 10.0
+2024-04-24 10:24:13,824 [main] DEBUG (o.r.c.u.LogSystem) Java vendor: Oracle Corporation
+2024-04-24 10:24:13,824 [main] DEBUG (o.r.c.u.LogSystem) Java version: 20.0.1
+2024-04-24 10:24:13,824 [main] DEBUG (o.r.c.u.LogSystem) Java class version: 64.0
+2024-04-24 10:24:13,824 [main] DEBUG (o.r.c.u.LogSystem) Default Charset reported by java: UTF-8
+2024-04-24 10:24:13,824 [main] DEBUG (o.r.c.u.LogSystem) Default Charset used by StreamWriter: UTF8
+2024-04-24 10:24:13,824 [main] DEBUG (o.r.c.u.LogSystem) file.encoding property: UTF-8
+2024-04-24 10:24:13,824 [main] DEBUG (o.r.c.c.Validate) command executed: validate -i C:\Users\Z6CMM\Downloads\IP_18006_SIARD2_1Rep_externallobs.zip

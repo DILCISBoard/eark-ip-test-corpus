@@ -117,6 +117,10 @@
         <fptr FILEID="ID_schemas">
         </fptr>
       </div>
+	        <div ID="struct-map-documentation-div" LABEL="Documentation">
+        <fptr FILEID="ID.AVID_documentation">
+        </fptr>
+      </div>
       <div ID="struct-map-reps-ing-div" LABEL="Representations/data">
         <mptr LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/METS.xml" xlink:title="ID_Rep1" ></mptr>
       </div>
