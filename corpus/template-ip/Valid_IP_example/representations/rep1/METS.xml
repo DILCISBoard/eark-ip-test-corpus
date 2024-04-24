@@ -8,7 +8,7 @@
 	xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance schemas/XMLSchema.xsd http://www.loc.gov/METS/ schemas/mets.xsd http://www.w3.org/1999/xlink schemas/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS schemas/CSIPExtensionMETS.xsd" 
 
  OBJID="rep1" TYPE="Databases" csip:CONTENTINFORMATIONTYPE="SIARD2" csip:OTHERCONTENTTYPESPECIFICATION="SIARD_2.1" 
- LABEL="representations level METS file for a representation" csip:OAISPACKAGETYPE="SIP" PROFILE="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml">
+ LABEL="representations level METS file for a representation" csip:OAISPACKAGETYPE="SIP" PROFILE="https://earksip.dilcis.eu/profile/E-ARK-SIP.xml">
 
 
 	<metsHdr RECORDSTATUS="NEW" CREATEDATE="2015-12-14T14:20:00" csip:OAISPACKAGETYPE="SIP"
@@ -21,10 +21,11 @@
 	</metsHdr>
 	
 	
-	<dmdSec ID="uuid-4wqd8DD8-2561-4315-AC39-F941CBB138B4" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
+	<dmdSec ID="ID_archiveIndex_xml_rep1" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
    <mdRef LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2381" CREATED="2018-04-24T14:37:49.609+01:00" 
      CHECKSUM="4E17DBF6DAA8865750D514C3FDEE656AEB823C0DC396B72D0B6AE17419549005" CHECKSUMTYPE="SHA-256" MIMETYPE="text/xml"/>
    </dmdSec>
+   
 	
 	
 	<fileSec ID="ID_REP1_filesec">
@@ -32,31 +33,31 @@
 	<!-- schemas -->		
 	<fileGrp USE="Schemas" ID="ID_schemas">
 		<!-- mets.xsd -->
-		<file ID="rep1_ID_mets_xsd" MIMETYPE="application/xml" SIZE="135700" CREATED="2018-05-01T14:20:00" CHECKSUM="3dcaf7c4c6f362f1e8baeaefca2d296f" CHECKSUMTYPE="MD5">
+		<file ID="ID_rep1_ID_mets_xsd" MIMETYPE="application/xml" SIZE="135700" CREATED="2018-05-01T14:20:00" CHECKSUM="3dcaf7c4c6f362f1e8baeaefca2d296f" CHECKSUMTYPE="MD5">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/mets.xsd"/>
 		</file>
     
 		<!-- XMLSchema.xsd -->
-		<file ID="rep1_ID_XMLSchema_xsd" MIMETYPE="application/xml" CREATED="2015-12-14T14:20:00" CHECKSUM="94ed1a93ce3147d01bcb2fc1126255ed" CHECKSUMTYPE="MD5" SIZE="90211">
+		<file ID="ID_rep1_ID_XMLSchema_xsd" MIMETYPE="application/xml" CREATED="2015-12-14T14:20:00" CHECKSUM="7eafc44f2e6f1381e2e3150520260fc6" CHECKSUMTYPE="MD5" SIZE="90211">
         <FLocat LOCTYPE="URL" xlink:href="schemas/XMLSchema.xsd" xlink:type="simple"/>
 		</file>
       
 		<!-- xlink.xsd -->
-		<file ID="rep1_ID_xlink_xsd" MIMETYPE="application/xml" CREATED="2015-12-14T14:20:00" CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
+		<file ID="ID_rep1_ID_xlink_xsd" MIMETYPE="application/xml" CREATED="2015-12-14T14:20:00" CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
         <FLocat LOCTYPE="URL" xlink:href="schemas/xlink.xsd" xlink:type="simple"/>
 		</file>
       
 		<!-- CSIPExtensionMETS.xsd -->
-		<file ID="rep1_ID_CSIPExtensionMETS.xsd" MIMETYPE="application/xml" CREATED="2018-12-14T14:20:00" CHECKSUM="1a31b3aa3ae1e9b99e7a8b4618f3b485" CHECKSUMTYPE="MD5" SIZE="1673">
+		<file ID="ID_rep1_ID_CSIPExtensionMETS.xsd" MIMETYPE="application/xml" CREATED="2018-12-14T14:20:00" CHECKSUM="107189fa916b92e4f5e50bc659d8284d" CHECKSUMTYPE="MD5" SIZE="1712">
         <FLocat LOCTYPE="URL" xlink:href="schemas/CSIPExtensionMETS.xsd" xlink:type="simple"/>
 		</file>
     </fileGrp>	
 
 
-	<fileGrp USE="Documentation" ID="ID.AVID_documentation">  <!-- this ID is just for internal reference -->
+	<fileGrp USE="Documentation" ID="ID_AVID_documentation">  <!-- this ID is just for internal reference -->
 
       <!-- ER diagramme -->
-      <file ID="IP_er_diagramme" USE="documentation" MIMETYPE="image/png"  CREATED="2015-12-14T14:20:00" 
+      <file ID="ID_IP_er_diagramme" USE="documentation" MIMETYPE="image/png"  CREATED="2015-12-14T14:20:00" 
         CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5" SIZE="86453">
         <FLocat LOCTYPE="URL" xlink:href="documentation/Northwind_ER_diagram.png" xlink:type="simple"/>
       </file>	
@@ -136,13 +137,17 @@
 			</fileGrp>
 	</fileSec>
 	
-  <structMap ID="StructmapID" TYPE="PHYSICAL" LABEL="CSIP">
-    <div ID="struct-map-example-div" LABEL="csip-mets-example">
-      <div ID="struct-map-metadata-div" LABEL="Metadata" ADMID="premis2.xml" DMDID="archiveIndex.xml submission_agreement.xml"></div>
-      <div ID="struct-map-schema-div" LABEL="Schemas">
+  <structMap ID="ID_StructmapID" TYPE="PHYSICAL" LABEL="CSIP">
+    <div ID="ID_struct-map-example-div" LABEL="csip-mets-example">
+      <div ID="ID_struct-map-metadata-div" LABEL="Metadata" DMDID="ID_archiveIndex_xml_rep1"></div>
+      <div ID="ID_struct-map-schema-div" LABEL="Schemas">
         <fptr FILEID="ID_schemas"></fptr>
       </div>
-      <div ID="struct-map-reps-ing-div" LABEL="data">
+	        <div ID="ID_struct-map-documentation-div" LABEL="Documentation">
+        <fptr FILEID="ID_AVID_documentation">
+        </fptr>
+      </div>
+      <div ID="ID_struct-map-reps-ing-div" LABEL="data">
         <mptr LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/METS.xml" xlink:title="ID_Rep1" ></mptr>
       </div>
     </div>
