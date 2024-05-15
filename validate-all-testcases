@@ -1,1 +1,0 @@
-find ./corpus -type f -iname "testcase.xml" -print0 | xargs -0 python scripts/validate-testcases.py
