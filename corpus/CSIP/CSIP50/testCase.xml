@@ -25,11 +25,11 @@ XML lists -->
         <message>The attribute xlink_type MUST exist in the mptr-element like this: @xlink:type='simple'</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="structMap_missing_xlink_type">
+        <package isValid="FALSE" name="structMap_missing_xlink_type" isImplemented="FALSE">
           <path>invalid/structMap_missing_xlink_type</path>
           <description>IP with no attribute xlink_type in mpt</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
+        <package isValid="TRUE" name="minimal_IP_with_schemas" isImplemented="FALSE">
           <path>valid/minimal_IP_with_schemas</path>
           <description>Minimal IP</description>
         </package>

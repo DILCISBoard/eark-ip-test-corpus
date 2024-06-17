@@ -24,8 +24,8 @@ XML lists -->
         <message>In METS.XML the dmdSec/mdRef-element MUST have the attribute: @xlink:type and its value must be "simple" </message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_18000_CSIP23_1">
-          <path>/corpora/csip/metadata/dmdSec/CSIP23/IP_18000_CSIP23_1</path>
+        <package isValid="FALSE" name="IP_18000_CSIP23_1" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP23_1</path>
           <description>The METS.XML does not have the @xlink:type attribute.</description>
         </package>
       </corpusPackages>

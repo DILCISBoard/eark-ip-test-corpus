@@ -27,15 +27,15 @@ XML lists -->
         <message>The value in the LOCTYPE-attribute must be "URL"</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_wrong_LOCTYPE_value_URN">
+        <package isValid="FALSE" name="IP_wrong_LOCTYPE_value_URN" isImplemented="FALSE">
           <path>invalid/IP_wrong_LOCTYPE_value_URN</path>
           <description>The LOCTYPE attribute value is URN</description>
         </package>
-        <package isValid="FALSE" name="IP_wrong_LOCTYPE_value_OTHER">
+        <package isValid="FALSE" name="IP_wrong_LOCTYPE_value_OTHER" isImplemented="FALSE">
           <path>invalid/IP_wrong_LOCTYPE_value_OTHER</path>
           <description>The LOCTYPE attribute value is OTHER</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
+        <package isValid="TRUE" name="minimal_IP_with_schemas" isImplemented="FALSE">
           <path>valid/minimal_IP_with_schemas</path>
           <description> valid example IP with URL value in the LOCTYPE-attribute</description>
         </package>

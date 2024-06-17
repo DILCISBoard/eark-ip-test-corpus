@@ -28,7 +28,7 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="FALSE" isImplemented="TRUE" name="mdRef_missing_MIMETYPE">
-          <path>valid/mdRef_missing_MIMETYPE</path>
+          <path>invalid/mdRef_missing_MIMETYPE</path>
           <description>A package where the MIIMETYPE-attribute is missing</description>
         </package>
         <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">

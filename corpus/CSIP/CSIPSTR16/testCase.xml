@@ -1,7 +1,7 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="PARTIAL">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIPSTR16"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIPSTR16"/>
   <references>
     <reference requirementId="CSIPSTR16" URL="http://earkcsip.dilcis.eu/#CSIPSTR16"/>
   </references>
@@ -19,8 +19,8 @@
 		</message>
 		</error>
         <corpusPackages>
-		    <package name="subfolder_documentation_in_IP_folder" isValid="TRUE">
-		        <path>pass\subfolder_documentation_in_IP_folder</path>
+		    <package name="subfolder_documentation_in_IP_folder" isValid="TRUE"  isImplemented="TRUE">
+		        <path>valid/subfolder_documentation_in_IP_folder</path>
 		        <description>Positive testcase. The Information Package has sub-folder "documentation".</description>
 		    </package>
         </corpusPackages>
@@ -33,8 +33,8 @@
 		</message>
 		</error>
         <corpusPackages>
-		    <package name="subfolder_documentation_in_representation_folder" isValid="TRUE">
-		        <path>pass\subfolder_documentation_in_representation_folder</path>
+		    <package name="subfolder_documentation_in_representation_folder" isValid="TRUE" isImplemented="TRUE">
+		        <path>valid/subfolder_documentation_in_representation_folder</path>
 		        <description>Positive testcase. The representation folder has sub-folder "documentation".</description>
 		    </package>
         </corpusPackages>

@@ -27,8 +27,8 @@ XML lists -->
         <message>The mdRef-element MUST be there if there are files in /metadata/descriptive/  but there is no dmdSec/mdRef-element in METS.xml.</message>
       </error>
       <corpusPackages>
-        <package name="IP_18000_CSIP21_1" isValid="TRUE" >
-          <path>/corpora/csip/metadata/dmdSec/CSIP21/IP_18000_CSIP21_1</path>
+        <package name="IP_18000_CSIP21_1" isValid="FALSE" isImplemented="TRUE" >
+          <path>invalid/IP_18000_CSIP21_1</path>
           <description>A package based on IP_18006_SIARD2_1Rep_externallobs. Contains a dmdSec element with no mdRef-element in both root METS.xml and representation METS but with files in both.</description>
         </package>
       </corpusPackages>
@@ -39,8 +39,8 @@ XML lists -->
         <message> There is no dmdSec/mdRef-element in METS.xml </message>
       </error>
       <corpusPackages>
-        <package name="IP_18000_CSIP21_2" isValid="FALSE" >
-          <path>/corpora/csip/metadata/dmdSec/CSIP21/IP_18000_CSIP21_2</path>
+        <package name="IP_18000_CSIP21_2" isValid="TRUE" isImplemented="TRUE" >
+          <path>valid/IP_18000_CSIP21_2</path>
           <description>A package based on IP_18006_SIARD2_1Rep_externallobs. Contains a dmdSec element with no mdRef-element in both root METS.xml and representation METS and with no files.</description>
         </package>
       </corpusPackages>

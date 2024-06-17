@@ -1,5 +1,3 @@
-<!-- Root element for an individual test case, allows these to be wrapped into
-XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
   <!-- Unique ID for the test case -->
@@ -31,77 +29,77 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIPSTR13_1" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_1" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_1</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. sub-folder named 'metadata' named in camelcase</description>
         </package>
-        <package name="IP_18000_CSIPSTR13_2" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_2" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_2</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. sub-folder named 'metadata' has extra lowercase character in back</description>
         </package>
-        <package name="IP_18000_CSIPSTR13_3" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_3" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_3</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP.  sub-folder named 'metadata' has extra lowercase character in front</description>
         </package>
-        <package name="IP_18000_CSIPSTR13_4" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_4" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_4</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. sub-folder named 'metadata'  has extra lowercase character in the middle. </description>
         </package>
-        <package name="IP_18000_CSIPSTR13_5" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_5" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_5</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. sub-folder named 'metadata' has extra uppercase character in back</description>
         </package>
-        <package name="IP_18000_CSIPSTR13_6" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_6" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_6</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP.sub-folder named 'metadata' has extra uppercase character in front</description>
         </package>
-        <package name="IP_18000_CSIPSTR13_7" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_7" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_7</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP.sub-folder named 'metadata' has extra uppercase character in middle</description>
         </package>
-        <package name="IP_18000_CSIPSTR13_8" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_8" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_8</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. sub-folder named 'metadata'  missing in root folder</description>
         </package>
-        <package name="IP_18000_CSIPSTR13_9" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_9" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_9</path>
           <!-- Full description of corpus package features. -->
         <description>A package based on the folder stucture IP. sub-folder named 'metadata' has extra number sign in back </description>
         </package>
-        <package name="IP_18000_CSIPSTR13_10" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_10" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_10</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. sub-folder named 'metadata' has extra number sign in front. </description>
         </package>
-        <package name="IP_18000_CSIPSTR13_11" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_11" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_11</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. sub-folder named 'metadata' has extra number sign in middle. </description>
         </package>
-        <package name="IP_18000_CSIPSTR13_12" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_12" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_12</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. sub-folder named 'metadata' has extra sign in back. </description>
         </package>
-        <package name="IP_18000_CSIPSTR13_13" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_13" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_13</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. sub-folder named 'metadata' has extra sign in middle.</description>
         </package>
-        <package name="IP_18000_CSIPSTR13_14" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_14" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_14</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. sub-folder named 'metadata' has extra sign in front.</description>
         </package>
-        <package name="IP_18000_CSIPSTR13_15" isValid="FALSE">
+        <package name="IP_18000_CSIPSTR13_15" isValid="FALSE" isImplemented="FALSE">
           <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_15</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. sub-folder named 'metadata' named in uppercase. </description>
@@ -116,7 +114,7 @@ XML lists -->
         <message>Sub-folder named 'metadata' contains following files:   </message>
       </error>
       <corpusPackages>
-      <package name="IP_18000_CSIPSTR13_16" isValid="TRUE">
+      <package name="IP_18000_CSIPSTR13_16" isValid="TRUE" isImplemented="FALSE">
         <path>/corpus/structure/CSIPSTR13/IP_18000_CSIPSTR13_16</path>
         <!-- Full description of corpus package features. -->
         <description>A package based on the folder stucture IP. Sub-folder named 'metadata' is empty</description>

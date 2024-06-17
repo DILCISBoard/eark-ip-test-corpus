@@ -34,8 +34,8 @@ A value from the METS-standard which identifies the algorithm used to calculate 
         <message>mets/dmdSec/mdRef/@CHECKSUMTYPE does not exist in METS.xml. @CHECKSUMTYPE is a mandatory attribute according to CS IP if the mdRef-element is present.</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_18000_CSIP30_1">
-          <path>IP_18000_CSIP30_1</path>
+        <package isValid="FALSE" name="IP_18000_CSIP30_1" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP30_1</path>
           <description>the METS.xml is missing an CHECKSUMTYPE-attribute in mets/dmdSec/mdRef</description>
         </package>
       </corpusPackages>

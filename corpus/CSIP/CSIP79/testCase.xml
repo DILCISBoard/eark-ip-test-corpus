@@ -29,11 +29,11 @@ XML lists -->
         <message>There MUST exist a xlink:href-attribute per fileSec_fileGrp_file_FLocat-element</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="fileSec_fileGrp_file_FLocat_missing_xlink_href">
+        <package isValid="FALSE" name="fileSec_fileGrp_file_FLocat_missing_xlink_href" isImplemented="FALSE">
           <path>invalid/fileSec_fileGrp_file_FLocat_missing_xlink_href</path>
           <description>IP with no xlink:href attribute</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
+        <package isValid="TRUE" name="minimal_IP" isImplemented="FALSE">
           <path>valid/minimal_IP</path>
           <description>Minimal IP</description>
         </package>
@@ -45,11 +45,11 @@ XML lists -->
         <message>The xlink:href-pointer must point to an existing file</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="fileSec_fileGrp_file_FLocat_wrong_reference">
+        <package isValid="FALSE" name="fileSec_fileGrp_file_FLocat_wrong_reference" isImplemented="FALSE">
           <path>invalid/fileSec_fileGrp_file_FLocat_wrong_reference</path>
           <description>IP with a value in xlink:href that does not point to a file within the IP</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
+        <package isValid="TRUE" name="minimal_IP" isImplemented="FALSE">
           <path>valid/minimal_IP</path>
           <description>Minimal IP</description>
         </package>

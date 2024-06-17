@@ -3,7 +3,7 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP20"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP20"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP20" URL="http://earkcsip.dilcis.eu/#CSIP20"/>
@@ -40,8 +40,8 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIP20_1" isValid="TRUE">
-          <path>/corpora/csip/metadata/dmdSec/CSIP20/IP_18000_CSIP20_1</path>
+        <package name="IP_18000_CSIP20_1" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/IP_18000_CSIP20_1</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains dmdSec without a STATUS attribute</description>
         </package>
@@ -59,23 +59,23 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIP20_2" isValid="FALSE">
-          <path>/corpora/csip/metadata/dmdSec/CSIP20/IP_18000_CSIP20_2</path>
+        <package name="IP_18000_CSIP20_2" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP20_2</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains a dmdSec element in mets.xml. Contains a mets/dmd/@STATUS attribute with an invalid value ("CURENT" with one "R" instead of two)</description>
         </package>
-        <package name="IP_18000_CSIP20_3" isValid="FALSE">
-          <path>/corpora/csip/metadata/dmdSec/CSIP20/IP_18000_CSIP20_3</path>
+        <package name="IP_18000_CSIP20_3" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP20_3</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains a dmdSec element in mets.xml. Contains a mets/dmd/@STATUS attribute with a valid value ("current" = lower case)</description>
         </package>
-        <package name="IP_18000_CSIP20_4" isValid="TRUE">
-          <path>/corpora/csip/metadata/dmdSec/CSIP20/IP_18000_CSIP20_4</path>
+        <package name="IP_18000_CSIP20_4" isValid="TRUE" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP20_4</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains a dmdSec element in mets.xml. Contains a mets/dmd/@STATUS attribute with a valid value ("CURRENT")</description>
         </package>
-        <package name="IP_18000_CSIP20_5" isValid="TRUE">
-          <path>/corpora/csip/metadata/dmdSec/CSIP20/IP_18000_CSIP20_5</path>
+        <package name="IP_18000_CSIP20_5" isValid="TRUE" isImplemented="TRUE" >
+          <path>valid/IP_18000_CSIP20_5</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains a dmdSec element in mets.xml. Contains a mets/dmd/@STATUS attribute with a valid value ("SUPERSEDED")</description>
         </package>

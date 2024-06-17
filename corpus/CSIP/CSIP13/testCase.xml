@@ -32,7 +32,7 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_agent_OTHERTYPE_not_exist" isValid="FALSE">
+        <package name="mets-xml_metsHdr_agent_OTHERTYPE_not_exist" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/mets-xml_metsHdr_agent_OTHERTYPE_not_exist</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has no mets/metsHdr/agent/@OTHERTYPE attribute.
@@ -42,12 +42,6 @@
               packages that have an optional agent that has no @OTHERTYPE, as
               this is a likely situation where a validator could raise false
               positives for the rule. -->
-        <package name="minimal_IP_with_1_representation" isValid="TRUE">
-          <path>valid/minimal_IP_with_1_representation</path>
-          <description>
-            Minimal IP that matches all MUST requirements.
-          </description>
-        </package>
       </corpusPackages>
     </rule>
     <rule id="2">
@@ -58,13 +52,13 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_agent_OTHERTYPE_incorrect" isValid="FALSE">
+        <package name="mets-xml_metsHdr_agent_OTHERTYPE_incorrect" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/mets-xml_metsHdr_agent_OTHERTYPE_incorrect</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/@OTHERTYPE = "random_string_e2368caa08a1cbbe2e8d5b96ab34a41e".
           </description>
         </package>
-        <package name="mets-xml_metsHdr_agent_OTHERTYPE_correct" isValid="TRUE">
+        <package name="mets-xml_metsHdr_agent_OTHERTYPE_correct" isValid="TRUE" isImplemented="TRUE">
           <path>valid/mets-xml_metsHdr_agent_OTHERTYPE_correct</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/@OTHERTYPE = "SOFTWARE".

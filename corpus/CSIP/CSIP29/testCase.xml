@@ -3,7 +3,7 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP29"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP29"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP29" URL="http://earkcsip.dilcis.eu/#CSIP29"/>
@@ -34,8 +34,8 @@ XML lists -->
         <message>mets/dmdSec/mdRef/@CHECKSUM does not exist in METS.xml. @CHECKSUM is a mandatory attribute according to CS IP.</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_18000_CSIP29_1">
-          <path>/corpora/csip/metadata/dmdSec/CSIP29/IP_18000_CSIP29_1</path>
+        <package isValid="FALSE" name="IP_18000_CSIP29_1" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP29_1</path>
           <description>the METS.xml is missing an CHECKSUM-attribute in mets/dmdSec/mdRef</description>
         </package>
       </corpusPackages>
@@ -46,16 +46,16 @@ XML lists -->
         <message>mets/dmdSec/mdRef/@CHECKSUM has a value in METS.xml that does not match the actual file's checksum </message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_18000_CSIP29_2">
-          <path>/corpora/csip/metadata/dmdSec/CSIP29/IP_18000_CSIP29_2</path>
+        <package isValid="FALSE" name="IP_18000_CSIP29_2" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP29_2</path>
           <description>This package has a wrong CHECKSUM-attribute value</description>
         </package>
-        <package isValid="FALSE" name="IP_18000_CSIP29_3">
-          <path>/corpora/csip/metadata/dmdSec/CSIP29/IP_18000_CSIP29_3</path>
+        <package isValid="FALSE" name="IP_18000_CSIP29_3" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP29_3</path>
           <description>This package has a wrong CHECKSUM-attribute value (actually it is a valid MD5 but SHA-1 is used in CHECKSUMTYPE)</description>
         </package>
-        <package isValid="FALSE" name="IP_18000_CSIP29_4">
-          <path>/corpora/csip/metadata/dmdSec/CSIP29/IP_18000_CSIP29_4</path>
+        <package isValid="FALSE" name="IP_18000_CSIP29_4" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP29_4</path>
           <description>This package has a wrong CHECKSUM-attribute value (actually it is a valid SHA-1 but MD5 is used in CHECKSUMTYPE)</description>
         </package>
       </corpusPackages>

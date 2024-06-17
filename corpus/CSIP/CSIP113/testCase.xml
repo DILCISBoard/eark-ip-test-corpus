@@ -24,15 +24,15 @@ XML lists -->
         <message>An information package METS document must contain a mets/fileSec/fileGrp@USE="Schemas" element.</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="no_sch_file_grp">
+        <package isValid="FALSE" name="no_sch_file_grp" isImplemented="FALSE">
           <path>./no_sch_file_grp</path>
           <description>The package root METS document has no mets/fileSec/fileGrp@USE="Schemas" element.</description>
         </package>
-        <package isValid="TRUE" name="single_sch_file_grp">
+        <package isValid="TRUE" name="single_sch_file_grp" isImplemented="FALSE">
           <path>./single_sch_file_grp</path>
           <description>The package root METS document has a single mets/fileSec/fileGrp@USE="Schemas" element.</description>
         </package>
-        <package isValid="TRUE" name="multi_sch_file_grp">
+        <package isValid="TRUE" name="multi_sch_file_grp" isImplemented="FALSE">
           <path>./multi_sch_file_grp</path>
           <description>The package root METS document has multiple mets/fileSec/fileGrp@USE="Schemas" elements.</description>
         </package>

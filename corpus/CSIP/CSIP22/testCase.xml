@@ -3,7 +3,7 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP22"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP22"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP22" URL="http://earkcsip.dilcis.eu/#CSIP22"/>
@@ -25,36 +25,36 @@ XML lists -->
         <message>The LOCTYPE-attribute does not have the value "URL". The LOCTYPE-attribute must always have the value "URL". </message>
       </error>
       <corpusPackages>
-        <package isValid="TRUE" name="IP_18000_CSIP22_1">
-          <path>\corpora\csip\metadata\dmdsec\CSIP22\IP_18000_CSIP22_1</path>
+        <package isValid="TRUE" name="IP_18000_CSIP22_1" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP22_1</path>
           <description>This package has a correct LOCTYPE-attribute value: the value "URL" </description>
         </package>
-        <package isValid="FALSE" name="IP_18000_CSIP22_2">
-          <path>\corpora\csip\metadata\dmdsec\CSIP22\IP_18000_CSIP22_2</path>
+        <package isValid="FALSE" name="IP_18000_CSIP22_2" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP22_2</path>
           <description>This package has a incorrect LOCTYPE-attribute value: the value "ARK" </description>
         </package>
-        <package isValid="FALSE" name="IP_18000_CSIP22_3">
-          <path>\corpora\csip\metadata\dmdsec\CSIP22\IP_18000_CSIP22_3</path>
+        <package isValid="FALSE" name="IP_18000_CSIP22_3" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP22_3</path>
           <description>This package has a incorrect LOCTYPE-attribute value: the value "DOI" </description>
         </package>
-        <package isValid="FALSE" name="IP_18000_CSIP22_4">
-          <path>\corpora\csip\metadata\dmdsec\CSIP22\IP_18000_CSIP22_4</path>
+        <package isValid="FALSE" name="IP_18000_CSIP22_4" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP22_4</path>
           <description>This package has a incorrect LOCTYPE-attribute value: the value "HANDLE" </description>
         </package>
-        <package isValid="FALSE" name="IP_18000_CSIP22_5">
-          <path>\corpora\csip\metadata\dmdsec\CSIP22\IP_18000_CSIP22_5</path>
+        <package isValid="FALSE" name="IP_18000_CSIP22_5" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP22_5</path>
           <description>This package has a incorrect LOCTYPE-attribute value: the value "OTHER" </description>
         </package>
-        <package isValid="FALSE" name="IP_18000_CSIP22_6">
-          <path>\corpora\csip\metadata\dmdsec\CSIP22\IP_18000_CSIP22_6</path>
+        <package isValid="FALSE" name="IP_18000_CSIP22_6" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP22_6</path>
           <description>This package has a incorrect LOCTYPE-attribute value: the value "PURL" </description>
         </package>
-        <package isValid="FALSE" name="IP_18000_CSIP22_7">
-          <path>\corpora\csip\metadata\dmdsec\CSIP22\IP_18000_CSIP22_7</path>
+        <package isValid="FALSE" name="IP_18000_CSIP22_7" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP22_7</path>
           <description>This package has a incorrect LOCTYPE-attribute value: the value "URN" </description>
         </package>
-        <package isValid="FALSE" name="IP_18000_CSIP22_8">
-          <path>\corpora\csip\metadata\dmdsec\CSIP22\IP_18000_CSIP22_8</path>
+        <package isValid="FALSE" name="IP_18000_CSIP22_8" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP22_8</path>
           <description>This package has a incorrect LOCTYPE-attribute value: the value "url" in lowercase </description>
         </package>
       </corpusPackages>

@@ -28,11 +28,11 @@ XML lists -->
         <message>The location of the resource should be the same as in the mets/structMap[@LABEL='CSIP']/div/div/@LABEL value</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="mptr_href_different_from_label_path">
+        <package isValid="FALSE" name="mptr_href_different_from_label_path" isImplemented="FALSE">
           <path>invalid/mptr_href_different_from_label_path</path>
           <description>A package where the mets pointer is different from the mets/structMap[@LABEL='CSIP']/div/div/@LABEL values that are not Representations</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
+        <package isValid="TRUE" name="minimal_IP" isImplemented="FALSE">
           <path>valid/minimal_IP</path>
           <description>Minimal IP</description>
         </package>

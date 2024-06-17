@@ -32,8 +32,8 @@ XML lists -->
         <message>The element mets/dmdSec/mdRef in METS.xml does not have a MIMETYPE-attribute. It MUST be there according to CSIP.</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_18000_CSIP26_1">
-          <path>/corpora/csip/metadata/dmdSec/CSIP26/IP_18000_CSIP26_1</path>
+        <package isValid="FALSE" name="IP_18000_CSIP26_1" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP26_1</path>
           <description>In METS.xml there is no MIMETYPE-attribute in mets/dmdSec/mdRef</description>
         </package>
       </corpusPackages>
@@ -44,8 +44,8 @@ XML lists -->
             <message>The element mets/dmdSec/mdRef in METS.xml has a MIMETYPE-attribute with no value. It SHOULD be there.</message>
           </error>
           <corpusPackages>
-            <package isValid="FALSE" name="IP_18000_CSIP26_2">
-              <path>/corpora/csip/metadata/dmdSec/CSIP26/IP_18000_CSIP26_2</path>
+            <package isValid="FALSE" name="IP_18000_CSIP26_2" isImplemented="TRUE">
+              <path>invalid/IP_18000_CSIP26_2</path>
               <description>This package has a MIMETYPE-attribute with no value in mets/dmdSec/mdRef</description>
             </package>
       </corpusPackages>
@@ -56,8 +56,8 @@ XML lists -->
             <message>The element mets/dmdSec/mdRef in METS.xml has a MIMETYPE-attribute which it not on the IANA list. See http://www.iana.org/assignments/media-types/media-types.xhtml for the list of valid MIMETYPES </message>
           </error>
           <corpusPackages>
-            <package isValid="FALSE" name="IP_18000_CSIP26_3">
-              <path>/corpora/csip/metadata/dmdSec/CSIP26/IP_18000_CSIP26_3</path>
+            <package isValid="FALSE" name="IP_18000_CSIP26_3" isImplemented="TRUE">
+              <path>invalid/IP_18000_CSIP26_3</path>
               <description>This package has a MIMETYPE-attribute with a wrong value in mets/dmdSec/mdRef</description>
             </package>
           </corpusPackages>

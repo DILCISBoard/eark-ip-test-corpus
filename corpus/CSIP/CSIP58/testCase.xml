@@ -26,11 +26,11 @@ XML lists -->
         <message>An information package METS document should contain a single mets/filesec only.</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="no_file_sec">
+        <package isValid="FALSE" name="no_file_sec" isImplemented="FALSE">
           <path>./no_file_sec</path>
           <description>The package root METS document has no mets/filesec element.</description>
         </package>
-        <package isValid="TRUE" name="single_file_sec">
+        <package isValid="TRUE" name="single_file_sec" isImplemented="FALSE">
           <path>./single_file_sec</path>
           <description>The package root METS document has a single mets/filesec element.</description>
         </package>

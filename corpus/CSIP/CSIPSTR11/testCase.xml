@@ -3,7 +3,7 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIPSTR11"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIPSTR11"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIPSTR11" URL="http://earkcsip.dilcis.eu/#CSIPSTR11" />
@@ -32,78 +32,78 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIPSTR11_1" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_1</path>
+        <package name="IP_18000_CSIPSTR11_1" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_1</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. Sub-folder 'data' named in camelcase</description>
         </package>
-        <package name="IP_18000_CSIPSTR11_2" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_2</path>
+        <package name="IP_18000_CSIPSTR11_2" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_2</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. Sub-folder 'data' has extra lowercase character in back</description>
         </package>
-        <package name="IP_18000_CSIPSTR11_3" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_3</path>
+        <package name="IP_18000_CSIPSTR11_3" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_3</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP.  Sub-folder 'data' has extra lowercase character in front</description>
         </package>
-        <package name="IP_18000_CSIPSTR11_4" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_4</path>
+        <package name="IP_18000_CSIPSTR11_4" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_4</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. Sub-folder 'data'  has extra lowercase character in the middle. </description>
         </package>
-        <package name="IP_18000_CSIPSTR11_5" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_5</path>
+        <package name="IP_18000_CSIPSTR11_5" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_5</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. Sub-folder 'data' has extra uppercase character in back</description>
         </package>
-        <package name="IP_18000_CSIPSTR11_6" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_6</path>
+        <package name="IP_18000_CSIPSTR11_6" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_6</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP.Sub-folder 'data' has extra uppercase character in front</description>
         </package>
-        <package name="IP_18000_CSIPSTR11_7" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_7</path>
+        <package name="IP_18000_CSIPSTR11_7" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_7</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP.Sub-folder 'data' has extra uppercase character in middle</description>
         </package>
-        <package name="IP_18000_CSIPSTR11_8" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_8</path>
+        <package name="IP_18000_CSIPSTR11_8" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_8</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. Sub-folder 'data'  missing in root folder</description>
         </package>
-        <package name="IP_18000_CSIPSTR11_9" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_9</path>
+        <package name="IP_18000_CSIPSTR11_9" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_9</path>
           <!-- Full description of corpus package features. -->
         <description>A package based on the folder stucture IP. Sub-folder 'data' has extra number sign in back </description>
         </package>
-        <package name="IP_18000_CSIPSTR11_10" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_10</path>
+        <package name="IP_18000_CSIPSTR11_10" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_10</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. Sub-folder 'data' has extra number sign in front. </description>
         </package>
-        <package name="IP_18000_CSIPSTR11_11" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_11</path>
+        <package name="IP_18000_CSIPSTR11_11" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_11</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. Sub-folder 'data' has extra number sign in middle. </description>
         </package>
-        <package name="IP_18000_CSIPSTR11_12" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_12</path>
+        <package name="IP_18000_CSIPSTR11_12" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_12</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. Sub-folder 'data' has extra sign in back. </description>
         </package>
-        <package name="IP_18000_CSIPSTR11_13" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_13</path>
+        <package name="IP_18000_CSIPSTR11_13" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_13</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. Sub-folder 'data' has extra sign in middle.</description>
         </package>
-        <package name="IP_18000_CSIPSTR11_14" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_14</path>
+        <package name="IP_18000_CSIPSTR11_14" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_14</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. Sub-folder 'data' has extra sign in front.</description>
         </package>
-        <package name="IP_18000_CSIPSTR11_15" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR11/IP_18000_CSIPSTR11_15</path>
+        <package name="IP_18000_CSIPSTR11_15" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/CSIPSTR11_15</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. Sub-folder 'data' named in uppercase. </description>
         </package>

@@ -1,9 +1,7 @@
-<!-- Root element for an individual test case, allows these to be wrapped into
-XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP78"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP78"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP78" URL="http://earkcsip.dilcis.eu/#CSIP78"/>
@@ -27,11 +25,11 @@ XML lists -->
         <message>The attribute xlink_type MUST exist in the FLocat-element like this: @xlink:type='simple'</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="fileSec_fileGrp_file_FLocat_missing_xlink_type">
+        <package isValid="FALSE" name="fileSec_fileGrp_file_FLocat_missing_xlink_type" isImplemented="TRUE">
           <path>invalid/fileSec_fileGrp_file_FLocat_missing_xlink_type</path>
           <description>METS.xml that has a mets/fileSec/fileGrp/file/FLocat without @xlink:type attribute</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_1_representation">
+        <package isValid="TRUE" name="minimal_IP_with_1_representation" isImplemented="TRUE">
           <path>valid/minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
