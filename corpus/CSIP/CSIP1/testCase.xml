@@ -31,7 +31,7 @@ For a representation level METS document this value records the name/ID of the r
       </error>
       <corpusPackages>
         <package name="mets-xml_mets_OBJID_attribute_not_exist" isValid="FALSE" isImplemented="TRUE">
-          <path>invalid/mets-xml_mets_OBJID_attribute_not_exist"</path>
+          <path>invalid/mets-xml_mets_OBJID_attribute_not_exist</path>
           <description>
             METS.xml file has no mets/@OBJID attribute.
           </description>

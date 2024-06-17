@@ -1,5 +1,3 @@
-<!-- Root element for an individual test case, allows these to be wrapped into
-XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="FALSE">
   <!-- Unique ID for the test case -->
