@@ -47,7 +47,7 @@
       </error>
       <corpusPackages>
         <package isValid="TRUE" isImplemented="FALSE" name="minimal_IP_with_no_representations">
-          <path>valid\minimal_IP_with_no_representations</path>
+          <path>valid/minimal_IP_with_no_representations</path>
           <description>Minimal IP that has no representations, only metadata.</description>
         </package>
       </corpusPackages>

@@ -28,7 +28,7 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="TRUE" name="minimal_IP">
-          <path>valid\minimal_IP</path>
+          <path>valid/minimal_IP</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>

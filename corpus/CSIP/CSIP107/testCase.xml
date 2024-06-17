@@ -27,11 +27,11 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="FALSE" name="missing_mention_of_rep_in_structMap">
-          <path>invalid\missing_mention_of_rep_in_structMap</path>
+          <path>invalid/missing_mention_of_rep_in_structMap</path>
           <description>A package where one representation METS.xml in the package  are not mentioned in mets/structMap</description>
         </package>
         <package isValid="TRUE" name="minimal_IP">
-          <path>valid\minimal_IP</path>
+          <path>valid/minimal_IP</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
@@ -43,7 +43,7 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="FALSE" name="path_to_nonexisting_rep_METS">
-          <path>invalid\path_to_nonexisting_rep_METS</path>
+          <path>invalid/path_to_nonexisting_rep_METS</path>
           <description>There is one path given in mets/structMap[@LABEL='CSIP']/div/div/@LABEL which does not direct to an existing file</description>
         </package>
       </corpusPackages>

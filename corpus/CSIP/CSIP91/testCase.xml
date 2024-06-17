@@ -34,11 +34,11 @@
        </error>
        <corpusPackages>
          <package isValid="FALSE" isImplemented="TRUE" name="structMap_missing_metadata_admid_attribute">
-           <path>invalid\structMap_missing_metadata_admid_attribute</path>
+           <path>invalid/structMap_missing_metadata_admid_attribute</path>
            <description>An IP where the @ADMID-attribute is missing</description>
          </package>
          <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
-           <path>valid\valid_IP_with_SHOULD_MAY_1_rep</path>
+           <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
            <description>Minimal IP</description>
          </package>
        </corpusPackages>
@@ -50,19 +50,19 @@
       </error>
       <corpusPackages>
         <package isValid="FALSE" isImplemented="TRUE" name="structMap_metadata_admid_attribute_missing_IDs">
-          <path>invalid\structMap_metadata_admid_attribute_missing_IDs</path>
+          <path>invalid/structMap_metadata_admid_attribute_missing_IDs</path>
           <description>An IP with three amdSec IDs where only two IDs are listed in the @ADMID</description>
         </package>
 		<package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep_3_premis">
-          <path>valid\valid_IP_with_SHOULD_MAY_1_rep_3_premis</path>
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep_3_premis</path>
           <description>Minimal IP</description>
         </package>
         <package isValid="FALSE" isImplemented="TRUE" name="structMap_metadata_admid_attribute_too_many_IDs">
-          <path>invalid\structMap_metadata_admid_attribute_too_many_IDs</path>
+          <path>invalid/structMap_metadata_admid_attribute_too_many_IDs</path>
           <description>An IP with two amdSec IDs where three IDs are listed in the @ADMID</description>
         </package>
         <package isValid="TRUE" isImplemented="TRUE" name="valid_IP_with_SHOULD_MAY_1_rep">
-          <path>valid\valid_IP_with_SHOULD_MAY_1_rep</path>
+          <path>valid/valid_IP_with_SHOULD_MAY_1_rep</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>

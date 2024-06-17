@@ -46,7 +46,7 @@
       </error>
       <corpusPackages>
         <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>

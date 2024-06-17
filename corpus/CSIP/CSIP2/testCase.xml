@@ -33,13 +33,13 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_mets_TYPE_attribute_not_exist" isValid="FALSE" isImplemented="TRUE">
-          <path>invalid\mets-xml_mets_TYPE_attribute_not_exist</path>
+          <path>invalid/mets-xml_mets_TYPE_attribute_not_exist</path>
           <description>
             METS.xml file has no mets/@TYPE attribute.
           </description>
         </package>
         <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -55,13 +55,13 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_mets_TYPE_attribute_value_incorrect" isValid="FALSE" isImplemented="TRUE">
-          <path>invalid\mets-xml_mets_TYPE_attribute_value_incorrect</path>
+          <path>invalid/mets-xml_mets_TYPE_attribute_value_incorrect</path>
           <description>
             METS.xml file has mets/@TYPE = "random_string_n3ihcu63LdGb37kF7".
           </description>
         </package>
         <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -87,13 +87,13 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist" isValid="FALSE" isImplemented="TRUE">
-          <path>invalid\mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist</path>
+          <path>invalid/mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist</path>
           <description>
             METS.xml file has mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE attribute does not exist.
           </description>
         </package>
         <package name="valid_minimal_mets_TYPE_value_OTHER" isValid="TRUE" isImplemented="TRUE">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works – Manuscripts".
           </description>
@@ -109,13 +109,13 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value" isValid="FALSE" isImplemented="TRUE">
-          <path>invalid\mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value</path>
+          <path>invalid/mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_has_no_value</path>
           <description>
             METS.xml file has mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "".
           </description>
         </package>
         <package name="valid_minimal_mets_TYPE_value_OTHER" isValid="TRUE" isImplemented="TRUE">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements, mets/@TYPE = "OTHER", mets/@csip:OTHERTYPE = "Textual works – Manuscripts".
           </description>

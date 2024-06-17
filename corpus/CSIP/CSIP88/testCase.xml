@@ -30,11 +30,11 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="FALSE" isImplemented="TRUE" name="no_div_label_metadata">
-          <path>invalid\no_div_label_metadata</path>
+          <path>invalid/no_div_label_metadata</path>
           <description>There is no div-element with the @LABEL='Metadata' nested in the div-element with the @LABEL='CSIP'</description>
         </package>
         <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
@@ -46,11 +46,11 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="FALSE" isImplemented="TRUE" name="two_div_elements_with_label_metadata">
-          <path>invalid\two_div_elements_with_label_metadata</path>
+          <path>invalid/two_div_elements_with_label_metadata</path>
           <description>Package with two div-elements with @LABEL='metadata'</description>
         </package>
         <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>

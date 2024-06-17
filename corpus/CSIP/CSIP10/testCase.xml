@@ -26,7 +26,7 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_agent_not_exist" isValid="FALSE" isImplemented="TRUE">
-          <path>invalid\mets-xml_metsHdr_agent_not_exist</path>
+          <path>invalid/mets-xml_metsHdr_agent_not_exist</path>
           <description>
             METS.xml file has no mets/metsHdr/agent element.
           </description>

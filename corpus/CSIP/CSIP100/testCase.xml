@@ -29,11 +29,11 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="FALSE" isImplemented="TRUE" name="fileGrp_Schemas_but_missing_structMap">
-          <path>invalid\fileGrp_Schemas_but_missing_structMap</path>
+          <path>invalid/fileGrp_Schemas_but_missing_structMap</path>
           <description>A package where there is a fileGrp with @USE="Schemas" but there is no structMap [@LABEL='CSIP']/div/div[@LABEL='Schemas']/fptr FILEID</description>
         </package>
         <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
@@ -45,11 +45,11 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="FALSE" isImplemented="TRUE" name="structMap_does_not_point_at_Schemas">
-          <path>invalid\structMap_does_not_point_at_Schemas</path>
+          <path>invalid/structMap_does_not_point_at_Schemas</path>
           <description>A package which has a Schemas filepointer that points to a filegroup that does not have @USE="Schemas"</description>
         </package>
         <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
