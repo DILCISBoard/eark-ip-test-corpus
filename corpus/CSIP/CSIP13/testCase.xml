@@ -33,7 +33,7 @@
       </error>
       <corpusPackages>
         <package name="mets-xml_metsHdr_agent_OTHERTYPE_not_exist" isValid="FALSE">
-          <path>mets-xml_metsHdr_agent_OTHERTYPE_not_exist</path>
+          <path>invalid/mets-xml_metsHdr_agent_OTHERTYPE_not_exist</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has no mets/metsHdr/agent/@OTHERTYPE attribute.
           </description>
