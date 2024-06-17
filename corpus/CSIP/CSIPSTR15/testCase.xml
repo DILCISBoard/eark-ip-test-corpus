@@ -2,7 +2,7 @@
 XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIPSTR15"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIPSTR15"/>
   <references>
     <reference requirementId="CSIPSTR15" URL="http://earkcsip.dilcis.eu/#CSIPSTR15"/>
   </references>
@@ -20,8 +20,8 @@ XML lists -->
 		</message>
 		</error>
         <corpusPackages>
-		    <package name="subfolder_schemas_in_IP_folder" isValid="TRUE">
-		        <path>pass\subfolder_schemas_in_IP_folder</path>
+		    <package name="subfolder_schemas_in_IP_folder" isValid="TRUE" isImplemented="TRUE">
+		        <path>valid/subfolder_schemas_in_IP_folder</path>
 		        <description>Positive testcase. The Information Package has sub-folder "schemas".</description>
 		    </package>
         </corpusPackages>

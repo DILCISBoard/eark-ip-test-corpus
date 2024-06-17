@@ -42,7 +42,7 @@
             SIP where the METS.xml file has no mets/metsHdr/altRecordID element with TYPE = 'PREVIOUSSUBMISSIONAGREEMENT'.
           </description>
         </package>
-        <package name="minimal_SIP_PREVIOUSSUBMISSIONAGREEMENT_1_instance" isValid="TRUE" isImplemented="TRUE">
+        <package name="minimal_SIP_PREVIOUSSUBMISSIONAGREEMENT_1_instance" isValid="TRUE" isImplemented="FALSE">
           <path>valid/minimal_SIP_PREVIOUSSUBMISSIONAGREEMENT_1_instance</path>
           <description>
             Minimal SIP that matches all MUST requirements, plus all SHOULD and MAY requirements (both for elements and attributes). METS.xml file has 1 instance of mets/metsHdr/altRecordID[@TYPE='PREVIOUSSUBMISSIONAGREEMENT']

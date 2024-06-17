@@ -27,7 +27,7 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_agent_TYPE_not_exist" isValid="FALSE">
+        <package name="mets-xml_metsHdr_agent_TYPE_not_exist" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/mets-xml_metsHdr_agent_TYPE_not_exist</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has no mets/metsHdr/agent/@TYPE attribute.
@@ -47,13 +47,13 @@
               value, as this is the only certain way to test that the validator
               reports an error on any one of them. This should be automated as
               mets.xsd allows 2 values that are not acceptable by CSIP. -->
-        <package name="mets-xml_metsHdr_agent_TYPE_INDIVIDUAL" isValid="FALSE">
+        <package name="mets-xml_metsHdr_agent_TYPE_INDIVIDUAL" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/mets-xml_metsHdr_agent_TYPE_INDIVIDUAL</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/@TYPE = "INDIVIDUAL".
           </description>
         </package>
-        <package name="mets-xml_metsHdr_agent_TYPE_exist" isValid="TRUE">
+        <package name="mets-xml_metsHdr_agent_TYPE_exist" isValid="TRUE" isImplemented="TRUE">
           <path>valid/mets-xml_metsHdr_agent_TYPE_exist</path>
           <description>
             Minimal IP that matches all MUST requirements.

@@ -47,8 +47,7 @@
           </description>
         </package>
         <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
-          <path>valid/minimal_IP_with_1_representation
-		  </path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements, plus all SHOULD requirements (both for elements and attributes), incl.:
             - the folder "documentation" exists (CSIPSTR16)

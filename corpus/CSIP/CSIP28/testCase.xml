@@ -34,8 +34,8 @@ The creation date and time of the referenced file. 1..1 MUST
         <message>mets/dmdSec/mdRef/@CREATED does not exist in METS.xml. @CREATED is a mandatory attribute according to CSIP.</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_18000_CSIP28_1">
-          <path>/corpora/csip/metadata/dmdSec/CSIP28/IP_18000_CSIP28_1</path>
+        <package isValid="FALSE" name="IP_18000_CSIP28_1" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP28_1</path>
           <description>This package is missing an CREATED-attribute in mets/dmdSec/mdRef</description>
         </package>
       </corpusPackages>

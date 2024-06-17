@@ -3,7 +3,7 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIPSTR5"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIPSTR5"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIPSTR5" URL="http://earkcsip.dilcis.eu/#CSIPSTR5" />
@@ -30,78 +30,78 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIPSTR5_1" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_1</path>
+        <package name="IP_18000_CSIPSTR5_1" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_1</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Folder `metadata` named in camelcase </description>
         </package>
-        <package name="IP_18000_CSIPSTR5_2" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_2</path>
+        <package name="IP_18000_CSIPSTR5_2" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_2</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Foldername `metadata` has extra lowercase character in back</description>
         </package>
-        <package name="IP_18000_CSIPSTR5_3" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_3</path>
+        <package name="IP_18000_CSIPSTR5_3" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_3</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas.  Foldername `metadata` has extra lowercase character in middle</description>  
         </package>
-        <package name="IP_18000_CSIPSTR5_4" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_4</path>
+        <package name="IP_18000_CSIPSTR5_4" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_4</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Folder `metadata` has extra lowercase character in front</description>
         </package>
-        <package name="IP_18000_CSIPSTR5_5" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_5</path>
+        <package name="IP_18000_CSIPSTR5_5" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_5</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas.Foldername `metadata` has extra uppercase character in back</description>
         </package>
-        <package name="IP_18000_CSIPSTR5_6" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_6</path>
+        <package name="IP_18000_CSIPSTR5_6" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_6</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Foldername `metadata` has extra uppercase character in front</description>
         </package>
-        <package name="IP_18000_CSIPSTR5_7" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_7</path>
+        <package name="IP_18000_CSIPSTR5_7" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_7</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Foldername `metadata` has extra uppercase character in middle</description>
         </package>
-        <package name="IP_18000_CSIPSTR5_8" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_8</path>
+        <package name="IP_18000_CSIPSTR5_8" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_8</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Folder `metadata` missing in root folder</description>
         </package>
-        <package name="IP_18000_CSIPSTR5_9" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_9</path>
+        <package name="IP_18000_CSIPSTR5_9" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_9</path>
           <!-- Full description of corpus package features. -->
         <description>A package based on the minimal IP with schemas. Foldername `metadata` has extra number sign in back</description>
         </package>
-        <package name="IP_18000_CSIPSTR5_10" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_10</path>
+        <package name="IP_18000_CSIPSTR5_10" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_10</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Foldername `metadata` has extra number sign in front</description>
         </package>
-        <package name="IP_18000_CSIPSTR5_11" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_11</path>
+        <package name="IP_18000_CSIPSTR5_11" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_11</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Negative testcase. Foldername `metadata` has extra number sign in middle</description>
         </package>
-        <package name="IP_18000_CSIPSTR5_12" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_12</path>
+        <package name="IP_18000_CSIPSTR5_12" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_12</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Foldername `metadata` has extra sign in back</description>
         </package>
-        <package name="IP_18000_CSIPSTR5_13" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_13</path>
+        <package name="IP_18000_CSIPSTR5_13" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_13</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Foldername `metadata` has extra sign in middle.</description>
         </package>
-        <package name="IP_18000_CSIPSTR5_14" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_14</path>
+        <package name="IP_18000_CSIPSTR5_14" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_14</path>
           <!-- Full description of corpus package features. -->
           <description>Foldername `metadata` has extra sign in front</description>
         </package>
-        <package name="IP_18000_CSIPSTR5_15" isValid="FALSE">
-          <path>/corpus/structure/CSIPSTR5/IP_18000_CSIPSTR5_15</path>
+        <package name="IP_18000_CSIPSTR5_15" isValid="FALSE"  isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIPSTR5_15</path>
           <!-- Full description of corpus package features. -->
           <description>Negative testcase. Folder `metadata` named in uppercase </description>
         </package>

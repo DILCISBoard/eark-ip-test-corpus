@@ -7,8 +7,11 @@
     <name>Content Information Type Specification</name>
     <location>mets/@csip:CONTENTINFORMATIONTYPE</location>
     <description>
-      Used to declare the Content Information Type Specification used when creating the package. Legal values are defined in a fixed vocabulary. The attribute is mandatory for representation level METS documents. The vocabulary will evolve under the care of the DILCIS Board as additional Content Information Type Specifications are developed.
-      See also: Content information type specification, https://earkcsip.dilcis.eu/#VocabularyContentInformationTypeSpecification
+      Content Information Type Specification
+mets/@csip:CONTENTINFORMATIONTYPE
+Used to declare the Content Information Type Specification used when creating the package. Legal values are defined in a fixed vocabulary. 
+The attribute is mandatory for representation level METS documents. 
+The vocabulary will evolve under the care of the DILCIS Board as additional Content Information Type Specifications are developed.
     </description>
     <cardinality>0..1</cardinality>
     <level>SHOULD</level>

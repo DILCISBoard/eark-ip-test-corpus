@@ -25,11 +25,11 @@ XML lists -->
         <message>The value has to be: "simple"</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="wrong_value_xlink_type">
+        <package isValid="FALSE" name="wrong_value_xlink_type" isImplemented="FALSE">
           <path>invalid/wrong_value_xlink_type</path>
           <description>IP has the value "METS"</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP_with_schemas">
+        <package isValid="TRUE" name="minimal_IP_with_schemas" isImplemented="FALSE">
           <path>valid/minimal_IP_with_schemas</path>
           <description></description>
         </package>

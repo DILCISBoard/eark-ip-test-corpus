@@ -25,8 +25,8 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_not_exist" isValid="FALSE">
-          <path>mets-xml_metsHdr_not_exist</path>
+        <package name="mets-xml_metsHdr_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/mets-xml_metsHdr_not_exist</path>
           <description>
             METS.xml file has no mets/metsHdr element.
           </description>

@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.4" requirementId="CSIP16"/>
+  <id specification="CSIP" version="2.1.0" requirementId="CSIP16"/>
   <references>
     <reference requirementId="CSIP16" URL="http://earkcsip.dilcis.eu/#CSIP16"/>
   </references>
@@ -32,8 +32,8 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_agent_note_NOTETYPE_not_exist" isValid="FALSE">
-          <path>mets-xml_metsHdr_agent_note_NOTETYPE_not_exist</path>
+        <package name="mets-xml_metsHdr_agent_note_NOTETYPE_not_exist" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/mets-xml_metsHdr_agent_note_NOTETYPE_not_exist</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has no mets/metsHdr/agent/note/@csip:NOTETYPE attribute.
           </description>
@@ -42,7 +42,7 @@
               packages that have an optional agent that has no note/@csip:NOTETYPE,
               as this is a likely situation where a validator could raise false
               positives for the rule. -->
-        <package name="mets-xml_metsHdr_agent_note_NOTETYPE_valid" isValid="TRUE">
+        <package name="mets-xml_metsHdr_agent_note_NOTETYPE_valid" isValid="TRUE" isImplemented="TRUE">
           <path>valid/mets-xml_metsHdr_agent_note_NOTETYPE_valid</path>
           <description>
             Minimal IP that matches all MUST requirements.
@@ -58,14 +58,14 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_agent_note_NOTETYPE_incorrect" isValid="FALSE">
+        <package name="mets-xml_metsHdr_agent_note_NOTETYPE_incorrect" isValid="FALSE" isImplemented="TRUE">
           <!--  It is unclear what to do with the vocabulary, as VocabularyNoteType
                 currently has another value IDENTIFICATIONCODE. If it's use is
                 prohibited, it should be removed from the vocabulary, or if it's
                 needed then its use clarified. The assumption in with this
                 package is that the other value has legal use, so it is not used
                 in the invalid package. -->
-          <path>mets-xml_metsHdr_agent_note_NOTETYPE_incorrect</path>
+          <path>invalid/mets-xml_metsHdr_agent_note_NOTETYPE_incorrect</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/note/@csip:NOTETYPE = "random_string_e2368caa08a1cbbe2e8d5b96ab34a41e".
           </description>
@@ -75,7 +75,7 @@
               note/@csip:NOTETYPE != 'SOFTWARE VERSION',
               as this is a likely situation where a validator could raise false
               positives for the rule. -->
-        <package name="mets-xml_metsHdr_agent_note_NOTETYPE_valid" isValid="TRUE">
+        <package name="mets-xml_metsHdr_agent_note_NOTETYPE_valid" isValid="TRUE" isImplemented="TRUE">
           <path>valid/mets-xml_metsHdr_agent_note_NOTETYPE_valid</path>
           <description>
             Minimal IP that matches all MUST requirements.

@@ -3,14 +3,16 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP19"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP19"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP19" URL="http://earkcsip.dilcis.eu/#533-use-of-the-mets-descriptive-metadata-section-element-dmdsec"/>
   </references>
   <!-- Textual description of the test case, may just be a repeat of the
   requirement text. -->
-  <requirementText>Creation date of the descriptive metadata in this section.</requirementText>
+  <requirementText>Descriptive metadata creation datetime
+mets/dmdSec/@CREATED
+Creation date and time of the descriptive metadata in this section.</requirementText>
   <description>Test of the creation date (attribute created for element dmdSec) is present.
     Optional according to XML Schema, mandatory according to CSIP.
     No requirement for the date given, it therefore can be much older than the package itself, or be created in the future! This will not be tested at this stage.
@@ -36,8 +38,8 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIP19_1" isValid="FALSE">
-          <path>/corpora/csip/metadata/dmdSec/CSIP19/IP_18000_CSIP19_1</path>
+        <package name="IP_18000_CSIP19_1" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP19_1</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains a dmdSec element in METS.xml with an "ID"-attribute but no "CREATED"-attribute. Contains no files in metadata/description</description>
         </package>

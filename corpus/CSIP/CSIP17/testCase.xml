@@ -3,16 +3,16 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP17"/>
+  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIP17"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP17" URL="http://earkcsip.dilcis.eu/#CSIP17" />
   </references>
-  <requirementText>ID	Name and Location	Description and usage	Cardinality and Level
-    CSIP17	Descriptive metadata
-    dmdSec	Must be used if descriptive metadata for the package content is available. Each descriptive metadata section (dmdSec) contains one description and thus is repeated when more descriptions are available.
-    It is possible to transfer metadata in a package using just the descriptive metadata section/or adminstrative metadata section.	0..n
-    SHOULD </requirementText>
+  <requirementText>
+  Descriptive metadata
+mets/dmdSec
+Must be used if descriptive metadata for the package content is available. Each descriptive metadata section (dmdSec) contains a single description and must be repeated for multiple descriptions, when available.
+It is possible to transfer metadata in a package using just the descriptive metadata section and/or administrative metadata section. </requirementText>
   <!-- Textual description of the test case, may just be a repeat of the
   requirment text. -->
   <description>This testcase is for requirement CSIP17, which relates to descriptive metadata; the optional dmdSec
@@ -42,8 +42,8 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIP17_1" isValid="TRUE">
-          <path>/corpora/csip/metadata/dmdSec/CSIP17/IP_18000_CSIP17_1</path>
+        <package name="IP_18006_CSIP17_1" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/IP_18006_CSIP17_1</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on 18006_SIARD2_1REP_ExternalLOBS. Contains no dmdSec in Root METS or Representation METS</description>
         </package>
@@ -63,8 +63,8 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIP17_2" isValid="TRUE">
-          <path>/corpora/csip/metadata/dmdSec/CSIP17/IP_18000_CSIP17_2</path>
+        <package name="IP_18000_CSIP17_2" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/IP_18000_CSIP17_2</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on 18006_SIARD2_1REP_ExternalLOBS. Contains a dmdSec element in METS.xml but contains
             no files in metadata/descriptive</description>
@@ -85,8 +85,8 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIP17_3" isValid="FALSE">
-          <path>/corpora/csip/metadata/dmdSec/CSIP17/IP_18000_CSIP17_3</path>
+        <package name="IP_18000_CSIP17_3" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP17_3</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains no dmdSec in METS.xml. Contains files in the folder
             metadata/descriptive</description>

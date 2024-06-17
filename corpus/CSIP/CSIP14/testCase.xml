@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.4" requirementId="CSIP14"/>
+  <id specification="CSIP" version="2.1.0" requirementId="CSIP14"/>
   <references>
     <reference requirementId="CSIP14" URL="http://earkcsip.dilcis.eu/#CSIP14"/>
   </references>
@@ -28,19 +28,19 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_agent_name_empty" isValid="FALSE">
+        <package name="mets-xml_metsHdr_agent_name_empty" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/mets-xml_metsHdr_agent_name_empty</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/name = "".
           </description>
         </package>
-        <package name="mets-xml_metsHdr_agent_name_element_missing" isValid="FALSE">
+        <package name="mets-xml_metsHdr_agent_name_element_missing" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/mets-xml_metsHdr_agent_name_element_missing</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has no mets/metsHdr/agent/name element.
           </description>
         </package>
-        <package name="mets-xml_metsHdr_agent_name_ok" isValid="TRUE">
+        <package name="mets-xml_metsHdr_agent_name_ok" isValid="TRUE" isImplemented="TRUE">
           <path>valid/mets-xml_metsHdr_agent_name_ok</path>
           <description>
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/name = "Consolidation Team".

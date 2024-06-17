@@ -40,7 +40,7 @@
       </error>
       <corpusPackages>
         <package name="CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_not_exist" isValid="FALSE" isImplemented="TRUE">
-          <path>invalid/mets-xml_fileGrp-CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_not_exist</path>
+          <path>invalid/CONTENTINFORMATIONTYPE_OTHER_and_OTHERCONTENTINFORMATIONTYPE_not_exist</path>
           <description>
             METS.xml file where:
             - mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE = "OTHER",

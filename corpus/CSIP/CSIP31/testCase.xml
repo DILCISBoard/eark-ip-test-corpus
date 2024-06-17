@@ -36,8 +36,8 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIP31_1" isValid="FALSE">
-          <path>/corpora/csip/metadata/amdSec/CSIP31/IP_18000_CSIP31_1</path>
+        <package name="IP_18000_CSIP31_1" isValid="FALSE" isImplemented="TRUE">
+          <path>valid/IP_18000_CSIP31_1</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains no amdSec</description>
         </package>
@@ -55,8 +55,8 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIP31_2" isValid="FALSE">
-          <path>/corpora/csip/metadata/amdSec/CSIP31/IP_18000_CSIP31_2</path>
+        <package name="IP_18000_CSIP31_2" isValid="FALSE" isImplemented="TRUE">
+          <path>valid/IP_18000_CSIP31_2</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains an amdSec element in METS.xml. Contains no files in metadata/preservation</description>
         </package>
@@ -74,8 +74,8 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIP31_3" isValid="FALSE">
-          <path>/corpora/csip/metadata/amdSec/CSIP31/IP_18000_CSIP31_3</path>
+        <package name="IP_18000_CSIP31_3" isValid="FALSE" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP31_3</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the minimal IP with schemas. Contains no amdSec in METS.xml. Contains file in the folder metadata/preservation</description>
         </package>

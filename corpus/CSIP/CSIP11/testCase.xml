@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="CSIP" version="2.0.4" requirementId="CSIP11"/>
+  <id specification="CSIP" version="2.1.0" requirementId="CSIP11"/>
   <references>
     <reference requirementId="CSIP11" URL="http://earkcsip.dilcis.eu/#CSIP11"/>
   </references>
@@ -29,26 +29,26 @@
         </message>
       </error>
       <corpusPackages>
-        <package name="mets-xml_metsHdr_agent_ROLE_CREATOR" isValid="TRUE">
+        <package name="mets-xml_metsHdr_agent_ROLE_CREATOR" isValid="TRUE" isImplemented="TRUE">
           <path>valid/mets-xml_metsHdr_agent_ROLE_CREATOR</path>
           <description>
             METS.xml file has mets/metsHdr/agent/@ROLE = "CREATOR".
           </description>
         </package>
-        <package name="mets-xml_metsHdr_agent_ROLE_CREATOR_multiple_agents" isValid="TRUE">
+        <package name="mets-xml_metsHdr_agent_ROLE_CREATOR_multiple_agents" isValid="TRUE" isImplemented="TRUE">
           <path>valid/mets-xml_metsHdr_agent_ROLE_CREATOR_multiple_agents</path>
           <description>
             METS.xml file has mets/metsHdr/agent/@ROLE = "CREATOR". 
             Multiple agents are allowed and creator is only required on one instance.
           </description>
         </package>
-        <package name="mets-xml_metsHdr_agent_ROLE_EDITOR" isValid="FALSE">
+        <package name="mets-xml_metsHdr_agent_ROLE_EDITOR" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/mets-xml_metsHdr_agent_ROLE_EDITOR</path>
           <description>
             METS.xml file has mets/metsHdr/agent/@ROLE = "EDITOR".
           </description>
         </package>
-        <package name="mets-xml_metsHdr_agent_all_criterias_different_objs" isValid="FALSE">
+        <package name="mets-xml_metsHdr_agent_all_criterias_different_objs" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/mets-xml_metsHdr_agent_all_criterias_different_objs</path>
           <description>
             METS.xml file has all agent criterias but on different objects.

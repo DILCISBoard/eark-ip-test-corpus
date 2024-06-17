@@ -42,11 +42,11 @@
         <message>There SHOULD be a div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="no_div_label_Representations">
+        <package isValid="FALSE" name="no_div_label_Representations" isImplemented="FALSE">
           <path>invalid/no_div_label_Representations</path>
           <description>There is no div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
+        <package isValid="TRUE" name="minimal_IP" isImplemented="FALSE">
           <path>valid/minimal_IP</path>
           <description>Minimal IP</description>
         </package>
@@ -58,11 +58,11 @@
         <message>There MUST be maximum one div-element with the @LABEL='Representations' nested in the div-element with the @LABEL='CSIP'</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="two_div_elements_with_label_metadata">
+        <package isValid="FALSE" name="two_div_elements_with_label_metadata" isImplemented="FALSE">
           <path>invalid/two_div_elements_with_label_Representations</path>
           <description>Package with two div-elements with @LABEL='Representations'</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
+        <package isValid="TRUE" name="minimal_IP" isImplemented="FALSE">
           <path>valid/minimal_IP</path>
           <description>Minimal IP</description>
         </package>

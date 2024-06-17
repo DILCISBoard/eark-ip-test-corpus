@@ -28,11 +28,11 @@ XML lists -->
         <message>All fileGrps with the @USE="Representations" must be presented in the structMap via mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Representations']/mptr </message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="fileGrp_Representations_but_missing_structMap">
+        <package isValid="FALSE" name="fileGrp_Representations_but_missing_structMap" isImplemented="FALSE">
           <path>invalid/fileGrp_Representations_but_missing_structMap</path>
           <description>A package where there is a fileGrp with @USE="Representations" but there is no structMap [@LABEL='CSIP']/div/div[@LABEL='Representations']/mptr @xlink:title</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
+        <package isValid="TRUE" name="minimal_IP" isImplemented="FALSE">
           <path>valid/minimal_IP</path>
           <description>Minimal IP</description>
         </package>
@@ -44,11 +44,11 @@ XML lists -->
         <message>The structMap[@LABEL='CSIP']/div/div[@LABEL='Representations']/mptr points to a fileGrp that does not have @USE="Representations"</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="structMap_does_not_point_at_Representations">
+        <package isValid="FALSE" name="structMap_does_not_point_at_Representations" isImplemented="FALSE">
           <path>invalid/structMap_does_not_point_at_Representations</path>
           <description>A package which has a Representations metspointer that points to a filegroup that does not have @USE="Representations"</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
+        <package isValid="TRUE" name="minimal_IP" isImplemented="FALSE">
           <path>valid/minimal_IP</path>
           <description>Minimal IP</description>
         </package>

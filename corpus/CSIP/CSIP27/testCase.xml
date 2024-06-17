@@ -31,8 +31,8 @@ XML lists -->
         <message>There is a dmdSec/mdRef element in METS.xml but no @SIZE-attribute. There must be a @SIZE-attribute</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_18000_CSIP27_1">
-          <path>/corpora/csip/metadata/dmdSec/CSIP27/IP_18000_CSIP27_1</path>
+        <package isValid="FALSE" name="IP_18000_CSIP27_1" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP27_1</path>
           <description>There is a dmdSec/mdRef element in METS.xml but no @SIZE-attribute.</description>
         </package>
       </corpusPackages>
@@ -43,8 +43,8 @@ XML lists -->
         <message>There is a mismatch between file size described in METS.xml versus the actual file size</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="IP_18000_CSIP27_2">
-          <path>/corpora/csip/metadata/dmdSec/CSIP27/IP_18000_CSIP27_2</path>
+        <package isValid="FALSE" name="IP_18000_CSIP27_2" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP27_2</path>
           <description>There is a dmdSec/mdRef element in METS.xml with a wrong value in @SIZE-attribute.</description>
         </package>
       </corpusPackages>

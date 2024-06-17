@@ -32,11 +32,11 @@ XML lists -->
           All dmdSec ID's MUST be listed in the @DMDID using spaces as delimiters </message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="structMap_missing_metadata_dmdid_attribute">
+        <package isValid="FALSE" name="structMap_missing_metadata_dmdid_attribute" isImplemented="FALSE">
           <path>invalid/structMap_missing_metadata_dmdid_attribute</path>
           <description>An IP where the @DMDID-attribute is missing</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
+        <package isValid="TRUE" name="minimal_IP" isImplemented="FALSE">
           <path>valid/minimal_IP</path>
           <description>Minimal IP</description>
         </package>
@@ -48,15 +48,15 @@ XML lists -->
         <message>All dmdSec ID's MUST be listed in the @DMDID using spaces as delimiters</message>
       </error>
       <corpusPackages>
-        <package isValid="FALSE" name="structMap_metadata_dmdid_attribute_missing_IDs">
+        <package isValid="FALSE" name="structMap_metadata_dmdid_attribute_missing_IDs" isImplemented="FALSE">
           <path>invalid/structMap_metadata_dmdid_attribute_missing_IDs</path>
           <description>An IP with three dmdSec IDs where only to ID are listed in the @DMDID</description>
         </package>
-        <package isValid="FALSE" name="structMap_metadata_dmdid_attribute_too_many_IDs">
+        <package isValid="FALSE" name="structMap_metadata_dmdid_attribute_too_many_IDs" isImplemented="FALSE">
           <path>invalid/structMap_metadata_dmdid_attribute_too_many_IDs</path>
           <description>An IP with two dmdSec IDs where three IDs are listed in the @DMDID</description>
         </package>
-        <package isValid="TRUE" name="minimal_IP">
+        <package isValid="TRUE" name="minimal_IP" isImplemented="FALSE">
           <path>valid/minimal_IP</path>
           <description>Minimal IP</description>
         </package>
