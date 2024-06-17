@@ -31,7 +31,7 @@
           <description>A package with a missing ID attribute at two fileGrps</description>
         </package>
         <package isValid="TRUE" isImplemented="FALSE" name="minimal_IP_with_1_representation">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>

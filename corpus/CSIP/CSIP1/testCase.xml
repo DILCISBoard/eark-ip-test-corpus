@@ -31,13 +31,13 @@ For a representation level METS document this value records the name/ID of the r
       </error>
       <corpusPackages>
         <package name="mets-xml_mets_OBJID_attribute_not_exist" isValid="FALSE" isImplemented="TRUE">
-          <path>invalid\mets-xml_mets_OBJID_attribute_not_exist"</path>
+          <path>invalid/mets-xml_mets_OBJID_attribute_not_exist"</path>
           <description>
             METS.xml file has no mets/@OBJID attribute.
           </description>
         </package>
         <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -53,13 +53,13 @@ For a representation level METS document this value records the name/ID of the r
       </error>
       <corpusPackages>
         <package name="mets-xml_mets_OBJID_attribute_value_empty" isValid="FALSE" isImplemented="TRUE">
-          <path>invalid\mets-xml_mets_OBJID_attribute_value_empty</path>
+          <path>invalid/mets-xml_mets_OBJID_attribute_value_empty</path>
           <description>
             METS.xml file has mets/@OBJID = "".
           </description>
         </package>
         <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -77,14 +77,14 @@ For a representation level METS document this value records the name/ID of the r
       </error>
       <corpusPackages>
         <package name="root_mets_file_mets-xml_mets_OBJID_not_equal_to_package_ID" isValid="FALSE" isImplemented="TRUE">
-          <path>invalid\root_mets_file_mets-xml_mets_OBJID_not_equal_to_package_ID</path>
+          <path>invalid/root_mets_file_mets-xml_mets_OBJID_not_equal_to_package_ID</path>
           <description>
             METS.xml file is located in the root folder.
             The METS.xml file has mets/@OBJID not equal to root folder name.
           </description>
         </package>
         <package name="minimal_IP_with_1_representation" isValid="TRUE" isImplemented="TRUE">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -102,14 +102,14 @@ For a representation level METS document this value records the name/ID of the r
       </error>
       <corpusPackages>
         <package name="rep_mets_file_mets-xml_mets_OBJID_not_equal_to_rep_ID" isValid="FALSE" isImplemented="TRUE">
-          <path>invalid\rep_mets_file_mets-xml_mets_OBJID_not_equal_to_rep_ID</path>
+          <path>invalid/rep_mets_file_mets-xml_mets_OBJID_not_equal_to_rep_ID</path>
           <description>
             METS.xml file is located in root_ID/representations/rep_ID folder.
             The METS.xml file has mets/@OBJID not equal to rep_ID.
           </description>
         </package>
         <package name="valid_minimal_with_one_representation" isValid="TRUE" isImplemented="TRUE">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>

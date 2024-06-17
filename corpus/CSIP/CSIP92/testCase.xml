@@ -33,11 +33,11 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="FALSE" name="structMap_missing_metadata_dmdid_attribute">
-          <path>invalid\structMap_missing_metadata_dmdid_attribute</path>
+          <path>invalid/structMap_missing_metadata_dmdid_attribute</path>
           <description>An IP where the @DMDID-attribute is missing</description>
         </package>
         <package isValid="TRUE" name="minimal_IP">
-          <path>valid\minimal_IP</path>
+          <path>valid/minimal_IP</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>
@@ -49,15 +49,15 @@ XML lists -->
       </error>
       <corpusPackages>
         <package isValid="FALSE" name="structMap_metadata_dmdid_attribute_missing_IDs">
-          <path>invalid\structMap_metadata_dmdid_attribute_missing_IDs</path>
+          <path>invalid/structMap_metadata_dmdid_attribute_missing_IDs</path>
           <description>An IP with three dmdSec IDs where only to ID are listed in the @DMDID</description>
         </package>
         <package isValid="FALSE" name="structMap_metadata_dmdid_attribute_too_many_IDs">
-          <path>invalid\structMap_metadata_dmdid_attribute_too_many_IDs</path>
+          <path>invalid/structMap_metadata_dmdid_attribute_too_many_IDs</path>
           <description>An IP with two dmdSec IDs where three IDs are listed in the @DMDID</description>
         </package>
         <package isValid="TRUE" name="minimal_IP">
-          <path>valid\minimal_IP</path>
+          <path>valid/minimal_IP</path>
           <description>Minimal IP</description>
         </package>
       </corpusPackages>

@@ -32,7 +32,7 @@ XML lists -->
           <description>A package with a fileGrp that has no file elements in it</description>
         </package>
         <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
-          <path>valid\minimal_IP_with_1_representation</path>
+          <path>valid/minimal_IP_with_1_representation</path>
           <description>Minimal IP</description>
         </package>
         
