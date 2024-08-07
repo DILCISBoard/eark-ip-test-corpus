@@ -17,7 +17,7 @@
     https://DILCIS.eu/XML/METS/CSIPExtensionMETS http://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd
     http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd"
   OBJID="mets-xml_mets_TYPE_attribute_value_OTHER_and_csip-OTHERTYPE_attribute_not_exist" 
-  TYPE="OTHER"  
+  TYPE="Other"  
   PROFILE="https://earkcsip.dilcis.eu/profile/E-ARK-CSIP.xml">
 
   <!-- CSIP117 mets/metsHdr - Package header - [1..1] -->
