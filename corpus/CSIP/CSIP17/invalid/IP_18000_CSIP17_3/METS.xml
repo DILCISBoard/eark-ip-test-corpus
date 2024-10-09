@@ -78,7 +78,7 @@
     <fileGrp USE="Documentation" ID="IP_18000_CSIP17_3.representations.documentation">  <!-- this ID is just for internal reference -->
       <!-- Submission decision-->
       <file ID="submission_decision" USE="documentation" MIMETYPE="TIFF"  CREATED="2015-12-14T14:20:00" 
-        CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5" SIZE="86453">
+        CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5" SIZE="368208">
         <FLocat LOCTYPE="URL" xlink:href="documentation\submission_decision.tif" xlink:type="simple"/>
       </file>	
       <!-- ER diagramme -->
