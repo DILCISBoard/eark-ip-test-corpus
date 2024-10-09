@@ -83,7 +83,7 @@
     </fileGrp>
 	<!-- CSIP61   mets/fileSec/fileGrp/@ADMID - INCORRECT -->
     <fileGrp ID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data" USE="Representations/rep1/data" ADMID="ID_rightsmd_premis_file ID_digiprovmd_premis_file" csip:CONTENTINFORMATIONTYPE="OTHER" csip:OTHERCONTENTINFORMATIONTYPE="NONE">
-      <file ID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data_file1" MIMETYPE="application/xml" SIZE="60589" CREATED="2019-04-12T18:40:24" CHECKSUM="183241e18688ba5fb6727ce53768cbbb" CHECKSUMTYPE="MD5" OWNERID="file-5.2/45.14" DMDID="ID_dmdsec_rep1_ead_file">
+      <file ID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data_file1" MIMETYPE="application/xml" SIZE="59785" CREATED="2019-04-12T18:40:24" CHECKSUM="183241e18688ba5fb6727ce53768cbbb" CHECKSUMTYPE="MD5" OWNERID="file-5.2/45.14" DMDID="ID_dmdsec_rep1_ead_file">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/data/archival_record_xyz123_Estonian_UAM_arh.xml" />
       </file>
     </fileGrp>

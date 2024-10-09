@@ -131,7 +131,7 @@
       </file>
     </fileGrp>
     <fileGrp ID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data" USE="Representations/rep1/data" ADMID="ID_rightsmd_premis_file ID_digiprovmd_premis_file" csip:CONTENTINFORMATIONTYPE="OTHER" csip:OTHERCONTENTINFORMATIONTYPE="NONE">
-      <file ID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data_file1" MIMETYPE="application/xml" SIZE="60589" CREATED="2019-04-12T18:40:24" CHECKSUM="183241e18688ba5fb6727ce53768cbbb" CHECKSUMTYPE="MD5" OWNERID="file-5.2/45.14" DMDID="ID_dmdsec_rep1_ead_file">
+      <file ID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data_file1" MIMETYPE="application/xml" SIZE="59785" CREATED="2019-04-12T18:40:24" CHECKSUM="183241e18688ba5fb6727ce53768cbbb" CHECKSUMTYPE="MD5" OWNERID="file-5.2/45.14" DMDID="ID_dmdsec_rep1_ead_file">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/data/archival_record_xyz123_Estonian_UAM_arh.xml" />
       </file>
 	  <file ID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data_file2" MIMETYPE="application/xml" SIZE="112" CREATED="2021-10-05T18:48:24" CHECKSUM="952446d8f13bbf4f20ba972943b4de43" CHECKSUMTYPE="MD5" sip:FILEFORMATNAME="" sip:FILEFORMATVERSION="1.0" sip:FILEFORMATREGISTRY="PRONOM" sip:FILEFORMATKEY="x-fmt/666111" OWNERID="file-5.2/45.14" DMDID="ID_dmdsec_rep1_ead_file">
