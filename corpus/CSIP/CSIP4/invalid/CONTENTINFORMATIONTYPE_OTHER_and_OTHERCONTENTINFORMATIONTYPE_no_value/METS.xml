@@ -64,7 +64,7 @@
       <file ID="ID_root_mets_fileSec_fileGrp_Schemas_file_ead2002_xsd" MIMETYPE="application/xml" SIZE="98321" CREATED="2008-04-21T00:00:00" CHECKSUM="0856696bcef5c849eb10b95b808ab7c0" CHECKSUMTYPE="MD5">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/ead2002.xsd" />
       </file>
-      <file ID="ID_root_mets_fileSec_fileGrp_Schemas_file_mets_xsd" MIMETYPE="application/xml" SIZE="138326" CREATED="2019-10-31T00:00:00" CHECKSUM="7102b6ea435a3f0d8231d149818f2487" CHECKSUMTYPE="MD5">
+      <file ID="ID_root_mets_fileSec_fileGrp_Schemas_file_mets_xsd" MIMETYPE="application/xml" SIZE="136472" CREATED="2019-10-31T00:00:00" CHECKSUM="7102b6ea435a3f0d8231d149818f2487" CHECKSUMTYPE="MD5">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/mets.xsd" />
       </file>
       <file ID="ID_root_mets_fileSec_fileGrp_Schemas_file_xlink_xsd" MIMETYPE="application/xml" SIZE="3180" CREATED="2004-11-15T00:00:00" CHECKSUM="6bdc7f9459a502964f889d70a335cece" CHECKSUMTYPE="MD5">

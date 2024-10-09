@@ -96,7 +96,7 @@
         <!-- CSIP79 mets/fileSec/fileGrp/file/FLocat/@xlink:href - Resource location - [1..1] -->
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/DILCISExtensionMETS.xsd" />
       </file>
-      <file ID="ID-root-mets-fileSec-fileGrp-Schemas-file-METS-xsd" MIMETYPE="application/xml" SIZE="138326" CREATED="2019-10-31T00:00:00" CHECKSUM="7102b6ea435a3f0d8231d149818f2487" CHECKSUMTYPE="MD5">
+      <file ID="ID-root-mets-fileSec-fileGrp-Schemas-file-METS-xsd" MIMETYPE="application/xml" SIZE="136472" CREATED="2019-10-31T00:00:00" CHECKSUM="7102b6ea435a3f0d8231d149818f2487" CHECKSUMTYPE="MD5">
         <!-- CSIP76 mets/fileSec/fileGrp/file/FLocat - File locator reference - [1..1]-->
         <!-- CSIP77 mets/fileSec/fileGrp/file/FLocat[@LOCTYPE='URL'] - Type of locator - [1..1] -->
         <!-- CSIP78 mets/fileSec/fileGrp/file/FLocat[@xlink:type='simple'] - Type of link - [1..1] -->
