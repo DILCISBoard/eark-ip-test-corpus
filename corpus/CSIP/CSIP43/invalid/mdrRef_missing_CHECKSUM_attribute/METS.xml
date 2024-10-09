@@ -43,7 +43,7 @@
   <!-- CSIP43   mets/amdSec/digiprovMD/mdRef/@CHECKSUM - INCORRECT -->
   <amdSec>
     <rightsMD ID="ID_rightsmd_premis_file" STATUS="CURRENT" >
-      <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/package_preservation_meta_premis_v3.xml" MDTYPE="PREMIS" MIMETYPE="text/xml" SIZE="16698" CREATED="2021-06-01T11:46:52" CHECKSUM="ac9126e7789229b976fbbbaa14e8a3ccb818e01faa87faeae6f929a92c9b5381" CHECKSUMTYPE="SHA-256" />
+      <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/package_preservation_meta_premis_v3.xml" MDTYPE="PREMIS" MIMETYPE="text/xml" SIZE="16464" CREATED="2021-06-01T11:46:52" CHECKSUM="ac9126e7789229b976fbbbaa14e8a3ccb818e01faa87faeae6f929a92c9b5381" CHECKSUMTYPE="SHA-256" />
     </rightsMD>
     <digiprovMD ID="ID_digiprovmd_premis_file" STATUS="CURRENT" >
       <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/metadata/preservation/rep1_preservation_meta_premis_v2-1.xml" MDTYPE="PREMIS" MIMETYPE="text/xml" SIZE="23828" CREATED="2021-05-31T09:50:52" CHECKSUMTYPE="SHA-256" />
