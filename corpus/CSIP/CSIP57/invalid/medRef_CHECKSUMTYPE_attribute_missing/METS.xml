@@ -38,7 +38,7 @@
     <mdRef LOCTYPE="URL" MDTYPE="EAD" xlink:type="simple" xlink:href="metadata/descriptive/package_archival_descriptions_ead2002.xml" MIMETYPE="application/xml" SIZE="54770" CREATED="2021-05-27T18:37:49" CHECKSUM="05657c2a5fc2fa16436ed806a8b26e17dbda64a1803cab8b9ba1e3ab5d93bcfe" CHECKSUMTYPE="SHA-256"></mdRef>
   </dmdSec>
   <dmdSec ID="ID_dmdsec_rep1_ead_file" CREATED="2018-04-24T14:37:49" STATUS="CURRENT">
-    <mdRef LOCTYPE="URL" MDTYPE="EAD" xlink:type="simple" xlink:href="representations/rep1/metadata/descriptive/rep1_archival_descriptions_ead2002.xml" MIMETYPE="application/xml" SIZE="54445" CREATED="2021-05-27T18:37:49" CHECKSUM="e8bf8e00e5bbb44eee598199b3423115e1b60bc5247eede3e40f673c7bd6d2e1" CHECKSUMTYPE="SHA-256"></mdRef>
+    <mdRef LOCTYPE="URL" MDTYPE="EAD" xlink:type="simple" xlink:href="representations/rep1/metadata/descriptive/rep1_archival_descriptions_ead2002.xml" MIMETYPE="application/xml" SIZE="53648" CREATED="2021-05-27T18:37:49" CHECKSUM="e8bf8e00e5bbb44eee598199b3423115e1b60bc5247eede3e40f673c7bd6d2e1" CHECKSUMTYPE="SHA-256"></mdRef>
   </dmdSec>
   <!-- CSIP57   mets/amdSec/rightsMD/mdRef/@CHECKSUMTYPE - INCORRECT -->
   <amdSec>
