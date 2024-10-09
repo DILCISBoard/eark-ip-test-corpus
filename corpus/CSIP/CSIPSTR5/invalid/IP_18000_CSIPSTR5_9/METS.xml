@@ -66,7 +66,7 @@
 
         <!-- xlink.xsd -->
         <file ID="IP_18000_CSIPSTR5_9_fileGrp_schemas_xlink_xsd" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00"
-          CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
+          CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8052">
           <FLocat LOCTYPE="URL" xlink:href="schemas/xlink.xsd" xlink:type="simple"/>
         </file>
 
