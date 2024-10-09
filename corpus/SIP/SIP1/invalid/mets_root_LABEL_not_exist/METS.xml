@@ -122,7 +122,7 @@
       </file>
     </fileGrp>
     <fileGrp ID="ID_root_mets_fileSec_fileGrp_rep1_Schemas" USE="Schemas">
-      <file ID="ID_root_mets_fileSec_fileGrp_rep1_Schemas_file_UAM_arh_xsd" MIMETYPE="application/xml" SIZE="56269" CREATED="2013-11-20T00:00:00" CHECKSUM="3b0a4858a498b080bbb272d48e59c649" CHECKSUMTYPE="MD5">
+      <file ID="ID_root_mets_fileSec_fileGrp_rep1_Schemas_file_UAM_arh_xsd" MIMETYPE="application/xml" SIZE="54962" CREATED="2013-11-20T00:00:00" CHECKSUM="3b0a4858a498b080bbb272d48e59c649" CHECKSUMTYPE="MD5">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/schemas/Estonian_UAM_arh_classification_scheme_v2.0.xsd" />
       </file>
       <file ID="ID_root_mets_fileSec_fileGrp_rep1_Schemas_file_premis-v2-1_xsd" MIMETYPE="application/xml" SIZE="57056" CREATED="2011-01-06T00:00:00" CHECKSUM="f8115667d6bf917f7c44e172d937fd5a" CHECKSUMTYPE="MD5">
