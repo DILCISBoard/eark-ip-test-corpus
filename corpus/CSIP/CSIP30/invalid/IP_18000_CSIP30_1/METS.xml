@@ -92,7 +92,7 @@
     </fileGrp>			
     <fileGrp USE="Representations" csip:CONTENTINFORMATIONTYPE="SIARD2" ID="ID_Representations">
       <file ID="IP_18006_SIARD2_1Rep_externallobs_METS.xml" USE="OTHER" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
-	     CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8052">
+	     CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="14297">
 	     <FLocat LOCTYPE="URL" xlink:href="representations\rep1\METS.xml" xlink:type="simple"/>
 	   </file>	
 	 </fileGrp>
