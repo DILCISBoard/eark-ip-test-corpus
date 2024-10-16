@@ -35,7 +35,7 @@
    </dmdSec>
   
   <dmdSec ID="ID_submission_agreement.xml" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
-    <mdRef LOCTYPE="URL" MDTYPE="OTHER" xlink:type="simple" xlink:href="metadata/descriptive/submission_agreement.xml" SIZE="1376" CREATED="2018-04-24T14:37:49.609+01:00" 
+    <mdRef LOCTYPE="URL" MDTYPE="OTHER" xlink:type="simple" xlink:href="metadata/descriptive/submission_agreement.xml" SIZE="1355" CREATED="2018-04-24T14:37:49.609+01:00" 
       CHECKSUM="1EDFDB31868D918BC17B2A12A6C0F64D" CHECKSUMTYPE="MD5" MIMETYPE="text/xml"/>
   </dmdSec>
 
@@ -43,7 +43,7 @@
   <amdSec>
     <digiprovMD ID="ID_premis2.xml" CREATED="2018-04-24T14:47:52.783+01:00" STATUS="CURRENT">
       <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/PREMIS3.xml" MDTYPE="PREMIS" MDTYPEVERSION="3.0" 
-	  MIMETYPE="text/xml" SIZE="5509" CREATED="2018-04-24T14:37:52.783+01:00" CHECKSUM="59975F80A4BB5C410D12079111C8F06DDF85AF13BA4A30E072EF028E1BE9518B" CHECKSUMTYPE="SHA-256" LABEL="premis2.xml"></mdRef>
+	  MIMETYPE="text/xml" SIZE="5417" CREATED="2018-04-24T14:37:52.783+01:00" CHECKSUM="59975F80A4BB5C410D12079111C8F06DDF85AF13BA4A30E072EF028E1BE9518B" CHECKSUMTYPE="SHA-256" LABEL="premis2.xml"></mdRef>
     </digiprovMD>
   </amdSec>
   
