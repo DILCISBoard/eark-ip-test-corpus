@@ -32,7 +32,7 @@
     </agent>
   </metsHdr>
   <dmdSec ID="ID-dmdsecID" CREATED="2018-10-10T12:00:00-05:00" STATUS="SUPERSEDED" >
-    <mdRef LOCTYPE="URL"  xlink:type="simple" xlink:href="metadata/descriptive/ead.xml" MDTYPE="EAD" MIMETYPE="application/xml" SIZE="10127" CREATED="2018-10-10T12:00:00-05:00" CHECKSUM="679dfdd18d8e0676500d09bed5d92ebd" CHECKSUMTYPE="MD5" />
+    <mdRef LOCTYPE="URL"  xlink:type="simple" xlink:href="metadata/descriptive/ead.xml" MDTYPE="EAD" MIMETYPE="application/xml" SIZE="10127" CREATED="2018-10-10T12:00:00-05:00" CHECKSUM="9d0e05e7dcc7e5ce8b1787427733116b" CHECKSUMTYPE="MD5" />
   </dmdSec>
   
   <fileSec ID="ID-IP_with_dmd_wrong_status_filesec">   
@@ -69,7 +69,7 @@
         
         <!-- xlink.xsd -->
       <file ID="ID-IP_with_dmd_wrong_status_fileGrp_schemas_xlink_xsd" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
-          CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8052">
+          CHECKSUM="14dac48802f5f99c51a6b200f9a0b3b4" CHECKSUMTYPE="MD5" SIZE="8052">
           <FLocat LOCTYPE="URL" xlink:href="schemas/xlink.xsd" xlink:type="simple"/>
         </file>
         

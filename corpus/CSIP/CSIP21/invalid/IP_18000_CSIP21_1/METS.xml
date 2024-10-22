@@ -33,7 +33,7 @@
 
   <amdSec>
     <digiprovMD ID="uuid-48C18DD8-2561-4315-AC39-F941CBB138B4" CREATED="2018-04-24T14:47:52.783+01:00" STATUS="CURRENT">
-      <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/PREMIS3.xml" MDTYPE="PREMIS" MDTYPEVERSION="3.0" MIMETYPE="text/xml" SIZE="5417" CREATED="2018-04-24T14:37:52.783+01:00" CHECKSUM="d1dfa585dcc9d87268069dc58d5e47956434ec3db4087a75a3885d287f15126f" CHECKSUMTYPE="SHA-256" LABEL="premis2.xml"></mdRef>
+      <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/PREMIS3.xml" MDTYPE="PREMIS" MDTYPEVERSION="3.0" MIMETYPE="text/xml" SIZE="5417" CREATED="2018-04-24T14:37:52.783+01:00" CHECKSUM="9994db02f4bc9188354b5309fca38275aca3f12ea6b3e0fd1442df9e30cff5c5" CHECKSUMTYPE="SHA-256" LABEL="premis2.xml"></mdRef>
     </digiprovMD>
   </amdSec>
   
@@ -67,7 +67,7 @@
       </file>
       <!-- xlink.xsd -->
       <file ID="ID_xlink_xsd" MIMETYPE="application/xml" CREATED="2015-12-14T14:20:00"
-        CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8052">
+        CHECKSUM="14dac48802f5f99c51a6b200f9a0b3b4" CHECKSUMTYPE="MD5" SIZE="8052">
         <FLocat LOCTYPE="URL" xlink:href="schemas/xlink.xsd" xlink:type="simple"/>
       </file>
       <!-- CSIPExtensionMETS.xsd -->
@@ -80,18 +80,18 @@
     <fileGrp USE="Documentation" ID="ID.AVID_documentation">  <!-- this ID is just for internal reference -->
       <!-- Submission decision-->
       <file ID="submission_decision" USE="documentation" MIMETYPE="TIFF"  CREATED="2015-12-14T14:20:00" 
-        CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5" SIZE="368208">
+        CHECKSUM="e1b17dc58f0f3fa160bb90b52450391c" CHECKSUMTYPE="MD5" SIZE="368208">
         <FLocat LOCTYPE="URL" xlink:href="documentation\submission_decision.tif" xlink:type="simple"/>
       </file>	
       <!-- ER diagramme -->
       <file ID="ID.AVID.erdiagramme" USE="documentation" MIMETYPE="PNG"  CREATED="2015-12-14T14:20:00" 
-        CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5" SIZE="86453">
+        CHECKSUM="e1b17dc58f0f3fa160bb90b52450391c" CHECKSUMTYPE="MD5" SIZE="86453">
         <FLocat LOCTYPE="URL" xlink:href="documentation\Northwind ER diagram.png" xlink:type="simple"/>
       </file>	
     </fileGrp>			
     <fileGrp USE="Representations" csip:CONTENTINFORMATIONTYPE="SIARD2" ID="ID_Representations">
       <file ID="IP_18000_CSIP21_1_rep1_METS.xml" USE="OTHER" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
-	     CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="13986">
+	     CHECKSUM="14dac48802f5f99c51a6b200f9a0b3b4" CHECKSUMTYPE="MD5" SIZE="13986">
 	     <FLocat LOCTYPE="URL" xlink:href="representations\rep1\METS.xml" xlink:type="simple"/>
 	   </file>	
 	 </fileGrp>
