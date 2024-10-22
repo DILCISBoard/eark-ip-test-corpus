@@ -22,7 +22,7 @@
 	
 	
 	<dmdSec ID="ID_archiveIndex_xml_rep1" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
-   <mdRef LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2381" CREATED="2018-04-24T14:37:49.609+01:00" 
+   <mdRef LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2340" CREATED="2018-04-24T14:37:49.609+01:00" 
      CHECKSUM="4E17DBF6DAA8865750D514C3FDEE656AEB823C0DC396B72D0B6AE17419549005" CHECKSUMTYPE="SHA-256" MIMETYPE="text/xml"/>
    </dmdSec>
    
@@ -43,7 +43,7 @@
 		</file>
       
 		<!-- xlink.xsd -->
-		<file ID="ID_rep1_ID_xlink_xsd" MIMETYPE="application/xml" CREATED="2015-12-14T14:20:00" CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
+		<file ID="ID_rep1_ID_xlink_xsd" MIMETYPE="application/xml" CREATED="2015-12-14T14:20:00" CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8052">
         <FLocat LOCTYPE="URL" xlink:href="schemas/xlink.xsd" xlink:type="simple"/>
 		</file>
       

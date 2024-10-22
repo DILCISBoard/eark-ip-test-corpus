@@ -30,20 +30,20 @@
   </metsHdr>
 
   <dmdSec ID="ID_archiveIndex.xml" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
-   <mdRef LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2381" CREATED="2018-04-24T14:37:49.609+01:00" 
-     CHECKSUM="4E17DBF6DAA8865750D514C3FDEE656AEB823C0DC396B72D0B6AE17419549005" CHECKSUMTYPE="SHA-256" MIMETYPE="text/xml"/>
+   <mdRef LOCTYPE="URL" MDTYPE="OTHER" MDTYPEVERSION="1007" xlink:type="simple" xlink:href="metadata/descriptive/archiveIndex.xml" SIZE="2340" CREATED="2018-04-24T14:37:49.609+01:00" 
+     CHECKSUM="9B706A5D472B383C5A965639F4873E01D081B89DFEA16A7D8E072A60B4C6846F" CHECKSUMTYPE="SHA-256" MIMETYPE="text/xml"/>
    </dmdSec>
   
   <dmdSec ID="ID_submission_agreement.xml" CREATED="2020-06-15T10:20:00" STATUS="CURRENT">
-    <mdRef LOCTYPE="URL" MDTYPE="OTHER" xlink:type="simple" xlink:href="metadata/descriptive/submission_agreement.xml" SIZE="1376" CREATED="2018-04-24T14:37:49.609+01:00" 
-      CHECKSUM="1EDFDB31868D918BC17B2A12A6C0F64D" CHECKSUMTYPE="MD5" MIMETYPE="text/xml"/>
+    <mdRef LOCTYPE="URL" MDTYPE="OTHER" xlink:type="simple" xlink:href="metadata/descriptive/submission_agreement.xml" SIZE="1355" CREATED="2018-04-24T14:37:49.609+01:00" 
+      CHECKSUM="A722CD8409491E0B146983BB391B442A" CHECKSUMTYPE="MD5" MIMETYPE="text/xml"/>
   </dmdSec>
 
 
   <amdSec>
     <digiprovMD ID="ID_premis2.xml" CREATED="2018-04-24T14:47:52.783+01:00" STATUS="CURRENT">
       <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/PREMIS3.xml" MDTYPE="PREMIS" MDTYPEVERSION="3.0" 
-	  MIMETYPE="text/xml" SIZE="5509" CREATED="2018-04-24T14:37:52.783+01:00" CHECKSUM="59975F80A4BB5C410D12079111C8F06DDF85AF13BA4A30E072EF028E1BE9518B" CHECKSUMTYPE="SHA-256" LABEL="premis2.xml"></mdRef>
+	  MIMETYPE="text/xml" SIZE="5417" CREATED="2018-04-24T14:37:52.783+01:00" CHECKSUM="9994DB02F4BC9188354B5309FCA38275ACA3F12EA6B3E0FD1442DF9E30CFF5C5" CHECKSUMTYPE="SHA-256" LABEL="premis2.xml"></mdRef>
     </digiprovMD>
   </amdSec>
   
@@ -79,7 +79,7 @@
       </file>
       <!-- xlink.xsd -->
       <file ID="ID_xlink_xsd" MIMETYPE="application/xml" CREATED="2015-12-14T14:20:00"
-        CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
+        CHECKSUM="14dac48802f5f99c51a6b200f9a0b3b4" CHECKSUMTYPE="MD5" SIZE="8052">
         <FLocat LOCTYPE="URL" xlink:href="schemas/xlink.xsd" xlink:type="simple"/>
       </file>
       <!-- CSIPExtensionMETS.xsd -->
@@ -101,7 +101,7 @@
     <fileGrp USE="Representations" csip:OAISPACKAGETYPE="SIP" csip:CONTENTINFORMATIONTYPE="SIARD2" csip:OTHERCONTENTTYPESPECIFICATION="SIARD_2.1" ID="ID_Rep1">
 
       <file ID="ID_IP_18006_SIARD2_1Rep_externallobs_METS.xml" USE="OTHER" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
-	     CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
+	     CHECKSUM="a33a8814829e28ecb026f807ca57d3ce" CHECKSUMTYPE="MD5" SIZE="10543">
 	     <FLocat LOCTYPE="URL" xlink:href="representations/rep1/METS.xml" xlink:type="simple"/>
 	   </file>	
 	 </fileGrp>
