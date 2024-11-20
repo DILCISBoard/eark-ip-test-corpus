@@ -85,13 +85,13 @@
       </file>	
       <!-- ER diagramme -->
       <file ID="ID.AVID.erdiagramme" USE="documentation" MIMETYPE="PNG"  CREATED="2015-12-14T14:20:00" 
-        CHECKSUM="e1b17dc58f0f3fa160bb90b52450391c" CHECKSUMTYPE="MD5" SIZE="86453">
+        CHECKSUM="005a46043be036835027b474dba863b5" CHECKSUMTYPE="MD5" SIZE="86453">
         <FLocat LOCTYPE="URL" xlink:href="documentation\Northwind ER diagram.png" xlink:type="simple"/>
       </file>	
     </fileGrp>			
     <fileGrp USE="Representations" csip:CONTENTINFORMATIONTYPE="SIARD2" ID="ID_Representations">
       <file ID="IP_18000_CSIP21_2_rep1_METS.xml" USE="OTHER" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
-	     CHECKSUM="14dac48802f5f99c51a6b200f9a0b3b4" CHECKSUMTYPE="MD5" SIZE="13746">
+	     CHECKSUM="61c6a1c17466271b7b34ed29805a6c02" CHECKSUMTYPE="MD5" SIZE="13746">
 	     <FLocat LOCTYPE="URL" xlink:href="representations\rep1\METS.xml" xlink:type="simple"/>
 	   </file>	
 	 </fileGrp>
