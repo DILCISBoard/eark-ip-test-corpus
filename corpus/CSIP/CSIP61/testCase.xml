@@ -27,7 +27,7 @@
             IDREF-ID match in general, ignoring the question of whether the ID
             belongs to the right element. This rule covers that gap. -->
       <description>If a mets/fileSec/fileGrp/@ADMID exists, its value must equal to an administrative metadata ID, or a space-separated list of them.</description>
-      <error level="WARNING"><!-- It's actually an ERROR, i.e. it's a "conditional MUST": @ADMID MAY exist, but if it does, it MUST point to a proper ID. -->
+      <error level="ERROR"><!-- It's actually an ERROR, i.e. it's a "conditional MUST": @ADMID MAY exist, but if it does, it MUST point to a proper ID. -->
         <message>
           mets/fileSec/fileGrp/@ADMID refers to an incorrect @ID. MUST be: If mets/fileSec/fileGrp/@ADMID exists, its value MUST equal to an administrative metadata ID.
         </message>
@@ -44,7 +44,7 @@
               the case where @ADMID contains a list of @ID values. -->
           <path>invalid/fileGrp_ADMID_incorrect_ref2</path>
           <description>
-            METS.xml file where the mets/fileSec/fileGrp/@ADMID value is a list of @ID values from the current METS.xml, where the first one is an administrative metadata ID but the other one is not. For example: @ADMID = "a-correct-digiprovMD-ID a-fileGrp-ID".
+            METS.xml file where the mets/fileSec/fileGrp/@ADMID value is a list of @ID values from the current METS.xml, where the first one is an administrative metadata ID but the other one is not. For example: @ADMID = "a-correct-digiprovMD-ID a-wrong-amdSec-ID".
           </description>
         </package>
         <!--  It seems most efficient to have one valid package for all MAY
