@@ -30,6 +30,7 @@ jobs:
           pip install ./validator
       - name: Install corpus tests
         run: |
+          find .
           pip install -r ./corpus/tests/requirements.txt
       - name: Run corpus tests
         run: |
