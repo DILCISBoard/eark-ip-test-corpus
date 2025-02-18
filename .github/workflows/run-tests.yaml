@@ -1,4 +1,4 @@
-name: Validate test cases
+name: Runs pytest
 
 on: [push]
 
@@ -6,7 +6,7 @@ permissions:
   contents: read
 
 jobs:
-  validate:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout corpus repository
