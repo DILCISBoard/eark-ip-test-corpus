@@ -36,7 +36,7 @@
 				</file>
 				<!-- xlink.xsd -->
 				<file ID="IP_18006_CSIP17_1.rep1.schemas.xlink.xsd" USE="schema" MIMETYPE="application/xml"  CREATED="2015-12-14T14:20:00" 
-					CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
+					CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8052">
 					<FLocat LOCTYPE="URL" xlink:href="../../schemas/xlink.xsd" xlink:type="simple"/>
 				</file>
 			</fileGrp>
@@ -44,7 +44,7 @@
 			<fileGrp USE="documentation" ID="IP_18006_CSIP17_1.rep1.representations.documentation">  <!-- this ID is just for internal reference -->
 				<!-- ER diagramme -->
 				<file ID="IP_18006_CSIP17_1.rep1.erdiagramme" USE="documentation" MIMETYPE="tif"  CREATED="2015-12-14T14:20:00" 
-					CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8322">
+					CHECKSUM="90c7527e6d4d3c3a6247ceb94b46bcf5" CHECKSUMTYPE="MD5" SIZE="8052">
 					<FLocat LOCTYPE="URL" xlink:href="documentation\Northwind ER diagram.png" xlink:type="simple"/>
 				</file>	
 			</fileGrp>				

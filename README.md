@@ -16,5 +16,10 @@ The test corpus has served and continues to serve these main purposes:
 2)	The test corpus provides a set of test cases and information packages that can be used to test software validators for the E-ARK specifications.
 3)	The development of the test corpus is an exploration of the testability of requirements – the development of the test corpus therefore produces a lot of feedback to the authors and owners of the E-ARK specifications. 
 
+## Cloning
+Use the following command to clone the repository:
+```
+git clone --config core.autocrlf=false https://github.com/DILCISBoard/eark-ip-test-corpus.git
+```
 ## Where can I learn more?
 See our wiki.
