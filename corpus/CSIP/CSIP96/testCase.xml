@@ -14,7 +14,7 @@ XML lists -->
     All file groups containing documentation described in the package are referenced via the relevant file group identifiers. There MUST be one file group reference per fptr-element.
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description> All fileGrps with the @USE="Documentation" must also be presented in the structMap. CSIP96 and CSIP116 are intrinsically linked together
+  <description> All fileGrps with the @USE="Documentation" must also be presented in the structMap. CSIP96 and CSIP116 are intrinsically linked together.
      </description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->

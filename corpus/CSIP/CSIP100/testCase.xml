@@ -14,7 +14,7 @@ XML lists -->
     All file groups containing schemas described in the package are referenced via the relevant file group identifiers. One file group reference per fptr-element
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description>All fileGrps with the @USE="Schemas" must also be presented in the structMap. CSIP100 and CSIP118 are intrinsically linked together and therefore is the same testcase.</description>
+  <description>All fileGrps with the @USE="Schemas" must also be presented in the structMap. CSIP100 and CSIP118 are intrinsically linked together.</description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
   <dependencies>
@@ -31,22 +31,6 @@ XML lists -->
         <package isValid="FALSE" isImplemented="TRUE" name="fileGrp_Schemas_but_missing_structMap">
           <path>invalid/fileGrp_Schemas_but_missing_structMap</path>
           <description>A package where there is a fileGrp with @USE="Schemas" but there is no structMap [@LABEL='CSIP']/div/div[@LABEL='Schemas']/fptr FILEID</description>
-        </package>
-        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
-          <path>valid/minimal_IP_with_1_representation</path>
-          <description>Minimal IP</description>
-        </package>
-      </corpusPackages>
-    </rule>
-    <rule id="2">
-      <description>A structMap[@LABEL='CSIP']/div/div[@LABEL='Schemas']/fptr must point to a fileGrp with @USE="Schemas"</description>
-      <error level="ERROR">
-        <message>The structMap[@LABEL='CSIP']/div/div[@LABEL='Schemas']/fptr points to a fileGrp that does not have @USE="Schemas"</message>
-      </error>
-      <corpusPackages>
-        <package isValid="FALSE" isImplemented="TRUE" name="structMap_does_not_point_at_Schemas">
-          <path>invalid/structMap_does_not_point_at_Schemas</path>
-          <description>A package which has a Schemas filepointer that points to a filegroup that does not have @USE="Schemas"</description>
         </package>
         <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
           <path>valid/minimal_IP_with_1_representation</path>
