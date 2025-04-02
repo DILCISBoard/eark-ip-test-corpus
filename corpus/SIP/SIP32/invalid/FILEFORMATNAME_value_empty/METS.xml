@@ -84,18 +84,18 @@
   </metsHdr>
 
   <dmdSec ID="ID_dmdsec_package_ead_file" CREATED="2018-04-24T14:37:49" STATUS="CURRENT">
-    <mdRef LOCTYPE="URL" MDTYPE="EAD" xlink:type="simple" xlink:href="metadata/descriptive/package_archival_descriptions_ead2002.xml" MIMETYPE="application/xml" SIZE="54770" CREATED="2021-05-27T18:37:49" CHECKSUM="05657c2a5fc2fa16436ed806a8b26e17dbda64a1803cab8b9ba1e3ab5d93bcfe" CHECKSUMTYPE="SHA-256"></mdRef>
+    <mdRef LOCTYPE="URL" MDTYPE="EAD" xlink:type="simple" xlink:href="metadata/descriptive/package_archival_descriptions_ead2002.xml" MIMETYPE="application/xml" SIZE="53968" CREATED="2021-05-27T18:37:49" CHECKSUM="277813238f172f44e54820b9d4aeac8478e2cf54333f853f0e0a29bec58550d2" CHECKSUMTYPE="SHA-256"></mdRef>
   </dmdSec>
   <dmdSec ID="ID_dmdsec_rep1_ead_file" CREATED="2018-04-24T14:37:49" STATUS="CURRENT">
-    <mdRef LOCTYPE="URL" MDTYPE="EAD" xlink:type="simple" xlink:href="representations/rep1/metadata/descriptive/rep1_archival_descriptions_ead2002.xml" MIMETYPE="application/xml" SIZE="54445" CREATED="2021-05-27T18:37:49" CHECKSUM="e8bf8e00e5bbb44eee598199b3423115e1b60bc5247eede3e40f673c7bd6d2e1" CHECKSUMTYPE="SHA-256"></mdRef>
+    <mdRef LOCTYPE="URL" MDTYPE="EAD" xlink:type="simple" xlink:href="representations/rep1/metadata/descriptive/rep1_archival_descriptions_ead2002.xml" MIMETYPE="application/xml" SIZE="53648" CREATED="2021-05-27T18:37:49" CHECKSUM="7ac0597465cdfafd6dc7d6a9720d8c71c88d234b6a66b46c102ea691670ab5a4" CHECKSUMTYPE="SHA-256"></mdRef>
   </dmdSec>
 
   <amdSec>
     <rightsMD ID="ID_rightsmd_premis_file" STATUS="CURRENT" >
-      <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/package_preservation_meta_premis_v3.xml" MDTYPE="PREMIS" MIMETYPE="text/xml" SIZE="16698" CREATED="2021-06-01T11:46:52" CHECKSUM="ac9126e7789229b976fbbbaa14e8a3ccb818e01faa87faeae6f929a92c9b5381" CHECKSUMTYPE="SHA-256" />
+      <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="metadata/preservation/package_preservation_meta_premis_v3.xml" MDTYPE="PREMIS" MIMETYPE="text/xml" SIZE="16464" CREATED="2021-06-01T11:46:52" CHECKSUM="a541189bf81fb4847ad980cec7b6e6ad5f0441d23d16441f5998b6bb55ecf2ea" CHECKSUMTYPE="SHA-256" />
     </rightsMD>
     <digiprovMD ID="ID_digiprovmd_premis_file" STATUS="CURRENT" >
-      <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/metadata/preservation/rep1_preservation_meta_premis_v2-1.xml" MDTYPE="PREMIS" MIMETYPE="text/xml" SIZE="24399" CREATED="2021-05-31T09:50:52" CHECKSUM="e2725de3cf8bcf6d57c2214712679775d87ececa15c3a0628b893a078420adfc" CHECKSUMTYPE="SHA-256" />
+      <mdRef LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/metadata/preservation/rep1_preservation_meta_premis_v2-1.xml" MDTYPE="PREMIS" MIMETYPE="text/xml" SIZE="23828" CREATED="2021-05-31T09:50:52" CHECKSUM="6edb936393aa9a291e8523f949a12b88aa83caa4a95149c7cfe3c20f37b25113" CHECKSUMTYPE="SHA-256" />
     </digiprovMD>
   </amdSec>
 
@@ -112,7 +112,7 @@
       <file ID="ID_root_mets_fileSec_fileGrp_Schemas_file_ead2002_xsd" MIMETYPE="application/xml" SIZE="98321" CREATED="2008-04-21T00:00:00" CHECKSUM="0856696bcef5c849eb10b95b808ab7c0" CHECKSUMTYPE="MD5">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/ead2002.xsd" />
       </file>
-      <file ID="ID_root_mets_fileSec_fileGrp_Schemas_file_mets_xsd" MIMETYPE="application/xml" SIZE="138326" CREATED="2019-10-31T00:00:00" CHECKSUM="7102b6ea435a3f0d8231d149818f2487" CHECKSUMTYPE="MD5">
+      <file ID="ID_root_mets_fileSec_fileGrp_Schemas_file_mets_xsd" MIMETYPE="application/xml" SIZE="136472" CREATED="2019-10-31T00:00:00" CHECKSUM="d303b7a71ba2b4ff0061bdcba0f152e0" CHECKSUMTYPE="MD5">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/mets.xsd" />
       </file>
       <file ID="ID_root_mets_fileSec_fileGrp_Schemas_file_xlink_xsd" MIMETYPE="application/xml" SIZE="3180" CREATED="2004-11-15T00:00:00" CHECKSUM="6bdc7f9459a502964f889d70a335cece" CHECKSUMTYPE="MD5">
@@ -123,7 +123,7 @@
       </file>
     </fileGrp>
     <fileGrp ID="ID_root_mets_fileSec_fileGrp_rep1_Schemas" USE="Schemas">
-      <file ID="ID_root_mets_fileSec_fileGrp_rep1_Schemas_file_UAM_arh_xsd" MIMETYPE="application/xml" SIZE="56269" CREATED="2013-11-20T00:00:00" CHECKSUM="3b0a4858a498b080bbb272d48e59c649" CHECKSUMTYPE="MD5">
+      <file ID="ID_root_mets_fileSec_fileGrp_rep1_Schemas_file_UAM_arh_xsd" MIMETYPE="application/xml" SIZE="54962" CREATED="2013-11-20T00:00:00" CHECKSUM="59836748963a11653f1b6acf066c6715" CHECKSUMTYPE="MD5">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/schemas/Estonian_UAM_arh_classification_scheme_v2.0.xsd" />
       </file>
       <file ID="ID_root_mets_fileSec_fileGrp_rep1_Schemas_file_premis-v2-1_xsd" MIMETYPE="application/xml" SIZE="57056" CREATED="2011-01-06T00:00:00" CHECKSUM="f8115667d6bf917f7c44e172d937fd5a" CHECKSUMTYPE="MD5">
@@ -131,7 +131,7 @@
       </file>
     </fileGrp>
     <fileGrp ID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data" USE="Representations/rep1/data" ADMID="ID_rightsmd_premis_file ID_digiprovmd_premis_file" csip:CONTENTINFORMATIONTYPE="OTHER" csip:OTHERCONTENTINFORMATIONTYPE="NONE">
-      <file ID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data_file1" MIMETYPE="application/xml" SIZE="60589" CREATED="2019-04-12T18:40:24" CHECKSUM="183241e18688ba5fb6727ce53768cbbb" CHECKSUMTYPE="MD5" OWNERID="file-5.2/45.14" DMDID="ID_dmdsec_rep1_ead_file">
+      <file ID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data_file1" MIMETYPE="application/xml" SIZE="59785" CREATED="2019-04-12T18:40:24" CHECKSUM="16967cf0d9517ef180154732c1f8316f" CHECKSUMTYPE="MD5" OWNERID="file-5.2/45.14" DMDID="ID_dmdsec_rep1_ead_file">
         <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/rep1/data/archival_record_xyz123_Estonian_UAM_arh.xml" />
       </file>
 	  <file ID="ID_root_mets_fileSec_fileGrp_Representations_rep1_data_file2" MIMETYPE="application/xml" SIZE="112" CREATED="2021-10-05T18:48:24" CHECKSUM="952446d8f13bbf4f20ba972943b4de43" CHECKSUMTYPE="MD5" sip:FILEFORMATNAME="" sip:FILEFORMATVERSION="1.0" sip:FILEFORMATREGISTRY="PRONOM" sip:FILEFORMATKEY="x-fmt/666111" OWNERID="file-5.2/45.14" DMDID="ID_dmdsec_rep1_ead_file">
