@@ -29,9 +29,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install ./validator
       - name: Install corpus tests
-        run: |
-          find .
-          pip install -r ./corpus/tests/requirements.txt
+        run: pip install -r ./corpus/tests/requirements.txt
       - name: Run corpus tests
         run: |
           cd corpus
