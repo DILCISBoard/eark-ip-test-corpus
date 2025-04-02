@@ -15,6 +15,9 @@
   <description>
     mets/metsHdr/agent/@ROLE MUST exist.
     mets/metsHdr/agent/@ROLE MUST have the value 'CREATOR'.
+    The test corpus team asked the specification authors for interpretation of this requirement: https://github.com/DILCISBoard/E-ARK-CSIP/issues/646.
+    There is one mandatory agent with the agent role being "CREATOR" and the type being "OTHER" and othertype being "SOFTWARE". 
+    As written in CSIP10 there can be local agents added but the "CREATOR" one is mandatory.
   </description>
   <dependencies />
   <rules>
@@ -51,7 +54,8 @@
         <package name="mets-xml_metsHdr_agent_all_criterias_different_objs" isValid="FALSE" isImplemented="TRUE">
           <path>invalid/mets-xml_metsHdr_agent_all_criterias_different_objs</path>
           <description>
-            METS.xml file has all agent criterias but on different objects.
+            METS.xml file has all agent criterias but on different objects. This package is made to make sure that validators only give one error message on this package since there only needs to be one agent
+            role being "CREATOR" and the type being "OTHER" and othertype being "SOFTWARE". 
           </description>
         </package>
       </corpusPackages>
