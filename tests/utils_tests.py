@@ -1,16 +1,22 @@
 from pathlib import Path
 
+from typing import Optional
 from xsdata.formats.dataclass.parsers import XmlParser
 from tests import case
 
 test_case_name = "testCase.xml"
 
-def load_test_case(path_to_test_case_directory: Path, should_throw_error_on_missing_test_case: bool) -> case.TestCase:
-    path_to_test_case = get_test_case_path(path_to_test_case_directory)
-
-    if not path_to_test_case.is_file():
+def load_test_case(path_to_test_case_directory: Path, should_throw_error_on_missing_test_case: bool) -> Optional[case.TestCase]:
+    if not path_to_test_case_directory.exists() or not path_to_test_case_directory.is_dir():
         if not should_throw_error_on_missing_test_case:
-            return
+            return None
+        
+        raise ValueError(f"{path_to_test_case_directory} is missing")
+    path_to_test_case = Path(path_to_test_case_directory / test_case_name)
+
+    if not path_to_test_case.exists() or not path_to_test_case.is_file():
+        if not should_throw_error_on_missing_test_case:
+            return None
         
         raise ValueError(f"{path_to_test_case} is missing")
 
@@ -18,17 +24,11 @@ def load_test_case(path_to_test_case_directory: Path, should_throw_error_on_miss
 
     if is_testable(test_case) and (test_case.rules is None or len(test_case.rules.rule) == 0):
         if not should_throw_error_on_missing_test_case:
-            return
+            return None
         
         raise ValueError(f"Test rules are not defined")
 
     return test_case
-
-def get_test_case_path(path_to_test_case_directory: Path) -> Path:    
-    assert path_to_test_case_directory.is_dir(), f"{path_to_test_case_directory} is missing"
-    path_to_test_case = Path(path_to_test_case_directory / test_case_name)
-
-    return path_to_test_case
 
 def parse_test_case(path_to_test_case: Path) -> case.TestCase:
     return XmlParser().from_path(path_to_test_case, case.TestCase)
