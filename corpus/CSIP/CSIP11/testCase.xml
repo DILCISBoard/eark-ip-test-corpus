@@ -15,6 +15,9 @@
   <description>
     mets/metsHdr/agent/@ROLE MUST exist.
     mets/metsHdr/agent/@ROLE MUST have the value 'CREATOR'.
+    The test corpus team asked the specification authors for interpretation of this requirement: https://github.com/DILCISBoard/E-ARK-CSIP/issues/646.
+    There is one mandatory agent with the agent role being "CREATOR" and the type being "OTHER" and othertype being "SOFTWARE". 
+    As written in CSIP10 there can be local agents added but the "CREATOR" one is mandatory.
   </description>
   <dependencies />
   <rules>
