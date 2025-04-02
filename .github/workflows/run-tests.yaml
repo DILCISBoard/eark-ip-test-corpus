@@ -33,4 +33,4 @@ jobs:
       - name: Run corpus tests
         run: |
           cd corpus
-          pytest
+          pytest --errorOnMissing
