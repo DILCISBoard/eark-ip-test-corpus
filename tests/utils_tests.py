@@ -21,13 +21,23 @@ def load_test_case(path_to_test_case_directory: Path, should_throw_error_on_miss
         raise ValueError(f"{path_to_test_case} is missing")
 
     test_case = parse_test_case(path_to_test_case)
+    if test_case.testable == case.TestCaseTestable.FALSE:
+        return None
+    elif test_case.testable != case.TestCaseTestable.TRUE and should_throw_error_on_missing_test_case:
+        raise ValueError(f"Testable attribute is not TRUE or FALSE - have a look if this be adjusted")
 
-    if is_testable(test_case) and (test_case.rules is None or len(test_case.rules.rule) == 0):
+    if test_case.rules is None or len(test_case.rules.rule) == 0:
         if not should_throw_error_on_missing_test_case:
             return None
         
         raise ValueError(f"Test rules are not defined")
-
+    
+    if should_throw_error_on_missing_test_case:
+        for rule in test_case.rules.rule:
+            for package in rule.corpus_packages.package:
+                if package.is_implemented == case.PackageIsImplemented.FALSE:
+                    raise ValueError(f"Package {package.name} is not implemented")
+    
     return test_case
 
 def parse_test_case(path_to_test_case: Path) -> case.TestCase:
