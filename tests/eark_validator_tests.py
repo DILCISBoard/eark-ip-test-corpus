@@ -7,8 +7,10 @@ from tests.utils_tests import get_path_to_package
 
 def eark_validator_test_from_test_case(test_case: case.TestCase, path_to_test_case_directory: Path):
     version = test_case.id.version
-    if version != "2.0.4":
-        version = "2.1.0"
+    if version == "2.0.4":
+        version = "V2.0.4"
+    else:
+        version = "V2.1.0"
 
     for rule in test_case.rules.rule:
         for package in rule.corpus_packages.package:
