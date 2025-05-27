@@ -1,5 +1,5 @@
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
-  <id specification="SIP" version="2.0.4" requirementId="SIP35"/>
+  <id specification="SIP" version="2.2.0" requirementId="SIP35"/>
   <references>
     <reference requirementId="SIP35" URL="https://earksip.dilcis.eu/#SIP35"/>
   </references>
