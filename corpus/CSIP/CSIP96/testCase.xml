@@ -3,7 +3,7 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testCase.xsd"
   testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.0.4" requirementId="CSIP96"/>
+  <id specification="E-ARK CSIP" version="2.2.0" requirementId="CSIP96"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIP96" URL="http://earkcsip.dilcis.eu/#CSIP96"/>
@@ -14,7 +14,7 @@ XML lists -->
     All file groups containing documentation described in the package are referenced via the relevant file group identifiers. There MUST be one file group reference per fptr-element.
 </requirementText>
   <!-- Textual description of the test case, extra notes beyond the requirment text. -->
-  <description> All fileGrps with the @USE="Documentation" must also be presented in the structMap. CSIP96 and CSIP116 are intrinsically linked together
+  <description> All fileGrps with the @USE="Documentation" must also be presented in the structMap. CSIP96 and CSIP116 are intrinsically linked together.
      </description>
   <!-- List of requirments that this test case depends on in addition to the
   main requirememt, e.g. general requirments on the form of IDs -->
@@ -26,32 +26,16 @@ XML lists -->
     <rule id="1">
       <description>All fileGrps with the @USE="Documentation" must also be presented in the structMap</description>
       <error level="ERROR">
-        <message>All fileGrps with the @USE="Documentation" must be presented in the structMap via mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr </message>
+        <message>Number of fileGrps with the @USE="Documentation" must be equal to number of mets/structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr</message>
       </error>
       <corpusPackages>
         <package isValid="FALSE" isImplemented="TRUE" name="fileGrp_documentation_but_missing_structMap">
           <path>invalid/fileGrp_documentation_but_missing_structMap</path>
-          <description>A package where there is a fileGrp with @USE="Documentation" but there is no structMap [@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr</description>
+          <description>A package where there is a fileGrp with @USE="Documentation" but there is no structMap/[@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr</description>
         </package>
         <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
           <path>valid/minimal_IP_with_1_representation</path>
-          <description>Minimal IP</description>
-        </package>
-      </corpusPackages>
-    </rule>
-    <rule id="2">
-      <description>A structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr must point to a fileGrp with @USE="Documentation"</description>
-      <error level="ERROR">
-        <message>The structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr points to a fileGrp that does not have @USE="Documentation"</message>
-      </error>
-      <corpusPackages>
-        <package isValid="FALSE" isImplemented="TRUE" name="structMap_does_not_point_at_documentation">
-          <path>invalid/structMap_does_not_point_at_documentation</path>
-          <description>A package which has a documentation filepointer that points to a filegroup that does not have @USE="Documentation"</description>
-        </package>
-        <package isValid="TRUE" isImplemented="TRUE" name="minimal_IP_with_1_representation">
-          <path>valid/minimal_IP_with_1_representation</path>
-          <description>Minimal IP</description>
+          <description>Minimal IP. 1 fileGrp with @USE="Documentation" and 1 corresponting structMap[@LABEL='CSIP']/div/div[@LABEL='Documentation']/fptr</description>
         </package>
       </corpusPackages>
     </rule>
