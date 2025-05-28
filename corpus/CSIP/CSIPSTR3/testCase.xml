@@ -6,7 +6,7 @@ XML lists -->
   <id specification="E-ARK CSIP" version="2.0-DRAFT" requirementId="CSIP3"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
-    <reference requirementId="CSIP3" URL="http://earkcsip.dilcis.eu/#CSIP3"/>
+    <reference requirementId="CSIPSTR3" URL="http://earkcsip.dilcis.eu/#CSIP3"/>
   </references>
   <!-- The full text of the requirement. -->
   <requirementText>The Information Package root folder CAN be compressed (for example by using TAR or ZIP).
