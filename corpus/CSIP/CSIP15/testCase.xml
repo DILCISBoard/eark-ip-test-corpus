@@ -57,8 +57,8 @@
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has two mets/metsHdr/agent/note child elements.
           </description>
         </package>
-        <package name="mets-xml_metsHdr_agent_note_conform.zip" isValid="TRUE" isImplemented="TRUE">
-          <path>valid/mets-xml_metsHdr_agent_note_conform.zip</path>
+        <package name="mets-xml_metsHdr_agent_note_conform" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_note_conform</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
@@ -79,8 +79,8 @@
             METS.xml file where the CSIP mandatory agent element (i.e. mets/metsHdr/agent[@ROLE='CREATOR']) has mets/metsHdr/agent/note = "".
           </description>
         </package>
-        <package name="mets-xml_metsHdr_agent_note_conform.zip" isValid="TRUE" isImplemented="TRUE">
-          <path>valid/mets-xml_metsHdr_agent_note_conform.zip</path>
+        <package name="mets-xml_metsHdr_agent_note_conform" isValid="TRUE" isImplemented="TRUE">
+          <path>valid/mets-xml_metsHdr_agent_note_conform</path>
           <description>
             Minimal IP that matches all MUST requirements.
           </description>
