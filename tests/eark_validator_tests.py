@@ -26,7 +26,7 @@ def eark_validator_test_from_test_case(test_case: case.TestCase, path_to_test_ca
 def validate_package_with_eark_validator(path: Path, version: str, specification_type: Optional[str]) -> str:
     args = ['eark-validator', path, "--specification_version", version]
     if specification_type:
-        args.append('specification_type')
+        args.append('--specification_type')
         args.append(specification_type)
 
     return subprocess.check_output(args, text=True)
