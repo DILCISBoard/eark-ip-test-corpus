@@ -12,7 +12,7 @@
   <title>E-ARK Corpora Reporting | Corpus SIP</title>
 
   <!-- Load local stylesheet default stylesheet -->
-  <link rel="stylesheet" href="./static/css/theme.css" />
+  <link rel="stylesheet" href="/static/css/theme.css" />
 </head>
 <body>
   
@@ -25,7 +25,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="./">Overview<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">Overview<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/CSIP/">CSIP<span class="sr-only">(current)</span></a>
@@ -56,107 +56,138 @@
     </thead>
     <tbody>
       <tr>
+        <td>51</td>
         <td>12</td>
-        <td>0</td>
-        <td></td>
-        <td></td>
+        <td>26</td>
+        <td>56</td>
       </tr>
     </tbody>
   </table>
   <h2>SIP Requirements</h2>
+  <h3>SIP Key</h3>
+  <table class="table table-striped" data-toggle="table">
+    <thead class="thead-dark">
+      <tr>
+        <th data-field="id">Test Case ID</th>
+        <th data-field="testable">Testable</th>
+        <th data-field="rules">Rules</th>
+        <th data-field="packages">Implemented Packages/Defined Packages</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="table-danger">Test Case XML failed validation</td>
+        <td class="table-danger">UNKNOWN</td>
+        <td>No Key</td>
+        <td class="table-danger">No packages implemented.</td>
+      </tr>
+      <tr>
+        <td>No Key</td>
+        <td class="table-warning">FALSE/PARTIAL</td>
+        <td>No Key</td>
+        <td class="table-warning">Some packages implemented.</td>
+      </tr>
+      <tr>
+        <td class="table-success">Test Case XML Valid</td>
+        <td class="table-success">TRUE</td>
+        <td>No Key</td>
+        <td class="table-success">All packages implemented.</td>
+      </tr>
+    </tbody>
+  </table>
   <table class="table table-striped" data-toggle="table" data-search="true">
     <thead class="thead-dark">
       <tr>
-        <th data-field="id" data-sortable="true">Cases</th>
+        <th data-field="id" data-sortable="true">Test Case ID</th>
         <th data-field="testable" data-sortable="true">Testable</th>
         <th data-field="rules" data-sortable="true">Rules</th>
-        <th data-field="packages" data-sortable="true">Packages</th>
+        <th data-field="packages" data-sortable="true">Implemented Packages/Defined Packages</th>
       </tr>
     </thead>
     <tbody>
       
       <tr>
-        <td>SIP1</td>
-        <td>TRUE</td>
+        <td class="table-danger"><a href="./SIP3/">SIP3</a></td>
+        <td class="table-success">TRUE</td>
         <td>2</td>
-        <td>4/4</td>
+        <td class="table-success">5/5</td>
       </tr>
       
       <tr>
-        <td>SIP2</td>
-        <td>TRUE</td>
+        <td class="table-danger"><a href="./SIP34/">SIP34</a></td>
+        <td class="table-success">TRUE</td>
         <td>2</td>
-        <td>5/5</td>
+        <td class="table-success">4/4</td>
       </tr>
       
       <tr>
-        <td>SIP3</td>
-        <td>TRUE</td>
+        <td class="table-danger"><a href="./SIP4/">SIP4</a></td>
+        <td class="table-success">TRUE</td>
         <td>2</td>
-        <td>5/5</td>
+        <td class="table-success">4/4</td>
       </tr>
       
       <tr>
-        <td>SIP4</td>
-        <td>TRUE</td>
-        <td>2</td>
-        <td>4/4</td>
-      </tr>
-      
-      <tr>
-        <td>SIP5</td>
-        <td>TRUE</td>
+        <td class="table-danger"><a href="./SIP5/">SIP5</a></td>
+        <td class="table-success">TRUE</td>
         <td>3</td>
-        <td>6/6</td>
+        <td class="table-success">6/6</td>
       </tr>
       
       <tr>
-        <td>SIP6</td>
-        <td>TRUE</td>
+        <td class="table-danger"><a href="./SIP1/">SIP1</a></td>
+        <td class="table-success">TRUE</td>
         <td>2</td>
-        <td>4/5</td>
+        <td class="table-success">4/4</td>
       </tr>
       
       <tr>
-        <td>SIP7</td>
-        <td>TRUE</td>
+        <td class="table-danger"><a href="./SIP2/">SIP2</a></td>
+        <td class="table-success">TRUE</td>
+        <td>2</td>
+        <td class="table-success">5/5</td>
+      </tr>
+      
+      <tr>
+        <td class="table-danger"><a href="./SIP32/">SIP32</a></td>
+        <td class="table-success">TRUE</td>
+        <td>2</td>
+        <td class="table-success">4/4</td>
+      </tr>
+      
+      <tr>
+        <td class="table-danger"><a href="./SIP8/">SIP8</a></td>
+        <td class="table-success">TRUE</td>
+        <td>2</td>
+        <td class="table-warning">3/5</td>
+      </tr>
+      
+      <tr>
+        <td class="table-danger"><a href="./SIP7/">SIP7</a></td>
+        <td class="table-success">TRUE</td>
         <td>3</td>
-        <td>6/6</td>
+        <td class="table-success">6/6</td>
       </tr>
       
       <tr>
-        <td>SIP8</td>
-        <td>TRUE</td>
+        <td class="table-success"><a href="./SIP35/">SIP35</a></td>
+        <td class="table-success">TRUE</td>
         <td>2</td>
-        <td>3/5</td>
+        <td class="table-danger">0/4</td>
       </tr>
       
       <tr>
-        <td>SIP32</td>
-        <td>TRUE</td>
+        <td class="table-danger"><a href="./SIP6/">SIP6</a></td>
+        <td class="table-success">TRUE</td>
         <td>2</td>
-        <td>4/4</td>
+        <td class="table-warning">4/5</td>
       </tr>
       
       <tr>
-        <td>SIP33</td>
-        <td>TRUE</td>
+        <td class="table-danger"><a href="./SIP33/">SIP33</a></td>
+        <td class="table-success">TRUE</td>
         <td>2</td>
-        <td>4/4</td>
-      </tr>
-      
-      <tr>
-        <td>SIP34</td>
-        <td>TRUE</td>
-        <td>2</td>
-        <td>4/4</td>
-      </tr>
-      
-      <tr>
-        <td>SIP35</td>
-        <td>TRUE</td>
-        <td>2</td>
-        <td>0/4</td>
+        <td class="table-success">4/4</td>
       </tr>
       
     </tbody>
@@ -164,6 +195,13 @@
 
   </div>
 
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2025 E-ARK Consortium</span>
+      </div>
+    </footer>
+  </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

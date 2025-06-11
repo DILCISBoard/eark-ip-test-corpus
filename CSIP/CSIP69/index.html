@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css" rel="stylesheet">
+
+  <title>E-ARK Corpora Reporting | Test Case CSIP69</title>
+
+  <!-- Load local stylesheet default stylesheet -->
+  <link rel="stylesheet" href="/static/css/theme.css" />
+</head>
+<body>
+  
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <a class="navbar-brand" href="/">E-ARK Corpora</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Overview<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/CSIP/">CSIP<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/SIP/">SIP<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/DIP/">DIP<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  
+  <div class="container" role="main">
+    
+  <h1>Test Case CSIP69</h1>
+   <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">CSIP69</h5>
+      <p>Testable: TRUE</br>
+      Schema Valid: 
+<span class="badge badge-danger">invalid</span>
+</br>
+      XML Validation Error: Element 'package', attribute 'isImplemented': The attribute 'isImplemented' is not allowed.</br>
+      Description: 
+    The SIZE-attribute is optional in METS.xsd but mandatory in CSIP69, therefore two tests are needed:
+    mets/fileSec/fileGrp/file/@SIZE MUST exist.
+    @SIZE attribute value MUST be equal to the file size in bytes
+  </br>
+    </div>
+  </div>
+  <h2>Rules</h2>
+  <ul class="list-group list-group-flush">
+  
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule ID: 1</h5>
+          <p class="card-text">Descripton: The MUST exist a SIZE-attribute in the file-element. This is one of the cases where many files can have a missing attribute. The validation tool should show the number of occurences with the possibility to get a list of the occurences</p>
+          <p class="card-text">ERROR: There MUST exist a SIZE-attribute in the file-element (so that the size of the referenced file can be recorded)</p>
+          <p class="card-text">
+            <h5>Packages:</h5>
+            
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><a href="./file_missing_SIZE_attribute/">file_missing_SIZE_attribute</a></h5>
+                <p class="card-text">Expected result: 
+<span class="badge badge-danger">invalid</span>
+</p>
+                <table class="table table-striped">
+                  <thead class="thead-dark">
+                    <th>Validator</th>
+                    <th>Version</th>
+                    <th>Ret Code</th>
+                    <th>Valid</th>
+                    <th>Duration</th>
+                    <th>Contains Code</th>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>Commons IP Validator</td>
+                      <td>v2.8.1</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.53s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3.dev76</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>11.26s</td>
+                      <td>True</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3</td>
+                      <td>1</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.73s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><a href="./minimal_IP_with_1_representation/">minimal_IP_with_1_representation</a></h5>
+                <p class="card-text">Expected result: 
+<span class="badge badge-success">Valid</span>
+</p>
+                <table class="table table-striped">
+                  <thead class="thead-dark">
+                    <th>Validator</th>
+                    <th>Version</th>
+                    <th>Ret Code</th>
+                    <th>Valid</th>
+                    <th>Duration</th>
+                    <th>Contains Code</th>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>Commons IP Validator</td>
+                      <td>v2.8.1</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.55s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3.dev76</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>11.46s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.73s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+          </p>
+        </div>
+      </div>
+    </li>
+  
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule ID: 2</h5>
+          <p class="card-text">Descripton: There should be a check if the information of size of the file is correct. This is one of the cases where many files can have a wrong documentation. The validation tool should show the number of occurences with the possibility to get a list of the occurences</p>
+          <p class="card-text">ERROR: The size of the file is not the size that is given in the SIZE-attribute</p>
+          <p class="card-text">
+            <h5>Packages:</h5>
+            
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><a href="./file_wrong_SIZE/">file_wrong_SIZE</a></h5>
+                <p class="card-text">Expected result: 
+<span class="badge badge-danger">invalid</span>
+</p>
+                <table class="table table-striped">
+                  <thead class="thead-dark">
+                    <th>Validator</th>
+                    <th>Version</th>
+                    <th>Ret Code</th>
+                    <th>Valid</th>
+                    <th>Duration</th>
+                    <th>Contains Code</th>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>Commons IP Validator</td>
+                      <td>v2.8.1</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.54s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3.dev76</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>10.93s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.71s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><a href="./minimal_IP_with_1_representation/">minimal_IP_with_1_representation</a></h5>
+                <p class="card-text">Expected result: 
+<span class="badge badge-success">Valid</span>
+</p>
+                <table class="table table-striped">
+                  <thead class="thead-dark">
+                    <th>Validator</th>
+                    <th>Version</th>
+                    <th>Ret Code</th>
+                    <th>Valid</th>
+                    <th>Duration</th>
+                    <th>Contains Code</th>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>Commons IP Validator</td>
+                      <td>v2.8.1</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.55s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3.dev76</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>11.46s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.73s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+          </p>
+        </div>
+      </div>
+    </li>
+  
+  </ul>
+
+  </div>
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2025 E-ARK Consortium</span>
+      </div>
+    </footer>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+
+
+</body>
+</html>

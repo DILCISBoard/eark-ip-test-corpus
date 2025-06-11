@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css" rel="stylesheet">
+
+  <title>E-ARK Corpora Reporting | Test Case CSIP32</title>
+
+  <!-- Load local stylesheet default stylesheet -->
+  <link rel="stylesheet" href="/static/css/theme.css" />
+</head>
+<body>
+  
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <a class="navbar-brand" href="/">E-ARK Corpora</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Overview<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/CSIP/">CSIP<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/SIP/">SIP<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/DIP/">DIP<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  
+  <div class="container" role="main">
+    
+  <h1>Test Case CSIP32</h1>
+   <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">CSIP32</h5>
+      <p>Testable: TRUE</br>
+      Schema Valid: 
+<span class="badge badge-success">Valid</span>
+</br>
+      
+      Description: 
+    This testcase is for requirement CSIP32, which relates to the digiprovMD element.
+    The requirement CSIP32 is not stringent and therefore difficult to test, it is based on conditions and optional elements.
+    The requirement text cites METS and mentions embedded or linked metadata, but according to http://earkcsip.dilcis.eu/#534-use-of-the-mets-administrative-metadata-section-element-amdsec    .
+    CSIP is only using referencing of files containing administrative metadata. So embedding is not allowed.
+  </br>
+    </div>
+  </div>
+  <h2>Rules</h2>
+  <ul class="list-group list-group-flush">
+  
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule ID: 1</h5>
+          <p class="card-text">Descripton: There should be an XML element named digiprovMD in the mets.xml</p>
+          <p class="card-text">ERROR: The element mets/amdSec/digiprovMD does not exist in METS.xml. It SHOULD be there.</p>
+          <p class="card-text">
+            <h5>Packages:</h5>
+            
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><a href="./IP_18000_CSIP32_1/">IP_18000_CSIP32_1</a></h5>
+                <p class="card-text">Expected result: 
+<span class="badge badge-danger">invalid</span>
+</p>
+                <table class="table table-striped">
+                  <thead class="thead-dark">
+                    <th>Validator</th>
+                    <th>Version</th>
+                    <th>Ret Code</th>
+                    <th>Valid</th>
+                    <th>Duration</th>
+                    <th>Contains Code</th>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>Commons IP Validator</td>
+                      <td>v2.8.1</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.57s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3.dev76</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>10.85s</td>
+                      <td>True</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.73s</td>
+                      <td>True</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+          </p>
+        </div>
+      </div>
+    </li>
+  
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule ID: 2</h5>
+          <p class="card-text">Descripton: When one or more mets/amdSec/digiprovMD element(s) exist(s) in mets.xml there SHOULD be files in the folder metadata/preservation.
+        The mets schema allows no files to be present since it allows no href to be present in digiprovMD</p>
+          <p class="card-text">ERROR: One or more mets/amdSec/digiprovMD elements exist(s). No file(s) found in metadata/preservation. File(s) SHOULD be there.</p>
+          <p class="card-text">
+            <h5>Packages:</h5>
+            
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><a href="./IP_18000_CSIP32_2/">IP_18000_CSIP32_2</a></h5>
+                <p class="card-text">Expected result: 
+<span class="badge badge-danger">invalid</span>
+</p>
+                <table class="table table-striped">
+                  <thead class="thead-dark">
+                    <th>Validator</th>
+                    <th>Version</th>
+                    <th>Ret Code</th>
+                    <th>Valid</th>
+                    <th>Duration</th>
+                    <th>Contains Code</th>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>Commons IP Validator</td>
+                      <td>v2.8.1</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.56s</td>
+                      <td>True</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3.dev76</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>10.92s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.77s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+          </p>
+        </div>
+      </div>
+    </li>
+  
+    <li class="list-group-item">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rule ID: 3</h5>
+          <p class="card-text">Descripton: When one or more files in the folder metadata/preservation exist(s) there must be a mets/amdSec/digiprovMD element for each file</p>
+          <p class="card-text">ERROR: One or more PREMIS files found in the directory metadata/preservation. No digiprovMD element found in mets.xml. The mets/amdSec/digiprovMD element in METS.xml must be used for each external PREMIS file.</p>
+          <p class="card-text">
+            <h5>Packages:</h5>
+            
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><a href="./IP_18000_CSIP32_3/">IP_18000_CSIP32_3</a></h5>
+                <p class="card-text">Expected result: 
+<span class="badge badge-danger">invalid</span>
+</p>
+                <table class="table table-striped">
+                  <thead class="thead-dark">
+                    <th>Validator</th>
+                    <th>Version</th>
+                    <th>Ret Code</th>
+                    <th>Valid</th>
+                    <th>Duration</th>
+                    <th>Contains Code</th>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                      <td>Commons IP Validator</td>
+                      <td>v2.8.1</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.54s</td>
+                      <td>False</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3.dev76</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>11.85s</td>
+                      <td>True</td>
+                    </tr>
+                  
+                    <tr>
+                      <td>E-ARK Python Validator</td>
+                      <td>v1.1.3</td>
+                      <td>0</td>
+                      <td>
+<span class="badge badge-danger">invalid</span>
+</td>
+                      <td>0.70s</td>
+                      <td>True</td>
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+          </p>
+        </div>
+      </div>
+    </li>
+  
+  </ul>
+
+  </div>
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2025 E-ARK Consortium</span>
+      </div>
+    </footer>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+
+
+</body>
+</html>
