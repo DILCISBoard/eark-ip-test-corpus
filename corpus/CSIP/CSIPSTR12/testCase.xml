@@ -3,7 +3,7 @@ XML lists -->
 <testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="testCase.xsd" testable="TRUE">
   <!-- Unique ID for the test case -->
-  <id specification="E-ARK CSIP" version="2.1.0" requirementId="CSIPSTR12"/>
+  <id specification="E-ARK CSIP" version="2.2.0" requirementId="CSIPSTR12"/>
   <!-- URL references to requirements for convenient lookup -->
   <references>
     <reference requirementId="CSIPSTR12" URL="http://earkcsip.dilcis.eu/#CSIPSTR12" />
@@ -33,7 +33,7 @@ XML lists -->
       </error>
       <corpusPackages>
         <!-- Details of corpus packages designed to test this validation rule. -->
-        <package name="IP_18000_CSIPSTR12_1" isValid="TRUE" isImplemented="TRUE">
+        <package name="IP_18000_CSIPSTR12_1" isValid="FALSE" isImplemented="TRUE">
           <path>valid/IP_18000_CSIPSTR12_1</path>
           <!-- Full description of corpus package features. -->
           <description>A package based on the folder stucture IP. Sub-folder 'data' named in camelcase</description>

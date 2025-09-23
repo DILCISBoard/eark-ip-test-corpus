@@ -36,8 +36,8 @@ XML lists -->
         <message>In METS.XML the value in dmdSec/mdRef/@xlink:href SHOULD be a URL type filepath. The current value is not a URL type filepath </message>
       </error>
       <corpusPackages>
-        <package isValid="TRUE" name="IP_18000_CSIP24_2" isImplemented="TRUE">
-          <path>valid/IP_18000_CSIP24_2</path>
+        <package isValid="FALSE" name="IP_18000_CSIP24_2" isImplemented="TRUE">
+          <path>invalid/IP_18000_CSIP24_2</path>
           <description>There is no value in dmdSec/mdRef/@xlink:href</description>
         </package>
       </corpusPackages>
